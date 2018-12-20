@@ -1,22 +1,25 @@
 # CAG-MainWebsite
 Welcome to CAG's main website repository. Thank you for being apart of something that will touch many people for the glory of God! Please read everything below to get started.
 
-## Guide Lines to Follow (Subject for Change)
-Here are some guide lines to follow that will help you get started and also help us as a team to work better together!
+## Guidelines to Follow (Subject for Change)
+Here are some guidelines to follow that will help you get started and also help us as a team to work better together!
 #### - !!!!DOCUMENT YOUR CODE!!!!
- I can not stress how important this is. Please provide easy to understand comments and if needed documentation for the code you right. We are working as a team and it is important that everyone can understand what you write.
- - Use propper formating.
+I can not stress how important this is. Please provide easy to understand comments and if needed documentation for the code you right. We are working as a team and it is important that everyone can understand what you write.
+#### - Use proper naming, arranging, and formatting.
+I will later provide official documentation on proper formatting but for now just make sure you arrange and format code so that us humans can easily look at it and see what's going on ;)
+#### - Communication
+As a team communication is key to developing a successful project. Please use your team chat and blogs here on GitHub to communicate back and forth. DO NOT use other platforms such as SMS, IM, or Email for conversation about this project. All discussions must be held here so that others can see and learn.
 
 ## Structure
 ### Branches
  - "bleeding": The main branch servant ministers should be connected with. SUBMIT ALL CODE TO THIS!!!
- - "freeze": Code taken from bleeding to be bug tested and finilized.
+ - "freeze": Code taken from bleeding to be bug tested and finalized.
  - "master": Holds project details like this readme.
  - "release": Code live on site.
 
 ## How to get started
 ### Recommended Software
-The nice thing about code is that its flexable. And us a programmers like flexibility!! So feel free to use whatever IDE you please but I will post what I use here.
+The nice thing about code is that its flexible. And us a programmers like flexibility!! So feel free to use whatever IDE you please but I will post what I use here.
 - IDE: [Visual Studio Code](https://code.visualstudio.com/)
 - Plugins: Live Server, HTMLS CSS Support, Material Icon Theme
 - Git: Git obviously ;)
@@ -33,10 +36,12 @@ The nice thing about code is that its flexable. And us a programmers like flexib
 3. Push updated code to repository: git push
 
 ## Request branch upgrade
-Code uploaded to the "bleeding" branch does not automaticaly get uploaded to the web servers. In order for code to be moved to the next level (like "freeze") you must create a Pull Request.
+Code uploaded to the "bleeding" branch does not automatically get uploaded to the web servers. In order for code to be moved to the next level (like "freeze") you must create a Pull Request.
 1. Click Pull Request on GitHub repository site.
 2. Click "New pull request".
 3. Choose your branch changes ("freeze" <- "bleeding").
 4. Name your request with a description.
-NOTE: Requests without a description will most likly not be approved.
+NOTE: Requests without a description will most likely not be approved.
 5. Submit and wait for approval from an admin.
+
+~silentsonata
