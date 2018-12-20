@@ -1,0 +1,4 @@
+footer {
+    width: var(--global-content-width);
+    margin: 0 auto;
+}
