@@ -13,6 +13,10 @@ Here are some guide lines to follow that will help you get started and also help
  - "release": Code live on site.
 
 ## How to get started
+### Recommended Software
+The nice thing about code is that its flexable. And us a programmers like flexibility!! So feel free to use whatever IDE you please but I will post what I use here.
+- IDE: Visual Studio Code [a link](https://code.visualstudio.com/)
+
 1. Clone into repository: git clone https://github.com/Cornerstone-Church/CAG-MainWebsite.git
 2. Change branch to "bleeding": git checkout bleeding
 3. Start editing!
