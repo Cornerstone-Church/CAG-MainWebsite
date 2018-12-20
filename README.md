@@ -9,7 +9,7 @@ Here are some guide lines to follow that will help you get started and also help
 ### Branches
  - "bleeding": The main branch servant ministers should be connected with. SUBMIT ALL CODE TO THIS!!!
  - "freeze": Code taken from bleeding to be bug tested and finilized.
- - "master": Lastest stable site that will be pushed to release.
+ - "master": Holds project details like this readme.
  - "release": Code live on site.
 
 ## How to get started
