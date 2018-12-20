@@ -1,7 +1,7 @@
 # CAG-MainWebsite
 Welcome to CAG's main website repository. Thank you for being apart of something that will touch many people for the glory of God! Please read everything below to get started.
 
-## Guidelines to Follow (Subject for Change)
+## Guidelines (Subject for Change)
 Here are some guidelines to follow that will help you get started and also help us as a team to work better together!
 #### - !!!!DOCUMENT YOUR CODE!!!!
 I can not stress how important this is. Please provide easy to understand comments and if needed documentation for the code you right. We are working as a team and it is important that everyone can understand what you write.
