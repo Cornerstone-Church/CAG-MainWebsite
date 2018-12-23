@@ -22,7 +22,7 @@ header {
 .header-scroll {
     /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
     transition: ease-in-out .3s;
-    border-bottom: solid 1px var(--theme-secondary-color);
+    /* border-bottom: solid 1px var(--theme-secondary-color); */
     backdrop-filter: blur(10px);
 }
 
