@@ -47,4 +47,5 @@ NOTE: Requests without a description will most likely not be approved.
 5. Submit and wait for approval from an admin.
 
 ___
+Together for Jesus!
 ###### ~silentsonata
