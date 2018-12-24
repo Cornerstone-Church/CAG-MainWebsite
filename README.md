@@ -5,6 +5,8 @@ Welcome to CAG's main website repository. Thank you for being apart of something
 Here are some guidelines to follow that will help you get started and also help us as a team to work better together!
 #### - !!!!DOCUMENT YOUR CODE!!!!
 I can not stress how important this is. Please provide easy to understand comments and if needed documentation for the code you right. We are working as a team and it is important that everyone can understand what you write.
+#### - Don't commit bad code
+Basically don’t upload code that is not complete or has issues. Meaning if you are currently working on a section of code and have not completed it, don’t commit it to GitHub. Leave it on your machine until you have finished so that other people don’t have to try to figure out how to finish it. If you need help and want to commit to get assistance from everyone, comment out your code so that the rest of the site can execute without issues then leave a post in the Discussions section.
 #### - Use proper naming, arranging, and formatting.
 I will later provide official documentation on proper formatting but for now just make sure you arrange and format code so that us humans can easily look at it and see what's going on ;)
 #### - Communication
