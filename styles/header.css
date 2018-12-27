@@ -8,14 +8,13 @@ header {
     background: rgba(0, 0, 0, 0);
 
     /* EXPERIMENTAL */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     
     /* Size */
     height: var(--header-height);
     width: 100%;
     z-index: 100;
 
-    backdrop-filter: blur(0px);
     transition: background-color ease-in-out .3s;
 }
 
@@ -26,13 +25,15 @@ header {
     backdrop-filter: blur(10px);
 }
 
+/* Dark mode code - used by default */
 .header-dark {
-    background: rgba(40, 40, 40, 0.7);
+    background: var(--theme-header-color-dark);
     transition: ease-in-out .3s;
 }
 
+/* Code for light mode if needed */
 .header-light{
-    background: rgba(233, 233, 233, 0.9);
+    background: var(--theme-header-color-light);
     transition: ease-in-out .3s;
 }
 
@@ -56,11 +57,6 @@ header table {
     height: 100%;
 }
 
-header table td {
-    /* Table border -- for dev */
-    /* border: 1px solid green; */
-}
-
 #header-icon {
     background: url('/ref/church-logo-white.png');
     background-repeat: no-repeat;
@@ -71,37 +67,38 @@ header table td {
 
 nav ul {
     text-align: right;
-    padding: 0px;
+    padding: 0;
     margin: 0;
     margin-right: 20px;
+    /* Removes a spacing glitch */
+    font-size: 0;
 }
 
 nav li {
     /* Display items horizontaly */
     display: inline-block;
-    margin: 0 5px;
+    list-style: none;
+    margin: 0px;
+    padding: 0;
 }
 
 nav a {
-    display: inline-block;
-
     /* Format Nav bar Text */
     text-decoration: none;
-    color: var(--theme-secondary-color);
+    color: var(--theme-nav-text);
     font-weight: bold;
     text-align: center;
-    font-size: 1em;
+    font-size: 12px;
 
     /* Format Button */
     border-radius: 5px;
 
     /* Transformation */
-    /* width: 80px; */
-    padding: 2px 10px;
+    padding: 10px 7px;
 
     transition: .1s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, .1);
+    color: var(--theme-secondary-color);
 }

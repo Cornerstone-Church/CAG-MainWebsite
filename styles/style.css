@@ -10,25 +10,23 @@
     --global-content-width: 800px;
 
     /* Default values for page if mode is not specified */
-    --theme-primary-color: #fff;
-    --theme-secondary-color: #aaa;
-    --theme-text-color: #000;
+    --theme-primary-color: rgb(219, 219, 219);
+    --theme-header-color-dark: rgba(10, 10, 10, .9);;
+    --theme-header-color-light: rgba(233, 233, 233, 0.9);
+    --theme-secondary-color: rgb(77, 104, 226);
+    --theme-text-color: rgb(30, 30, 30);
+    --theme-nav-text: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 /* Text Syles */
 h1 {
     margin: 0px;
     padding: 10px;
-}
-
-h5 {
-    margin: 0;
-    padding: 0;
-
-    font-size: 2em;
-    font-weight: normal;
-
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -46,31 +44,36 @@ body, html {
     color: var(--theme-text-color);
 }
 
-main .parallax_base {
-    background: var(--theme-primary-color);
-    padding: 40px 0px;
-    /* border-top: 1px solid var(--theme-secondary-color);
-    border-bottom: 1px solid var(--theme-secondary-color); */
-    color: var(--theme-text-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .content {
     width: var(--global-content-width);
     margin: 0 auto;
 }
 
+/* A class that makes an object fill the screen */
 .fit img{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
-/* Header format for parallax elements */
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-.parallax h1 {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans';
-    text-shadow: 0 0 5px black;
+.sermon_video {
+    height: 450px;
+    width: 800px;
+    background-image: url("../ref/home_page/video_thumbnail.png");
+    background-repeat: none;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.video_overlay {
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
 }

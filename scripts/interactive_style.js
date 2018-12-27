@@ -3,19 +3,19 @@ var isScrolling = false;
 
 // Sets the transition height for the header when scrolling.
 // Units are in px.
-var scrollTransitionHeight = 1;
+var scrollTransitionHeight = 200;
 
 // Enable light mode
 var lightMode = false;
 
 // Light mode styles
-var lightModePrimaryColor = "#eee";
+var lightModePrimaryColor = "#dadada";
 var lightModeSecondaryColor = "#888";
 var lightModeTextColor = "#111";
 var lightModNavTextColor = "";
 
 // Dark mode styles
-var darkModePrimaryColor = "#111";
+var darkModePrimaryColor = "rgba(10, 10, 10, 1.0)";
 var darkModeSecondaryColor = "#aaa";
 var darkModeTextColor = "#eee";
 var darkModeNavTextColor = "";
@@ -62,6 +62,7 @@ function headerScroll() {
     }
 }
 
+// TODO: Implement nav color change
 
 function enableLightMode() {
     var entirePage = document.querySelector("body");
