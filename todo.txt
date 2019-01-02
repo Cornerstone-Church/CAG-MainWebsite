@@ -1,0 +1,2 @@
+ - Structure is good. Move forward with design
+ - Make header non-transparent by default. Need to call a function if transparent.
