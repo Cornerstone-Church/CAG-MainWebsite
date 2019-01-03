@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../templates/header.html');
+            $('#footer').load('../templates/footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="header_padding">
+        <!-- Section Links -->
+        <table class="section_links">
+            <tr>
+                <td style="background-image: url('../ref/about/background.jpg')">
+                    <a href="/about/whatwebelieve/"><div class="section_links_text">What We Believe</div></a>
+                </td>
+                <td style="background-image: url('../ref/about/background.jpg')">
+                    <a href="/about/ourstaff/"><div class="section_links_text">Meet Our Staff</div></a>
+                </td>
+                <td style="background-image: url('../ref/about/background.jpg')">
+                    <a href="/about/partnerchurches/"><div class="section_links_text">Partner Churches</div></a>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Description Section -->
+        <div class="content text_element">Description Section</div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+</html>

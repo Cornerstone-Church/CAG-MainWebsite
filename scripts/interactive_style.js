@@ -21,6 +21,11 @@ var darkModeTextColor = "#eee";
 var darkModeNavTextColor = "";
 
 
+function headerVideo() {
+    var header = document.querySelector("header");
+    header.classList.add('header-video');
+}
+
 
 function headerScroll() {
     // Import elements
