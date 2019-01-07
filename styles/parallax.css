@@ -1,6 +1,78 @@
 
 /* Parallax Effect */
 
+/* Parallax title styles */
+.background_text {
+    background: rgba(0, 0, 0, 0);
+}
+
+.parallax_back h1 {
+    margin: -30px 0 -10px 0;
+    padding: 0;
+    /* TODO: Glitch where it wraps */
+    width: 800px;
+
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    font-family: 'IBM Plex Sans';
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.parallax_back h2 {
+    margin: 0;
+    padding: 0;
+
+    color: rgb(200, 200, 200);
+    font-size: 30px;
+    font-family: 'IBM Plex Sans';
+    font-variant-caps: all-small-caps;
+    font-weight: normal;
+
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.parallax_back h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    color: rgb(200, 200, 200);
+    font-size: 20px;
+    font-family: 'IBM Plex Sans';
+    font-variant-caps: all-small-caps;
+    font-style: italic;
+    font-weight: normal;
+
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.parallax_back a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-variant-caps: all-small-caps;
+
+    transition: .3s ease-in-out;
+}
+
+.parallax_back a:hover {
+    color: var(--theme-secondary-color);
+    transition: .3s ease-in-out;
+}
+
+/* Sections */
+
+.parallax_base {
+    background: var(--theme-primary-color);
+    padding: 40px 0px;
+    border-top: 2px solid var(--theme-secondary-color);
+    border-bottom: 2px solid var(--theme-secondary-color);
+    color: var(--theme-text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 /* Creates a container for the whole body section to be in */
 .parallax_container {
     perspective: 300px;
@@ -45,6 +117,7 @@
 }
 
 .parallax_back {
+    text-align: center;
     transform: translateZ(-300px) scale(2);
 }
 

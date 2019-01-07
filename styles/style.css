@@ -1,0 +1,164 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@import url('header.css');
+@import url('footer.css');
+@import url('parallax.css');
+
+/* TODO: Make header absolute and not fixed */
+
+:root {
+    --global-content-width: 800px;
+
+    /* Default values for page if mode is not specified */
+    --theme-primary-color: rgb(219, 219, 219);
+    --theme-background-color: rgb(10, 10, 10);
+    --theme-header-color-dark: rgba(10, 10, 10, .9);;
+    --theme-header-color-light: rgba(233, 233, 233, 0.9);
+    --theme-secondary-color: rgb(77, 104, 226);
+    --theme-text-color: rgb(30, 30, 30);
+    --theme-nav-text: #fff;
+
+    --header-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Syles */
+h1 {
+    margin: 0px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 10px;
+    text-indent: 30px;
+}
+
+
+/* Body Styles */
+body, html {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--theme-background-color);
+    color: var(--theme-text-color);
+}
+
+section {
+    background: var(--theme-primary-color);
+    padding-bottom: 20px;
+}
+
+.content {
+    width: var(--global-content-width);
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.header_padding {
+    padding-top: calc(var(--header-height) + 20px);
+}
+
+
+/* Functional Classes */
+.fit img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Home Video */
+.video_overlay {
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+}
+
+.video_element {
+    height: 100%;
+    width: 100%;
+}
+
+/* Section Link Element */
+
+.section_links {
+    width: 100%;
+    height: 400px;
+    margin-top: -20px;
+    table-layout: fixed;
+}
+
+.section_links:hover a{
+    font-size: 20px;
+}
+
+.section_links td {
+    width: 20%;
+    
+    /* Fall back color if image is not loading */
+    background: var(--theme-secondary-color);
+    background-size: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid var(--theme-primary-color);
+
+    transition: width .3s;
+}
+
+.section_links td:hover {
+    width: 50%;
+}
+
+.section_links a {
+    /* Fill table */
+    display: block;
+    /* width: 600px; */
+    height: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    
+    text-decoration: none;
+    color: var(--theme-primary-color);
+    text-shadow: 0 0 10px black;
+    text-transform: uppercase;
+
+    font-size: 30px;
+
+    transition: font-size .3s, text-shadow .3s;
+}
+
+.section_links td:hover a {
+    text-shadow: 20px 20px 50px black;
+    font-size: 50px;
+}
+
+.section_links .section_links_text {
+    /* Center Text */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section_links img {
+    width: 100px;
+}
