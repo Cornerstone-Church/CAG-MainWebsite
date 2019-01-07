@@ -2,4 +2,9 @@ footer {
     width: var(--global-content-width);
     margin: 20px auto;
     color: var(--theme-primary-color);
+    text-align: center;
+}
+
+img {
+    height: 200px;
 }
