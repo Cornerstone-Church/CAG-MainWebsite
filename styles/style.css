@@ -13,15 +13,15 @@
     --global-content-width: 800px;
 
     /* Default values for page if mode is not specified */
-    --theme-primary-color: rgb(219, 219, 219);
-    --theme-background-color: rgb(10, 10, 10);
-    --theme-header-color-dark: rgba(10, 10, 10, .9);;
+    --theme-primary-color: #ecf0f1;
+    --theme-background-color: rgb(42, 45, 51);
+    --theme-header-color-dark: rgba(37, 41, 46, .85);
     --theme-header-color-light: rgba(233, 233, 233, 0.9);
     --theme-secondary-color: rgb(77, 104, 226);
     --theme-text-color: rgb(30, 30, 30);
-    --theme-nav-text: #fff;
+    --theme-nav-text: #ecf0f1;
 
-    --header-height: 60px;
+    --header-height: 70px;
 }
 
 * {
