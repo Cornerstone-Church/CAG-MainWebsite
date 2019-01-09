@@ -23,7 +23,7 @@ var darkModeNavTextColor = "";
 
 function headerVideo() {
     var header = document.querySelector("header");
-    header.classList.add('header-video');
+    header.classList.add('header-transparent');
 }
 
 
@@ -40,7 +40,8 @@ function headerScroll() {
     if (scrollPosition >= scrollTransitionHeight) {
         // Make sure we only execute once when scrolling
         if (!isScrolling) {
-            header.classList.toggle("header-scroll");
+            header.classList.toggle("header-blur");
+            header.classList.toggle("header-transparent");
 
             // Check to see if light mode should be applied
             if (lightMode) {
@@ -53,7 +54,8 @@ function headerScroll() {
         }
     } else {
         if (isScrolling) {
-            header.classList.toggle("header-scroll");
+            header.classList.toggle("header-blur");
+            header.classList.toggle("header-transparent");
 
             // Check to see if light mode should be applied
             if (lightMode) {

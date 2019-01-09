@@ -6,6 +6,7 @@
         our World.</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/debug.css">
+    <link rel="stylesheet" href="./styles/home_page.css">
     <script src="./scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -33,22 +34,23 @@
                 <section class="parallax_center_element background_text">
                     <h2>Welcome to</h2>
                     <h1>Cornerstone Church</h1>
-                    <h3>Local Chuch &bull; Global Outreach</h3>
+                    <h3>Local Church With a Global Outreach</h3>
                 </section>
             </div>
         </div>
 
         <!-- Sermon Section -->
-        <div class="parallax_group layer1">
-            <section style="background-image: url('/ref/home_page/sermon_series/enduring_faith-back.jpg');" class="parallax_layer parallax_base">
+        <div class="parallax_group layer1 sermon-parallax">
+            <section id="sermon-video-section" class="parallax_layer parallax_base sermon-series">
                 <div class="content">
-                    <h1>(Sermon Section)</h1>
-                    <div class="sermon_video">
-                        <div class="video_overlay">
-                            <h1 class="center">CORNERSTONE CHURCH, BOWIE MD</h1>
-                        </div>
+                    <div id="sermon-video">
+                        <img src="/ref/home_page/sermon_series/logo.png">
+                        <h1>Watch the latest sermon from the series</h1>
+                        <iframe width="906" height="510" src="https://www.youtube.com/embed/ULAcqNxQjhs?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                            <h2><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More sermons</a></h2>
                     </div>
-                    <a href="#MoreSermons">Watch more sermons</a>
                 </div>
             </section>
         </div>

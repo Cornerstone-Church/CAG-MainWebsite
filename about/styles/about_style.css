@@ -1,0 +1,102 @@
+
+/* Default display on landing page */
+#element1 {
+    display: none;
+}
+
+#element2 {
+    display: none;
+}
+
+#element3 {
+    display: none;
+}
+
+#defaultElement {
+    display: inline;
+}
+
+p {
+    text-indent: 0px;
+}
+
+#pastor-lead-image {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 640px;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+}
+
+#pastor-lead-description {
+    padding: 20px;
+    align-self: flex-end;
+    text-align: center;
+    background: rgba(255, 255, 255, .9);
+}
+
+#pastor-lead-description h1 {
+    padding: 5px;
+    color: var(--theme-secondary-color);
+    font-size: 30px;
+}
+
+#pastor-lead-description h2 {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+.pastor-table {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.pastor-table:first-child {
+    margin-top: 50px;
+}
+
+.pastor-table h1 {
+    font-size: 25px;
+    padding-left: 20px;
+    color: var(--theme-secondary-color);
+}
+
+.pastor-table h2 {
+    font-size: 18px;
+    padding: 0 10px;
+    color: #7f8c8d;
+}
+
+.pastor-table p {
+    padding: 20px;
+}
+
+.pastor-table img {
+    border: 10px solid white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-image {
+    width: 30%;
+}
+
+.pastor-description {
+    width: 70%;
+}
+
+#all-staff-link {
+    display: block;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #7f8c8d;
+    
+}
+
+#all-staff-link:hover {
+    text-decoration: underline;
+}

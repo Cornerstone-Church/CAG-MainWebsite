@@ -1,0 +1,59 @@
+:root {
+    --sermon-primary-color: white;
+}
+
+#sermon-video {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+#sermon-video iframe {
+    margin-top: 50px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+#sermon-video h1 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans';
+
+    color: var(--sermon-primary-color);
+    /* color: var(--theme-secondary-color); */
+
+    text-shadow: 0 0 20px black;
+}
+
+#sermon-video h2 {
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+#sermon-video a:hover {
+    color: var(--theme-secondary-color);
+}
+
+#sermon-video a {
+    color: var(--sermon-primary-color);
+    text-decoration: none;
+}
+
+#sermon-video img {
+    width: 600px;
+    height: auto;
+}
+
+#sermon-video-section {
+    background: var(--theme-background-color);
+    background-image: url(/ref/home_page/sermon_series/background.jpg);
+}
+
+.sermon-parallax {
+    height: 900px;
+}
