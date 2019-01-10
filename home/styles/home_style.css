@@ -54,6 +54,40 @@
     background-image: url(/ref/home_page/sermon_series/background.jpg);
 }
 
-.sermon-parallax {
+.section-fixed-height {
     height: 900px;
+}
+
+#series-logo {
+    opacity: 0;
+}
+
+#series-text {
+    opacity: 0;
+}
+
+#slide1 {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    border-top: 10px solid green;
+    /* opacity: .5; */
+    background: white;
+}
+
+#slide1-background {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+}
+
+#slide1-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    transform: translate(-50%, -50%);
 }

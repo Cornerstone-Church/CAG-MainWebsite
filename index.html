@@ -6,7 +6,8 @@
         our World.</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/debug.css">
-    <link rel="stylesheet" href="./styles/home_page.css">
+    <link rel="stylesheet" href="/home/styles/home_style.css">
+    <link rel="stylesheet" href="/home/styles/home_animation.css">
     <script src="./scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -22,7 +23,7 @@
     <div id="header"></div>
 
     <!-- Body Section -->
-    <div class="parallax_container" onscroll="headerScroll()">
+    <div class="parallax_container" onscroll="headerScroll(); animationChecker();">
         <!-- Welcome Video Layer -->
         <div class="parallax_group layer3">
             <div class="parallax_layer parallax_far fit">
@@ -40,47 +41,41 @@
         </div>
 
         <!-- Sermon Section -->
-        <div class="parallax_group layer1 sermon-parallax">
+        <div id="series-section" class="parallax_group layer1 section-fixed-height">
             <section id="sermon-video-section" class="parallax_layer parallax_base sermon-series">
                 <div class="content">
                     <div id="sermon-video">
-                        <img src="/ref/home_page/sermon_series/logo.png">
-                        <h1>Watch the latest sermon from the series</h1>
-                        <iframe width="906" height="510" src="https://www.youtube.com/embed/ULAcqNxQjhs?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                        <img id="series-logo" src="/ref/home_page/sermon_series/logo.png">
+                        <h1 id="series-text">Watch the latest sermon from the series</h1>
+                        <iframe id="series-video" width="906" height="510" src="https://www.youtube.com/embed/ULAcqNxQjhs?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                             frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                            <h2><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More sermons</a></h2>
+                        <h2><a class="button" target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
+                                sermons</a></h2>
                     </div>
                 </div>
             </section>
         </div>
-
-        <!-- Announcment Section -->
-        <div class="parallax_group layer2">
-            <section class="parallax_layer parallax_back fit">
-                <img src="./ref/stock/worship_audiance.jpg">
-            </section>
-        </div>
-
-        <!-- Temporary have height to get rid of glitch -->
-        <div class="parallax_group layer1" style="height: 100vh;">
-            <section class="parallax_layer parallax_base">
-                <div class="content">
-                    <h1>Bottom Section</h1>
-                    <p>This is what a paragraph would look like if it were to be on this page. It is kinda boring
-                        without an interesting story to fill it.</p>
+        <div class="parallax_group layer1 section-fixed-height">
+            <section class="parallax_layer parallax_base sermon-series">
+                <!-- Announcment Section -->
+                <div id="slide1">
+                    <img id="slide1-background" src="/ref/home_page/announcments/slide1-background.jpg">
+                    <img id="slide1-foreground" src="/ref/home_page/announcments/slide1-foreground.png">
                 </div>
-
-                <!-- Footer Element -->
+                <!-- Footer Section -->
                 <div id="footer"></div>
-
             </section>
         </div>
     </div>
 
+    <div id="dev" style="position: fixed; bottom: 0px; right: 0px; padding: 20px; background: black; color: white;">
+        Debug
+    </div>
     <!-- Scripts -->
     <script src="./scripts/interactive_style.js"></script>
     <script src="./scripts/video_banner_resize.js"></script>
+    <script src="/home/scripts/home_script.js"></script>
 </body>
 
 </html>
