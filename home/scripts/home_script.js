@@ -2,11 +2,13 @@
 var seriesElementHasRun = false;
 
 // Get Elements
+// Series
 var seriesElement = document.getElementById("series-section");
 var seriesLogo = document.getElementById("series-logo");
 var seriesText = document.getElementById("series-text");
+var seriesVideo = document.getElementById("series-video");
+// Debug
 var debugElement = document.getElementById("dev");
-
 
 // The container that scrolls
 var parallaxContainer = document.querySelector(".parallax_container");
@@ -17,11 +19,10 @@ function animationChecker() {
     // of the window to get the bottom pixel
     var bottomWindow = parallaxContainer.scrollTop + window.innerHeight;
 
-    debugElement.innerHTML = bottomWindow;
     // Series Logo
     if (!seriesElementHasRun) {
         if (bottomWindow > (seriesElement.offsetTop + 300)) {
-            // debugElement.innerHTML = (seriesLogo.offsetTop);
+            debugElement.innerHTML = (seriesLogo.offsetTop);
             seriesElementHasRun = true;
             seriesLogo.classList.add("series-logo--animation");
             seriesText.classList.add("series-text--animation");

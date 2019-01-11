@@ -1,8 +1,9 @@
 footer {
-    width: var(--global-content-width);
+    width: 100%;
     margin: 20px auto;
-    color: var(--theme-primary-color);
     text-align: center;
+    background-color: var(--theme-background-color);
+    color: var(--theme-primary-color);
 }
 
 img {

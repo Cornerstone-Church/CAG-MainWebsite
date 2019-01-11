@@ -1,6 +1,12 @@
+/* Animations */
 @keyframes fadeInPull {
-    0% { opacity: 0; transform: translate(0px, 50px); }
-    100% { opacity: 1; transform: translate(0px, 0px); }
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes fadeInPull--slide {
+    0% { opacity: 0; transform: translate(-50%, -30%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 @keyframes fadeInBounce {
@@ -9,6 +15,12 @@
     100% {opacity: 1; transform: scale(1.0) }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Series Annimations */
 .series-logo--animation {
     animation-name: fadeInPull;
     animation-duration: 1s;
@@ -22,5 +34,26 @@
     animation-duration: .5s;
     animation-delay: .5s;
     /* Keeps from looping */
+    animation-fill-mode: forwards;
+}
+
+.series-video--animation {
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+
+/* Anouncments */
+.annOneBackground--animation {
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.annOneForeground--animation {
+    animation-name: fadeInPull--slide;
+    animation-duration: 1s;
+    animation-delay: .3s;
     animation-fill-mode: forwards;
 }

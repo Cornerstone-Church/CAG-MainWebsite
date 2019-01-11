@@ -67,11 +67,9 @@
 .parallax_base {
     background: var(--theme-primary-color);
     background-position: center;
-    padding: 40px 0px;
-    /* border-top: 2px solid var(--theme-secondary-color); */
-    /* border-bottom: 2px solid var(--theme-secondary-color); */
+    padding: 0;
+    text-align: center;
     color: var(--theme-text-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Creates a container for the whole body section to be in */
@@ -83,8 +81,18 @@
 }
 
 .parallax_group {
+    /* Sets so parent is now this group */
     position: relative;
     height: 100vh;
+    transform-style: preserve-3d;
+
+    /* DEBUG */
+    /* transform: translate3d(700px, 0px, -800px) rotateY(40deg); */
+}
+
+.parallax_group_autoSize {
+    /* Sets so parent is now this group */
+    position: relative;
     transform-style: preserve-3d;
 
     /* DEBUG */
@@ -95,9 +103,9 @@
     /* Set the position to be absolute without any values */
     position: absolute;
     top: 0px;
+    left: 0px;
     bottom: 0px;
     right: 0px;
-    left: 0px;
 }
 
 .parallax_layer video {
@@ -111,6 +119,10 @@
     top: 50%;
 
     transform: translate(-50%, -50%);
+}
+
+.parallax_close {
+    transform: translateZ(300px) scale(-2);
 }
 
 .parallax_base {

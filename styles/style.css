@@ -67,6 +67,7 @@ section {
 }
 
 .content {
+    display: block;
     width: var(--global-content-width);
     margin: 20px auto;
     padding: 10px;
@@ -79,14 +80,17 @@ section {
 
 
 /* Functional Classes */
-.fit img{
-    width: 100vw;
-    height: 100vh;
+
+/* A class that fits the object to fill the entire parent and preserve aspect ratio */
+.fit {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
+ /* Class that centers elements to the center */
 .center {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -173,6 +177,6 @@ section {
     width: 100px;
 }
 
-.button {
+/* .button {
     border: 
-}
+} */

@@ -2,24 +2,23 @@
     --sermon-primary-color: white;
 }
 
-#sermon-video {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    text-align: center;
+#sermon-video-element {
+    display: inline-block;
+    /* Center Video element */
+    width: 100%;
+    margin: 0 0;
+    padding: 90px 0;
 
-    margin: 0;
-    padding: 0;
-
+    background: var(--theme-background-color);
+    background-image: url(/ref/home_page/sermon_series/background.jpg);
 }
 
-#sermon-video iframe {
+#sermon-video-element iframe {
     margin-top: 50px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
-#sermon-video h1 {
+#sermon-video-element h1 {
     font-weight: bold;
     font-size: 30px;
     font-family: 'IBM Plex Sans';
@@ -30,64 +29,46 @@
     text-shadow: 0 0 20px black;
 }
 
-#sermon-video h2 {
+#sermon-video-element h2 {
     margin-top: 30px;
     text-transform: uppercase;
 }
 
-#sermon-video a:hover {
+#sermon-video-element a:hover {
     color: var(--theme-secondary-color);
 }
 
-#sermon-video a {
+#sermon-video-element a {
     color: var(--sermon-primary-color);
     text-decoration: none;
 }
 
-#sermon-video img {
+#sermon-video-element img {
     width: 600px;
     height: auto;
-}
-
-#sermon-video-section {
-    background: var(--theme-background-color);
-    background-image: url(/ref/home_page/sermon_series/background.jpg);
 }
 
 .section-fixed-height {
     height: 900px;
 }
 
-#series-logo {
+#series-logo, #series-text {
     opacity: 0;
 }
 
-#series-text {
-    opacity: 0;
+#announcment-div {
+    display: inline-block;
+    padding: 40px 0;
 }
 
-#slide1 {
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    border-top: 10px solid green;
-    /* opacity: .5; */
-    background: white;
+#announcment-div h3 {
+    font-size: 40px;
+    font-family: "IBM Plex Sans";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--theme-background-color);
 }
 
-#slide1-background {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
-}
-
-#slide1-foreground {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 500px;
-    transform: translate(-50%, -50%);
+.slide {
+    
 }

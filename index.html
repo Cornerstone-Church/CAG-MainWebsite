@@ -26,7 +26,7 @@
     <div class="parallax_container" onscroll="headerScroll(); animationChecker();">
         <!-- Welcome Video Layer -->
         <div class="parallax_group layer3">
-            <div class="parallax_layer parallax_far fit">
+            <div class="parallax_layer parallax_far">
                 <video id="video_banner" class="parallax_center_element" autoplay loop muted>
                     <source src="./ref/home_page/clip.mp4">
                 </video>
@@ -35,33 +35,41 @@
                 <section class="parallax_center_element background_text">
                     <h2>Welcome to</h2>
                     <h1>Cornerstone Church</h1>
-                    <h3>Local Church With a Global Outreach</h3>
                 </section>
             </div>
         </div>
 
         <!-- Sermon Section -->
-        <div id="series-section" class="parallax_group layer1 section-fixed-height">
-            <section id="sermon-video-section" class="parallax_layer parallax_base sermon-series">
-                <div class="content">
-                    <div id="sermon-video">
-                        <img id="series-logo" src="/ref/home_page/sermon_series/logo.png">
-                        <h1 id="series-text">Watch the latest sermon from the series</h1>
-                        <iframe id="series-video" width="906" height="510" src="https://www.youtube.com/embed/ULAcqNxQjhs?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
-                            frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <h2><a class="button" target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
-                                sermons</a></h2>
-                    </div>
+        <div id="series-section" class="parallax_group_autoSize layer1">
+            <section class="parallax_base">
+                <!-- Sermon video Section -->
+                <div id="sermon-video-element">
+                    <img id="series-logo" src="/ref/home_page/sermon_series/logo.png">
+                    <h1 id="series-text">Watch the latest sermon from the series</h1>
+                    <iframe id="series-video" width="906" height="510" src="https://www.youtube.com/embed/ULAcqNxQjhs?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                        frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <h2><a class="button" target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
+                            sermons</a></h2>
                 </div>
-            </section>
-        </div>
-        <div class="parallax_group layer1 section-fixed-height">
-            <section class="parallax_layer parallax_base sermon-series">
-                <!-- Announcment Section -->
-                <div id="slide1">
-                    <img id="slide1-background" src="/ref/home_page/announcments/slide1-background.jpg">
-                    <img id="slide1-foreground" src="/ref/home_page/announcments/slide1-foreground.png">
+
+                <div id="announcment-div">
+                    <h3>Local Church &bull; Global Outreach</h3>
+                </div>
+                <!-- Announcment Secion -->
+                <div id="banner">
+                    <div id="slide1" class="slide">
+                        <img class="slide-background" src="/ref/home_page/announcments/slides/slide1-background.jpg">
+                        <img class="slide-foreground" src="/ref/home_page/announcments/slides/slide1-foreground.png">
+                    </div>
+                    <div id="slide2" class="slide">
+                        <img class="slide-background" src="/ref/home_page/announcments/slides/slide2-background.jpg">
+                        <img class="slide-foreground" src="/ref/home_page/announcments/slides/slide2-foreground.png">
+                    </div>
+                    <div id="slide3" class="slide">
+                        <img class="slide-background" src="/ref/home_page/announcments/slides/slide3-background.jpg">
+                        <img class="slide-foreground" src="/ref/home_page/announcments/slides/slide3-foreground.png">
+                    </div>
                 </div>
                 <!-- Footer Section -->
                 <div id="footer"></div>
