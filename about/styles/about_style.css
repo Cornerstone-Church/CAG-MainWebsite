@@ -9,11 +9,11 @@
 }
 
 #element3 {
-    display: none;
+    display: inline;
 }
 
 #defaultElement {
-    display: inline;
+    display: none;
 }
 
 p {
@@ -49,8 +49,9 @@ p {
 }
 
 .pastor-table {
-    margin: 50px 0;
+    margin: 0;
     text-align: center;
+    width: 800px;
 }
 
 .pastor-table:first-child {
@@ -69,21 +70,33 @@ p {
     color: #7f8c8d;
 }
 
-.pastor-table p {
-    padding: 20px;
-}
-
 .pastor-table img {
     border: 10px solid white;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
+.pastor-table tr {
+    text-align: center;
+}
+
+.pastor-table td{
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
 .pastor-image {
-    width: 30%;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
 }
 
 .pastor-description {
-    width: 70%;
+    padding-bottom: 30px;
+}
+
+.partnered-church {
+    border: 1px green solid;
+    height: 400px;
 }
 
 #all-staff-link {
@@ -99,4 +112,9 @@ p {
 
 #all-staff-link:hover {
     text-decoration: underline;
+}
+
+#partnered-church--bristow, #partnered-church--easterhouse, #partnered-church--lumina {
+    background: url('/ref/about/background.jpg');
+    background-position: center;
 }

@@ -22,7 +22,6 @@ function animationChecker() {
     // Series Logo
     if (!seriesElementHasRun) {
         if (bottomWindow > (seriesElement.offsetTop + 300)) {
-            debugElement.innerHTML = (seriesLogo.offsetTop);
             seriesElementHasRun = true;
             seriesLogo.classList.add("series-logo--animation");
             seriesText.classList.add("series-text--animation");
