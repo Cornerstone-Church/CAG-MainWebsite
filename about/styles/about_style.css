@@ -1,7 +1,7 @@
 
 /* Default display on landing page */
 #element1 {
-    display: inline;
+    display: none;
 }
 
 #element2 {
@@ -13,7 +13,7 @@
 }
 
 #defaultElement {
-    display: none;
+    display: inline;
 }
 
 p {
@@ -90,6 +90,12 @@ p {
 
 #what-we-believe-element li {
     padding-bottom: 50px;
+}
+
+#about-welcome {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .what-we-believe--background {

@@ -1,13 +1,28 @@
+@keyframes fadeInBumpUp {
+    0% { opacity: }
+}
+
+:root {
+    --default-button--height: 400px;
+    --expanded-button--height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .section-bar {
     position: fixed;
     top: var(--header-height);
-    background: rgba(227, 234, 243, 0.85);
+    background: rgba(227, 234, 243, 0.8);
     width: 100%;
     /* EXPERIMENTAL */
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 
     table-layout: fixed;
+
+    z-index: 90;
 }
 
 .section-bar td {
@@ -45,17 +60,71 @@
 #ministry-selector {
     list-style: none;
     padding: 0px;
-    border: 1px green solid;
-
     width: 100%;
+
+
 }
 
 #ministry-selector a {
     display: block;
-    height: 400px;
-    border: 1px solid red;
+    height: var(--default-button--height);
+    
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
 }
 
-#ministry-selector .clicked {
-    height: 600px;
+#ministry-selector img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 1
 }
+
+#ministry-selector .selector-text-header {
+    z-index: 2;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    opacity: 1;
+    transition: .5s;
+}
+
+#ministry-selector .selector-text-content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: .5s;
+}
+
+#ministry-selector h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: var(--theme-primary-color);
+    font-weight: bold;
+}
+
+#ministry-selector h2 {
+    color: var(--theme-secondary-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+#ministry-selector p {
+    color: var(--theme-primary-color);
+}
+
