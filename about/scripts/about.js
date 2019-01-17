@@ -10,6 +10,7 @@ function showSection(elementIndex) {
     var elementTwo = document.getElementById("element2");
     var elementThree = document.getElementById("element3");
     var elementDefault = document.getElementById("defaultElement");
+    var aboutSection = document.getElementById("about-sections");
 
     var selectorOne = document.getElementById("selector1");
     var selectorTwo = document.getElementById("selector2");
@@ -24,7 +25,7 @@ function showSection(elementIndex) {
 
         // Show the selector
         selectorOne.style.color = "var(--theme-primary-color)";
-        selectorTwo.style.color = "var(--theme-secondary-color)";
+        selectorTwo.style.color = "var(--theme-activation-color)";
         selectorThree.style.color = "var(--theme-primary-color)";
     } else if (elementIndex == 2) {
         // Display the third Element
@@ -36,7 +37,7 @@ function showSection(elementIndex) {
         // Show the selector
         selectorOne.style.color = "var(--theme-primary-color)";
         selectorTwo.style.color = "var(--theme-primary-color)";
-        selectorThree.style.color = "var(--theme-secondary-color)";
+        selectorThree.style.color = "var(--theme-activation-color)";
     } else {
         // Display the first element
         elementOne.style.display = "inline";
@@ -45,7 +46,7 @@ function showSection(elementIndex) {
         elementDefault.style.display = "none";
 
         // Show the selector
-        selectorOne.style.color = "var(--theme-secondary-color)";
+        selectorOne.style.color = "var(--theme-activation-color)";
         selectorTwo.style.color = "var(--theme-primary-color)";
         selectorThree.style.color = "var(--theme-primary-color)";
     }

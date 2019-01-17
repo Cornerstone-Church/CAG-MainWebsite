@@ -10,7 +10,7 @@
     padding: 90px 0;
 
     background: var(--theme-background-color);
-    background-image: url(/ref/home_page/sermon_series/background.jpg);
+    background-image: url('/ref/sermon_series/enduring_faith/background.jpg');
 }
 
 #sermon-video-element iframe {

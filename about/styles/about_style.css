@@ -1,7 +1,7 @@
 
 /* Default display on landing page */
 #element1 {
-    display: none;
+    display: inline;
 }
 
 #element2 {
@@ -9,7 +9,7 @@
 }
 
 #element3 {
-    display: inline;
+    display: none;
 }
 
 #defaultElement {
@@ -48,6 +48,54 @@ p {
     color: #7f8c8d;
 }
 
+
+
+#all-staff-link {
+    display: block;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #7f8c8d;
+    
+}
+
+#all-staff-link:hover {
+    text-decoration: underline;
+}
+
+#partnered-church--bristow {
+    background: url('/ref/pages/about_page/partnered/bristow.jpg');
+}
+
+#partnered-church--easterhouse {
+    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
+}
+
+#partnered-church--lumina {
+    background: url('/ref/pages/about_page/partnered/biserica.jpg');
+}
+
+#partnered-church--bristow, #partnered-church--easterhouse, #partnered-church--lumina {
+    background-position: center;
+    background-size: 100vw;
+    background-attachment: fixed;
+}
+
+#what-we-believe-element {
+    list-style: none;
+    padding: 0px;
+}
+
+#what-we-believe-element li {
+    padding-bottom: 50px;
+}
+
+.what-we-believe--background {
+    background: #E8D6D1;
+}
+
 .pastor-table {
     margin: 0;
     text-align: center;
@@ -67,7 +115,7 @@ p {
 .pastor-table h2 {
     font-size: 18px;
     padding: 0 10px;
-    color: #7f8c8d;
+    color: var(--theme-text-subheader);
 }
 
 .pastor-table img {
@@ -95,26 +143,28 @@ p {
 }
 
 .partnered-church {
-    border: 1px green solid;
-    height: 400px;
+    height: 80vh;
+    position: relative;
+    margin: 40px 0;
 }
 
-#all-staff-link {
-    display: block;
+.partnered-church--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 30px;
 
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: #7f8c8d;
-    
+    background: var(--theme-primary-color);
+
+    /* background: rgba(255, 255, 255, .6); */
+    /* -webkit-backdrop-filter: blur(30px); */
 }
 
-#all-staff-link:hover {
-    text-decoration: underline;
-}
+.partnered-church--text h1 {
+    padding-bottom: 20px;
+    margin: -10px 0 0 0;
 
-#partnered-church--bristow, #partnered-church--easterhouse, #partnered-church--lumina {
-    background: url('/ref/about/background.jpg');
-    background-position: center;
+    color: var(--theme-text-subheader);
 }

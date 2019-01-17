@@ -6,33 +6,33 @@
     <link rel="stylesheet" href="../styles/style.css">
     <!-- About specific stylesheet -->
     <link rel="stylesheet" href="./styles/about_style.css">
-    <script src="../scripts/jquery-3.3.1.min.js">
+    <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
         $(document).ready(function () {
-            $('#header').load('../templates/header.html');
-            $('#footer').load('../templates/footer.html');
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html');
         });
     </script>
 </head>
 
 <body>
     <div id="header"></div>
-    <section class="header_padding">
+    <section id="about-sections" class="header_padding">
         <!-- Section Links -->
         <table class="section_links">
             <tr>
-                <td style="background-image: url('../ref/about/background.jpg')">
+                <td style="background-image: url('/ref/pages/about_page/section_links/what-we-believe.jpg')">
                     <a href="#WhatWeBelieve" onclick="showSection(0)">
                         <div class="section_links_text" id="selector1">What We Believe</div>
                     </a>
                 </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
+                <td style="background-image: url('/ref/pages/about_page/section_links/our-staff.jpg')">
                     <a href="#OurStaff" onclick="showSection(1)">
                         <div class="section_links_text" id="selector2">Meet Our Staff</div>
                     </a>
                 </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
+                <td style="background-image: url('/ref/pages/about_page/section_links/partnered-churches.jpg')">
                     <a href="#PartneredChurches" onclick="showSection(2)">
                         <div class="section_links_text" id="selector3">Partner Churches</div>
                     </a>
@@ -42,7 +42,7 @@
         <!-- What we Believe -->
         <section id="element1">
             <div class="content">
-                <ul>
+                <ul id="what-we-believe-element">
                     <li>
                         <h1>About the Bible</h1>
                         <p>
@@ -140,7 +140,7 @@
                         </p>
                     </li>
                     <li>
-                        <h1>Devine Healing</h1>
+                        <h1>Divine Healing</h1>
                         <p>
                             Wherever Jesus went, He ministered with compassion and healed the sick. Christ’s example
                             showed an interconnection with salvation as many believed following their healing.
@@ -197,7 +197,7 @@
         <section id="element2">
             <!-- Pastor Mark -->
             <div>
-                <div id="pastor-lead-image" style="background-image: url('/ref/about/pastors/PastorMark.jpg')">
+                <div id="pastor-lead-image" style="background-image: url('/ref/pages/about_page/pastors/PastorMark.jpg')">
                     <div id="pastor-lead-description" class="content">
                         <h1>Pastor Mark Lehmann</h1>
                         <h2>Lead Pastor</h2>
@@ -224,10 +224,10 @@
                     <!-- Pastor Sonja, Pastor Jason -->
                     <tr>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorSonja.jpg">
+                            <img src="/ref/pages/about_page/pastors/PastorSonja.jpg">
                         </td>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorJason.jpg">
+                            <img src="/ref/pages/about_page/pastors/PastorJason.jpg">
                         </td>
                     </tr>
                     <tr>
@@ -243,10 +243,10 @@
                     <!-- Pastor Mike, Pastor Matthew -->
                     <tr>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorMike.jpg">
+                            <img src="/ref/pages/about_page/pastors/PastorMike.jpg">
                         </td>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorMatthew.jpg">
+                            <img src="/ref/pages/about_page/pastors/PastorMatthew.jpg">
                         </td>
                     </tr>
                     <tr>
@@ -263,10 +263,10 @@
                     <!-- Pastor Arnold, Dr. Mark -->
                     <tr>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorArnold.jpg">
+                            <img src="/ref/pages/about_page//pastors/PastorArnold.jpg">
                         </td>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorMatthew.jpg">
+                            <img src="/ref/pages/about_page//pastors/PastorMatthew.jpg">
                         </td>
                     </tr>
                     <tr>
@@ -282,7 +282,7 @@
                     <!-- Pastor Shane -->
                     <tr>
                         <td class="pastor-image">
-                            <img src="../ref/about/pastors/PastorMike.jpg">
+                            <img src="/ref/pages/about_page//pastors/PastorMike.jpg">
                         </td>
                     </tr>
                     <tr>
@@ -298,7 +298,7 @@
         <!-- Partnered Churches -->
         <section id="element3">
             <div id="partnered-church--bristow" class="partnered-church">
-                <div class="content">
+                <div class="content partnered-church--text">
                     <h1>Cornerstone Church - Bristow, OK</h1>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
@@ -317,7 +317,7 @@
                 </div>
             </div>
             <div id="partnered-church--lumina" class="partnered-church">
-                <div class="content">
+                <div class="content partnered-church--text">
                     <h1>Biserica Lumina Lumii - Balti, Moldova</h1>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
                         page
@@ -335,7 +335,7 @@
                 </div>
             </div>
             <div id="partnered-church--easterhouse" class="partnered-church">
-                <div class="content">
+                <div class="content partnered-church--text">
                     <h1>Easterhouse Community Church - Glasgow, Scotland</h1>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
                         page
