@@ -20,13 +20,16 @@
 
     /* Default values for page if mode is not specified */
     --theme-primary-color: #ecf0f1;
-    --theme-background-color: rgb(42, 45, 51);
-    --theme-header-color-dark: rgba(37, 41, 46, .85);
-    --theme-header-color-light: rgba(233, 233, 233, 0.9);
-    --theme-secondary-color: #bdc3c7;
+    --theme-secondary-color: #34495e;
+    --theme-secondary-color--rgb: 52, 73, 94;
+    --theme-background-color: #ecf0f1;
+    --theme-header-color-dark: rgba(20, 20, 20, 0.8);
+    --theme-header-color-light: rgba(236, 240, 241, 0.9);
+    --theme-subheader-color-light: rgba(220, 220, 220, 0.8);
     --theme-activation-color: #3498db;
-    --theme-text-color: rgb(30, 30, 30);
-    --theme-nav-text: #ecf0f1;
+    --theme-text-color: #34495e;
+    --theme-text-hover: #aaa;
+    --theme-nav-text: #34495e;
     --theme-text-subheader: #7f8c8d;
 
     --header-height: 70px;
@@ -41,8 +44,12 @@
 /* Text Syles */
 h1 {
     margin: 0px;
-    padding: 10px;
+    padding: 10px 0px;
     text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
 }
 
 p {
@@ -50,9 +57,14 @@ p {
     text-indent: 30px;
 }
 
-/* Restore padding back into the ul object */
 ul {
-    padding-left: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+
+li {
+    margin: 30px 0;
 }
 
 /* Body Styles */
@@ -66,7 +78,15 @@ body, html {
 
 section {
     background: var(--theme-primary-color);
-    padding-bottom: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Big images at the top of the page */
+#banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .content {
@@ -121,11 +141,11 @@ section {
 }
 
 /* Section Link Element */
-
 .section_links {
     width: 100%;
     height: 400px;
     table-layout: fixed;
+    border-collapse: collapse;
 }
 
 .section_links:hover a{
@@ -134,20 +154,36 @@ section {
 
 .section_links td {
     width: 20%;
-    
-    background-size: 60vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* border: 2px solid var(--theme-primary-color); */
-
     transition: width .3s;
+}
+
+.section_links img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    transition: .3s
 }
 
 .section_links td:hover {
     width: 50%;
+    cursor: pointer;
+}
+
+.section_links td:hover .section_links_text {
+    font-size: 30px
+    /* opacity: 0; */
+}
+
+.section_links td:hover img {
+    height: 150%;
 }
 
 .section_links a {
+    position: relative;
     /* Fill table */
     display: block;
     /* width: 600px; */
@@ -158,40 +194,65 @@ section {
     
     text-decoration: none;
     color: var(--theme-primary-color);
-    text-shadow: 0 0 10px black;
     text-transform: uppercase;
 
     font-size: 30px;
 
-    transition: font-size .3s, text-shadow .3s;
+    transition: .3s;
 }
 
-.section_links td:hover a {
-    text-shadow: 20px 20px 50px black;
-    font-size: 50px;
-}
 
 .section_links .section_links_text {
     /* Center Text */
     padding: 0;
     margin: 0;
-    position: relative;
+    position: absolute;
     left: 50%;
     top: 25px;
     /* top: 50%; */
     /* transform: translate(-50%, -50%); */
     transform: translateX(-50%);
     text-align: center;
-}
 
-.section_links img {
-    width: 100px;
+    transition: .3s;
 }
 
 .section_links_text {
     background: rgba(236, 240, 241, 0);
 }
 
-/* .button {
-    border: 
-} */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--theme-text-color);
+    padding: 10px 30px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--theme-text-color);
+}
+
+.button:hover {
+    color: var(--theme-text-hover);
+    border-color: var(--theme-text-hover);
+}
+
+.button-small {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--theme-text-color);
+    padding: 5px 10px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--theme-text-color);
+}
+
+.button-small:hover {
+    color: #aaa;
+    border-color: #aaa;
+}

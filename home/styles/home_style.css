@@ -56,17 +56,17 @@
     opacity: 0;
 }
 
-#announcment-div {
+#announcement-div {
     display: inline-block;
     padding: 40px 0;
 }
 
-#announcment-div h3 {
+#announcement-div h3 {
     font-size: 40px;
     font-family: "IBM Plex Sans";
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--theme-background-color);
+    color: var(--theme-text-color);
 }
 
 #banner {

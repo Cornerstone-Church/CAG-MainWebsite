@@ -1,19 +1,25 @@
 
 /* Default display on landing page */
-#element1 {
+.element1 {
     display: none;
 }
 
-#element2 {
+.element2 {
     display: none;
 }
 
-#element3 {
+.element3 {
     display: none;
 }
 
-#defaultElement {
-    display: inline;
+.defaultElement {
+    display: block;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 p {
@@ -92,12 +98,6 @@ p {
     padding-bottom: 50px;
 }
 
-#about-welcome {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
 .what-we-believe--background {
     background: #E8D6D1;
 }
@@ -174,3 +174,4 @@ p {
 
     color: var(--theme-text-subheader);
 }
+

@@ -19,28 +19,65 @@
 <body>
     <div id="header"></div>
     <section id="about-sections" class="header_padding">
+        <!-- Banners -->
+        <section class="defaultElement">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
+        <section class="element1">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
+        <section id="banner" class="element2">
+            <div>
+                <div id="pastor-lead-image" style="background-image: url('/ref/pages/about_page/pastors/PastorMark.jpg')">
+                    <div id="pastor-lead-description" class="content">
+                        <h1>Pastor Mark Lehmann</h1>
+                        <h2>Lead Pastor</h2>
+                        <p>
+                            Pastor Mark and his wife Dee have been married for 34 years and have two amazing
+                            sons
+                            David
+                            & Matthew, two wonderful daughters by marriage Renee & Brandi and three incredible
+                            grandchildren, Evangeline, Bennett & Scarlett. Having served in the Midwest as a
+                            lead
+                            and staff pastor, they
+                            moved
+                            to
+                            Cornerstone in 1993. Since that time God has been faithful to guide and help them
+                            as
+                            they lead the body.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="element3">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
         <!-- Section Links -->
         <table class="section_links">
             <tr>
-                <td style="background-image: url('/ref/pages/about_page/section_links/what-we-believe.jpg')">
-                    <a href="#WhatWeBelieve" onclick="showSection(0)">
+                <td>
+                    <a onclick="showSection(0)">
+                        <img src="/ref/pages/about_page/section_links/what-we-believe.jpg">
                         <div class="section_links_text" id="selector1">What We Believe</div>
                     </a>
                 </td>
-                <td style="background-image: url('/ref/pages/about_page/section_links/our-staff.jpg')">
-                    <a href="#OurStaff" onclick="showSection(1)">
+                <td>
+                    <a onclick="showSection(1)">
+                        <img src="/ref/pages/about_page/section_links/our-staff.jpg">
                         <div class="section_links_text" id="selector2">Meet Our Staff</div>
                     </a>
                 </td>
-                <td style="background-image: url('/ref/pages/about_page/section_links/partnered-churches.jpg')">
-                    <a href="#PartneredChurches" onclick="showSection(2)">
+                <td>
+                    <a onclick="showSection(2)">
+                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
                         <div class="section_links_text" id="selector3">Partner Churches</div>
                     </a>
                 </td>
             </tr>
         </table>
         <!-- What we Believe -->
-        <section id="element1">
+        <section class="element1">
             <div class="content">
                 <ul id="what-we-believe-element">
                     <li>
@@ -194,30 +231,8 @@
             </div>
         </section>
         <!-- Our Staff -->
-        <section id="element2">
+        <section class="element2">
             <!-- Pastor Mark -->
-            <div>
-                <div id="pastor-lead-image" style="background-image: url('/ref/pages/about_page/pastors/PastorMark.jpg')">
-                    <div id="pastor-lead-description" class="content">
-                        <h1>Pastor Mark Lehmann</h1>
-                        <h2>Lead Pastor</h2>
-                        <p>
-                            Pastor Mark and his wife Dee have been married for 34 years and have two amazing
-                            sons
-                            David
-                            & Matthew, two wonderful daughters by marriage Renee & Brandi and three incredible
-                            grandchildren, Evangeline, Bennett & Scarlett. Having served in the Midwest as a
-                            lead
-                            and staff pastor, they
-                            moved
-                            to
-                            Cornerstone in 1993. Since that time God has been faithful to guide and help them
-                            as
-                            they lead the body.
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div class="content">
                 <!-- Pastor Sonja -->
                 <table class="pastor-table">
@@ -296,7 +311,7 @@
             </div>
         </section>
         <!-- Partnered Churches -->
-        <section id="element3">
+        <section class="element3">
             <div id="partnered-church--bristow" class="partnered-church">
                 <div class="content partnered-church--text">
                     <h1>Cornerstone Church - Bristow, OK</h1>
@@ -357,8 +372,7 @@
                 </div>
             </div>
         </section>
-        <section id="defaultElement">
-            <img id="about-welcome" src="/ref/pages/about_page/cornerstone-background.jpg">
+        <section class="defaultElement">
             <div class="content">
                 <h1>Default About Section</h1>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page

@@ -14,18 +14,18 @@
     </script>
 </head>
 
-<body>
+<body onload="enableDarkMode()">
     <div id="header"></div>
 
     <!-- Content goes here -->
-    <section id="watch-page--section" class="header_padding dark-background">
+    <section id="watch-page--section" class=" dark-background">
         <div id="enduring-faith--section">
-            <div class="content center-text">
+            <div class="content center-text header_padding">
                 <img id="sermon-series-logo" src="/ref/sermon_series/enduring_faith/logo.png">
                 <div class="video-section">
                     <div class="video-wrapper">
                         <div id="defaultVideo" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE?autoplay=1"
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE?rel=0"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -76,7 +76,7 @@
         <div id="sermons--section">
             <div class="content">
                 <h1>Watch our Service</h1>
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/wTDPSwoOC1w?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                <iframe width="800" height="450" src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <h2><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
@@ -140,6 +140,7 @@
     <div id="footer"></div>
 
     <script src="./scripts/watch_page.js"></script>
+    <script src="/scripts/interactive_style.js"></script>
 </body>
 
 </html>

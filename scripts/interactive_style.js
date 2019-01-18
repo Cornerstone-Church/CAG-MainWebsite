@@ -6,19 +6,9 @@ var isScrolling = false;
 var scrollTransitionHeight = 200;
 
 // Enable light mode
-var lightMode = false;
+var lightMode = true;
 
-// Light mode styles
-var lightModePrimaryColor = "#dadada";
-var lightModeSecondaryColor = "#888";
-var lightModeTextColor = "#111";
-var lightModNavTextColor = "";
 
-// Dark mode styles
-var darkModePrimaryColor = "rgba(10, 10, 10, 1.0)";
-var darkModeSecondaryColor = "#aaa";
-var darkModeTextColor = "#eee";
-var darkModeNavTextColor = "";
 
 
 function headerVideo() {
@@ -70,24 +60,20 @@ function headerScroll() {
 }
 
 // TODO: Implement nav color change
-
-function enableLightMode() {
-    var entirePage = document.querySelector("body");
-
-    entirePage.style.setProperty('--theme-primary-color', lightModePrimaryColor);
-    entirePage.style.setProperty('--theme-secondary-color', lightModeSecondaryColor);
-    entirePage.style.setProperty('--theme-text-color', lightModeTextColor);
-
-    lightMode = true;
-}
-
-
 function enableDarkMode() {
-    var entirePage = document.querySelector("body");
+    // Declare Variables
+    var header = document.querySelector("header");
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
 
-    entirePage.style.setProperty('--theme-primary-color', darkModePrimaryColor);
-    entirePage.style.setProperty('--theme-secondary-color', darkModeSecondaryColor);
-    entirePage.style.setProperty('--theme-text-color', darkModeTextColor);
+    // Header elements
+    header.style.background = 'var(--theme-header-color-dark)';
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-primary-color)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-white.png";
 
     lightMode = false;
 }

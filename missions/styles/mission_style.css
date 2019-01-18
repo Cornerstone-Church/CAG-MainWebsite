@@ -1,0 +1,19 @@
+#project-links {
+    margin-top: 50px;
+    width: 100%;
+}
+
+#project-links td {
+    width: 50%;
+    text-align: center;
+    vertical-align: top;
+}
+
+#project-links a {
+    color: var(--theme-text-color);
+    text-decoration: none;
+}
+
+#project-links a:hover {
+    color: var(--theme-text-hover);
+}
