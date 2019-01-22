@@ -14,6 +14,7 @@ var lightMode = true;
 function headerVideo() {
     var header = document.querySelector("header");
     header.classList.add('header-transparent');
+    enableLightText();
 }
 
 
@@ -32,13 +33,7 @@ function headerScroll() {
         if (!isScrolling) {
             header.classList.toggle("header-blur");
             header.classList.toggle("header-transparent");
-
-            // Check to see if light mode should be applied
-            if (lightMode) {
-                header.classList.toggle("header-light");
-            } else {
-                header.classList.toggle("header-dark");
-            }
+            enableNormalText();
 
             isScrolling = true;
         }
@@ -46,20 +41,14 @@ function headerScroll() {
         if (isScrolling) {
             header.classList.toggle("header-blur");
             header.classList.toggle("header-transparent");
-
-            // Check to see if light mode should be applied
-            if (lightMode) {
-                header.classList.toggle("header-light");
-            } else {
-                header.classList.toggle("header-dark");
-            }
+            enableLightText();
 
             isScrolling = false;
         }
     }
 }
 
-// TODO: Implement nav color change
+
 function enableDarkMode() {
     // Declare Variables
     var header = document.querySelector("header");
@@ -76,4 +65,32 @@ function enableDarkMode() {
     headerLogo.src = "/ref/icons/cag-logo-white.png";
 
     lightMode = false;
+}
+
+
+function enableLightText() {
+    // Declare Variables
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
+
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-primary-color)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-white.png";
+}
+
+
+function enableNormalText() {
+    // Declare Variables
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
+
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-nav-text)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-left.png";
 }
