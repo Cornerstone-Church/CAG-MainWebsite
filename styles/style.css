@@ -256,3 +256,16 @@ section {
     color: #aaa;
     border-color: #aaa;
 }
+
+#debug {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: black;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 5px;
+
+    color: white;
+    font-weight: bold;
+}

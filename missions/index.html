@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="stylesheet" href="../../styles/style.css">
-    <script src="../../scripts/jquery-3.3.1.min.js">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/mission_style.css">
+    <link rel="stylesheet" href="./styles/missions_animation.css">
+    <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
         $(document).ready(function () {
@@ -13,38 +15,66 @@
     </script>
 </head>
 
-<body>
+<body onscroll="scrolling()">
     <div id="header"></div>
+    <div id="debug">Debug</div>
 
     <!-- Content goes here -->
     <section class="header_padding">
-            <table class="section_links">
-                    <tr>
-                        <td>
-                            <a href="visionformissions/">
-                                <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
-                                <div class="section_links_text">Our Vision for Missions</div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="missionsprojects/">
-                                <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
-                                <div class="section_links_text">Missions Projects</div>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="missionstrips/">
-                                <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
-                                <div class="section_links_text">Missions Trips</div>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-        <h1>Missions</h1>
+        <table class="section_links">
+            <tr>
+                <td>
+                    <a href="visionformissions/">
+                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
+                        <div class="section_links_text">Our Vision for Missions</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="missionsprojects/">
+                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
+                        <div class="section_links_text">Missions Projects</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="missionstrips/">
+                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
+                        <div class="section_links_text">Missions Trips</div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div id="section1" class="missions-sections left">
+            <img src="/ref/pages/missions_page/backgrounds/missions-projects.jpg">
+            <div class="text-wrapper">
+                <p>Here at Cornerstone we believe that touching our world through missions is an essential part of who
+                    we
+                    are as a church.</p>
+            </div>
+        </div>
+        <div id="section2" class="missions-sections right">
+            <img src="/ref/pages/missions_page/backgrounds/missions-trips.jpg">
+            <div class="text-wrapper">
+                <p>Over the past decade we have hosted more than <b>___ missions trips</b> and currently
+                    support more then <b>200 missionaries</b> in over <b>60 countries.</b></p>
+            </div>
+        </div>
+        <div id="section3" class="missions-sections left">
+            <img src="/ref/pages/missions_page/backgrounds/vision-for-missions.jpg">
+            <div class="text-wrapper">
+                <p>We believe God is doing a great
+                    work in our world through global missions. Use the links above to check out more about Cornerstone
+                    and
+                    missions.</p>
+            </div>
+        </div>
+
+
     </section>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
+    <script src="./scripts/missions_animation.js"></script>
 </body>
 
 </html>
