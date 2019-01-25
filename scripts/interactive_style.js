@@ -6,24 +6,15 @@ var isScrolling = false;
 var scrollTransitionHeight = 200;
 
 // Enable light mode
-var lightMode = false;
+var lightMode = true;
 
-// Light mode styles
-var lightModePrimaryColor = "#dadada";
-var lightModeSecondaryColor = "#888";
-var lightModeTextColor = "#111";
-var lightModNavTextColor = "";
 
-// Dark mode styles
-var darkModePrimaryColor = "rgba(10, 10, 10, 1.0)";
-var darkModeSecondaryColor = "#aaa";
-var darkModeTextColor = "#eee";
-var darkModeNavTextColor = "";
 
 
 function headerVideo() {
     var header = document.querySelector("header");
-    header.classList.add('header-video');
+    header.classList.add('header-transparent');
+    enableLightText();
 }
 
 
@@ -40,52 +31,66 @@ function headerScroll() {
     if (scrollPosition >= scrollTransitionHeight) {
         // Make sure we only execute once when scrolling
         if (!isScrolling) {
-            header.classList.toggle("header-scroll");
-
-            // Check to see if light mode should be applied
-            if (lightMode) {
-                header.classList.toggle("header-light");
-            } else {
-                header.classList.toggle("header-dark");
-            }
+            header.classList.toggle("header-blur");
+            header.classList.toggle("header-transparent");
+            enableNormalText();
 
             isScrolling = true;
         }
     } else {
         if (isScrolling) {
-            header.classList.toggle("header-scroll");
-
-            // Check to see if light mode should be applied
-            if (lightMode) {
-                header.classList.toggle("header-light");
-            } else {
-                header.classList.toggle("header-dark");
-            }
+            header.classList.toggle("header-blur");
+            header.classList.toggle("header-transparent");
+            enableLightText();
 
             isScrolling = false;
         }
     }
 }
 
-// TODO: Implement nav color change
 
-function enableLightMode() {
-    var entirePage = document.querySelector("body");
+function enableDarkMode() {
+    // Declare Variables
+    var header = document.querySelector("header");
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
 
-    entirePage.style.setProperty('--theme-primary-color', lightModePrimaryColor);
-    entirePage.style.setProperty('--theme-secondary-color', lightModeSecondaryColor);
-    entirePage.style.setProperty('--theme-text-color', lightModeTextColor);
+    // Header elements
+    header.style.background = 'var(--theme-header-color-dark)';
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-primary-color)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-white.png";
 
-    lightMode = true;
+    lightMode = false;
 }
 
 
-function enableDarkMode() {
-    var entirePage = document.querySelector("body");
+function enableLightText() {
+    // Declare Variables
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
 
-    entirePage.style.setProperty('--theme-primary-color', darkModePrimaryColor);
-    entirePage.style.setProperty('--theme-secondary-color', darkModeSecondaryColor);
-    entirePage.style.setProperty('--theme-text-color', darkModeTextColor);
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-primary-color)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-white.png";
+}
 
-    lightMode = false;
+
+function enableNormalText() {
+    // Declare Variables
+    var navTextElements = document.querySelectorAll("nav a");
+    var headerLogo = document.querySelector("#header-icon img");
+
+    // Sets the text color of the nav bar
+    for (var i = 0; i < navTextElements.length; i++) {
+        navTextElements[i].style.color = 'var(--theme-nav-text)';
+    }
+    // Change Logo to white
+    headerLogo.src = "/ref/icons/cag-logo-left.png";
 }

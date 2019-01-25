@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/ministries_animation.css">
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -16,46 +18,120 @@
 <body>
     <div id="header"></div>
 
+    <table class="section-bar barEnterAnimation">
+        <tr>
+            <td style="background-image: url('../ref/about/background.jpg')">
+                <a href="ministered/">
+                    <div class="section-bar--text">Be Ministered To</div>
+                </a>
+            </td>
+            <td style="background-image: url('../ref/about/background.jpg')">
+                <a href="fellowship/">
+                    <div class="section-bar--text">Find Fellowship</div>
+                </a>
+            </td>
+            <td style="background-image: url('../ref/about/background.jpg')">
+                <a href="freedom/">
+                    <div class="section-bar--text">Find Freedom</div>
+                </a>
+            </td>
+            <td style="background-image: url('../ref/about/background.jpg')">
+                <a href="serve/">
+                    <div class="section-bar--text">Serve</div>
+                </a>
+            </td>
+            <td style="background-image: url('../ref/about/background.jpg')">
+                <a href="education/">
+                    <div class="section-bar--text">Education</div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
     <!-- Content goes here -->
-    <section class="header_padding">
-        <!-- TODO: Make this parallax? -->
-        <table class="section_links">
-            <tr>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="ministered/">
-                        <div class="section_links_text">Be Ministered To</div>
+    <section class="header_padding--barAnimate">
+        <ul id="ministry-selector">
+            <li>
+                <a id="be-ministered--bigButton" onclick="sectionExpand(0)">
+                    <img src="/ref/announcments/slides/slide1-background.jpg">
+                    <div id="be-ministered--title" class="selector-text-header">
+                        <h1>Be Ministered To</h1>
+                        <h2>Details -></h2>
+                    </div>
+                    <div id="be-ministered--content" class="selector-text-content">
+                        <h1>Be Ministered To</h1>
+                        <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
+                            akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id="find-fellowship--bigButton" onclick="sectionExpand(1)">
+                        <img src="/ref/announcments/slides/slide1-background.jpg">
+                        <div id="find-fellowship--title" class="selector-text-header">
+                            <h1>Find Fellowship</h1>
+                            <h2>Details -></h2>
+                        </div>
+                        <div id="find-fellowship--content" class="selector-text-content">
+                            <h1>Find Fellowship To</h1>
+                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
+                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                        </div>
                     </a>
-                </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="fellowship/">
-                        <div class="section_links_text">Find Fellowship</div>
+            </li>
+            <li>
+                <a id="find-freedom--bigButton" onclick="sectionExpand(2)">
+                        <img src="/ref/announcments/slides/slide1-background.jpg">
+                        <div id="find-freedom--title" class="selector-text-header">
+                            <h1>Find Freedom</h1>
+                            <h2>Details -></h2>
+                        </div>
+                        <div id="find-freedom--content" class="selector-text-content">
+                            <h1>Find Freedom</h1>
+                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
+                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                        </div>
                     </a>
-                </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="freedom/">
-                        <div class="section_links_text">Find Freedom</div>
+            </li>
+            <li>
+                <a id="serve--bigButton" onclick="sectionExpand(3)">
+                        <img src="/ref/announcments/slides/slide1-background.jpg">
+                        <div id="serve--title" class="selector-text-header">
+                            <h1>Serve</h1>
+                            <h2>Details -></h2>
+                        </div>
+                        <div id="serve--content" class="selector-text-content">
+                            <h1>Serve</h1>
+                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
+                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                        </div>
                     </a>
-                </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="serve/">
-                        <div class="section_links_text">Serve</div>
+            </li>
+            <li>
+                <a id="education--bigButton" onclick="sectionExpand(4)">
+                        <img src="/ref/announcments/slides/slide1-background.jpg">
+                        <div id="education--title" class="selector-text-header">
+                            <h1>Education</h1>
+                            <h2>Details -></h2>
+                        </div>
+                        <div id="education--content" class="selector-text-content">
+                            <h1>Education</h1>
+                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
+                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                        </div>
                     </a>
-                </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="education/">
-                        <div class="section_links_text">Education</div>
-                    </a>
-                </td>
-            </tr>
-        </table>
+            </li>
+        </ul>
+
         <div class="content">
-            <h1>Ministries</h1>
-            <p>Description section</p>
+
         </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
+
+    <script src="./scripts/ministries-script.js"></script>
 </body>
 
 </html>

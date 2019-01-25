@@ -1,0 +1,177 @@
+
+/* Default display on landing page */
+.element1 {
+    display: none;
+}
+
+.element2 {
+    display: none;
+}
+
+.element3 {
+    display: none;
+}
+
+.defaultElement {
+    display: block;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    text-indent: 0px;
+}
+
+#pastor-lead-image {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 640px;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+}
+
+#pastor-lead-description {
+    padding: 20px;
+    align-self: flex-end;
+    text-align: center;
+    background: rgba(255, 255, 255, .9);
+}
+
+#pastor-lead-description h1 {
+    padding: 5px;
+    color: var(--theme-secondary-color);
+    font-size: 30px;
+}
+
+#pastor-lead-description h2 {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+
+
+#all-staff-link {
+    display: block;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #7f8c8d;
+    
+}
+
+#all-staff-link:hover {
+    text-decoration: underline;
+}
+
+#partnered-church--bristow {
+    background: url('/ref/pages/about_page/partnered/bristow.jpg');
+}
+
+#partnered-church--easterhouse {
+    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
+}
+
+#partnered-church--lumina {
+    background: url('/ref/pages/about_page/partnered/biserica.jpg');
+}
+
+#partnered-church--bristow, #partnered-church--easterhouse, #partnered-church--lumina {
+    background-position: center;
+    background-size: 100vw;
+    background-attachment: fixed;
+}
+
+#what-we-believe-element {
+    list-style: none;
+    padding: 0px;
+}
+
+#what-we-believe-element li {
+    padding-bottom: 50px;
+}
+
+.what-we-believe--background {
+    background: #E8D6D1;
+}
+
+.pastor-table {
+    margin: 0;
+    text-align: center;
+    width: 800px;
+}
+
+.pastor-table:first-child {
+    margin-top: 50px;
+}
+
+.pastor-table h1 {
+    font-size: 25px;
+    padding-left: 20px;
+    color: var(--theme-secondary-color);
+}
+
+.pastor-table h2 {
+    font-size: 18px;
+    padding: 0 10px;
+    color: var(--theme-text-subheader);
+}
+
+.pastor-table img {
+    border: 10px solid white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-table tr {
+    text-align: center;
+}
+
+.pastor-table td{
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
+.pastor-image {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.pastor-description {
+    padding-bottom: 30px;
+}
+
+.partnered-church {
+    height: 80vh;
+    position: relative;
+    margin: 40px 0;
+}
+
+.partnered-church--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 30px;
+
+    background: var(--theme-primary-color);
+
+    /* background: rgba(255, 255, 255, .6); */
+    /* -webkit-backdrop-filter: blur(30px); */
+}
+
+.partnered-church--text h1 {
+    padding-bottom: 20px;
+    margin: -10px 0 0 0;
+
+    color: var(--theme-text-subheader);
+}
+

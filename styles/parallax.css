@@ -7,15 +7,15 @@
 }
 
 .parallax_back h1 {
-    margin: -30px 0 -10px 0;
+    margin: 0px 0 10px 0;
     padding: 0;
     /* TODO: Glitch where it wraps */
     width: 800px;
 
     color: rgb(255, 255, 255);
-    font-size: 90px;
+    font-size: 60px;
     font-family: 'IBM Plex Sans';
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
     font-weight: bold;
 
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -28,7 +28,7 @@
     color: rgb(200, 200, 200);
     font-size: 30px;
     font-family: 'IBM Plex Sans';
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
     font-weight: normal;
 
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -41,7 +41,7 @@
     color: rgb(200, 200, 200);
     font-size: 20px;
     font-family: 'IBM Plex Sans';
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
     font-style: italic;
     font-weight: normal;
 
@@ -52,7 +52,7 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 20px;
-    font-variant-caps: all-small-caps;
+    text-transform: uppercase;
 
     transition: .3s ease-in-out;
 }
@@ -67,11 +67,9 @@
 .parallax_base {
     background: var(--theme-primary-color);
     background-position: center;
-    padding: 40px 0px;
-    border-top: 2px solid var(--theme-secondary-color);
-    border-bottom: 2px solid var(--theme-secondary-color);
+    padding: 0;
+    text-align: center;
     color: var(--theme-text-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Creates a container for the whole body section to be in */
@@ -83,8 +81,18 @@
 }
 
 .parallax_group {
+    /* Sets so parent is now this group */
     position: relative;
     height: 100vh;
+    transform-style: preserve-3d;
+
+    /* DEBUG */
+    /* transform: translate3d(700px, 0px, -800px) rotateY(40deg); */
+}
+
+.parallax_group_autoSize {
+    /* Sets so parent is now this group */
+    position: relative;
     transform-style: preserve-3d;
 
     /* DEBUG */
@@ -95,9 +103,9 @@
     /* Set the position to be absolute without any values */
     position: absolute;
     top: 0px;
+    left: 0px;
     bottom: 0px;
     right: 0px;
-    left: 0px;
 }
 
 .parallax_layer video {
@@ -111,6 +119,10 @@
     top: 50%;
 
     transform: translate(-50%, -50%);
+}
+
+.parallax_close {
+    transform: translateZ(300px) scale(-2);
 }
 
 .parallax_base {

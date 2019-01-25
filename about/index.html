@@ -2,41 +2,395 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/jquery-3.3.1.min.js">
+    <!-- About specific stylesheet -->
+    <link rel="stylesheet" href="./styles/about_style.css">
+    <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
         $(document).ready(function () {
-            $('#header').load('../templates/header.html');
-            $('#footer').load('../templates/footer.html');
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html');
         });
     </script>
 </head>
 
 <body>
     <div id="header"></div>
-    <section class="header_padding">
+    <section id="about-sections" class="header_padding">
+        <!-- Banners -->
+        <section class="defaultElement">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
+        <section class="element1">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
+        <section id="banner" class="element2">
+            <div>
+                <div id="pastor-lead-image" style="background-image: url('/ref/pages/about_page/pastors/PastorMark.jpg')">
+                    <div id="pastor-lead-description" class="content">
+                        <h1>Pastor Mark Lehmann</h1>
+                        <h2>Lead Pastor</h2>
+                        <p>
+                            Pastor Mark and his wife Dee have been married for 34 years and have two amazing
+                            sons
+                            David
+                            & Matthew, two wonderful daughters by marriage Renee & Brandi and three incredible
+                            grandchildren, Evangeline, Bennett & Scarlett. Having served in the Midwest as a
+                            lead
+                            and staff pastor, they
+                            moved
+                            to
+                            Cornerstone in 1993. Since that time God has been faithful to guide and help them
+                            as
+                            they lead the body.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="element3">
+            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
+        </section>
         <!-- Section Links -->
         <table class="section_links">
             <tr>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="/about/whatwebelieve/"><div class="section_links_text">What We Believe</div></a>
+                <td>
+                    <a onclick="showSection(0)">
+                        <img src="/ref/pages/about_page/section_links/what-we-believe.jpg">
+                        <div class="section_links_text" id="selector1">What We Believe</div>
+                    </a>
                 </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="/about/ourstaff/"><div class="section_links_text">Meet Our Staff</div></a>
+                <td>
+                    <a onclick="showSection(1)">
+                        <img src="/ref/pages/about_page/section_links/our-staff.jpg">
+                        <div class="section_links_text" id="selector2">Meet Our Staff</div>
+                    </a>
                 </td>
-                <td style="background-image: url('../ref/about/background.jpg')">
-                    <a href="/about/partnerchurches/"><div class="section_links_text">Partner Churches</div></a>
+                <td>
+                    <a onclick="showSection(2)">
+                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
+                        <div class="section_links_text" id="selector3">Partner Churches</div>
+                    </a>
                 </td>
             </tr>
         </table>
+        <!-- What we Believe -->
+        <section class="element1">
+            <div class="content">
+                <ul id="what-we-believe-element">
+                    <li>
+                        <h1>About the Bible</h1>
+                        <p>
+                            We believe that the Bible is fully inspired by God, that it is entirely trustworthy and is
+                            our guide for faith and life.
+                            <br><br><i>All Scripture is God-breathed and is useful for teaching, rebuking, correcting
+                                and training
+                                in righteousness, so that the servant of God may be thoroughly equipped for every good
+                                work. (2 Timothy 3:16)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About God</h1>
+                        <p>
+                            We believe that God is the loving Creator of all that exists, both seen and unseen. God is
+                            eternal and completely good, knowing all things, having all power and majesty. God exists
+                            eternally as the Trinity, in three persons, yet one God: Father, Son, and Holy Spirit.
 
-        <!-- Description Section -->
-        <div class="content text_element">Description Section</div>
+                            <br><br><i>Do you not know? Have you not heard? The Lord is the everlasting God, the
+                                Creator of the
+                                ends of the earth. He will not grow tired or weary, and his understanding no one can
+                                fathom. Isaiah 40:28/ Genesis 1:1-31)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About Jesus</h1>
+                        <p>
+                            We believe Jesus was born of the virgin Mary and lived a sinless life. We believe He was
+                            crucified for the sins of us all, rose again from the dead and ascended to heaven.
+
+                            <br><br><i>Jesus said to her, “I am the resurrection and the life. The one who believes in
+                                me will
+                                live, even though they die; and whoever lives by believing in me will never die. Do you
+                                believe this?” (John 11:25-26)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About the Holy Spirit</h1>
+                        <p>
+                            We believe that the Holy Spirit, sent from God to live in all who believe in Jesus,
+                            teaches, comforts, and empowers us, giving each follower of Jesus diverse gifts for serving
+                            in the church and serving others in the world. We believe that it is through the Holy
+                            Spirit that we change and develop a holy life and Jesus-like character.
+
+                            <br><br><i>But you will receive power when the Holy Spirit comes on you; and you will be my
+                                witnesses
+                                in Jerusalem, and in all Judea and Samaria, and to the ends of the earth. (Acts 1:8).</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About Salvation</h1>
+                        <p>
+                            We believe that all people are created with dignity and great value in the image of God. We
+                            are created to live in a thriving relationship with God. However, through our sin (failing
+                            to live by God’s moral standards), we break our intended relationship with God and we
+                            experience the sad consequences of that broken relationship, but because of God’s love for
+                            us, He sent His Son, Jesus, to rescue us from those consequences and to restore our broken
+                            relationship with God, through Jesus´ death on the cross. We can receive the free gift of
+                            forgiveness and can be made new when we put our faith in Him.
+
+                            <br><br><i>For God so loved the world that he gave his one and only Son, that whoever
+                                believes in him shall not perish but have eternal life. (John 3:16)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About the Church</h1>
+                        <p>
+                            We believe that the church is comprised of any person, anywhere in the world who puts faith
+                            in Jesus. The church itself is people who are empowered by God’s Spirit to be part of the
+                            mission of Jesus here on earth. The church is one global community, but has smaller, local
+                            expressions, such as Cornerstone. Each local church expression has a unique personality and
+                            we see beauty in that diversity. We believe that the church does not exist for itself, but
+                            exists as a community of worshipers who are here to serve others, as we bring the love and
+                            hope of Jesus to the world around us.
+
+                            <br><br><i>Consequently, you are no longer foreigners and strangers, but fellow citizens
+                                with God’s
+                                people and also members of his household, built on the foundation of the apostles and
+                                prophets, with Christ Jesus himself as the chief cornerstone. (Ephesians 2:19-20)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>About the Afterlife and End Times</h1>
+                        <p>
+                            We believe there are a literal heaven and hell and that one day Jesus will return, although
+                            we approach the topics of the afterlife and end times with great mystery and wonder.
+
+                            <br><br><i>Since, then, you have been raised with Christ, set your hearts on things above,
+                                where
+                                Christ is, seated at the right hand of God. Set your minds on things above, not on
+                                earthly
+                                things. For you died, and your life is now hidden with Christ in God. When Christ, who
+                                is
+                                your life, appears, then you also will appear with him in glory. (Colossians 3:1-4)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Divine Healing</h1>
+                        <p>
+                            Wherever Jesus went, He ministered with compassion and healed the sick. Christ’s example
+                            showed an interconnection with salvation as many believed following their healing.
+
+                            <br><br><i>Jesus went throughout Galilee, teaching in their synagogues, proclaiming the
+                                good news of
+                                the kingdom, and healing every disease and sickness among the people. (Matthew 4:23)</i>
+
+                            <br><br>Our Lord continues to heal today and it is vital that the church preach, teach and
+                            practice
+                            this biblical truth. Scriptures command believers to pray in faith and trust God for the
+                            outcome.
+
+                            <br><br><i>He himself bore our sins in his body on the cross, so that we might die to sins
+                                and live
+                                for righteousness; “by his wounds you have been healed.” (Peter 2:24)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Empowerment of the Holy Spirit</h1>
+                        <p>
+                            The doctrine of the Baptism in the Holy Spirit is our distinctive. This truth explains the
+                            passion and power of our witness. Jesus promised His followers they would receive power
+                            from on high so that they would be His witnesses. We believe this truth is just as relevant
+                            today as our Fellowship continues to take the gospel message around the globe.
+
+                            <br><br><i>Peter replied, “Repent and be baptized, every one of you, in the name of Jesus
+                                Christ for
+                                the forgiveness of your sins. And you will receive the gift of the Holy Spirit. (Acts
+                                2:38)</i>
+                        </p>
+                    </li>
+                    <li>
+                        <h1>The Second Coming</h1>
+                        <p>
+                            With the world experiencing natural disasters, economic downturns, and increasing
+                            uncertainties on many fronts, the doctrine of Christ’s Second Coming is more relevant than
+                            ever. Believers must rest in the certainty of the imminent return of our Lord, live their
+                            lives in view of this, and share this hope with others.
+
+                            <br><br><i>Since everything will be destroyed in this way, what kind of people ought you to
+                                be? You
+                                ought to live holy and godly lives as you look forward to the day of God and speed its
+                                coming. That day will bring about the destruction of the heavens by fire, and the
+                                elements
+                                will melt in the heat. But in keeping with his promise we are looking forward to a new
+                                heaven and a new earth, where righteousness dwells (2 Peter 3:11-13)</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Our Staff -->
+        <section class="element2">
+            <!-- Pastor Mark -->
+            <div class="content">
+                <!-- Pastor Sonja -->
+                <table class="pastor-table">
+                    <!-- Pastor Sonja, Pastor Jason -->
+                    <tr>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorSonja.jpg">
+                        </td>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorJason.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pastor-description">
+                            <h1>Sonja Owen</h1>
+                            <h2>Children's Pastor</h2>
+                        </td>
+                        <td class="pastor-description">
+                            <h1>Jason Rose</h1>
+                            <h2>Creative Arts Pastor</h2>
+                        </td>
+                    </tr>
+                    <!-- Pastor Mike, Pastor Matthew -->
+                    <tr>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorMike.jpg">
+                        </td>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorMatthew.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pastor-description">
+                            <h1>Michael Badolato</h1>
+                            <h2>Youth Pastor</h2>
+                        </td>
+                        <td class="pastor-description">
+                            <h1>Matthew Lehmann</h1>
+                            <h2>Young Adults Pastor</h2>
+                        </td>
+
+                    </tr>
+                    <!-- Pastor Arnold, Dr. Mark -->
+                    <tr>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page//pastors/PastorArnold.jpg">
+                        </td>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page//pastors/PastorMatthew.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pastor-description">
+                            <h1>Arnold Bracy</h1>
+                            <h2>Care Pastor</h2>
+                        </td>
+                        <td class="pastor-description">
+                            <h1>Dr. Mark Wootton</h1>
+                            <h2>Discipleship Pastor</h2>
+                        </td>
+                    </tr>
+                    <!-- Pastor Shane -->
+                    <tr>
+                        <td class="pastor-image">
+                            <img src="/ref/pages/about_page//pastors/PastorMike.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pastor-description">
+                            <h1>Shane Pucher</h1>
+                            <h2>Special Ministries Pastor</h2>
+                        </td>
+                    </tr>
+                </table>
+                <a id="all-staff-link" href="./allstaff/">Meet the whole team</a>
+            </div>
+        </section>
+        <!-- Partnered Churches -->
+        <section class="element3">
+            <div id="partnered-church--bristow" class="partnered-church">
+                <div class="content partnered-church--text">
+                    <h1>Cornerstone Church - Bristow, OK</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                        purpose
+                        (injected humour and the like).</p>
+                    <ul>
+                        <li>Address: 114 E. 7th Ave. Bristow, OK 74010</li>
+                        <li>Phone: (918) 367-2070</li>
+                        <li>Contact: mark@cag.church</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="partnered-church--lumina" class="partnered-church">
+                <div class="content partnered-church--text">
+                    <h1>Biserica Lumina Lumii - Balti, Moldova</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a
+                        page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                        purpose
+                        (injected humour and the like).</p>
+                    <ul>
+                        <li>Address: Moldova 3100. Or. Balti. Str. Decebal 144</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="partnered-church--easterhouse" class="partnered-church">
+                <div class="content partnered-church--text">
+                    <h1>Easterhouse Community Church - Glasgow, Scotland</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a
+                        page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                        purpose
+                        (injected humour and the like).</p>
+                    <ul>
+                        <li>Website: <a href="http://www.easterhousecommunitychurch.org.uk">www.easterhousecommunitychurch.org.uk</a></li>
+                        <li>Address: Unit 40 Upper Shandwick Square, 710 Westerhouse Rd, Glasgow G34 9DT, United
+                            Kingdom</li>
+                        <li>+44 7828 756945</li>
+                        <li>Contact: easterhousecommunitychurch@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="defaultElement">
+            <div class="content">
+                <h1>Default About Section</h1>
+                <p>Added another section</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                    their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+        </section>
     </section>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
+    <!-- Scripts -->
+    <script src="./scripts/about.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,122 @@
+:root {
+    --sermon-primary-color: white;
+}
+
+#sermon-video-element {
+    display: inline-block;
+    /* Center Video element */
+    width: 100%;
+    margin: 0 0;
+    padding: 90px 0;
+
+    background: var(--theme-background-color);
+    background-image: url('/ref/sermon_series/enduring_faith/background.jpg');
+}
+
+#sermon-video-element iframe {
+    margin-top: 50px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+#sermon-video-element h1 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans';
+
+    color: var(--sermon-primary-color);
+    /* color: var(--theme-secondary-color); */
+
+    text-shadow: 0 0 20px black;
+}
+
+#sermon-video-element h2 {
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+#sermon-video-element a:hover {
+    color: var(--theme-secondary-color);
+}
+
+#sermon-video-element a {
+    color: var(--sermon-primary-color);
+    text-decoration: none;
+}
+
+#sermon-video-element img {
+    width: 600px;
+    height: auto;
+}
+
+.section-fixed-height {
+    height: 900px;
+}
+
+#series-logo, #series-text {
+    opacity: 0;
+}
+
+#announcement-div {
+    display: inline-block;
+    padding: 40px 0;
+}
+
+#announcement-div h3 {
+    font-size: 40px;
+    font-family: "IBM Plex Sans";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--theme-text-color);
+}
+
+#banner {
+    display: block;
+    position: relative;
+    /* Weird padding on the left I could not get rid of */
+    margin-left: -2px;
+    /* Elements will not wrap under the banner */
+    margin-bottom: 90vh;
+}
+
+.slide {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+    height: 90vh;
+    width: 100%;
+
+    position: absolute;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: 0.2s;
+}
+
+.slide-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: auto;
+    height: auto;
+    z-index: 10;
+}
+
+.slide-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+    height: auto;
+    z-index: 11;
+}
+
+#slide1 {
+    opacity: 1;
+}

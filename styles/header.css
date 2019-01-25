@@ -1,30 +1,34 @@
 header {
     /* Make parent relative for centering */
     position: fixed;
-    background: var(--theme-header-color-dark);
+    background: var(--theme-header-color-light);
+    top: 0px;
     
     display: flex;
     align-content: center;
     justify-content: center;
 
     /* EXPERIMENTAL */
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     
     /* Size */
     height: var(--header-height);
     width: 100%;
     z-index: 100;
+
+    transition: .5s;
 }
 
-.header-scroll {
-    /* border-bottom: solid 1px var(--theme-secondary-color); */
+.header-blur {
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
 
-.header-video {
+.header-transparent {
     background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px) saturate(100%);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
     transition: ease-in-out .3s;
 }
 
@@ -41,17 +45,9 @@ header {
 }
 
 .header-content {
-    /* Center header content */
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-
     /* Size */
     width: 100%;
     padding: 0 10px;
-
-    /* background: greenyellow; */
 }
 
 header table {
@@ -67,16 +63,21 @@ header table {
 }
 
 #header-icon img {
-    margin: 0;
+    margin: 0 20px;
     padding: 0;
-    height: calc(var(--header-height) - 10px);
+    /* Get the height of the header and subtracked 10px */
+    height: calc(var(--header-height) - 20px);
+}
+
+nav {
+    text-align: right;
 }
 
 nav ul {
-    text-align: right;
+    display: inline-block;
     padding: 0;
     margin: 0;
-    margin-right: 20px;
+    margin: 0 20px;
     /* Removes a spacing glitch */
     font-size: 0;
 }
@@ -90,6 +91,7 @@ nav li {
 }
 
 nav a {
+    display: block;
     /* Format Nav bar Text */
     text-decoration: none;
     color: var(--theme-nav-text);
@@ -105,6 +107,11 @@ nav a {
     transition: .1s;
 }
 
-nav a:hover {
+nav ul:hover a {
+    opacity: .7;
+}
+
+nav ul a:hover {
     color: var(--theme-secondary-color);
+    opacity: 1;
 }

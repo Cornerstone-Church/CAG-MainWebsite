@@ -1,0 +1,28 @@
+@keyframes barEnter {
+    0% { opacity: 0; transform: translateY(-30px); }
+    20% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes pageShift {
+    0% { margin-top: var(--header-height); }
+    100% { margin-top: calc(var(--header-height) + var(--header-second-bar--height)) }
+}
+
+.barEnterAnimation {
+    opacity: 0;
+    animation-name: barEnter;
+    animation-delay: .2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.header_padding--barAnimate {
+    margin-top: var(--header-height);
+
+    animation-name: pageShift;
+    animation-delay: .2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}

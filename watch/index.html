@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/watch_page_style.css">
+    <script src="../../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html');
+        });
+    </script>
+</head>
+
+<body onload="enableDarkMode()">
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section id="watch-page--section" class=" dark-background">
+        <div id="enduring-faith--section">
+            <div class="content center-text header_padding">
+                <img id="sermon-series-logo" src="/ref/sermon_series/enduring_faith/logo.png">
+                <div class="video-section">
+                    <div class="video-wrapper">
+                        <div id="defaultVideo" class="video">
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE?rel=0"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video1" class="video">
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video2" class="video">
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/c7Wup5DlQXk"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video3" class="video">
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/zaAy1n1rMgs"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video4" class="video">
+                            <iframe width="780" height="331" src="https://www.youtube.com/embed/Ok2JDbIEbss"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <table id="video-thumbs">
+                        <tr>
+                            <td id="thumb1" class="" onclick="showVideoOne()">
+                                <img src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1>The Race Before Us</h1>
+                            </td>
+                            <td id="thumb2" class="" onclick="showVideoTwo()">
+                                <img src="/ref/pages/watch_page/thumbnails/02.jpg">
+                                <h1>Video 2</h1>
+                            </td>
+                            <td id="thumb3" class="" onclick="showVideoThree()">
+                                <img src="/ref/pages/watch_page/thumbnails/03.jpg">
+                                <h1>Video 3</h1>
+                            </td>
+                            <td id="thumb4" class="" onclick="showVideoFour()">
+                                <img src="/ref/pages/watch_page/thumbnails/04.jpg">
+                                <h1>Video 4</h1>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="sermons--section">
+            <div class="content">
+                <h1>Watch our Service</h1>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h2><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
+                        Services</a></h2>
+            </div>
+        </div>
+        <div id="recent-videos--section">
+            <h1>Recent Videos</h1>
+            <table>
+                <tr>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-1.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-2.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-3.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-4.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-5.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#"><img src="/ref/pages/watch_page/recent-vid/recent_vid-6.png">
+                            <div id="play-button">
+                                <div id="play-text">Play</div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="./scripts/watch_page.js"></script>
+    <script src="/scripts/interactive_style.js"></script>
+</body>
+
+</html>

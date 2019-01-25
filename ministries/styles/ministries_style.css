@@ -1,0 +1,126 @@
+:root {
+    --default-button--height: 400px;
+    --expanded-button--height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-bar {
+    position: fixed;
+    top: var(--header-height);
+    background: var(--theme-subheader-color-light);
+    width: 100%;
+    /* EXPERIMENTAL */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    table-layout: fixed;
+
+    z-index: 90;
+}
+
+.section-bar td {
+    width: 20%;
+    text-align: center;
+    border-right: 2px solid rgba(var(--theme-secondary-color--rgb), 0.3);
+    transition: .3s;
+
+}
+
+.section-bar td:hover {
+    width: 30%;
+}
+
+.section-bar td:last-child {
+    border-right: none;
+}
+
+.section-bar a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Noto Sans TC";
+    padding: 4px;
+
+    color: var(--theme-header-color-dark);
+}
+
+.section-bar .selected a{
+    color: #666;
+}
+
+#ministry-selector {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+
+
+}
+
+#ministry-selector a {
+    display: block;
+    height: var(--default-button--height);
+    
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+#ministry-selector img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 1
+}
+
+#ministry-selector .selector-text-header {
+    z-index: 2;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    opacity: 1;
+    transition: .5s;
+}
+
+#ministry-selector .selector-text-content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: .5s;
+}
+
+#ministry-selector h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: var(--theme-primary-color);
+    font-weight: bold;
+}
+
+#ministry-selector h2 {
+    color: var(--theme-secondary-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+#ministry-selector p {
+    color: var(--theme-primary-color);
+}
+
