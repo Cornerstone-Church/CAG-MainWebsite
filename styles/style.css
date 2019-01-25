@@ -239,6 +239,24 @@ section {
     border-color: var(--theme-text-hover);
 }
 
+.button--white {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--theme-primary-color);
+    padding: 10px 30px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--theme-primary-color);
+}
+
+.button--white:hover {
+    color: var(--theme-secondary-color);
+    border-color: var(--theme-secondary-color);
+}
+
 .button-small {
     display: inline-block;
     text-decoration: none;
