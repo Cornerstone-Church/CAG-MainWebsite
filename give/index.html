@@ -2,13 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="stylesheet" href="../../styles/style.css">
-    <script src="../../scripts/jquery-3.3.1.min.js">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/give_style.css">
+    <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
         $(document).ready(function () {
-            $('#header').load('../../templates/header.html');
-            $('#footer').load('../../templates/footer.html');
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html');
         });
     </script>
 </head>
@@ -18,9 +19,41 @@
 
     <!-- Content goes here -->
     <section class="header_padding">
-        <h1>Give</h1>
+        <div id="banner-give">
+            <img src="/ref/pages/give_page/tithe.jpg">
+            <div class="text">
+                <p>
+                    Here at Cornerstone we believe in giving back what God has blessed us with. Whether that is through
+                    tithe, missions donations, or faith promises we give out of a joyful heart to furthing the kingdom.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="give-online" class="give-buttons">
+                                <div class="button-container">
+                                    <img src="/ref/pages/give_page/online.png">
+                                    <h1>Online</h1>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="give-mobile" class="give-buttons">
+                                <div class="button-container">
+                                    <img src="/ref/pages/give_page/text.png">
+                                    <h1>Text Message</h1>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
     </section>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
 </body>
