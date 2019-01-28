@@ -57,8 +57,11 @@ html {
     list-style: none;
     padding: 0px;
     width: 100%;
+}
 
-
+#ministry-selector li {
+    display: block;
+    margin: 4px 0px;
 }
 
 #ministry-selector a {
