@@ -1,9 +1,9 @@
 // Container imports
-var containerElements = [document.getElementById('be-ministered--bigButton'), document.getElementById('find-fellowship--bigButton'), document.getElementById('find-freedom--bigButton'), document.getElementById('serve--bigButton'), document.getElementById('education--bigButton')];
+var containerElements = [document.getElementById('be-ministered--bigButton'), document.getElementById('find-fellowship--bigButton'), document.getElementById('find-freedom--bigButton'), document.getElementById('serve--bigButton')];
 
 // Title and Content elements
-var titleElements = [document.getElementById('be-ministered--title'), document.getElementById('find-fellowship--title'), document.getElementById('find-freedom--title'), document.getElementById('serve--title'), document.getElementById('education--title')];
-var contentElements = [document.getElementById('be-ministered--content'), document.getElementById('find-fellowship--content'), document.getElementById('find-freedom--content'), document.getElementById('serve--content'), document.getElementById('education--content')];
+var titleElements = [document.getElementById('be-ministered--title'), document.getElementById('find-fellowship--title'), document.getElementById('find-freedom--title'), document.getElementById('serve--title')];
+var contentElements = [document.getElementById('be-ministered--content'), document.getElementById('find-fellowship--content'), document.getElementById('find-freedom--content'), document.getElementById('serve--content')];
 
 var isOpen = false;
 
