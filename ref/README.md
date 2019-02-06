@@ -1,10 +1,10 @@
-#PERMISSIONS
-##Home Page
-###Owner: Silent Sonata
-###Maintainer: Silent Sonata
-###Editors: All
+# PERMISSIONS
+## Reference Section
+### Owner: Silent Sonata
+### Maintainer: Silent Sonata
+### Editors: All
 
-###DO NOT MODIFY THIS DIRECTORY
+### DO NOT MODIFY THIS DIRECTORY
 
 *For any modifications please contact the directory's maintainer stated above via slack.*
 

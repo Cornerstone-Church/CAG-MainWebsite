@@ -1,7 +1,7 @@
-#PERMISSIONS
-##Home Page
-###Owner: Silent Sonata
-###Maintainer: Silent Sonata
+# PERMISSIONS
+## Service Section
+### Owner: Silent Sonata
+### Maintainer: Silent Sonata
 
 *For any modifications please contact the directory's maintainer stated above via slack.*
 
