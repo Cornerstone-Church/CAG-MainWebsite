@@ -12,7 +12,7 @@
 .barEnterAnimation {
     opacity: 0;
     animation-name: barEnter;
-    animation-delay: .2s;
+    animation-delay: .5s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -21,7 +21,7 @@
     margin-top: var(--header-height);
 
     animation-name: pageShift;
-    animation-delay: .2s;
+    animation-delay: .5s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
