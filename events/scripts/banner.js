@@ -2,9 +2,9 @@ var shouldRun = true;
 var currentSlide = 2; // Starts on 2 because 1 is shown by default when page loads
 var slideDelay = 5000; // In miliseconds
 
-var slideOne = document.getElementById("slide1");
-var slideTwo = document.getElementById("slide2");
-var slideThree = document.getElementById("slide3");
+var slideOne = document.getElementById("slider-slide1");
+var slideTwo = document.getElementById("slider-slide2");
+var slideThree = document.getElementById("slider-slide3");
 
 function startSlideShow() {
     window.setInterval(changeSlide, slideDelay);
