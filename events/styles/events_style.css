@@ -144,11 +144,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 60%;
-    height: auto;
+    width: auto;
+    height: 98%;
     z-index: 11;
-}
-
-#slider-slide1 {
-    opacity: 1;
 }

@@ -14,12 +14,14 @@
     </script>
 </head>
 
-<body onload="onLoad()" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
+<body onload="onLoad(); startSlideShow()" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
+        <!-- Title Banner -->
         <img id="banner" src="/ref/pages/events_page/events_banner.jpg">
 
+        <!-- Header Section -->
         <div class="content">
             <center>
                 <h1>Be Apart of the change</h1>
@@ -28,9 +30,8 @@
             </center>
         </div>
 
-
-        <!-- TODO: Get Banner working. Can not display one slide at a time -->
-        <!-- <div id="slider">
+        <!-- Slider -->
+        <div id="slider">
             <div id="slider-slide1" class="slider-slide">
                 <a href="#" onclick="alert('Slide 1')">
                     <img class="slide-background" src="/ref/announcments/slides/slide1-background.jpg">
@@ -49,7 +50,7 @@
                     <img class="slide-foreground" src="/ref/announcments/slides/slide3-foreground.png">
                 </a>
             </div>
-        </div> -->
+        </div>
 
         <div id="paragraphSection">
             <img src="/ref/pages/events_page/hands.jpg">
@@ -65,7 +66,7 @@
         </div>
 
         <div class="content">
-            <h2>Come be apart of touching our community</h2>
+            <h2>Some of the events that we do</h2>
         </div>
 
         <div id="slideshowContainer">
