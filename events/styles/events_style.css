@@ -28,7 +28,7 @@
     opacity: 0;
 
     transition: 1s;
-    transition-delay: 1s;
+    transition-delay: 0s;
 }
 
 .slide-text {
