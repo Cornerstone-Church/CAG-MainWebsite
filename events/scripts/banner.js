@@ -7,6 +7,7 @@ var slideTwo = document.getElementById("slider-slide2");
 var slideThree = document.getElementById("slider-slide3");
 
 function startSlideShow() {
+    slideOne.style.opacity = 1;
     window.setInterval(changeSlide, slideDelay);
 }
 
