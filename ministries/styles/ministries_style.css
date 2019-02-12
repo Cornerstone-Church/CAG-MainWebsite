@@ -64,6 +64,10 @@ html {
     margin: 4px 0px;
 }
 
+#ministry-selector li:hover {
+    cursor: pointer;
+}
+
 #ministry-selector .big-button {
     display: block;
     height: var(--default-button--height);
