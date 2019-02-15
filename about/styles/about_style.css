@@ -27,13 +27,9 @@ p {
 }
 
 #pastor-lead-image {
-    display: flex;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
-    height: 640px;
-    border-top: 10px solid white;
-    border-bottom: 10px solid white;
+    height: 500px;
+    object-fit: cover;
 }
 
 #pastor-lead-description {
@@ -41,10 +37,11 @@ p {
     align-self: flex-end;
     text-align: center;
     background: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
 }
 
 #pastor-lead-description h1 {
-    padding: 5px;
+    padding: 20px 20px 0px 20px;
     color: var(--theme-secondary-color);
     font-size: 30px;
 }
@@ -112,18 +109,6 @@ p {
     margin-top: 50px;
 }
 
-.pastor-table h1 {
-    font-size: 25px;
-    padding-left: 20px;
-    color: var(--theme-secondary-color);
-}
-
-.pastor-table h2 {
-    font-size: 18px;
-    padding: 0 10px;
-    color: var(--theme-text-subheader);
-}
-
 .pastor-table img {
     border: 10px solid white;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
@@ -135,17 +120,45 @@ p {
 
 .pastor-table td{
     text-align: center;
-    /* border: 1px solid green; */
+}
+
+/*  */
+#pastor-list {
+    text-align: center;
+}
+
+.pastor {
+    margin: 10px 30px;
+    width: 320px;
+    display: inline-block;
 }
 
 .pastor-image {
     text-align: center;
-    width: 50%;
-    padding: 20px;
+    border: 10px solid white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    font-size: 0px;
+}
+
+.pastor-image img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
 }
 
 .pastor-description {
     padding-bottom: 30px;
+    text-align: center;
+}
+
+.pastor-description h1 {
+    font-size: 25px;
+    color: var(--theme-secondary-color);
+}
+
+.pastor-description h2 {
+    font-size: 18px;
+    color: var(--theme-text-subheader);
 }
 
 .partnered-church {
@@ -163,9 +176,6 @@ p {
     padding: 30px;
 
     background: var(--theme-primary-color);
-
-    /* background: rgba(255, 255, 255, .6); */
-    /* -webkit-backdrop-filter: blur(30px); */
 }
 
 .partnered-church--text h1 {
@@ -175,3 +185,7 @@ p {
     color: var(--theme-text-subheader);
 }
 
+.large-header {
+    font-size: 30px;
+    margin: 30px 0px 10px 0px;
+}

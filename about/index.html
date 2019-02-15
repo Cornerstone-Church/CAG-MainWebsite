@@ -20,57 +20,25 @@
     <div id="header"></div>
     <section id="about-sections" class="header_padding">
         <!-- Banners -->
-        <section class="defaultElement">
+        <section>
             <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
         </section>
-        <section class="element1">
-            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
-        </section>
-        <section id="banner" class="element2">
-            <div>
-                <div id="pastor-lead-image" style="background-image: url('/ref/pages/about_page/pastors/PastorMark.jpg')">
-                    <div id="pastor-lead-description" class="content">
-                        <h1>Pastor Mark Lehmann</h1>
-                        <h2>Lead Pastor</h2>
-                        <p>
-                            Pastor Mark and his wife Dee have been married for 34 years and have two amazing
-                            sons
-                            David
-                            & Matthew, two wonderful daughters by marriage Renee & Brandi and three incredible
-                            grandchildren, Evangeline, Bennett & Scarlett. Having served in the Midwest as a
-                            lead
-                            and staff pastor, they
-                            moved
-                            to
-                            Cornerstone in 1993. Since that time God has been faithful to guide and help them
-                            as
-                            they lead the body.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="element3">
-            <img id="banner" src="/ref/pages/about_page/cornerstone-background.jpg">
-        </section>
+
         <!-- Section Links -->
         <table class="section_links">
             <tr>
-                <td>
+                <td id="section1">
                     <a onclick="showSection(0)">
-                        <img src="/ref/pages/about_page/section_links/what-we-believe.jpg">
                         <div class="section_links_text" id="selector1">What We Believe</div>
                     </a>
                 </td>
-                <td>
+                <td id="section2">
                     <a onclick="showSection(1)">
-                        <img src="/ref/pages/about_page/section_links/our-staff.jpg">
                         <div class="section_links_text" id="selector2">Meet Our Staff</div>
                     </a>
                 </td>
-                <td>
+                <td id="section3">
                     <a onclick="showSection(2)">
-                        <img src="/ref/pages/about_page/section_links/partnered-churches.jpg">
                         <div class="section_links_text" id="selector3">Partner Churches</div>
                     </a>
                 </td>
@@ -126,7 +94,8 @@
 
                             <br><br><i>But you will receive power when the Holy Spirit comes on you; and you will be my
                                 witnesses
-                                in Jerusalem, and in all Judea and Samaria, and to the ends of the earth. (Acts 1:8).</i>
+                                in Jerusalem, and in all Judea and Samaria, and to the ends of the earth. (Acts
+                                1:8).</i>
                         </p>
                     </li>
                     <li>
@@ -233,80 +202,110 @@
         <!-- Our Staff -->
         <section class="element2">
             <!-- Pastor Mark -->
+            <div id="pastor-lead-description" class="content">
+                <img id="pastor-lead-image" src="/ref/pages/about_page/pastors/PastorMark.jpg">
+                <h1>Pastor Mark Lehmann</h1>
+                <h2>Lead Pastor</h2>
+                <p>
+                    Pastor Mark and his wife Dee have been married for 34 years and have two amazing
+                    sons
+                    David
+                    & Matthew, two wonderful daughters by marriage Renee & Brandi and three incredible
+                    grandchildren, Evangeline, Bennett & Scarlett. Having served in the Midwest as a
+                    lead
+                    and staff pastor, they
+                    moved
+                    to
+                    Cornerstone in 1993. Since that time God has been faithful to guide and help them
+                    as
+                    they lead the body.
+                </p>
+            </div>
+
             <div class="content">
-                <!-- Pastor Sonja -->
-                <table class="pastor-table">
-                    <!-- Pastor Sonja, Pastor Jason -->
-                    <tr>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page/pastors/PastorSonja.jpg">
-                        </td>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page/pastors/PastorJason.jpg">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="pastor-description">
-                            <h1>Sonja Owen</h1>
-                            <h2>Children's Pastor</h2>
-                        </td>
-                        <td class="pastor-description">
-                            <h1>Jason Rose</h1>
-                            <h2>Creative Arts Pastor</h2>
-                        </td>
-                    </tr>
-                    <!-- Pastor Mike, Pastor Matthew -->
-                    <tr>
-                        <td class="pastor-image">
+                <div class="center">
+                    <h1 class="large-header">Our Staff Pastors</h1>
+                </div>
+                <ul id="pastor-list">
+
+                    <!-- Pastor Mike -->
+                    <li class="pastor">
+                        <div class="pastor-image">
                             <img src="/ref/pages/about_page/pastors/PastorMike.jpg">
-                        </td>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page/pastors/PastorMatthew.jpg">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="pastor-description">
+                        </div>
+                        <div class="pastor-description">
                             <h1>Michael Badolato</h1>
                             <h2>Youth Pastor</h2>
-                        </td>
-                        <td class="pastor-description">
-                            <h1>Matthew Lehmann</h1>
-                            <h2>Young Adults Pastor</h2>
-                        </td>
+                        </div>
+                    </li>
 
-                    </tr>
-                    <!-- Pastor Arnold, Dr. Mark -->
-                    <tr>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page//pastors/PastorArnold.jpg">
-                        </td>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page//pastors/PastorMatthew.jpg">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="pastor-description">
+                    <!-- Pastor Arnold -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorArnold.jpg">
+                        </div>
+                        <div class="pastor-description">
                             <h1>Arnold Bracy</h1>
                             <h2>Care Pastor</h2>
-                        </td>
-                        <td class="pastor-description">
-                            <h1>Dr. Mark Wootton</h1>
-                            <h2>Discipleship Pastor</h2>
-                        </td>
-                    </tr>
-                    <!-- Pastor Shane -->
-                    <tr>
-                        <td class="pastor-image">
-                            <img src="/ref/pages/about_page//pastors/PastorMike.jpg">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="pastor-description">
+                        </div>
+                    </li>
+
+                    <!-- Pastor Matthew -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorMatthew.jpg">
+                        </div>
+                        <div class="pastor-description">
+                            <h1>Matthew Lehmann</h1>
+                            <h2>Young Adults Pastor</h2>
+                        </div>
+                    </li>
+
+                    <!-- Pastor Sonja -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorSonja.jpg">
+                        </div>
+                        <div class="pastor-description">
+                            <h1>Sonja Owen</h1>
+                            <h2>Children's Pastor</h2>
+                        </div>
+                    </li>
+                    
+                    <!-- Shane Pucher -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorArnold.jpg">
+                        </div>
+                        <div class="pastor-description">
                             <h1>Shane Pucher</h1>
                             <h2>Special Ministries Pastor</h2>
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </li>
+
+                    <!-- Pastor Jason -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorJason.jpg">
+                        </div>
+                        <div class="pastor-description">
+                            <h1>Jason Rose</h1>
+                            <h2>Creative Arts Pastor</h2>
+                        </div>
+                    </li>
+
+                    <!-- Dr. Mark -->
+                    <li class="pastor">
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorMark-Evans.jpg">
+                        </div>
+                        <div class="pastor-description">
+                            <h1>Dr. Mark Wootton</h1>
+                            <h2>Discipleship Pastor</h2>
+                        </div>
+                    </li>
+                </ul>
+
                 <a id="all-staff-link" href="./allstaff/">Meet the whole team</a>
             </div>
         </section>
@@ -363,7 +362,9 @@
                         purpose
                         (injected humour and the like).</p>
                     <ul>
-                        <li>Website: <a href="http://www.easterhousecommunitychurch.org.uk">www.easterhousecommunitychurch.org.uk</a></li>
+                        <li>Website: <a
+                                href="http://www.easterhousecommunitychurch.org.uk">www.easterhousecommunitychurch.org.uk</a>
+                        </li>
                         <li>Address: Unit 40 Upper Shandwick Square, 710 Westerhouse Rd, Glasgow G34 9DT, United
                             Kingdom</li>
                         <li>+44 7828 756945</li>
