@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="../../styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/stream_style.css">
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Copy this everywhere -->
+    <table class="section-bar">
+        <tr>
+            <td class="selected">
+                <a href="/ministries/ministered/">
+                    <div class="section-bar--text">Be Ministered To</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/fellowship/">
+                    <div class="section-bar--text">Find Fellowship</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/freedom/">
+                    <div class="section-bar--text">Find Freedom</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/serve/">
+                    <div class="section-bar--text">Serve</div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Content goes here -->
+    <section class="header_padding--bar">
+        <img id="banner" src="/ref/pages/ministries_page/banners/stream_banner.jpg">
+        <div class="content">
+            <a href="../" class="button-small">Go Back</a><br><br>
+            <center>
+                <img src="/ref/pages/ministries_page/logos/stream_logo.png">
+            </center>
+            <p>Cleansing Stream uses Biblical teaching to bring wholeness, freedom, guidance and victorious living. It
+                helps us learn how to walk out of the residue of mindsets, bondage and struggles from our past.</p>
+
+            <ul id="class-element">
+
+                <!-- Free to Grow -->
+                <li class="class-selector">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/livingfree/grow.jpg">
+                        <h2>Wednesday Night Class</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Wednesday Night Class</h2>
+                            <p>Check out our Wednesday night class at 7pm every semester.</p>
+                            <a class="button--white" href="/services/">Go to Services</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+</html>
