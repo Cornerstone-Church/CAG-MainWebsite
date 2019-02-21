@@ -67,6 +67,14 @@ li {
     margin: 30px 0;
 }
 
+a {
+    color: var(--theme-activation-color);
+}
+
+a:hover {
+    color: var(--theme-text-hover);
+}
+
 /* Body Styles */
 body, html {
     font-family: 'Raleway', sans-serif;
