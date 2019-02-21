@@ -33,29 +33,52 @@
                 <table>
                     <tr>
                         <td>
-                            <div id="give-online" class="give-buttons">
+                            <a target="_blank" href="https://app.easytithe.com/g3/" id="give-online" class="give-buttons">
                                 <div class="button-container">
                                     <img src="/ref/pages/give_page/online.png">
                                     <h1>Online</h1>
                                 </div>
-                            </div>
+                            </a>
                         </td>
                         <td>
-                            <div id="give-mobile" class="give-buttons">
+                            <a onclick="openPopup()" id="give-mobile" class="give-buttons">
                                 <div class="button-container">
                                     <img src="/ref/pages/give_page/text.png">
                                     <h1>Text Message</h1>
                                 </div>
-                            </div>
+                            </a>
                         </td>
                     </tr>
                 </table>
             </center>
         </div>
+
+        <div id="text-overlay">
+            <div class="dim-background" onclick="closePopup()">
+
+            </div>
+            <div id="popup-window">
+                <div id="popup-titlebar">
+                    <div onclick="closePopup()" title="Close Popup" class="close-button">X</div>
+                </div>
+                <h1>Give Through Texting</h1>
+                <ul>
+                    <li>
+                        <h2>Step 1</h2>
+                        Text the number: 301-640-5767
+                    </li>
+                    <li>
+                        <h2>Step 2</h2>
+                        Enter your amount.<br>For example, if you were wanting to give $100 for missions text:<br>$100 missions
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <div id="footer"></div>
+    <script src="./scripts/giving_popup.js"></script>
 </body>
 
 </html>

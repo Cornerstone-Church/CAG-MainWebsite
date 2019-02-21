@@ -38,11 +38,19 @@
     height: 300px;
     margin: 20px;
 
-
     color: var(--theme-primary-color);
-    border: 2px solid var(--theme-secondary-color);
 
     background: var(--theme-secondary-color);
+
+    cursor: pointer;
+}
+
+.give-buttons:hover {
+    background: var(--theme-text-hover);
+}
+
+.give-buttons:hover h1 {
+    color: var(--theme-primary-color);
 }
 
 
@@ -67,3 +75,32 @@
     margin: 0;
     width: 100%;
 }
+
+#text-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    display: none;
+}
+
+#popup-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    height: auto;
+    width: 700px;
+
+    padding: 20px;
+}
+
+#popup-titlebar .close-button {
+    text-align: right;
+    cursor: pointer;
+}
+
