@@ -72,7 +72,7 @@
     /* opacity: 0.2; */
 
     /* TODO: Causing a safari glitch */
-    filter: blur(2px) saturate(50%) brightness(40%);
+    filter: blur(5px) saturate(20%) brightness(40%);
 }
 
 #video-thumbs h1 {
@@ -88,22 +88,23 @@
     margin: 0;
 }
 
-#video-thumbs .selected img {
+#video-thumbs .enabled {
+    cursor: pointer;
+}
+
+#video-thumbs .enabled img {
     /* opacity: 1; */
     filter: saturate(100%) brightness(100%);
 }
 
-#video-thumbs .selected h1 {
-    display: none;
-}
-
-#video-thumbs td:hover {
-    cursor: pointer;
+#video-thumbs .selected {
+    border: 4px solid var(--theme-primary-color);
 }
 
 #sermon-series-logo {
-    width: 600px;
+    width: 500px;
     height: auto;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
