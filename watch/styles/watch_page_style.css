@@ -41,6 +41,11 @@
     transform: translate(-50%, -50%);
 }
 
+#sermon-series--forground h1 {
+    padding: 0px;
+    margin: -30px 0px 20px 0px;
+}
+
 #enduring-faith--section .video {
     position: absolute;
     top: 0px;
