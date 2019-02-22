@@ -67,6 +67,14 @@ li {
     margin: 30px 0;
 }
 
+a {
+    color: var(--theme-activation-color);
+}
+
+a:hover {
+    color: var(--theme-text-hover);
+}
+
 /* Body Styles */
 body, html {
     font-family: 'Raleway', sans-serif;
@@ -85,7 +93,7 @@ section {
 /* Big images at the top of the page */
 #banner {
     width: 100%;
-    height: 400px;
+    height: 50vh;
     object-fit: cover;
 }
 
@@ -98,6 +106,7 @@ section {
 
 .dark-background {
     background: #111;
+    color: var(--theme-primary-color);
 }
 
 .header_padding {
@@ -121,10 +130,7 @@ section {
 
  /* Class that centers elements to the center */
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 
@@ -143,7 +149,7 @@ section {
 /* Section Link Element */
 .section_links {
     width: 100%;
-    height: 400px;
+    height: 100px;
     table-layout: fixed;
     border-collapse: collapse;
 }
@@ -155,6 +161,7 @@ section {
 .section_links td {
     width: 20%;
     transition: width .3s;
+    background: var(--theme-secondary-color);
 }
 
 .section_links img {
@@ -221,6 +228,10 @@ section {
     background: rgba(236, 240, 241, 0);
 }
 
+.section_links .selected {
+    background: #2881BA;
+}
+
 .button {
     display: inline-block;
     text-decoration: none;
@@ -239,6 +250,24 @@ section {
     border-color: var(--theme-text-hover);
 }
 
+.button--white {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--theme-primary-color);
+    padding: 10px 30px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--theme-primary-color);
+}
+
+.button--white:hover {
+    color: var(--theme-text-hover);
+    border-color: var(--theme-text-hover);
+}
+
 .button-small {
     display: inline-block;
     text-decoration: none;
@@ -253,8 +282,34 @@ section {
 }
 
 .button-small:hover {
-    color: #aaa;
-    border-color: #aaa;
+    color: var(--theme-text-hover);
+    border-color: var(--theme-text-hover);
+}
+
+.button-small--white {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--theme-primary-color);
+    padding: 5px 10px;
+
+    text-transform: uppercase;
+
+    border: 2px solid var(--theme-primary-color);
+}
+
+.button-small--white:hover {
+    color: var(--theme-text-hover);
+    border-color: var(--theme-text-hover);
+}
+
+.dim-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--theme-primary-color);
 }
 
 #debug {
@@ -268,4 +323,60 @@ section {
 
     color: white;
     font-weight: bold;
+}
+
+/* FORMS */
+form {
+    display: block;
+    padding: 10px;
+    width: 400px;
+    text-align: left;
+}
+
+form input, textarea {
+    margin: 10px 0px 20px 2%;
+    padding: 10px;
+    border: 2px solid #98a5b4;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+form input {
+    width: 40%;
+}
+
+form input::placeholder, textarea::placeholder {
+    color: var(--theme-text-color);
+    text-transform: uppercase;
+    font-family: "Raleway";
+}
+
+form input:focus, textarea:focus {
+    border-color: var(--theme-secondary-color);
+    outline: none;
+}
+
+form #email {
+    width: 90%;
+}
+
+form textarea {
+    width: 90%;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--theme-secondary-color);
+
+    color: var(--theme-primary-color);
+    font-family: "Raleway";
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background-color: #98a5b4;
+    cursor: pointer;
 }

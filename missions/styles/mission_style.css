@@ -33,6 +33,11 @@
     border-top: 2px solid #ccd4df;
 }
 
+#missions-trip td:last-child {
+    text-align: right;
+    width: 100px;
+}
+
 .missions-sections {
     position: relative;
     height: 100vh;
@@ -90,4 +95,8 @@
 .right p {
     text-align: right;
     right: 5vw;
+}
+
+.none {
+    display: inline;
 }

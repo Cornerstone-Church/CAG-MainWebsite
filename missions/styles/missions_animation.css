@@ -11,7 +11,7 @@
 .text-animation p {
     animation-name: bounceUp;
     animation-duration: 1s;
-    animation-delay: 0s;
+    animation-delay: .5s;
     animation-fill-mode: forwards;
 }
 

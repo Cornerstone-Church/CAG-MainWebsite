@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="../../styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/doulos_styles.css">
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <table class="section-bar">
+        <tr>
+            <td class="selected">
+                <a href="/ministries/ministered/">
+                    <div class="section-bar--text">Be Ministered To</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/fellowship/">
+                    <div class="section-bar--text">Find Fellowship</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/freedom/">
+                    <div class="section-bar--text">Find Freedom</div>
+                </a>
+            </td>
+            <td>
+                <a href="/ministries/serve/">
+                    <div class="section-bar--text">Serve</div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Content goes here -->
+    <section class="header_padding--bar">
+
+        <img id="banner" src="/ref/pages/ministries_page/banners/doulosBanner.jpg">
+        <div class="content">
+            <a href="../" class="button-small--white">Go Back</a><br><br>
+            <center>
+                <h1>Young Adults Community</h1>
+            </center>
+            <p>Doulos exists to establish an environment where young adults can come unashamed and intimately interact
+                with God. From the very first time you walk through the doors, we hope you feel welcomed and sense
+                community. </p>
+            <h2>Here's what happens on Monday night:</h2>
+
+            <ul id="class-element">
+
+                <!-- Men's Discipleship -->
+                <li class="class-selector">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/prayer.jpg">
+                        <h2>Prayer | 6:30 - 7:00pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Prayer</h2>
+                            <p><b>6:30pm - 7:00pm</b>
+                                <br><br>Join us as a community to seek the face of Jesus and feel His presence draw near. You can pray for needs in your life, dreams that God has not answered, or even for service. Draw close and expireance God.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Men's Breakfast -->
+                <li class="class-selector">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/dinner.jpg">
+                        <h2>Dinner | 7:30 - 8:05pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Dinner</h2>
+                            <p><b>7:30 - 8:05pm</b><br><br>
+                                Enjoy felloship with other members of doulos and fill up on a delicious meal. Every week a different course will be served.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Sports -->
+                <li class="class-selector">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/worship.jpg">
+                        <h2>Worship | 8:05 - 9:30pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Service</h2>
+                            <p><b>8:05 - 9:30pm</b><br><br>
+                                Encounter God and let Him breath life into your sole. Hear from leaders, teachers, and fellow doulos members on what God has placed on their hearts.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>No current upcoming events.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+</html>

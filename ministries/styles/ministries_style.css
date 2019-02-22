@@ -1,6 +1,6 @@
 :root {
     --default-button--height: 400px;
-    --expanded-button--height: 100vh;
+    --expanded-button--height: 80vh;
 }
 
 html {
@@ -57,11 +57,18 @@ html {
     list-style: none;
     padding: 0px;
     width: 100%;
-
-
 }
 
-#ministry-selector a {
+#ministry-selector li {
+    display: block;
+    margin: 4px 0px;
+}
+
+#ministry-selector li:hover {
+    cursor: pointer;
+}
+
+#ministry-selector .big-button {
     display: block;
     height: var(--default-button--height);
     
@@ -82,6 +89,19 @@ html {
     z-index: 1
 }
 
+#ministry-selector .section-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+
+    opacity: 0;
+
+    transition: .5s;
+}
+
 #ministry-selector .selector-text-header {
     z-index: 2;
 
@@ -95,14 +115,11 @@ html {
 }
 
 #ministry-selector .selector-text-content {
-    z-index: 2;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    opacity: 0;
-    transition: .5s;
 }
 
 #ministry-selector h1 {
@@ -114,7 +131,7 @@ html {
 }
 
 #ministry-selector h2 {
-    color: var(--theme-secondary-color);
+    color: var(--theme-primary-color);
     text-transform: uppercase;
     font-weight: lighter;
     margin-top: 20px;
@@ -122,5 +139,55 @@ html {
 
 #ministry-selector p {
     color: var(--theme-primary-color);
+    text-indent: 0px;
+    padding: 0;
+    margin: 10px 0;
 }
 
+.icon-table {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    /* Because padding on the right was not enough??? */
+    padding-right: 40px;
+}
+
+.icon-table:hover {
+    background: white;
+}
+
+.icon-table .table-icon {
+    width: 130px;
+}
+
+.icon-table img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    border: 10px solid white;
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.icon-table .table-description-text {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.icon-table .table-description-text--right {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.icon-table h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--theme-text-color);
+}
+
+.icon-table p {
+    color: var(--theme-text-color);
+    text-indent: 0px;
+    padding: 0;
+    margin: 0;
+}

@@ -19,112 +19,131 @@
     <div id="header"></div>
 
     <table class="section-bar barEnterAnimation">
-        <tr>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="ministered/">
-                    <div class="section-bar--text">Be Ministered To</div>
-                </a>
-            </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="fellowship/">
-                    <div class="section-bar--text">Find Fellowship</div>
-                </a>
-            </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="freedom/">
-                    <div class="section-bar--text">Find Freedom</div>
-                </a>
-            </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="serve/">
-                    <div class="section-bar--text">Serve</div>
-                </a>
-            </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="education/">
-                    <div class="section-bar--text">Education</div>
-                </a>
-            </td>
-        </tr>
-    </table>
+            <tr>
+                <td>
+                    <a href="/ministries/ministered/">
+                        <div class="section-bar--text">Be Ministered To</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="/ministries/fellowship/">
+                        <div class="section-bar--text">Find Fellowship</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="/ministries/freedom/">
+                        <div class="section-bar--text">Find Freedom</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="/ministries/serve/">
+                        <div class="section-bar--text">Serve</div>
+                    </a>
+                </td>
+            </tr>
+        </table>
 
     <!-- Content goes here -->
     <section class="header_padding--barAnimate">
         <ul id="ministry-selector">
             <li>
-                <a id="be-ministered--bigButton" onclick="sectionExpand(0)">
-                    <img src="/ref/announcments/slides/slide1-background.jpg">
+                <div id="be-ministered--bigButton" class="big-button" onclick="sectionExpand(0)">
+                    <img src="/ref/pages/ministries_page/be_ministered.jpg">
                     <div id="be-ministered--title" class="selector-text-header">
                         <h1>Be Ministered To</h1>
                         <h2>Details -></h2>
                     </div>
-                    <div id="be-ministered--content" class="selector-text-content">
-                        <h1>Be Ministered To</h1>
-                        <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
-                            akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
+                    <div id="be-ministered--content" class="section-overlay">
+                        <div class="selector-text-content">
+                            <h1>Be Ministered To</h1>
+                            <p>
+                                Hearing God speak and growing in Him is an essential key to having a healthy
+                                relationship
+                                with Jesus. Check out our experiences that span across all age groups.
+                            </p><br>
+                            <a class="button--white" href="./ministered/">Go to page</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div id="find-fellowship--bigButton" class="big-button" onclick="sectionExpand(1)">
+                    <img src="/ref/pages/ministries_page/find_fellowship.jpg">
+                    <div id="find-fellowship--title" class="selector-text-header">
+                        <!-- Had to apply color at element because CSS is already set -->
+                        <h1 style="color: var(--theme-secondary-color)">Find Fellowship</h1>
+                        <h2 style="color: var(--theme-secondary-color)">Details -></h2>
+                    </div>
+                    <div id="find-fellowship--content" class="section-overlay">
+                        <div class="selector-text-content">
+                            <h1>Find Fellowship To</h1>
+                            <p>
+                                Bonding with fellow believers, reading the word together, and coming along side each
+                                other
+                                in hard times is what fellowship is all about. Check out some of the ways you can be
+                                apart
+                                of the fellowship here at Cornerstone.
+                            </p>
+                            <a class="button--white" href="./fellowship/">Go to page</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div id="find-freedom--bigButton" class="big-button" onclick="sectionExpand(2)">
+                    <img src="/ref/pages/ministries_page/find_freedom.jpg">
+                    <div id="find-freedom--title" class="selector-text-header">
+                        <h1>Find Freedom</h1>
+                        <h2>Details -></h2>
+                    </div>
+                    <div id="find-freedom--content" class="section-overlay">
+                        <div class="selector-text-content">
+                            <h1>Find Freedom</h1>
+                            <p>
+                                Have you been hurt? Abused? Do you regret your past mistakes? Need freedom? Healing?
+                                Find
+                                ministries that will come along side you and help you leave the past behind and step
+                                into
+                                the person God has made you to be.
+                            </p>
+                            <a class="button--white" href="./freedom/">Go to page</a>
+                        </div>
                     </div>
                 </a>
             </li>
             <li>
-                <a id="find-fellowship--bigButton" onclick="sectionExpand(1)">
-                        <img src="/ref/announcments/slides/slide1-background.jpg">
-                        <div id="find-fellowship--title" class="selector-text-header">
-                            <h1>Find Fellowship</h1>
-                            <h2>Details -></h2>
-                        </div>
-                        <div id="find-fellowship--content" class="selector-text-content">
-                            <h1>Find Fellowship To</h1>
-                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
-                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
-                        </div>
-                    </a>
-            </li>
-            <li>
-                <a id="find-freedom--bigButton" onclick="sectionExpand(2)">
-                        <img src="/ref/announcments/slides/slide1-background.jpg">
-                        <div id="find-freedom--title" class="selector-text-header">
-                            <h1>Find Freedom</h1>
-                            <h2>Details -></h2>
-                        </div>
-                        <div id="find-freedom--content" class="selector-text-content">
-                            <h1>Find Freedom</h1>
-                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
-                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
-                        </div>
-                    </a>
-            </li>
-            <li>
-                <a id="serve--bigButton" onclick="sectionExpand(3)">
-                        <img src="/ref/announcments/slides/slide1-background.jpg">
-                        <div id="serve--title" class="selector-text-header">
+                <div id="serve--bigButton" class="big-button" onclick="sectionExpand(3)">
+                    <img src="/ref//pages/ministries_page/serve.jpg">
+                    <div id="serve--title" class="selector-text-header">
+                        <h1>Serve</h1>
+                        <h2>Details -></h2>
+                    </div>
+                    <div id="serve--content" class="section-overlay">
+                        <div class="selector-text-content">
                             <h1>Serve</h1>
-                            <h2>Details -></h2>
+                            <p>
+                                Making a difference on earth seams like an impossible task. But when you come along
+                                side
+                                other believers with the heart to serve God will do things far beyond impossible. Join
+                                the
+                                team and be apart of the the work God is doing!
+                            </p>
+                            <a class="button--white" href="./serve/">Go to page</a>
                         </div>
-                        <div id="serve--content" class="selector-text-content">
-                            <h1>Serve</h1>
-                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
-                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
-                        </div>
-                    </a>
-            </li>
-            <li>
-                <a id="education--bigButton" onclick="sectionExpand(4)">
-                        <img src="/ref/announcments/slides/slide1-background.jpg">
-                        <div id="education--title" class="selector-text-header">
-                            <h1>Education</h1>
-                            <h2>Details -></h2>
-                        </div>
-                        <div id="education--content" class="selector-text-content">
-                            <h1>Education</h1>
-                            <p>jfsjsefjjsfea sefajefs efsjkl esfaefshefas fseakesfk efshjkas efjmsfechsef lesf kljhfse
-                                akhjsef ak efaskjfs eakjesfjefsfse jkhsaef efsaafebnewafjlhfsklb esafhjl fsaejlh eafw </p>
-                        </div>
-                    </a>
+                    </div>
+                </div>
             </li>
         </ul>
-
         <div class="content">
-
+            <h2>Looking for our schools?</h2>
+            <ul>
+                <li>
+                    <a target="_blank" href="https://university.cag.org">university.cag.org</a> | Cornerstone School of Ministry
+                </li>
+                <li>
+                    <a target="_blank" href="https://education.cag.org">education.cag.org</a> | CCA & Little Pebbles
+                </li>
+            </ul>
         </div>
     </section>
 

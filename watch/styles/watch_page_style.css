@@ -22,10 +22,23 @@
 }
 
 #enduring-faith--section {
-    background: url('/ref/sermon_series/enduring_faith/background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 40px 0px;
+    position: relative;
+    height: 800px;
+}
+
+#sermon-series--background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#sermon-series--forground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #enduring-faith--section .video {
@@ -59,7 +72,7 @@
     /* opacity: 0.2; */
 
     /* TODO: Causing a safari glitch */
-    filter: blur(2px) saturate(50%) brightness(40%);
+    filter: blur(5px) saturate(20%) brightness(40%);
 }
 
 #video-thumbs h1 {
@@ -75,22 +88,23 @@
     margin: 0;
 }
 
-#video-thumbs .selected img {
+#video-thumbs .enabled {
+    cursor: pointer;
+}
+
+#video-thumbs .enabled img {
     /* opacity: 1; */
     filter: saturate(100%) brightness(100%);
 }
 
-#video-thumbs .selected h1 {
-    display: none;
-}
-
-#video-thumbs td:hover {
-    cursor: pointer;
+#video-thumbs .selected {
+    border: 4px solid var(--theme-primary-color);
 }
 
 #sermon-series-logo {
-    width: 600px;
+    width: 500px;
     height: auto;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -175,4 +189,8 @@
 
 #recent-videos--section td:hover #play-button {
     opacity: 1;
+}
+
+#sermons-links {
+    color: #2f2f2f;
 }

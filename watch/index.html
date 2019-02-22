@@ -19,54 +19,59 @@
 
     <!-- Content goes here -->
     <section id="watch-page--section" class=" dark-background">
+        <!-- Sermon Series -->
         <div id="enduring-faith--section">
-            <div class="content center-text header_padding">
-                <img id="sermon-series-logo" src="/ref/sermon_series/enduring_faith/logo.png">
+            <!-- Background Image -->
+            <img id="sermon-series--background" src="/ref/sermon_series/background.jpg">
+            <!-- Video Content -->
+            <div id="sermon-series--forground" class="content center-text">
+                <img id="sermon-series-logo" src="/ref/sermon_series/logo.png">
                 <div class="video-section">
                     <div class="video-wrapper">
                         <div id="defaultVideo" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE?rel=0"
+                            <iframe id="default-frame" width="780" height="331" src="https://www.youtube.com/embed/qvnop0jrHCY?rel=0"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
+                                
                         </div>
                         <div id="video1" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE"
+                            <iframe id="video1-frame" width="780" height="331" src="https://www.youtube.com/embed/f7cDoTTORJE"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
                         <div id="video2" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/c7Wup5DlQXk"
+                            <iframe id="video2-frame" width="780" height="331" src="https://www.youtube.com/embed/c7Wup5DlQXk"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
                         <div id="video3" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/zaAy1n1rMgs"
+                            <iframe id="video3-frame" width="780" height="331" src="https://www.youtube.com/embed/zaAy1n1rMgs"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
                         <div id="video4" class="video">
-                            <iframe width="780" height="331" src="https://www.youtube.com/embed/Ok2JDbIEbss"
+                            <iframe id="video4-frame" width="780" height="331" src="https://www.youtube.com/embed/Ok2JDbIEbss"
                                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
                     </div>
                     <table id="video-thumbs">
                         <tr>
-                            <td id="thumb1" class="" onclick="showVideoOne()">
+                            <td id="thumb1" class="enabled" onclick="showVideoOne()">
                                 <img src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1>The Race Before Us</h1>
+                                <h1>Video</h1>
                             </td>
-                            <td id="thumb2" class="" onclick="showVideoTwo()">
+                            <td id="thumb2" class="" onclick="//showVideoTwo()">
                                 <img src="/ref/pages/watch_page/thumbnails/02.jpg">
-                                <h1>Video 2</h1>
+                                <h1></h1>
                             </td>
-                            <td id="thumb3" class="" onclick="showVideoThree()">
+                            <td id="thumb3" class="" onclick="//showVideoThree()">
                                 <img src="/ref/pages/watch_page/thumbnails/03.jpg">
-                                <h1>Video 3</h1>
+                                <h1></h1>
                             </td>
-                            <td id="thumb4" class="" onclick="showVideoFour()">
+                            <td id="thumb4" class="" onclick="//showVideoFour()">
                                 <img src="/ref/pages/watch_page/thumbnails/04.jpg">
-                                <h1>Video 4</h1>
+                                <h1></h1>
                             </td>
                         </tr>
                     </table>
@@ -79,8 +84,8 @@
                 <iframe width="800" height="450" src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <h2><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
-                        Services</a></h2>
+                <h2 id="sermons-links"><a target="_blank" href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">Watch More
+                        Services</a> or <a target="_blank" href="https://cornerstone4us.podbean.com/">Download Podcast</a></h2>
             </div>
         </div>
         <div id="recent-videos--section">

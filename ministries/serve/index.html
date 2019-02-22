@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="../../styles/style.css">
     <link rel="stylesheet" href="../styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/serve_style.css">
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -19,29 +20,24 @@
 
     <table class="section-bar">
         <tr>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="../ministered/">
+            <td class="selected">
+                <a href="/ministries/ministered/">
                     <div class="section-bar--text">Be Ministered To</div>
                 </a>
             </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="../fellowship/">
+            <td>
+                <a href="/ministries/fellowship/">
                     <div class="section-bar--text">Find Fellowship</div>
                 </a>
             </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="../freedom/">
+            <td>
+                <a href="/ministries/freedom/">
                     <div class="section-bar--text">Find Freedom</div>
                 </a>
             </td>
-            <td class="selected" style="background-image: url('../ref/about/background.jpg')">
-                <a href="../serve/">
+            <td class="selected">
+                <a href="/ministries/serve/">
                     <div class="section-bar--text">Serve</div>
-                </a>
-            </td>
-            <td style="background-image: url('../ref/about/background.jpg')">
-                <a href="../education/">
-                    <div class="section-bar--text">Education</div>
                 </a>
             </td>
         </tr>
@@ -49,9 +45,62 @@
 
     <!-- Content goes here -->
     <section class="header_padding--bar">
-        <h1>Serve</h1>
+
+        <!-- Top Ministries Elements -->
+
+        <ul id="top-ministries">
+            <li class="ministry-section">
+                <div class="background-image">
+                    <img src="/ref/pages/ministries_page/sections/serve/creative_arts.jpg">
+                </div>
+                
+                <div class="forground-content dim-background">
+                    <div class="text">
+                        <h1>
+                            Creative Arts
+                        </h1>
+                        <p>
+                            We are currently looking for people who have a heart for worship and would like to get
+                            involved in the band and choir.
+                        </p>
+                        <br>
+                        <div class="center">
+                            <a class="button--white" href="https://cornerstonebowie.churchcenter.com/people/forms/9474" target="_blank">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="ministry-section">
+                <div class="background-image">
+                    <img src="/ref/pages/ministries_page/sections/serve/media.jpg">
+                </div>
+                
+                <div class="forground-content dim-background">
+                    <div class="text">
+                        <h1>
+                            Media
+                        </h1>
+                        <p>
+                            Have a heart for production? A passion for media? Join our team and start serving today!
+                        </p>
+                        <br>
+                        <div class="center">
+                            <a class="button--white" href="https://cornerstonebowie.churchcenter.com/people/forms/9474" target="_blank">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="content center">
+            <h2>Check out all of the places you can serve!</h2>
+            <br>
+            <a target="_blank" href="https://cornerstonebowie.churchcenter.com/people/forms/9474" class="button">All Ministries</a>
+        </div>
+
+
     </section>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
 </body>

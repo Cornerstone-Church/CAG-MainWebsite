@@ -1,0 +1,150 @@
+#slideshowContainer {
+    height: 400vh;
+}
+
+.slide {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.slide-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-wrapper h1 {
+    font-size: 40px;
+    color: var(--theme-primary-color);
+}
+
+.slide-wrapper .slide-content {
+    opacity: 0;
+
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: auto;
+    z-index: 10;
+}
+
+.slide-text p {
+    color: var(--theme-primary-color);
+    text-indent: 0px;
+    font-size: 20px;
+}
+
+.slide-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#paragraphSection {
+    display: block;
+    position: relative;
+    margin: 25px 0px;
+    height: 100vh;
+}
+
+#paragraphSection img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#paragraphSection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: 0px;
+
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--theme-primary-color);
+}
+
+h1 {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Banner Section */
+
+#slider {
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+#slider .slider-slide {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+
+    transition: 0.2s;
+}
+
+#slider .slide-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: auto;
+    height: auto;
+    z-index: 10;
+}
+
+#slider .slide-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: auto;
+    height: 98%;
+    z-index: 11;
+}

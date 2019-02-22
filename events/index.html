@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/events_style.css">
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -13,16 +14,112 @@
     </script>
 </head>
 
-<body>
+<body onload="onLoad(); startSlideShow()" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
     <div id="header"></div>
-
     <!-- Content goes here -->
     <section class="header_padding">
-        <h1>Events</h1>
+        <!-- Title Banner -->
+        <img id="banner" src="/ref/pages/events_page/events_banner.jpg">
+
+        <!-- Header Section -->
+        <div class="content">
+            <center>
+                <h1>Be Apart of the change</h1>
+                <a class="button" href="https://cornerstonebowie.churchcenter.com/registrations" target="_blank">Sign up
+                    for events</a>
+            </center>
+        </div>
+
+        <!-- Slider -->
+        <div id="slider">
+            <div id="slider-slide1" class="slider-slide">
+                <a href="#" onclick="alert('Slide 1')">
+                    <img class="slide-background" src="/ref/announcments/slides/slide1-background.jpg">
+                    <img class="slide-foreground" src="/ref/announcments/slides/slide1-foreground.png">
+                </a>
+            </div>
+            <div id="slider-slide2" class="slider-slide">
+                <a href="#" onclick="alert('Slide 2')">
+                    <img class="slide-background" src="/ref/announcments/slides/slide2-background.jpg">
+                    <img class="slide-foreground" src="/ref/announcments/slides/slide2-foreground.png">
+                </a>
+            </div>
+            <div id="slider-slide3" class="slider-slide">
+                <a href="#" onclick="alert('Slide 3')">
+                    <img class="slide-background" src="/ref/announcments/slides/slide3-background.jpg">
+                    <img class="slide-foreground" src="/ref/announcments/slides/slide3-foreground.png">
+                </a>
+            </div>
+        </div>
+
+        <div id="paragraphSection">
+            <img src="/ref/pages/events_page/hands.jpg">
+            <div class="dim-background">
+                <p>
+                    The DNA of Cornerstone is to reach as many people for Jesus as we can. Interacting and ministering
+                    to
+                    the community around us allows us to meet with people where they're at and share the love that
+                    Christ
+                    gives.
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Some of the events that we do</h2>
+        </div>
+
+        <div id="slideshowContainer">
+            <div id="slide1" class="slide">
+                <div class="slide-wrapper">
+                    <img id="image1" class="slide-image" src="/ref/pages/events_page/harvest_fest.jpg">
+                    <div id="slide-content-1" class="dim-background slide-content">
+                        <div class="slide-text content">
+                            <h1>Harvest Fest</h1>
+                            <p>With more then 1,500+ attendance from the comunity, enjoy inflatables, food, games, and
+                                hear the gosple through presentation. Every October 31st join cornerstone for a fun
+                                filled evening.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide2" class="slide">
+                <div class="slide-wrapper">
+                    <img id="image2" class="slide-image" src="/ref/pages/events_page/touch_of_christmas.jpg">
+                    <div id="slide-content-2" class="dim-background slide-content">
+                        <div class="slide-text content">
+                            <h1>Touch of Christmas</h1>
+                            <p>During the Christmas season, touching our community around us has never been more
+                                important. Sharing the meaning of Christmas by blessing people with food, coats, drama,
+                                and so much more allows us to present Christ to those who may not come to a church
+                                service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide3" class="slide">
+                <div class="slide-wrapper">
+                    <img id="image3" class="slide-image" src="/ref/pages/events_page/5k.jpg">
+                    <div id="slide-content-3" class="dim-background slide-content">
+                        <div class="slide-text content">
+                            <h1>5K</h1>
+                            <p>With more then 1,500+ attendance from the comunity, enjoy inflatables, food, games, and
+                                hear the gosple through presentation. Every October 31st join cornerstone for a fun
+                                filled evening.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
+
+    <script src="./scripts/events_page.js"></script>
+    <script src="./scripts/banner.js"></script>
 </body>
 
 </html>
