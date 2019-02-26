@@ -1,41 +1,60 @@
 var shouldRun = true;
-var currentSlide = 2; // Starts on 2 because 1 is shown by default when page loads
-var slideDelay = 5000; // In miliseconds
+var currentSlide = 0; // Start on slide 1
+var slideDelay = 6000; // In miliseconds 5000
 
-var slideOne = document.getElementById("slider-slide1");
-var slideTwo = document.getElementById("slider-slide2");
-var slideThree = document.getElementById("slider-slide3");
+var timerId, pauseTime;
+
+var bannerSlides = document.querySelectorAll(".slider-slide");
+var statusBar = document.getElementById('slide-progress');
 
 function startSlideShow() {
-    slideOne.style.opacity = 1;
-    window.setInterval(changeSlide, slideDelay);
+    // Set slide one to visiable
+    bannerSlides[0].style.opacity = '1';
+    // Set the duration of the status bar
+    statusBar.style.animationDuration = (slideDelay / 1000) + "s";
+    // Start Status Bar
+    statusBar.classList.add('startStatusBarAnimation');
+
+    // Start Show
+    // window.setInterval(changeSlide, slideDelay);
+    startTimer(changeSlide, slideDelay);
+
 }
 
 function changeSlide() {
     if (shouldRun) {
-
-        if (currentSlide == 1) {
-            slideOne.style.opacity = 1;
-            slideTwo.style.opacity = 0;
-            slideThree.style.opacity = 0;
-            currentSlide += 1;
-            return;
-        }
-
-        if (currentSlide == 2) {
-            slideTwo.style.opacity = 1;
-            slideOne.style.opacity = 0;
-            slideThree.style.opacity = 0;
-            currentSlide += 1;
-            return;
-        }
-
-        if (currentSlide == 3) {
-            slideThree.style.opacity = 1;
-            slideOne.style.opacity = 0;
-            slideTwo.style.opacity = 0;
-            currentSlide = 1;
-            return;
+        if ((bannerSlides.length - 1) > currentSlide) {
+            // Hide current slide
+            bannerSlides[currentSlide].style.opacity = '0';
+            // Increase current slide one slide
+            currentSlide++;
+            // Display new slide
+            bannerSlides[currentSlide].style.opacity = '1';
+        } else {
+            // Hide all slides
+            bannerSlides.forEach(function(slide) {
+                slide.style.opacity = '0';
+            });
+            // Show first slide
+            bannerSlides[0].style.opacity = '1';
+            // Reset counter
+            currentSlide = 0;
         }
     }
+}
+
+function pauseSlideShow() {
+    shouldRun = false;
+    statusBar.classList.remove('startStatusBarAnimation');
+    window.clearInterval(timerId);
+}
+
+function resumeSlideShow() {
+    shouldRun = true;
+    statusBar.classList.add('startStatusBarAnimation');
+    startTimer(changeSlide, slideDelay);
+}
+
+function startTimer(callback, delay) {
+    timerId = window.setInterval(callback, delay);
 }
