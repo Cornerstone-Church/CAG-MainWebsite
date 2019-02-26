@@ -72,6 +72,12 @@ body {
 #recent-videos--section h1 {
     text-align: center;
     font-size: 40px;
+    color: var(--theme-secondary-color);
+}
+
+#recent-videos--section h2 {
+    text-align: center;
+    color: var(--theme-secondary-color);
     margin-bottom: 30px;
 }
 
