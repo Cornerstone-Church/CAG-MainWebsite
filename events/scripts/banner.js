@@ -1,6 +1,6 @@
 var shouldRun = true;
 var currentSlide = 0; // Start on slide 1
-var slideDelay = 6000; // In miliseconds 5000
+var slideDelay = 4000; // In miliseconds 5000
 
 var timerId, pauseTime;
 
