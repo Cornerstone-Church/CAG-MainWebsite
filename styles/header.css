@@ -50,7 +50,7 @@ header {
     padding: 0px;
 
     display: grid;
-    grid-template-columns: 10vw auto;
+    grid-template-columns: 220px auto;
 }
 
 #header-icon {
@@ -78,7 +78,7 @@ nav {
 nav ul {
     position: absolute;
     top: 50%;
-    left: 40vw;
+    left: calc(50vw - 220px);
     transform: translate(-50%, -50%);
     width: 600px;
     display: inline-block;

@@ -6,6 +6,7 @@
     <meta charset="utf8">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="./styles/events_style.css">
+    <link rel="stylesheet" href="./styles/banner.css">
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -16,33 +17,39 @@
     </script>
 </head>
 
-<body onload="onLoad(); startSlideShow()" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
+<body onload="onLoad(); startSlideShow();" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
         <!-- Title Banner -->
         <!-- Slider -->
-        <div id="slider">
-            <div id="slider-slide1" class="slider-slide">
+        <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()">
+            <div id="slide-progress"></div>
+            <div class="slider-slide">
                 <a href="#" onclick="alert('Slide 1')">
                     <img class="slide-background" src="/ref/announcments/slides/slide1-background.jpg">
                     <img class="slide-foreground" src="/ref/announcments/slides/slide1-foreground.png">
                 </a>
             </div>
-            <div id="slider-slide2" class="slider-slide">
+            <div class="slider-slide">
                 <a href="#" onclick="alert('Slide 2')">
                     <img class="slide-background" src="/ref/announcments/slides/slide2-background.jpg">
                     <img class="slide-foreground" src="/ref/announcments/slides/slide2-foreground.png">
                 </a>
             </div>
-            <div id="slider-slide3" class="slider-slide">
+            <div class="slider-slide">
                 <a href="#" onclick="alert('Slide 3')">
                     <img class="slide-background" src="/ref/announcments/slides/slide3-background.jpg">
                     <img class="slide-foreground" src="/ref/announcments/slides/slide3-foreground.png">
                 </a>
             </div>
+            <div class="slider-slide">
+                <a href="#" onclick="alert('Slide 4')">
+                    <img class="slide-background" src="/ref/announcments/slides/slide4-background.jpg">
+                    <img class="slide-foreground" src="/ref/announcments/slides/slide4-foreground.png">
+                </a>
+            </div>
         </div>
-        <!-- <img id="banner" src="/ref/pages/events_page/events_banner.jpg"> -->
 
         <!-- Header Section -->
         <div class="content">

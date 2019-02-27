@@ -1,0 +1,82 @@
+:root {
+    /* To find run <Amount of Thumbs>*<Length of thumb (160px)> */
+    --thumbnail-list-length: 1600px;
+}
+
+#video-player {
+    background: rgba(0, 0, 0, .9);
+    height: 435px;
+    width: 780px;
+    padding: 10px;
+}
+
+#video-player--video {
+    position: relative;
+    height: 340px;
+}
+
+#video-player--video .video {
+    position: absolute;
+    top: 0px;
+
+    display: none;
+}
+
+#video-player--thumbnail {
+    width: 780px;
+    height: 100px;
+
+    overflow: scroll;
+}
+
+#video-player--thumbnail #thumbnail-wrapper {
+    width: var(--thumbnail-list-length);
+}
+
+#video-player--thumbnail .thumbnail {
+    position: relative;
+    height: 90px;
+    width: 160px;
+    display: inline-block;
+    overflow: hidden;
+
+    border: 2px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#video-player--thumbnail img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-player--thumbnail h1 {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    text-transform: uppercase;
+}
+
+#video-player--thumbnail .dissable {
+    filter: saturate(0%) blur(5px);
+    cursor: default;
+}
+
+.selected {
+    border: 2px solid white !important;
+}
+
+#video-error {
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}

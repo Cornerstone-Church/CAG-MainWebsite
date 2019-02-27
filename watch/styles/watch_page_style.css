@@ -1,31 +1,25 @@
+body {
+    overflow-x: hidden;
+}
+
 .video-wrapper {
     position: relative;
     height: 340px;
-}
-
-.video {
-    display: none;
 }
 
 .center-text {
     text-align: center;
 }
 
-.video-section {
-    background: rgba(0, 0, 0, .8);
-    padding: 10px;
-}
-
-
 #defaultVideo {
     display: inline;
 }
+
 
 #enduring-faith--section {
     position: relative;
     height: 800px;
 }
-
 #sermon-series--background {
     position: absolute;
     top: 0px;
@@ -46,65 +40,6 @@
     margin: -30px 0px 20px 0px;
 }
 
-#enduring-faith--section .video {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-#video-thumbs {
-    width: 100%;
-    height: 100px;
-}
-
-#video-thumbs td {
-    position: relative;
-    width: 25%;
-
-    overflow: hidden;
-}
-
-#video-thumbs img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    /* opacity: 0.2; */
-
-    /* TODO: Causing a safari glitch */
-    filter: blur(5px) saturate(20%) brightness(40%);
-}
-
-#video-thumbs h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    color: var(--theme-primary-color);
-    font-size: 15px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-#video-thumbs .enabled {
-    cursor: pointer;
-}
-
-#video-thumbs .enabled img {
-    /* opacity: 1; */
-    filter: saturate(100%) brightness(100%);
-}
-
-#video-thumbs .selected {
-    border: 4px solid var(--theme-primary-color);
-}
 
 #sermon-series-logo {
     width: 500px;
@@ -137,6 +72,12 @@
 #recent-videos--section h1 {
     text-align: center;
     font-size: 40px;
+    color: var(--theme-secondary-color);
+}
+
+#recent-videos--section h2 {
+    text-align: center;
+    color: var(--theme-secondary-color);
     margin-bottom: 30px;
 }
 
@@ -175,9 +116,9 @@
     background: rgba(52, 73, 94, .9);
     width: 100%;
     height: 100%;
-
+    
     opacity: 0;
-
+    
     transition: .1s;
 }
 
@@ -186,7 +127,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     color: var(--theme-primary-color);
     font-size: 30px;
     text-transform: uppercase;
