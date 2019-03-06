@@ -1,5 +1,4 @@
 header {
-    /* Make parent relative for centering */
     position: fixed;
     background: var(--theme-header-color-light);
     top: 0px;
@@ -70,12 +69,12 @@ header {
 
 }
 
-nav {
+#desktop-nav {
     position: relative;
     text-align: center;
 }
 
-nav ul {
+#desktop-nav ul {
     position: absolute;
     top: 50%;
     left: calc(50vw - 220px);
@@ -89,7 +88,7 @@ nav ul {
     font-size: 0;
 }
 
-nav li {
+#desktop-nav li {
     /* Display items horizontaly */
     display: inline-block;
     list-style: none;
@@ -97,7 +96,7 @@ nav li {
     padding: 0;
 }
 
-nav a {
+#desktop-nav a {
     display: block;
     /* Format Nav bar Text */
     text-decoration: none;
@@ -113,11 +112,85 @@ nav a {
     transition: .1s;
 }
 
-nav ul:hover a {
+#desktop-nav ul:hover a {
     opacity: .7;
 }
 
-nav ul a:hover {
+#desktop-nav ul a:hover {
     color: var(--theme-secondary-color);
     opacity: 1;
+}
+
+#mobile-nav--button {
+    display: none;
+}
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: var(--header-height);
+    height: 100vh;
+    width: 100%;
+    background: var(--theme-header-color-light);
+    text-align: center;
+
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+#mobile-nav a {
+    color: var(--theme-nav-text);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 80px;
+}
+
+#hamburger-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 20px;
+}
+
+#hamburger-button--wrapper {
+    display: block;
+    position: relative;
+}
+
+#hamburger-button span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--theme-nav-text);
+}
+
+#hamburger-button span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hamburger-button span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hamburger-button span:nth-child(4) {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 950px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav--button {
+        display: inline;
+    }
 }
