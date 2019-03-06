@@ -3,7 +3,7 @@
         <a id="header-icon" href="/">
             <img src="/ref/icons/cag-logo-left.png" alt="Home Page">
         </a>
-        <nav>
+        <nav id="desktop-nav">
             <ul>
                 <li>
                     <a href="/services/">SERVICES</a>
@@ -31,5 +31,45 @@
                 </li>
             </ul>
         </nav>
+        <nav id="mobile-nav--button">
+            <a id="hamburger-button" onclick="toggleMobileNav()">
+                <div class="hamburger-button--wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </nav>
     </main>
+
+    <!-- Outside of the flex style -->
+    <nav id="mobile-nav">
+        <ul>
+            <li>
+                <a href="/services/">SERVICES</a>
+            </li>
+            <li>
+                <a href="/watch/">WATCH</a>
+            </li>
+            <li>
+                <a href="/about/">ABOUT</a>
+            </li>
+            <li>
+                <a href="/ministries/">MINISTRIES</a>
+            </li>
+            <li>
+                <a href="/events/">EVENTS</a>
+            </li>
+            <li>
+                <a href="/missions/">MISSIONS</a>
+            </li>
+            <li>
+                <a href="/prayer/">PRAYER</a>
+            </li>
+            <li>
+                <a href="/give/">GIVE</a>
+            </li>
+        </ul>
+    </nav>
 </header>
