@@ -108,7 +108,7 @@
 
 @media only screen and (max-width:800px) {
     #banner-give {
-        height: 300px;
+        display: none;
     }
 
     #banner-give .text {
