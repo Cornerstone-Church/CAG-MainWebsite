@@ -6,7 +6,7 @@
     display: inline-block;
     /* Center Video element */
     width: 100%;
-    margin: 0 0;
+    margin: 0;
     padding: 90px 0;
 
     background: var(--theme-background-color);
@@ -41,6 +41,11 @@
     height: auto;
 }
 
+#sermon-video-element iframe {
+    width: 906px;
+    height: 510px;
+}
+
 .section-fixed-height {
     height: 900px;
 }
@@ -60,4 +65,20 @@
     font-weight: bold;
     text-transform: uppercase;
     color: var(--theme-text-color);
+}
+
+@media only screen and (max-width:800px) {
+    #announcement-div h3 {
+        font-size: 20px;
+    }
+
+    #sermon-video-element img {
+        width: 80%;
+    }
+
+    #sermon-video-element iframe {
+        margin: 10px;
+        width: 300px;
+        height: 167px;
+    }
 }

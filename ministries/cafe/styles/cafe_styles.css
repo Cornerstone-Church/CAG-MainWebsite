@@ -105,3 +105,10 @@ h2 {
     padding: 0px;
     font-size: 25px;
 }
+
+
+@media only screen and (max-width:800px) {
+    .class-selector .placeholder-bottom {
+        width: 90%;
+    }
+}

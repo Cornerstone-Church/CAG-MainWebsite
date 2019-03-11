@@ -1,6 +1,6 @@
 :root {
     --default-button--height: 400px;
-    --expanded-button--height: 80vh;
+    --expanded-button--height: 600px;
 }
 
 html {
@@ -261,4 +261,23 @@ html {
     object-fit: cover;
 
     filter: saturate(30%) blur(1px);
+}
+
+
+@media only screen and (max-width:800px) {
+    :root {
+        --expanded-button--height: 1000px;
+    }
+
+    .selector-text-content h1 {
+        font-size: 30px !important;
+    }
+
+    #ministry-selector .selector-text-content {
+        width: 90%;
+    }
+
+    #ministry-logo {
+        width: 100%;
+    }
 }

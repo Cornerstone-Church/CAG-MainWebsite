@@ -151,3 +151,19 @@
 .layer3 {
     z-index: 0;
 }
+
+
+@media only screen and (max-width:800px) {
+    .parallax_back h1 {
+        font-size: 30px;
+        width: 100vw;
+    }
+
+    .parallax_back h2 {
+        font-size: 20px;
+    }
+
+    .parallax_group {
+        height: 80vh;
+    }
+}

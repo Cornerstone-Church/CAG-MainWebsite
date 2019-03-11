@@ -51,23 +51,6 @@ p {
     color: #7f8c8d;
 }
 
-
-
-#all-staff-link {
-    display: block;
-
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: #7f8c8d;
-    
-}
-
-#all-staff-link:hover {
-    text-decoration: underline;
-}
-
 #partnered-church--bristow {
     background: url('/ref/pages/about_page/partnered/bristow.jpg');
 }
@@ -97,29 +80,6 @@ p {
 
 .what-we-believe--background {
     background: #E8D6D1;
-}
-
-.pastor-table {
-    margin: 0;
-    text-align: center;
-    width: 800px;
-}
-
-.pastor-table:first-child {
-    margin-top: 50px;
-}
-
-.pastor-table img {
-    border: 10px solid white;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-}
-
-.pastor-table tr {
-    text-align: center;
-}
-
-.pastor-table td{
-    text-align: center;
 }
 
 /*  */
@@ -213,4 +173,37 @@ p {
     padding: 30px;
 
     background: rgba(0, 0, 0, .8);
+}
+
+.image-overlay .text-section--right {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0%, -50%);
+    width: 50vw;
+    padding: 30px;
+
+
+    color: var(--theme-primary-color);
+}
+
+
+@media only screen and (max-width:800px) {
+    .image-overlay .text-section {
+        width: 80%;
+    }
+
+    #pastor-lead-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    #pastor-lead-description {
+        width: 80%;
+    }
+
+    .pastor-image img {
+        height: 180px;
+        width: 280px;
+    }
 }

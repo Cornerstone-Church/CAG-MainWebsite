@@ -89,3 +89,13 @@ h2 {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;;
 }
+
+@media only screen and (max-width:800px) {
+    .class-selector {
+        height: 500px;
+    }
+
+    .class-selector .placeholder-bottom {
+        width: 90%;
+    }
+}

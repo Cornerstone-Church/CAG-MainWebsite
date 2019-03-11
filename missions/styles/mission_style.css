@@ -61,7 +61,6 @@
     top: 0px;
     width: 100vw;
     height: 100%;
-
 }
 
 .missions-sections p {
@@ -99,4 +98,24 @@
 
 .none {
     display: inline;
+}
+
+
+@media only screen and (max-width:800px) {
+    .missions-sections p {
+        width: 80vw;
+    }
+
+    .left .text-wrapper {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .right .text-wrapper {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .right p {
+        text-align: left;
+        left: 5vw;
+    }
 }

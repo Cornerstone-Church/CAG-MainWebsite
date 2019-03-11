@@ -6,6 +6,26 @@ h2 {
     margin-bottom: 20px;
 }
 
+#sunday-element {
+    height: 500px;
+}
+
+#wednesday-element {
+
+}
+
+#nursery-element {
+    height: 350px;
+}
+
+#checkin-element {
+    height: 420px;
+}
+
+#serving-element {
+    height: 400px;
+}
+
 .class-selector {
     padding: 0;
     margin: 0;
@@ -53,15 +73,6 @@ h2 {
     color: var(--theme-primary-color);
 }
 
-.class-selector .table-view {
-    width: 90%;
-}
-
-.class-selector .table-view td:first-child {
-    width: 70%;
-    padding: 10px;
-}
-
 .class-selector .content-wrapper {
     position: absolute;
     top: 0px;
@@ -95,3 +106,38 @@ h2 {
     margin-bottom: 30px;;
 }
 
+
+@media only screen and (max-width:800px) {
+
+    .class-selector .content-wrapper {
+        opacity: 1;
+    }
+
+    .class-selector .placeholder-top h2 {
+        opacity: 0;
+    }
+
+    .class-selector .placeholder-bottom {
+        width: 90%;
+    }
+
+    #sunday-element {
+        height: 900px;
+    }
+
+    #wednesday-element {
+        height: 600px;
+    }
+
+    #nursery-element {
+        height: 600px;
+    }
+
+    #checkin-element {
+        height: 800px;
+    }
+
+    #serving-element {
+        height: 600px;
+    }
+}

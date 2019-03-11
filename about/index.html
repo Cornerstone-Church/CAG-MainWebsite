@@ -4,7 +4,7 @@
 <head>
     <title>About Us | Cornerstone Church</title>
     <meta charset="utf8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../styles/style.css">
     <!-- About specific stylesheet -->
@@ -47,6 +47,7 @@
                 </td>
             </tr>
         </table>
+
         <!-- What we Believe -->
         <section class="element1">
             <div class="content">
@@ -202,6 +203,7 @@
                 </ul>
             </div>
         </section>
+
         <!-- Our Staff -->
         <section class="element2">
             <!-- Pastor Mark -->
@@ -255,15 +257,15 @@
 
                     <!-- Pastor Arnold -->
                     <li class="pastor">
-                            <div class="pastor-image">
-                                <img src="/ref/pages/about_page/pastors/PastorArnold.jpg">
-                            </div>
-                            <div class="pastor-description">
-                                <h1>Arnold Bracy</h1>
-                                <h2>Care Pastor</h2>
-                            </div>
-                        </li>
-    
+                        <div class="pastor-image">
+                            <img src="/ref/pages/about_page/pastors/PastorArnold.jpg">
+                        </div>
+                        <div class="pastor-description">
+                            <h1>Arnold Bracy</h1>
+                            <h2>Care Pastor</h2>
+                        </div>
+                    </li>
+
                     <!-- Pastor Mike -->
                     <li class="pastor">
                         <div class="pastor-image">
@@ -308,10 +310,12 @@
                         </div>
                     </li>
                 </ul>
-
-                <a id="all-staff-link" href="./allstaff/">Meet the whole team</a>
+                <div class="center">
+                    <a class="button" href="./allstaff/">Meet the whole team</a>
+                </div>
             </div>
         </section>
+
         <!-- Partnered Churches -->
         <section class="element3">
             <div id="partnered-church--bristow" class="partnered-church">
@@ -376,6 +380,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Default Section -->
         <section class="defaultElement">
             <div class="image-overlay">
                 <img src="/ref/pages/about_page/sanctuary.jpg">
@@ -393,17 +399,15 @@
                 </div>
             </div>
             <div class="image-overlay">
-                <img src="/ref/pages/about_page/sanctuary.jpg">
-                <div class="dim-background">
-                    <div class="text-section">
-                        <h1>Our Lead Pastor</h1>
-                        <p>
-                            <b>Pastor Mark Lehmann,</b> senior Pastor at Cornerstone for 20+ years, has a heart for
-                            people and
-                            the world around him. Each Sunday Pastor Mark delivers real, relatable sermons that touch on
-                            topics that people experience in everyday life.
-                        </p>
-                    </div>
+                <img src="/ref/pages/about_page/pastor_pose.jpg">
+                <div class="text-section--right">
+                    <h1>Our Lead Pastor</h1>
+                    <p>
+                        <b>Pastor Mark Lehmann,</b> senior Pastor at Cornerstone for 20+ years, has a heart for
+                        people and
+                        the world around him. Each Sunday Pastor Mark delivers real, relatable sermons that touch on
+                        topics that people experience in everyday life.
+                    </p>
                 </div>
             </div>
         </section>
@@ -411,7 +415,7 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    
+
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js"></script>
     <script src="./scripts/about.js"></script>

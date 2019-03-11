@@ -124,12 +124,30 @@ function enableNormalText() {
 // Enables navigation toggle on mobile
 function toggleMobileNav() {
     var mobileNav = document.getElementById('mobile-nav');
+    var mobileButton = document.querySelectorAll('#hamburger-button span');
 
     if (!mobileNavVissable) {
-        mobileNav.style.display = 'inline';
+        // mobileNav.style.display = 'inline';
+        mobileNav.style.animationName = 'MobileNavMenu-In';
+
+        // Modify the menu button
+        mobileButton[0].style.opacity = '0';
+        mobileButton[1].style.transform = 'rotate(45deg)';
+        mobileButton[2].style.transform = 'rotate(-45deg)';
+        mobileButton[3].style.opacity = '0';
+
+
         mobileNavVissable = true;
     } else {
-        mobileNav.style.display = 'none';
+        // mobileNav.style.display = 'none';
+        mobileNav.style.animationName = 'MobileNavMenu-Out';
+
+        // Modify the menu button
+        mobileButton[0].style.opacity = '1';
+        mobileButton[1].style.transform = 'rotate(0deg)';
+        mobileButton[2].style.transform = 'rotate(0deg)';
+        mobileButton[3].style.opacity = '1';
+        
         mobileNavVissable = false;
     }
 }

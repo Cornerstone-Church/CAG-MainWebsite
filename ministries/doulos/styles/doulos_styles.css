@@ -103,3 +103,10 @@ p {
     width: 200px;
     height: auto;
 }
+
+
+@media only screen and (max-width:800px) {
+    .class-selector .placeholder-bottom {
+        width: 90%;
+    }
+}

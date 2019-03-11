@@ -31,3 +31,10 @@
 #top-ministries .text p {
     text-indent: 0px;
 }
+
+
+@media only screen and (max-width:800px) {
+    #top-ministries .text {
+        width: 90%;
+    }
+}

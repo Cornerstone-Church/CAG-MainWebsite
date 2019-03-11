@@ -20,7 +20,7 @@
     </script>
 </head>
 
-<body onresize="setVideoBannerSize()" onload="headerVideo(); startSlideShow();">
+<body onresize="setVideoBannerSize()" onload="headerVideo();">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -29,7 +29,7 @@
         <!-- Welcome Video Layer -->
         <div class="parallax_group layer3">
             <div class="parallax_layer parallax_far">
-                <video id="video_banner" class="parallax_center_element" autoplay loop muted>
+                <video playsinline muted id="video_banner" class="parallax_center_element" autoplay loop muted>
                     <source src="./ref/pages/home_page/clip.mp4">
                 </video>
             </div>
@@ -51,7 +51,7 @@
                 <div id="sermon-video-element">
                     <img id="series-logo" src="/ref/sermon_series/logo.png">
                     <h1 id="series-text">Watch the latest service from the series</h1>
-                    <iframe id="series-video" width="906" height="510"
+                    <iframe id="series-video"
                         src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                         frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -68,7 +68,6 @@
     <script src="/scripts/interactive_style.js"></script>
     <script src="/scripts/video_banner_resize.js"></script>
     <script src="/home/scripts/home_script.js"></script>
-    <script src="/home/scripts/banner.js"></script>
 </body>
 
 </html>

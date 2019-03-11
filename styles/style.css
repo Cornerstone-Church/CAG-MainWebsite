@@ -382,17 +382,22 @@ form button:hover {
 
 /* MOBILE */
 @media only screen and (max-width:800px) {
+    p {
+        font-size: 18px;
+    }
+
     .content {
-        display: inline;
+        display: inline-block;
         padding: 0px;
-        margin: 10px;
+        width: 90%;
+        margin: 5%;
     }
 
-    #class-element {
-        display: none;
+    #banner {
+        height: 30vh;
     }
 
-    footer {
-        display:none;
+    form {
+        width: 100%;
     }
 }

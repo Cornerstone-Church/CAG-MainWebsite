@@ -6,6 +6,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+#cleansing-logo {
+    width: 100%;
+}
+
 .class-selector {
     padding: 0;
     margin: 0;
@@ -93,4 +97,11 @@ h2 {
     border: 10px solid white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;;
+}
+
+
+@media only screen and (max-width:800px) {
+    .class-selector .placeholder-bottom {
+        width: 90%;
+    }
 }
