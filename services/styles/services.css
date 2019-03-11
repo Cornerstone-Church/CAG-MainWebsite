@@ -66,6 +66,10 @@ h1 {
     text-indent: 0px;
 }
 
+.class-list p {
+    text-indent: 0px;
+}
+
 .class-list li {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, .1);
     background: white;
