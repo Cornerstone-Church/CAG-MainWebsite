@@ -1,5 +1,5 @@
 # PERMISSIONS
-## Home Page
+## About Page
 ### Owner: Silent Sonata
 ### Maintainer: Silent Sonata
 
