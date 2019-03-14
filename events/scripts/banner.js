@@ -1,6 +1,8 @@
 var shouldRun = true;
 var currentSlide = 0; // Start on slide 1
 var slideDelay = 4000; // In miliseconds 5000
+var statusTime = 0;
+var statusFPS = 50; // Change this number to your contetment
 
 var timerId, pauseTime;
 
@@ -12,8 +14,6 @@ function startSlideShow() {
     bannerSlides[0].style.opacity = '1';
     // Set the duration of the status bar
     statusBar.style.animationDuration = (slideDelay / 1000) + "s";
-    // Start Status Bar
-    statusBar.classList.add('startStatusBarAnimation');
 
     // Start Show
     // window.setInterval(changeSlide, slideDelay);
@@ -23,6 +23,7 @@ function startSlideShow() {
 
 function changeSlide() {
     if (shouldRun) {
+        statusTime = 0;
         if ((bannerSlides.length - 1) > currentSlide) {
             // Hide current slide
             bannerSlides[currentSlide].style.opacity = '0';
@@ -45,16 +46,23 @@ function changeSlide() {
 
 function pauseSlideShow() {
     shouldRun = false;
-    statusBar.classList.remove('startStatusBarAnimation');
     window.clearInterval(timerId);
+    window.clearInterval(statusId);
+    statusBar.style.width = '0%';
+    statusTime = 0;
 }
 
 function resumeSlideShow() {
     shouldRun = true;
-    statusBar.classList.add('startStatusBarAnimation');
     startTimer(changeSlide, slideDelay);
+}
+
+function statusbar() {
+    statusTime += 100 / statusFPS ;
+    statusBar.style.width = statusTime + '%';
 }
 
 function startTimer(callback, delay) {
     timerId = window.setInterval(callback, delay);
+    statusId = window.setInterval(statusbar, delay/statusFPS)
 }
