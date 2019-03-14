@@ -1,0 +1,21 @@
+h2 {
+    padding: 0px;
+    margin-top: 50px;
+
+    text-transform: uppercase;
+}
+
+li {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.staff-name {
+    padding: 0px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.staff-description {
+    font-style: italic;
+}
