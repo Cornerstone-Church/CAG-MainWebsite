@@ -26,6 +26,7 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #sermon-series--forground {
@@ -55,6 +56,12 @@ body {
     margin-bottom: 30px;
 }
 
+#sermons--section {
+    text-align: center;
+
+    padding: 40px 0px;
+}
+
 #sermons--section h2 {
     margin-top: 30px;
     text-align: center;
@@ -67,6 +74,11 @@ body {
 
 #sermons--section a:hover {
     color: var(--theme-primary-color);
+}
+
+#sermons--section iframe {
+    width: 800px;
+    height: 450px;
 }
 
 #recent-videos--section h1 {
@@ -88,55 +100,29 @@ body {
     padding: 30px 0;
 }
 
-#recent-videos--section table {
-    width: 100%;
-}
-
-#recent-videos--section td {
-    position: relative;
-    background: green;
-    height: 300px;
-}
-
-#recent-videos--section img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#recent-videos--section #play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(52, 73, 94, .9);
-    width: 100%;
-    height: 100%;
-    
-    opacity: 0;
-    
-    transition: .1s;
-}
-
-#recent-videos--section #play-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    color: var(--theme-primary-color);
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-#recent-videos--section td:hover #play-button {
-    opacity: 1;
+#recent-videos--section iframe {
+    width: 800px;
+    height: 450px;
 }
 
 #sermons-links {
     color: #2f2f2f;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #sermon-series-logo {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #recent-videos--section iframe {
+        width: 80%;
+        height: 300px;
+    }
+
+    #sermons--section iframe {
+        width: 80%;
+        height: 300px;
+    }
 }
