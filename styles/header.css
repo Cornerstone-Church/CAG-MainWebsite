@@ -131,8 +131,9 @@ header {
     /* Format Nav bar Text */
     text-decoration: none;
     color: var(--theme-nav-text);
-    font-weight: bold;
-    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 14px;
 
     /* Format Button */
     border-radius: 5px;
