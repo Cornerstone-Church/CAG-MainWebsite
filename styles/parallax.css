@@ -9,7 +9,6 @@
 .parallax_back h1 {
     margin: 0px 0 10px 0;
     padding: 0;
-    /* TODO: Glitch where it wraps */
     width: 800px;
 
     color: rgb(255, 255, 255);
