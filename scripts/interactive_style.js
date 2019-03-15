@@ -27,7 +27,6 @@ function headerScroll() {
     // Import elements
     var header = document.querySelector("header");
     var parallaxContainer = document.querySelector(".parallax_container");
-    var debugBar = document.querySelector(".debug_float");
 
     // Captures scrolling position
     var scrollPosition = parallaxContainer.scrollTop;
@@ -36,16 +35,16 @@ function headerScroll() {
     if (scrollPosition >= scrollTransitionHeight) {
         // Make sure we only execute once when scrolling
         if (!isScrolling) {
-            header.classList.toggle("header-blur");
-            header.classList.toggle("header-transparent");
+            header.classList.add("header-blur");
+            header.classList.remove("header-transparent");
             enableNormalText();
 
             isScrolling = true;
         }
     } else {
         if (isScrolling) {
-            header.classList.toggle("header-blur");
-            header.classList.toggle("header-transparent");
+            header.classList.remove("header-blur");
+            header.classList.add("header-transparent");
             enableLightText();
 
             isScrolling = false;
@@ -59,6 +58,9 @@ function enableDarkMode() {
     var header = document.querySelector("header");
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
+
+    // Make text light
+    enableLightText();
 
     // Header elements
     header.style.background = 'var(--theme-header-color-dark)';
