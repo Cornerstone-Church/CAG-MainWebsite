@@ -24,8 +24,6 @@ function resizingWindow() {
             item.style.top = position;
         });
     }
-
-    // TODO: Fix if resized at the bottom of the slideshow
 }
 
 function scrollingSlideShow() {
