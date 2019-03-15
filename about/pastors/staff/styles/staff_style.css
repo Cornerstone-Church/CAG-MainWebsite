@@ -1,11 +1,11 @@
-h2 {
+#office-staff h2 {
     padding: 0px;
     margin-top: 50px;
 
     text-transform: uppercase;
 }
 
-li {
+#office-staff li {
     padding: 0px;
     margin: 10px 0px;
 }
