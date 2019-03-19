@@ -54,7 +54,8 @@ html {
 
     opacity: 0;
 
-    transition: .5s;
+    /* Hide elements off screen */
+    transform: translateX(-100%);
 }
 
 #ministry-selector .selector-text-header {

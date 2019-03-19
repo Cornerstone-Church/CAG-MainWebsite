@@ -1,28 +1,57 @@
-@keyframes barEnter {
-    0% { opacity: 0; transform: translateY(-30px); }
-    20% { opacity: 0; }
-    100% { opacity: 1; }
+/*
+    A stylesheet that moves the element from off screen and
+    brings up the opacity. Will also fade then move element
+    off screen so it is not clickable.
+
+    Check out the ministries-script.js to see the implememntation.
+*/
+
+@keyframes sectionShow {
+    /* Bring element on screen and keep hidden */
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+    1% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    /* Fade in the element */
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
 }
 
-@keyframes pageShift {
-    0% { margin-top: var(--header-height); }
-    100% { margin-top: calc(var(--header-height) + var(--header-second-bar--height)) }
+@keyframes sectionHide {
+    /* Fade out element */
+    0% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+    /* Move element off screen */
+    99% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-100%);
+    }
 }
 
-.barEnterAnimation {
-    opacity: 0;
-    animation-name: barEnter;
+/* Apply this class to the element to fade it in */
+.showSection {
+    animation-name: sectionShow;
+    animation-duration: .5s;
     animation-delay: .5s;
-    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-.header_padding--barAnimate {
-    margin-top: var(--header-height);
-
-    animation-name: pageShift;
-    animation-delay: .5s;
-    animation-duration: 1s;
+/* Apply this class to fade the element back out */
+.hideSection {
+    animation-name: sectionHide;
+    animation-duration: .5s;
+    animation-delay: 0s;
     animation-fill-mode: forwards;
-
 }

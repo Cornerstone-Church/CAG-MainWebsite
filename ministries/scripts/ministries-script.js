@@ -5,11 +5,17 @@ var containerElements = [document.getElementById('be-ministered--bigButton'), do
 var titleElements = [document.getElementById('be-ministered--title'), document.getElementById('find-fellowship--title'), document.getElementById('find-freedom--title'), document.getElementById('serve--title')];
 var contentElements = [document.getElementById('be-ministered--content'), document.getElementById('find-fellowship--content'), document.getElementById('find-freedom--content'), document.getElementById('serve--content')];
 
+// A variable to hold if an section is open
 var isOpen = false;
 
+/* 
+    Function accepts an index for the element to expand. If the 
+    section is already open, the next click will close all sections.
+
+    Use this function with onclick on each element.
+*/
 
 function sectionExpand(index) {
-
     if (!isOpen) {
         switch (index) {
             case 0:
@@ -44,15 +50,18 @@ function sectionExpand(index) {
 }
 
 function openElement(index) {
-    // Set up delays
+    // Set the title delay to 0s so it fades out instantly
     titleElements[index].style.transitionDelay = '0s';
-    contentElements[index].style.transitionDelay = '.5s';
-
-    // Open and fade up
+    // Expand the element
     containerElements[index].style.height = 'var(--expanded-button--height)';
+    // Hide title
     titleElements[index].style.opacity = '0';
-    contentElements[index].style.opacity = '1';
-    // Isn't working right??
+    // Remove any hideSection classes that could be in the elemnt
+    contentElements[index].classList.remove('hideSection');
+    // Add the showSection class to move and fade in the element
+    contentElements[index].classList.add('showSection');
+    
+    // TODO: Isn't working right??
     // containerElements[index].scrollIntoView({
     //     behavior: 'smooth'
     // });
@@ -60,13 +69,15 @@ function openElement(index) {
 
 function closeAll() {
     for (i = 0; i < titleElements.length; i++) {
-        // Set up the transition delays
+        // Set the title delay to .5s so it comes in after the inner elements fade away
         titleElements[i].style.transitionDelay = '.5s';
-        contentElements[i].style.transitionDelay = '0s';
-
-        // Fade up elements
+        // Fade in the title
         titleElements[i].style.opacity = '1';
-        contentElements[i].style.opacity = '0';
+        // Shrink the element
         containerElements[i].style.height = 'var(--default-button--height)';
+        // Remove the showSection class
+        contentElements[i].classList.remove('showSection');
+        // Add the hideSection class to move and hide the element
+        contentElements[i].classList.add('hideSection');
     }
 }
