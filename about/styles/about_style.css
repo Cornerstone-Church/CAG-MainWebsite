@@ -224,46 +224,56 @@ p {
 
 /* Partnered Churches Section */
 
-#partnered-church--bristow {
+#partnered-churches {
+
+}
+
+#partnered-churches .churches {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#partnered-churches .churches--background {
+    width: 100%;
+    height: 100%;
+}
+
+#partnered-churches #bristow--background {
     background: url('/ref/pages/about_page/partnered/bristow.jpg');
-}
-
-#partnered-church--easterhouse {
-    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
-}
-
-#partnered-church--lumina {
-    background: url('/ref/pages/about_page/partnered/biserica.jpg');
-}
-
-#partnered-church--bristow, #partnered-church--easterhouse, #partnered-church--lumina {
+    background-size: cover;
     background-position: center;
-    background-size: 100vw;
     background-attachment: fixed;
 }
 
-.partnered-church {
-    height: 80vh;
-    position: relative;
-    margin: 40px 0;
+#partnered-churches #easterhouse--background {
+    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.partnered-church--text {
+#partnered-churches #biserica--background {
+    background: url('/ref/pages/about_page/partnered/biserica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#partnered-churches .churches--forground {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 30px;
+    object-fit: cover;
 
     background: var(--theme-primary-color);
+    padding: 30px 40px;
+
+    text-align: center;
 }
 
-.partnered-church--text h1 {
-    padding-bottom: 20px;
-    margin: -10px 0 0 0;
-
-    color: var(--theme-text-subheader);
+#partnered-churches .churches--forground h1 {
 }
 
 
