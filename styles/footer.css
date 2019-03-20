@@ -56,11 +56,24 @@ footer li a {
     }
 
     footer h1 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     footer li {
         text-align: center;
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    footer .footer-link--section {
+        margin-top: 20px;
+    }
+
+    footer img {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    footer .content {
+        margin: 0px;
     }
 }
