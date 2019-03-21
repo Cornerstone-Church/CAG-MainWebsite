@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="../styles/ministries_style.css">
     <link rel="stylesheet" href="./styles/cafe_styles.css">
-    <script src="/scripts/jquery-3.3.1.min.js">
-    </script>
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
+    
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+    <script src="/scripts/zalem_firebase.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#header').load('/templates/header.html');
@@ -53,17 +58,8 @@
                     <div class="content-wrapper">
                         <div class="placeholder-bottom">
                             <h2>Wednesday Menu</h2>
-                            <ul>
-                                <li>
-                                    Item 1
-                                </li>
-                                <li>
-                                    Item 2
-                                </li>
-                                <li>
-                                    Item 3
-                                </li>
-                            </ul>
+                            <h3 id="wednesday-menu-date"></h3>
+                            <p id="wednesday-menu"></p>
                         </div>
                     </div>
                 </li>
@@ -78,17 +74,8 @@
                     <div class="content-wrapper">
                         <div class="placeholder-bottom">
                             <h2>Saturday Menu</h2>
-                            <ul>
-                                <li>
-                                    Item 1
-                                </li>
-                                <li>
-                                    Item 2
-                                </li>
-                                <li>
-                                    Item 3
-                                </li>
-                            </ul>
+                            <h3 id="saturday-menu-date"></h3>
+                            <p id="saturday-menu"></p>
                         </div>
                     </div>
                 </li>
@@ -102,6 +89,7 @@
 
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js"></script>
+    <script src="./scripts/cafe_menu.js"></script>
 </body>
 
 </html>
