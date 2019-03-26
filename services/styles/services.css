@@ -62,8 +62,19 @@ h1 {
 }
 
 #services .overlay-title p {
-    margin: 0px 30px;
+    margin: 20px 30px;
+    padding: 0px;
     text-indent: 0px;
+}
+
+#services .avaliable-ministries {
+    margin: 0px 30px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#services .button-small--white {
+    margin-bottom: 10px;
 }
 
 .class-list p {
