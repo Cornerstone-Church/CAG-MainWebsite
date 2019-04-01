@@ -20,53 +20,48 @@
     </script>
 </head>
 
-<body onload="headerVideo();">
+<body onload="headerVideo();" onscroll="headerScroll(); animationChecker();">
     <!-- Header Element -->
     <div id="header"></div>
 
     <!-- Body Section -->
-    <div class="parallax_container" onscroll="headerScroll(); animationChecker();">
-        <!-- Welcome Video Layer -->
-        <div class="parallax_group layer3">
-            <div class="parallax_layer parallax_far">
-                <video playsinline muted id="video_banner" class="parallax_center_element" autoplay loop muted>
-                    <source src="./ref/pages/home_page/clip.mp4">
-                </video>
-            </div>
-            <div class="parallax_layer parallax_back">
-                <section class="parallax_center_element background_text">
-                    <h2>Welcome to</h2>
-                    <h1>Cornerstone Church</h1>
-                </section>
+    <!-- Welcome Video Layer -->
+    <div id="video-banner">
+        <video playsinline muted id="video-banner--video" autoplay loop muted>
+            <source src="./ref/pages/home_page/clip.mp4">
+        </video>
+        <div>
+            <div id="video-banner--text">
+                <h2>Welcome to</h2>
+                <h1>Cornerstone Church</h1>
             </div>
         </div>
+    </div>
 
-        <!-- Sermon Section -->
-        <div id="series-section" class="parallax_group_autoSize layer1">
-            <section class="parallax_base">
-                <div id="announcement-div">
-                    <h3>Local Church &bull; Global Outreach</h3>
-                </div>
-                <!-- Sermon video Section -->
-                <div id="sermon-video-element">
-                    <img id="series-logo" src="/ref/sermon_series/logo.png">
-                    <h1 id="series-text">Watch the latest service from the series</h1>
-                    <iframe id="series-video"
-                        src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
-                        frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <h2><a class="button--white" target="_blank"
-                            href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
-                            services</a></h2>
-                </div>
-                <!-- Footer Section -->
-                <div id="footer"></div>
-            </section>
-        </div>
+    <!-- Sermon Section -->
+    <div id="series-section">
+        <section class="parallax_base">
+            <div id="announcement-div">
+                <h3>Local Church &bull; Global Outreach</h3>
+            </div>
+            <!-- Sermon video Section -->
+            <div id="sermon-video-element">
+                <img id="series-logo" src="/ref/sermon_series/logo.png">
+                <h1 id="series-text">Watch the latest service from the series</h1>
+                <iframe id="series-video"
+                    src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h2><a class="button--white" target="_blank"
+                        href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
+                        services</a></h2>
+            </div>
+            <!-- Footer Section -->
+            <div id="footer"></div>
+        </section>
     </div>
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js"></script>
-    <!-- <script src="/scripts/video_banner_resize.js"></script> -->
     <script src="/home/scripts/home_script.js"></script>
 </body>
 
