@@ -2,7 +2,6 @@
  * IMPORTANT!!!! YOU MUST IMPORT THIS SCRIPT ON EVERY PAGE!
  */
 
-
 // Mechanical variables
 var isScrolling = false;
 
@@ -26,10 +25,10 @@ function headerVideo() {
 function headerScroll() {
     // Import elements
     var header = document.querySelector("header");
-    var parallaxContainer = document.querySelector(".parallax_container");
 
     // Captures scrolling position
-    var scrollPosition = parallaxContainer.scrollTop;
+    // var scrollPosition = parallaxContainer.scrollTop;
+    var scrollPosition = window.scrollY;
 
     // If the scroll position is greater than the set height
     if (scrollPosition >= scrollTransitionHeight) {
