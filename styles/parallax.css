@@ -134,7 +134,7 @@
 }
 
 .parallax_far {
-    transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(2.5);
 }
 
 /* Create  */
