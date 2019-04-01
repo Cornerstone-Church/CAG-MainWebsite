@@ -17,7 +17,7 @@ var parallaxContainer = document.querySelector(".parallax_container");
 function animationChecker() {
     // Gets the current top value of the container and adds it to the height
     // of the window to get the bottom pixel
-    var bottomWindow = parallaxContainer.scrollTop + window.innerHeight;
+    var bottomWindow = window.scrollY + window.innerHeight;
 
     // Series Logo
     if (!seriesElementHasRun) {
