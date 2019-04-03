@@ -18,7 +18,7 @@
     </script>
 </head>
 
-<body onload="onLoad(); startSlideShow();" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
+<body onload="startSlideShow();" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
@@ -64,53 +64,46 @@
             <h2>Some of the events that we do</h2>
         </div>
 
-        <div id="slide1" class="slide">
-            <div class="slide-wrapper">
-                <img id="image1" class="slide-image" src="/ref/pages/events_page/5k.jpg">
-                <div id="slide-content-1" class="dim-background slide-content">
-                    <div class="slide-text content">
-                        <h1>Missions Fun Run</h1>
-                        <p>
-                            Love to run? Join the Cornerstone comunity as we raise money for missions. Not a runner? We
-                            need your help. Participate in the run by serving food, passing out water, and encourage others as they cross the finish line.
-                        </p>
-                    </div>
+        <div class="event-element">
+            <div class="events-wrapper">
+                <img src="/ref/pages/events_page/5k.jpg">
+                <div class="events-text">
+                    <h1>Missions Fun Run</h1>
+                    <p>
+                        Love to run? Join the Cornerstone comunity as we raise money for missions. Not a runner? We
+                        need your help. Participate in the run by serving food, passing out water, and encourage others as they
+                        cross the finish line.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="event-element">
+            <div class="events-wrapper">
+                <img src="/ref/pages/events_page/harvest_fest.jpg">
+                <div class="events-text">
+                    <h1>Harvest Festival</h1>
+                    <p>
+                        Every October 31st, Cornerstone hosts their annual Harvest Festival where more than
+                        1,500+ people come out for an evening of fun. Activities include inflatables, food,
+                        games, and a stage entertainment presentation.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="event-element">
+            <div class="events-wrapper">
+                <img src="/ref/pages/events_page/touch_of_christmas.jpg">
+                <div class="events-text">
+                    <h1>A Touch of Christmas</h1>
+                    <p>During the Christmas season, touching the community around us has never been more
+                        important. Sharing the meaning of Christmas by blessing people with food, coats, drama,
+                        and so much more allows us to present Christ to those who may not come to a church
+                        service.</p>
                 </div>
             </div>
         </div>
 
-        <div id="slideshowContainer">
-            <div id="slide2" class="slide">
-                <div class="slide-wrapper">
-                    <img id="image2" class="slide-image" src="/ref/pages/events_page/harvest_fest.jpg">
-                    <div id="slide-content-2" class="dim-background slide-content">
-                        <div class="slide-text content">
-                            <h1>Harvest Festival</h1>
-                            <p>
-                                Every October 31st, Cornerstone hosts their annual Harvest Festival where more than
-                                1,500+ people come out for an evening of fun. Activities include inflatables, food,
-                                games, and a stage entertainment presentation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="slide3" class="slide">
-                <div class="slide-wrapper">
-                    <img id="image3" class="slide-image" src="/ref/pages/events_page/touch_of_christmas.jpg">
-                    <div id="slide-content-3" class="dim-background slide-content">
-                        <div class="slide-text content">
-                            <h1>A Touch of Christmas</h1>
-                            <p>During the Christmas season, touching the community around us has never been more
-                                important. Sharing the meaning of Christmas by blessing people with food, coats, drama,
-                                and so much more allows us to present Christ to those who may not come to a church
-                                service.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </section>
 
     <!-- Footer -->
@@ -118,7 +111,7 @@
 
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js"></script>
-    <script src="./scripts/events_page.js"></script>
+    <!-- <script src="./scripts/events_page.js"></script> -->
     <script src="./scripts/banner.js"></script>
 </body>
 
