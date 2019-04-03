@@ -133,6 +133,10 @@ section {
     text-align: center;
 }
 
+.drop-shadow {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+}
+
 
 /* Home Video */
 .video_overlay {
