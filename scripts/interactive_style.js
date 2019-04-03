@@ -12,13 +12,19 @@ var scrollTransitionHeight = 200;
 // Enable light mode
 var lightMode = true;
 
+// Shows if mobile nav bar is open or not
 var mobileNavVissable = false;
+
+// Shows if header is trasparent or not (For nav bar mobile)
+var headerTransparent = false;
 
 
 function headerVideo() {
     var header = document.querySelector("header");
     header.classList.add('header-transparent');
     enableLightText();
+
+    headerTransparent = true;
 }
 
 
@@ -36,17 +42,26 @@ function headerScroll() {
         if (!isScrolling) {
             header.classList.add("header-blur");
             header.classList.remove("header-transparent");
+            header.classList.remove("header-dark");
             enableNormalText();
 
             isScrolling = true;
+            headerTransparent = false;
         }
     } else {
         if (isScrolling) {
             header.classList.remove("header-blur");
-            header.classList.add("header-transparent");
+            // Only add dark header if nav bar is open
+            if (mobileNavVissable) {
+                header.classList.add("header-dark");
+            } else {
+                // Enable transparancy if nav bar is not open
+                header.classList.add("header-transparent");
+            }
             enableLightText();
 
             isScrolling = false;
+            headerTransparent = true;
         }
     }
 }
@@ -126,17 +141,23 @@ function enableNormalText() {
 function toggleMobileNav() {
     var mobileNav = document.getElementById('mobile-nav');
     var mobileButton = document.querySelectorAll('#hamburger-button span');
+    var header = document.querySelector("header");
 
     if (!mobileNavVissable) {
         // mobileNav.style.display = 'inline';
         mobileNav.style.animationName = 'MobileNavMenu-In';
-
+        
         // Modify the menu button
         mobileButton[0].style.opacity = '0';
         mobileButton[1].style.transform = 'rotate(45deg)';
         mobileButton[2].style.transform = 'rotate(-45deg)';
         mobileButton[3].style.opacity = '0';
-
+        
+        // Check to see if header is in transparent mode
+        if (headerTransparent) {
+            header.classList.remove("header-transparent");
+            header.classList.add("header-dark");
+        }
 
         mobileNavVissable = true;
     } else {
@@ -148,7 +169,13 @@ function toggleMobileNav() {
         mobileButton[1].style.transform = 'rotate(0deg)';
         mobileButton[2].style.transform = 'rotate(0deg)';
         mobileButton[3].style.opacity = '1';
+
+        if (headerTransparent) {
+            header.classList.add("header-transparent");
+            header.classList.remove("header-dark");
+        }
         
         mobileNavVissable = false;
     }
+
 }
