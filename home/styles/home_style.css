@@ -106,6 +106,10 @@
     text-shadow: 0px 0px 20px black;
 }
 
+.series-subtext {
+    font-size: 20px;
+}
+
 @media only screen and (max-width:800px) {
     #announcement-div h3 {
         font-size: 20px;
