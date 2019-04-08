@@ -6,10 +6,10 @@
         our World.</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css?version=19040801">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" href="/home/styles/home_style.css">
-    <link rel="stylesheet" href="/home/styles/home_animation.css">
+    <link rel="stylesheet" href="/home/styles/home_style.css?version=19040802">
+    <link rel="stylesheet" href="/home/styles/home_animation.css?version=19040801">
     <script src="./scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -45,24 +45,33 @@
                 <h3>Local Church &bull; Global Outreach</h3>
             </div>
             <!-- Sermon video Section -->
-            <div id="sermon-video-element">
-                <img id="series-logo" src="/ref/sermon_series/logo.png">
-                <h1 id="series-text">Palm Celebration<br><span class="series-subtext">April 13, 5pm & April 14, 9am & 11am</span><br><br>Good Friday<br><span class="series-subtext">April 19, 7pm</span><br><br>Resurrection Service<br><span class="series-subtext">April 20, 5pm & April 21, 7:30am, 9am & 11am</span></h1>
-                <iframe class="drop-shadow" id="series-video"
-                    src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
-                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <h2><a class="button--white" target="_blank"
-                        href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
-                        services</a></h2>
+            <div id="sermon-video--wrapper">
+                <div id="sermon-video--background">
+                    <img src="/ref/sermon_series/background.jpg?version=19040802">
+                </div>
+                <div id="sermon-video--foreground">
+                    <img id="series-logo" src="/ref/sermon_series/logo.png?version=19040802">
+                    <h1 id="series-text">Palm Celebration<br><span class="series-subtext">April 13, 5pm & April 14, 9am
+                            & 11am</span><br><br>Good Friday<br><span class="series-subtext">April 19,
+                            7pm</span><br><br>Resurrection Service<br><span class="series-subtext">April 20, 5pm & April
+                            21, 7:30am, 9am & 11am</span></h1>
+                    <iframe class="drop-shadow" id="series-video"
+                        src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                        frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <h2><a class="button--white" target="_blank"
+                            href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">More
+                            services</a></h2>
+                </div>
             </div>
+
             <!-- Footer Section -->
             <div id="footer"></div>
         </section>
     </div>
     <!-- Scripts -->
-    <script src="/scripts/interactive_style.js"></script>
-    <script src="/home/scripts/home_script.js"></script>
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/home/scripts/home_script.js?version=19040801"></script>
 </body>
 
 </html>
