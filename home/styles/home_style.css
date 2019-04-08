@@ -2,24 +2,42 @@
     --sermon-primary-color: white;
 }
 
-#sermon-video-element {
+#sermon-video--wrapper {
+    position: relative;
+}
+
+#sermon-video--background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#sermon-video--background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+#sermon-video--foreground {
     display: inline-block;
     /* Center Video element */
     width: 100%;
     margin: 0;
     padding: 90px 0;
-
+/* 
     background: var(--theme-background-color);
     background-image: url('/ref/sermon_series/background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
-#sermon-video-element iframe {
+#sermon-video--foreground iframe {
     margin-top: 50px;
 }
 
-#sermon-video-element h1 {
+#sermon-video--foreground h1 {
     font-weight: bold;
     font-size: 30px;
     font-family: 'IBM Plex Sans';
@@ -30,17 +48,17 @@
     text-shadow: 0 0 20px black;
 }
 
-#sermon-video-element h2 {
+#sermon-video--foreground h2 {
     margin-top: 30px;
     text-transform: uppercase;
 }
 
-#sermon-video-element img {
+#sermon-video--foreground img {
     width: 600px;
     height: auto;
 }
 
-#sermon-video-element iframe {
+#sermon-video--foreground iframe {
     width: 906px;
     height: 510px;
 }
@@ -115,11 +133,11 @@
         font-size: 20px;
     }
 
-    #sermon-video-element img {
+    #sermon-video--foreground img {
         width: 80%;
     }
 
-    #sermon-video-element iframe {
+    #sermon-video--foreground iframe {
         margin: 10px;
         width: 300px;
         height: 167px;
