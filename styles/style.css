@@ -11,9 +11,9 @@ You have been warned..... :-0 */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 
-@import url('header.css');
-@import url('footer.css');
-@import url('parallax.css');
+@import url('header.css?version=19040801');
+@import url('footer.css?version=19040801');
+@import url('parallax.css?version=19040801');
 
 :root {
     --global-content-width: 800px;
