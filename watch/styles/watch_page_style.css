@@ -41,7 +41,6 @@ body {
     margin: -30px 0px 20px 0px;
 }
 
-
 #sermon-series-logo {
     width: 500px;
     height: auto;
@@ -109,11 +108,33 @@ body {
     color: #2f2f2f;
 }
 
+.more-sermons--wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.more-sermons--button {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--theme-primary-color) !important;
+}
+
+.more-sermons--button img {
+    height: 70px;
+}
+
 
 @media only screen and (max-width: 800px) {
     #sermon-series-logo {
         width: 90%;
         max-width: 500px;
+        margin-left: 0px;
+    }
+
+    #sermon-series--forground {
+        left: 0px;
+        transform: translate(0%, -50%);
     }
 
     #recent-videos--section iframe {
