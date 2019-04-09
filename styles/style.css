@@ -20,6 +20,7 @@ You have been warned..... :-0 */
 
     /* Default values for page if mode is not specified */
     --theme-primary-color: #ecf0f1;
+    --theme-primary-color--rgb: 236, 240, 241;
     --theme-secondary-color: #34495e;
     --theme-secondary-color--rgb: 52, 73, 94;
     --theme-background-color: #ecf0f1;

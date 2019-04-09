@@ -5,8 +5,8 @@
     <title>Watch | Cornerstone Church</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css?version=19040801">
-    <link rel="stylesheet" href="./styles/watch_page_style.css">
+    <link rel="stylesheet" href="/styles/style.css?version=19040901">
+    <link rel="stylesheet" href="./styles/watch_page_style.css?version=19040901">
     <link rel="stylesheet" href="./styles/video-player.css">
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
@@ -31,7 +31,7 @@
             <div id="sermon-series--forground" class="content">
                 <div class="center">
                     <img id="sermon-series-logo" src="/ref/sermon_series/logo.png?version=19040801">
-                    
+
                     <!-- Commented out because we have no shorts -->
                     <!-- <h1>Series Short Films</h1> -->
                 </div>
@@ -120,19 +120,35 @@
         </div>
         <div id="sermons--section">
             <h1>Watch our Service</h1>
-            <iframe class="drop-shadow" src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+            <iframe class="drop-shadow"
+                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <h2 id="sermons-links"><a target="_blank"
-                    href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">Watch More
-                    Services</a> or <a target="_blank" href="https://cornerstone4us.podbean.com/">Download
-                    Podcast</a></h2>
+                allowfullscreen></iframe><br><br>
+
+            <div class="content">
+                <div class="more-sermons--wrapper">
+                    <div class="more-sermons--element">
+                        <a href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV" target="_blank" class="more-sermons--button">
+                            <img src="/ref/pages/watch_page/icons/video_icon.png"><br>
+                            More Services
+                        </a>
+                    </div>
+    
+                    <div class="podcast--element">
+                        <a href="https://cornerstone4us.podbean.com/" target="_blank" class="more-sermons--button">
+                            <img src="/ref/pages/watch_page/icons/podcast_icon.png"><br>
+                            Podcast
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- TODO: Add shadow to video -->
         <div id="recent-videos--section">
             <h1>A Moment Together</h1>
             <h2>New Episodes Every Friday</h2>
-            <iframe class="drop-shadow" src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGvYMkmF9aFePk-S_zfHdNW"
+            <iframe class="drop-shadow"
+                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGvYMkmF9aFePk-S_zfHdNW"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
