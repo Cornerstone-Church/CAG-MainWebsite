@@ -144,6 +144,10 @@
     }
 
     #video-banner h1 {
-        font-size: 40px;
+        font-size: 30px;
+    }
+    
+    #video-banner h2 {
+        font-size: 20px;
     }
 }
