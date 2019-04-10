@@ -4,6 +4,8 @@ const wednesdayMenu = document.querySelector("#wednesday-menu");
 const saturdayDate = document.querySelector("#saturday-menu-date");
 const saturdayMenu = document.querySelector("#saturday-menu");
 
+var firestore = firebase.firestore();
+
 // Reference where the data is stored in the database
 const wednesdayDocRef = firestore.doc("cafe-menu/wednesday");
 const saturdayDocRef = firestore.doc("cafe-menu/saturday");
