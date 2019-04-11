@@ -1,3 +1,33 @@
+@keyframes social-in {
+    0% {
+        transform: scale(.5);
+    }
+    40% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(.7);
+    }
+    100% {
+        transform: scale(.8);
+    }
+}
+
+@keyframes social-out {
+    0% {
+        transform: scale(.8);
+    }
+    40% {
+        transform: scale(.4);
+    }
+    70% {
+        transform: scale(.6);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+
 #item4 { grid-area: right; }
 
 footer {
@@ -19,12 +49,22 @@ footer .footer-social-icons img {
 
 footer .footer-social-icons a {
     display: inline-block;
-    height: 40px;
-    padding: 5px;
+    height: 80px;
+    padding: 0px;
+    /* background: green; */
+    transform: scale(.5);
 }
 
 footer .footer-social-icons a:hover {
-    opacity: .5;
+    animation-name: social-in;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+footer .footer-social-icons a:not( :hover) {
+    animation-name: social-out;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
 }
 
 footer .footer-information {
