@@ -13,6 +13,32 @@ footer img {
     height: 20px;
 }
 
+footer .footer-social-icons img {
+    height: 100%;
+}
+
+footer .footer-social-icons a {
+    display: inline-block;
+    height: 40px;
+    padding: 5px;
+}
+
+footer .footer-social-icons a:hover {
+    opacity: .5;
+}
+
+footer .footer-information {
+    color: var(--theme-secondary-color);
+}
+
+footer .footer-information #phone {
+    font-size: 20px;
+}
+
+footer .footer-information #address {
+    color: #8392a3;
+}
+
 footer .footer-link--container {
     display: grid;
     grid-template-areas: 
@@ -51,7 +77,7 @@ footer li a {
 @media only screen and (max-width:800px) {
     
     footer .footer-link--container {
-        display: inline;
+        display: none;
         text-align: center;
     }
 
@@ -66,6 +92,10 @@ footer li a {
 
     footer .footer-link--section {
         margin-top: 20px;
+    }
+
+    footer .footer-social-icons a {
+        padding: 10px 5px;
     }
 
     footer img {
