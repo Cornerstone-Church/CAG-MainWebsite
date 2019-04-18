@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Prayer Walk | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=19041701">
+    <link rel="stylesheet" href="../styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/prayerwalk_style.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body onload="checkExpired()">
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <img id="banner" src="/ref/pages/ministries_page/banners/prayerWalk.jpg">
+        <div class="content">
+            <a href="../" class="button-small">Back to Ministries</a><br><br>
+
+            <div class="center">
+                <h1>Bowie Prayer Walks</h1>
+                <p>Join us Sundays at 6pm as we walk and pray in different parts of Bowie. Below is our list of upcoming prayer walks.</p>
+            </div>
+            <br>
+            <h2>Upcoming Walks</h2>
+            <br>
+            <table id="prayer-table">
+                <tr id="title-section">
+                    <td>Date</td>
+                    <td>Section</td>
+                    <td>Start Location</td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-04-28</div>
+                    <td>April 28th</td>
+                    <td>A</td>
+                    <td>
+                        United Parish of Bowie – 2515 Mitchellville Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-05-05</div>
+                    <td>May 5th</td>
+                    <td>B</td>
+                    <td>
+                        Belcroft Bible Church – 13000 Beechtree Lane
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-05-12</div>
+                    <td>May 12th</td>
+                    <td>C</td>
+                    <td>
+                        Church of the Redeemer – 7300 Race Track Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-05-19</div>
+                    <td>May 19th</td>
+                    <td>D</td>
+                    <td>
+                        Mt. Oak United Methodist – 14100 Mt. Oak Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-05-26</div>
+                    <td>May 26th</td>
+                    <td>E</td>
+                    <td>
+                        Enfield Chase Park – 3800 Northview Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-06-02</div>
+                    <td>June 2nd</td>
+                    <td>F</td>
+                    <td>
+                        Bowie Church of Christ – 2518 Kenhill Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-06-09</div>
+                    <td>June 9th</td>
+                    <td>G</td>
+                    <td>
+                        Cresthill Baptist Church – 6510 Laurel-Bowie Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-06-16</div>
+                    <td>June 16th</td>
+                    <td>H</td>
+                    <td>
+                        Heather Hills Elementary – 12605 Heming Ln
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-06-23</div>
+                    <td>June 23th</td>
+                    <td>I and V</td>
+                    <td>
+                        Cornerstone Church – 16010 Annapolis Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-06-30</div>
+                    <td>June 30th</td>
+                    <td>J</td>
+                    <td>
+                        Jennings Mill Pool Club – 316 Jennings Mill Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-07-07</div>
+                    <td>July 7th</td>
+                    <td>K</td>
+                    <td>
+                        Grace Lutheran – 2503 Belair Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-07-14</div>
+                    <td>July 14th</td>
+                    <td>L</td>
+                    <td>
+                        Bowie Church of Christ – 2518 Kenhill Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-07-21</div>
+                    <td>July 21th</td>
+                    <td>M</td>
+                    <td>
+                        St. Matthew’s United Methodist – 14900 Annapolis Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-07-28</div>
+                    <td>July 28th</td>
+                    <td>N</td>
+                    <td>
+                        Allen Pond Park – 3330 Northview Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-08-04</div>
+                    <td>August 4th</td>
+                    <td>O and Y</td>
+                    <td>
+                        Church of the Redeemer – 7300 Race Track Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-08-11</div>
+                    <td>August 11th</td>
+                    <td>P</td>
+                    <td>
+                        Village Baptist Church – 1950 Mitchellville Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-08-18</div>
+                    <td>August 18th</td>
+                    <td>Q</td>
+                    <td>
+                        Northridge Park – 12401 Quintette Lane
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-08-25</div>
+                    <td>August 25th</td>
+                    <td>R</td>
+                    <td>
+                        Rockledge Elementary – 7701 Laurel Bowie Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-09-01</div>
+                    <td>September 1st</td>
+                    <td>S</td>
+                    <td>
+                        Belair Baptist – 2801 Belair Dr
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-09-08</div>
+                    <td>September 8th</td>
+                    <td>T</td>
+                    <td>
+                        Tulip Grove Elementary – 2909 Trainor Ln
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-09-15</div>
+                    <td>September 15th</td>
+                    <td>U</td>
+                    <td>
+                        United Lane Park – United Lane
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-09-22</div>
+                    <td>September 22nd</td>
+                    <td>W</td>
+                    <td>
+                        Whitehall Elementary – 3901 Woodhaven Ln
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-09-29</div>
+                    <td>September 29th</td>
+                    <td>Old Stage</td>
+                    <td>
+                        Woodlawn Baptist – 5001 Church Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-10-06</div>
+                    <td>October 6th</td>
+                    <td>High Bridge</td>
+                    <td>
+                        High Bridge Elementary – 7011 High Bridge Rd
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-10-13</div>
+                    <td>October 13th</td>
+                    <td>Longleaf</td>
+                    <td>
+                        Longleaf Park – 4305 Whispering Leaves Ln
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-10-20</div>
+                    <td>October 20th</td>
+                    <td>Fairwood</td>
+                    <td>
+                        Sycamore Club – 12600 Fairwood Parkway
+                    </td>
+                </tr>
+                <tr class="expires">
+                    <div class="expire-date">2019-10-27</div>
+                    <td>October 27th</td>
+                    <td>Huntington</td>
+                    <td>
+                        Bowie United Methodist – 13009 6th St (Old Bowie)
+                    </td>
+                </tr>
+            </table>
+            <div id="expire-empty">
+                No more prayer walks scheduled
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/expire_it.js"></script>
+</body>
+
+</html>
