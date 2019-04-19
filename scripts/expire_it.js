@@ -3,12 +3,12 @@
     # HOW TO USE #
     ##############
 
-    Required Classes:
-    'expires' - Put on parent element that will hide if expired.
-    'expire-date' - Required for each element that will expire. FORMAT: <YEAR>-<MONTH>-<DAY> 2019-04-12
-    'expire-empty' - An element that will notify user that everything is expired. Will be displayed inline.
+    Classes:
+    'expires' (Required) - Put on parent element that will hide if expired.
+    'expire-date' (Required) - On each element that will expire. FORMAT: <YEAR>-<MONTH>-<DAY> 2019-04-12
+    'expire-empty' (Optional) - An element that will notify user that everything is expired. Will be displayed inline.
 
-    1. Add function checkExpired() to body onload.
+    1. Add function expireIt() to body onload.
     2. Add the 'expires' class on each item that can expire.
     3. Add the 'expire-date' class inside each element in the correct format.
 
@@ -17,7 +17,6 @@
         <div class="expire-date">2019-02-11</div>
         Content goes here...
     </div>
-
  */
 
 
@@ -29,7 +28,7 @@ var expireEmpty = document.querySelector("#expire-empty")
 var TAG = "EXPIRE IT: "
 
 /* Checks to see if any element on the page expired. Must be loaded on page load. */
-function checkExpired() {
+function expireIt() {
     var currentTime = new Date().getTime();
     var currentIndex = 0;
     var expiredItems = 0;
@@ -58,7 +57,9 @@ function checkExpired() {
     }
 
     // Check if all items are expired
-    if (expiredItems == elements.length) {
-        expireEmpty.style.display = 'inline';
+    if (expireEmpty != null) {
+        if (expiredItems == elements.length) {
+            expireEmpty.style.display = 'inline';
+        }
     }
 }
