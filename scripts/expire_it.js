@@ -33,13 +33,18 @@ function expireIt() {
     var currentIndex = 0;
     var expiredItems = 0;
 
+    console.log(expireDates);
+
     expireDates.forEach((element) => {
         // Format for the Date class
-        var dateFormated = "'" + element.innerHTML + "'";
-        var dateCaptured = new Date(dateFormated).getTime();
+        
+        var dateCaptured = new Date(element.innerHTML).getTime();
+
 
         // Add number of milliseconds in a day to show element on expiration date
         dateCaptured += 86400000;
+
+        console.log(dateCaptured); 
 
         if ((dateCaptured) < currentTime) {
             // Element expired
