@@ -1,3 +1,13 @@
+@keyframes sliderProgress {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
 #slider {
     display: block;
     position: relative;
@@ -55,6 +65,12 @@
 
     background: rgba(255, 255, 255, .5);
     z-index: 90;
+}
+
+.slide-progress-animation {
+    animation-name: sliderProgress;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 
 @media only screen and (max-width:800px) {
