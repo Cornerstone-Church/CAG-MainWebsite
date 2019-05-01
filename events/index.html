@@ -5,7 +5,7 @@
     <title>Events | Cornerstone Church</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/style.css?version=19041701">
+    <link rel="stylesheet" href="/styles/style.css?version=19050101">
     <link rel="stylesheet" href="./styles/events_style.css?version=19040901">
     <link rel="stylesheet" href="./styles/banner.css?version=19042401">
 
@@ -20,8 +20,9 @@
 
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
-    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
-    
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
     <script>
@@ -42,7 +43,7 @@
     </script>
 </head>
 
-<body onload="startSlideShow();" onscroll="scrollingSlideShow()" onresize="resizingWindow()">
+<body onload="holdIt(); expireIt(); startSlideShow();" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
@@ -50,15 +51,20 @@
         <!-- Slider -->
         <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()">
             <div id="slide-progress"></div>
+
             <!-- Star Wars -->
-            <div class="slider-slide">
-                <a href="https://cornerstonebowie.churchcenter.com/registrations/events/223255" target="_blank">
-                    <img class="slide-background"
-                        src="/ref/announcments/slides/star_wars-background.jpg?version=19041001">
-                    <img class="slide-foreground"
-                        src="/ref/announcments/slides/star_wars-foreground.png?version=19041001">
-                </a>
+            <div class="expires">
+                <div class="expire-date">2019-05-04</div>
+                <div class="slider-slide">
+                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/223255" target="_blank">
+                        <img class="slide-background"
+                            src="/ref/announcments/slides/star_wars-background.jpg?version=19041001">
+                        <img class="slide-foreground"
+                            src="/ref/announcments/slides/star_wars-foreground.png?version=19041001">
+                    </a>
+                </div>
             </div>
+
             <!-- Cornerstone Colledge of Leadership -->
             <div class="slider-slide">
                 <a>
@@ -66,6 +72,26 @@
                     <img class="slide-foreground" src="/ref/announcments/slides/ccl-foreground.png">
                 </a>
             </div>
+
+            <!-- Water Baptism -->
+            <div class="hold">
+                <div class="hold-date">2019-05-06</div>
+                <div class="slider-slide">
+                    <a href="https://cornerstonebowie.churchcenter.com/people/forms/35955" target="_blank">
+                        <img class="slide-background" src="/ref/announcments/slides/WaterBaptism_Background.jpg">
+                        <img class="slide-foreground" src="/ref/announcments/slides/WaterBaptism_foreground.png">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dudes and Food -->
+            <div class="slider-slide">
+                <a href="https://cornerstonebowie.churchcenter.com/people/forms/35955" target="_blank">
+                    <img class="slide-background" src="/ref/announcments/slides/Dudes&Food_Background.jpg">
+                    <img class="slide-foreground" src="/ref/announcments/slides/Dudes&Food_Foreground.png">
+                </a>
+            </div>
+
             <!-- B&B Slide -->
             <div class="slider-slide">
                 <a href="https://cornerstonebowie.churchcenter.com/people/forms/35955" target="_blank">
@@ -73,6 +99,7 @@
                     <img class="slide-foreground" src="/ref/announcments/slides/B&B-foreground.png?version=19042901">
                 </a>
             </div>
+
             <!-- Israel -->
             <div class="slider-slide">
                 <a href="https://cornerstonebowie.churchcenter.com/people/forms/35955" target="_blank">
@@ -80,6 +107,7 @@
                     <img class="slide-foreground" src="/ref/announcments/slides/israel-foreground.png?version=19041001">
                 </a>
             </div>
+
         </div>
 
         <!-- Header Section -->
@@ -142,7 +170,8 @@
 
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=19040801"></script>
-    <!-- <script src="./scripts/events_page.js"></script> -->
+    <script src="/scripts/hold_it.js?version=19050101"></script>
+    <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="./scripts/banner.js?version=19042401s"></script>
 </body>
 
