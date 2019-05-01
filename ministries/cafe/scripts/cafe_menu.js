@@ -14,14 +14,26 @@ getRealtimeUpdate();
 
 function getRealtimeUpdate() {
     wednesdayDocRef.onSnapshot(function (doc) {
+        // Grab snapshot data
         const fetchedData = doc.data();
-        wednesdayDate.innerHTML = fetchedData.date;
-        wednesdayMenu.innerHTML = fetchedData.menu;
+        // Fetch Date
+        wednesdayDate.innerHTML = fetchedData['date'];
+
+        // List all elements in the items array
+        fetchedData['items'].forEach((item) => {
+            wednesdayMenu.innerHTML += item + '<br>';
+        });
     });
 
     saturdayDocRef.onSnapshot(function (doc) {
+        // Grab snapshot data
         const fetchedData = doc.data();
-        saturdayDate.innerHTML = fetchedData.date;
-        saturdayMenu.innerHTML = fetchedData.menu;
+        // Fetch Date
+        saturdayDate.innerHTML = fetchedData['date'];
+
+        // List all elements in the items array
+        fetchedData['items'].forEach((item) => {
+            saturdayMenu.innerHTML += item + '<br>';
+        });
     });
 }
