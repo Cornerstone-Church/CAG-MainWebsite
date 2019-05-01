@@ -1,12 +1,18 @@
 var currentSlide = 0; // Start on slide 1
 var slideDelay = 4000; // In miliseconds 5000
 
-var bannerSlides = document.querySelectorAll(".slider-slide");
+// Will find slides and put here after startSlideShow() is called for hidden slides.
+var bannerSlides = [];
 var statusBar = document.getElementById('slide-progress');
 
-statusBar.addEventListener("animationend", animationListener, false);
 
 function startSlideShow() {
+    // Capture remaining element slides
+    bannerSlides = document.querySelectorAll(".slider-slide");
+
+    // Start animation listener
+    statusBar.addEventListener("animationend", animationListener, false);
+    
     // Set slide one to visiable
     bannerSlides[0].style.opacity = '1';
     // Set the duration of the status bar
