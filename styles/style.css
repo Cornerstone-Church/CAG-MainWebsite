@@ -141,6 +141,10 @@ section {
     display: none;
 }
 
+.hold-date {
+    display: none;
+}
+
 
 /* Home Video */
 .video_overlay {
