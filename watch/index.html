@@ -20,8 +20,9 @@
 
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
-    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
-    
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
     <script>
@@ -46,7 +47,7 @@
     <div id="header"></div>
 
     <!-- Content goes here -->
-    <section id="watch-page--section" class=" dark-background">
+    <section id="watch-page--section">
         <!-- Sermon Series -->
         <div id="enduring-faith--section">
             <!-- Background Image -->
@@ -142,7 +143,7 @@
                 </section>
             </div>
         </div>
-        <div id="sermons--section">
+        <div id="sermons--section" class="dark-section">
             <h1>Watch our Service</h1>
             <iframe class="drop-shadow"
                 src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
@@ -170,13 +171,45 @@
         </div>
 
         <!-- A Moment Together Section -->
-        <div id="recent-videos--section">
+        <div id="moment-together--section" class="light-section">
             <h1>A Moment Together</h1>
             <h2>New Episodes Every Friday</h2>
             <iframe class="drop-shadow"
                 src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGvYMkmF9aFePk-S_zfHdNW"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+        </div>
+
+        <div id="recent-videos--section" class="dark-section">
+            <h1>Our Recent Event Recaps</h1>
+            <ul id="recent-selector">
+                <li>
+                    <a onclick="openRecentVideo(0, 'https://www.youtube.com/embed/Ed27f1LOhIo')">
+                        <img src="/ref/pages/watch_page/thumbs/MissionsFunRun_Slide.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a onclick="openRecentVideo(1, 'https://www.youtube.com/embed/TYldUoerLxc')">
+                        <img src="/ref/pages/watch_page/thumbs/TOC_Slide_2018.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a onclick="openRecentVideo(2, 'https://www.youtube.com/embed/ajCIULtbZ2Q')">
+                        <img src="/ref/pages/watch_page/thumbs/HarvestFestival_AnnSlide.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="recent-videos--popup" onclick="closeAll()">
+            <div id="popup-window">
+                <div id="close-button" onclick="closeAll()" style="text-align: right">X</div>
+                <div class="center">
+                    <iframe width="560" height="315" src="" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -185,7 +218,7 @@
     <script src="./scripts/video-player.js"></script>
     <!-- <script src="./scripts/watch_page.js"></script> -->
     <script src="/scripts/interactive_style.js?version=19040801"></script>
-    <script></script>
+    <script src="./scripts/recap-section.js"></script>
 </body>
 
 </html>
