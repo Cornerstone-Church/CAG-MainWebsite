@@ -141,6 +141,10 @@ section {
     display: none;
 }
 
+.hold {
+    opacity: 0;
+}
+
 .hold-date {
     display: none;
 }
