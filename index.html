@@ -5,15 +5,16 @@
     <title>Cornerstone Church - Bowie MD | Building an Authentic Community, Lifting up Jesus, Growing in Him, Touching
         our World.</title>
     <meta charset="utf8">
-    
+
     <!-- Search Engine Information -->
     <meta name="title" content="Cornerstone Church | Bowie MD">
-    <meta name="description" content="Building an Authentic Community, Lifting up Jesus, Growing in Him and Touching our World. Check Cornerstone Church located in Bowie MD. Experience God through our services and activities on Saturday, Sunday, and through the week.">
-    
+    <meta name="description"
+        content="Building an Authentic Community, Lifting up Jesus, Growing in Him and Touching our World. Check Cornerstone Church located in Bowie MD. Experience God through our services and activities on Saturday, Sunday, and through the week.">
+
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css?version=19050101">
+    <link rel="stylesheet" href="/styles/style.css?version=19052201">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" href="/home/styles/home_style.css?version=19041001">
+    <link rel="stylesheet" href="/home/styles/home_style.css?version=19052201">
     <link rel="stylesheet" href="/home/styles/home_animation.css?version=19040801">
 
     <!-- Fav Icons -->
@@ -50,7 +51,7 @@
     </script>
 </head>
 
-<body onload="headerVideo(); expireIt();" onscroll="headerScroll(); animationChecker();">
+<body onload="headerVideo(); expireIt(); holdIt();" onscroll="headerScroll(); animationChecker();">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -64,6 +65,16 @@
             <div id="video-banner--text">
                 <h2>Welcome to</h2>
                 <h1>Cornerstone Church</h1>
+            </div>
+        </div>
+        <div class="hold">
+            <div class="hold-date">2019-05-26</div>
+            <div class="expires">
+                <div class="expire-date">2019-05-26</div>
+                <div id="memorial-day">
+                    <img src="/ref/announcments/slides/Memorial Day_Background.jpg">
+                    <img id="foreground" src="/ref/announcments/slides/Memorial Day_Foreground.png">
+                </div>
             </div>
         </div>
     </div>
@@ -113,6 +124,7 @@
     <script src="/scripts/interactive_style.js?version=19040801"></script>
     <script src="/home/scripts/home_script.js?version=19040801"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
+    <script src="/scripts/hold_it.js"></script>
 </body>
 
 </html>
