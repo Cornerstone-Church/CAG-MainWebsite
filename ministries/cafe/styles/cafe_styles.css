@@ -111,4 +111,12 @@ h2 {
     .class-selector .placeholder-bottom {
         width: 90%;
     }
+
+    .placeholder-top h2 {
+        display: none;
+    }
+
+    .class-selector .content-wrapper {
+        opacity: 1;
+    }
 }
