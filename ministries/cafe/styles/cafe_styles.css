@@ -113,10 +113,6 @@ h2 {
     }
 
     .placeholder-top h2 {
-        display: none;
-    }
-
-    .class-selector .content-wrapper {
-        opacity: 1;
+        width: 80%;
     }
 }
