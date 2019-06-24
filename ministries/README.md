@@ -14,6 +14,6 @@
 * Any and all changes are up for the owner to question at any time.
 
 ### IMPORTANT DOCUMENTATION
-**onclick**
+**onClick**
 
-There is a bug in iOS that does not let :hover flags in CSS to work. On each section that requires the hover there is a empty onclick function in the HTML. This tricks iOS to allow the hover as a click.
+There is a bug in iOS that does not let :hover flags in CSS to work. On each section that requires the hover there is a empty onClick function in the HTML. This tricks iOS to allow the hover as a click.
