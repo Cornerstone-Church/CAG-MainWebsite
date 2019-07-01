@@ -9,16 +9,21 @@ var statusBar = document.getElementById('slide-progress');
 function startSlideShow() {
     // Capture remaining element slides
     bannerSlides = document.querySelectorAll(".slider-slide");
-
+    
     // Start animation listener
     statusBar.addEventListener("animationend", animationListener, false);
     
     // Set slide one to visiable
     bannerSlides[0].style.opacity = '1';
-    // Set the duration of the status bar
-    statusBar.style.animationDuration = (slideDelay / 1000) + "s";
+    
+    // Only run timmer if there is 2 or more slides
+    if (bannerSlides.length >= 2) {
+        // Set the duration of the status bar
+        statusBar.style.animationDuration = (slideDelay / 1000) + "s";
+    
+        statusBar.classList.add("slide-progress-animation");
+    }
 
-    statusBar.classList.add("slide-progress-animation");
 }
 
 function animationListener(event) {
