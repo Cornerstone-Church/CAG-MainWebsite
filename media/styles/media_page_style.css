@@ -1,0 +1,286 @@
+body {
+    overflow-x: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    height: 340px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+#defaultVideo {
+    display: inline;
+}
+
+
+#enduring-faith--section {
+    position: relative;
+    height: 800px;
+}
+#sermon-series--background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sermon-series--forground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sermon-series--forground h1 {
+    padding: 0px;
+    margin: -30px 0px 20px 0px;
+}
+
+#sermon-series-logo {
+    width: 500px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#sermons--section h1 {
+    text-align: center;
+    color: var(--theme-primary-color);
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#sermons--section {
+    text-align: center;
+
+    padding: 40px 0px;
+}
+
+#sermons--section h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#sermons--section a {
+    color: #444;
+    text-decoration: none;
+}
+
+#sermons--section a:hover {
+    color: var(--theme-primary-color);
+}
+
+#sermons--section iframe {
+    width: 800px;
+    height: 450px;
+}
+
+#moment-together--section iframe {
+    width: 800px;
+    height: 450px;
+}
+
+#sermons-links {
+    color: #2f2f2f;
+}
+
+#recent-selector {
+    display: inline-block;
+    width: 100%;
+}
+
+#recent-selector li {
+    display: inline-block;
+    margin: 10px;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(.9);
+
+    animation-name: bounceOut;
+
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+
+    transition: 1s;
+}
+
+#recent-selector li:hover {
+    transform: scale(1);
+    animation-name: bounceIn;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(.9);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    40% {
+        box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes bounceOut {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(.86);
+    }
+    100% {
+        transform: scale(.9);
+    }
+}
+
+#recent-selector img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#recent-videos--popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: -100;
+    background: rgba(0, 0, 0, 0.7);
+
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#recent-videos--popup #popup-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 580px;
+
+    color: var(--theme-primary-color);
+}
+
+@keyframes popupEnter {
+    0% {
+        z-index: -100;
+        opacity: 0;
+    }
+    1% {
+        z-index: 10;
+        opacity: 0;
+    }
+    100% {
+        z-index: 10;
+        opacity: 1;
+    }
+}
+
+@keyframes popupOut {
+    0% {
+        z-index: 10;
+        opacity: 1;
+    }
+    99% {
+        z-index: 10;
+        opacity: 0;
+    }
+    100% {
+        z-index: -100;
+        opacity: 0;
+    }
+}
+
+#recent-videos--section a:hover, #close-button {
+    cursor: pointer;
+}
+
+.more-sermons--wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.more-sermons--button {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--theme-primary-color) !important;
+}
+
+.more-sermons--button img {
+    height: 70px;
+}
+
+.light-section h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--theme-secondary-color);
+}
+
+.light-section h2 {
+    text-align: center;
+    color: var(--theme-secondary-color);
+    margin-bottom: 30px;
+}
+
+.light-section {
+    background: var(--theme-primary-color);
+    text-align: center;
+
+    padding: 30px 0;
+}
+
+.dark-section h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--theme-primary-color);
+}
+
+.dark-section h2 {
+    text-align: center;
+    color: var(--theme-primary-color);
+    margin-bottom: 30px;
+}
+
+.dark-section {
+    background: #242424;
+    text-align: center;
+
+    padding: 30px 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+    #sermon-series-logo {
+        width: 90%;
+        max-width: 500px;
+        margin-left: 0px;
+    }
+
+    #sermon-series--forground {
+        left: 0px;
+        transform: translate(0%, -50%);
+    }
+
+    #recent-videos--section iframe {
+        width: 80%;
+        height: 300px;
+    }
+
+    #sermons--section iframe {
+        width: 80%;
+        height: 300px;
+    }
+}
