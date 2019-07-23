@@ -1,5 +1,5 @@
 # PERMISSIONS
-## Watch Page
+## Media Page
 ### Owner: Silent Sonata
 ### Maintainer: Silent Sonata
 
