@@ -15,11 +15,11 @@ body {
     display: inline;
 }
 
-
 #enduring-faith--section {
     position: relative;
     height: 800px;
 }
+
 #sermon-series--background {
     position: absolute;
     top: 0px;
@@ -57,7 +57,6 @@ body {
 
 #sermons--section {
     text-align: center;
-
     padding: 40px 0px;
 }
 
@@ -80,7 +79,7 @@ body {
     height: 450px;
 }
 
-#moment-together--section iframe {
+.moment-together--section iframe {
     width: 800px;
     height: 450px;
 }
@@ -101,12 +100,9 @@ body {
     height: 250px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transform: scale(.9);
-
     animation-name: bounceOut;
-
     animation-duration: .3s;
     animation-fill-mode: forwards;
-
     transition: 1s;
 }
 
@@ -157,7 +153,6 @@ body {
     opacity: 1;
     z-index: -100;
     background: rgba(0, 0, 0, 0.7);
-
     animation-duration: .5s;
     animation-fill-mode: forwards;
 }
@@ -167,9 +162,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 580px;
-
     color: var(--theme-primary-color);
 }
 
@@ -238,7 +231,6 @@ body {
 .light-section {
     background: var(--theme-primary-color);
     text-align: center;
-
     padding: 30px 0;
 }
 
@@ -257,10 +249,8 @@ body {
 .dark-section {
     background: #242424;
     text-align: center;
-
     padding: 30px 0;
 }
-
 
 @media only screen and (max-width: 800px) {
     #sermon-series-logo {
@@ -268,15 +258,21 @@ body {
         max-width: 500px;
         margin-left: 0px;
     }
-
     #sermon-series--forground {
         left: 0px;
         transform: translate(0%, -50%);
     }
-
     #recent-videos--section iframe {
         width: 80%;
         height: 300px;
+    }
+    .moment-together--section iframe {
+        width: 80%;
+        height: 300px;
+    }
+
+    #recent-videos--popup iframe {
+        width: 80%;
     }
 
     #sermons--section iframe {
