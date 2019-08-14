@@ -96,7 +96,8 @@ body {
 #recent-selector li {
     display: inline-block;
     margin: 10px;
-    width: 400px;
+    max-width: 400px;
+    width: 90%;
     height: 250px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transform: scale(.9);
@@ -162,7 +163,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 580px;
+    width: 90%;
     color: var(--theme-primary-color);
 }
 
@@ -278,5 +279,9 @@ body {
     #sermons--section iframe {
         width: 80%;
         height: 300px;
+    }
+
+    #recent-videos--section {
+
     }
 }
