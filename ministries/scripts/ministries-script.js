@@ -1,9 +1,10 @@
 // Container imports
-var containerElements = [document.getElementById('be-ministered--bigButton'), document.getElementById('find-fellowship--bigButton'), document.getElementById('find-freedom--bigButton'), document.getElementById('serve--bigButton')];
+var containerElements = [document.getElementById('be-ministered--bigButton'), document.getElementById('find-fellowship--bigButton'), document.getElementById('find-freedom--bigButton'), document.getElementById('serve--bigButton'), document.getElementById('schools--bigButton')];
 
+//// TODO: Add schools to this
 // Title and Content elements
-var titleElements = [document.getElementById('be-ministered--title'), document.getElementById('find-fellowship--title'), document.getElementById('find-freedom--title'), document.getElementById('serve--title')];
-var contentElements = [document.getElementById('be-ministered--content'), document.getElementById('find-fellowship--content'), document.getElementById('find-freedom--content'), document.getElementById('serve--content')];
+var titleElements = [document.getElementById('be-ministered--title'), document.getElementById('find-fellowship--title'), document.getElementById('find-freedom--title'), document.getElementById('serve--title'), document.getElementById('schools--title')];
+var contentElements = [document.getElementById('be-ministered--content'), document.getElementById('find-fellowship--content'), document.getElementById('find-freedom--content'), document.getElementById('serve--content'), document.getElementById('schools--content')];
 
 // A variable to hold if an section is open
 var isOpen = false;
