@@ -166,6 +166,8 @@ header {
     background: var(--theme-header-color-light);
     text-align: center;
     transform: translateY(-150%);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
 
     z-index: 100;
 
