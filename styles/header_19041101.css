@@ -60,13 +60,11 @@ header {
     transition: ease-in-out .3s;
 }
 
-/* Dark mode code - used by default */
 .header-dark {
     background: var(--theme-header-color-dark);
     transition: ease-in-out .3s;
 }
 
-/* Code for light mode if needed */
 .header-light{
     background: var(--theme-header-color-light);
     transition: ease-in-out .3s;
@@ -166,9 +164,12 @@ header {
     background: var(--theme-header-color-light);
     text-align: center;
     transform: translateY(-150%);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
 
     z-index: 100;
 
+    /* EXPERIMENTAL */
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
 
@@ -182,6 +183,10 @@ header {
     text-decoration: none;
     font-size: 20px;
     padding: 15px 80px;
+}
+
+#mobile-nav ul {
+    margin-bottom: 100px;
 }
 
 #hamburger-button {
