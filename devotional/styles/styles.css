@@ -1,0 +1,44 @@
+#devotionals {
+    padding: 0px;
+}
+
+#devotionals li {
+    border-top: 2px solid rgba(var(--theme-secondary-color--rgb), .3);
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+#devotionals li:first-child {
+    border-top: 2px solid rgba(var(--theme-secondary-color--rgb), 0);
+}
+
+#devotionals h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+#devotionals .devo-title {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#devotionals .devo-author {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 800px) {
+    #banner {
+        display: none;
+    }
+
+    .content {
+        margin-top: 80px; 
+    }
+
+    #devotionals h2 {
+        text-align: center;
+    }
+}
