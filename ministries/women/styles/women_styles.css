@@ -94,6 +94,10 @@ h2 {
     height: 400px;
 }
 
+#huddleston {
+    height: 500px;
+}
+
 
 @media only screen and (max-width:800px) {
     .class-selector {
@@ -101,6 +105,10 @@ h2 {
     }
 
     #moms-night {
+        height: 700px;
+    }
+
+    #huddleston {
         height: 700px;
     }
 
