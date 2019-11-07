@@ -1,0 +1,242 @@
+@keyframes MobileNavMenu-In {
+    0% {
+        opacity: 0;
+        /* Hides elements so they are not clickable */
+        transform: translateY(-150%);
+    }
+    1% {
+        opacity: 0;
+        /* Bring elements to forground then fade up */
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes MobileNavMenu-Out {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+}
+
+
+header {
+    position: fixed;
+    background: var(--theme-header-color-light);
+    top: 0px;
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    /* EXPERIMENTAL */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Size */
+    height: var(--header-height);
+    width: 100%;
+    z-index: 100;
+
+    transition: .5s;
+}
+
+.header-blur {
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.header-transparent {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(0px) saturate(100%);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
+    transition: ease-in-out .3s;
+}
+
+.header-dark {
+    background: var(--theme-header-color-dark);
+    transition: ease-in-out .3s;
+}
+
+.header-light{
+    background: var(--theme-header-color-light);
+    transition: ease-in-out .3s;
+}
+
+.header-content {
+    /* Size */
+    width: 100%;
+    padding: 0px;
+    z-index: 101;
+
+    display: grid;
+    grid-template-columns: 220px auto;
+}
+
+#header-icon {
+    position: relative;
+    display: block;
+    text-align: right;
+}
+
+#header-icon img {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    padding: 0px;
+    /* Get the height of the header and subtracked 10px */
+    height: 13px;
+
+}
+
+#desktop-nav {
+    position: relative;
+    text-align: center;
+}
+
+#desktop-nav ul {
+    position: absolute;
+    top: 50%;
+    left: calc(50vw - 220px);
+    transform: translate(-50%, -50%);
+    width: 600px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin: 0px;
+    /* Removes a spacing glitch */
+    font-size: 0;
+}
+
+#desktop-nav li {
+    /* Display items horizontaly */
+    display: inline-block;
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+#desktop-nav a {
+    display: block;
+    /* Format Nav bar Text */
+    text-decoration: none;
+    color: var(--theme-nav-text);
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+    /* Format Button */
+    border-radius: 5px;
+
+    /* Transformation */
+    padding: 10px 7px;
+    transition: .1s;
+}
+
+#desktop-nav ul:hover a {
+    opacity: .7;
+}
+
+#desktop-nav ul a:hover {
+    color: var(--theme-secondary-color);
+    opacity: 1;
+}
+
+#mobile-nav--button {
+    display: none;
+}
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: var(--header-height);
+    height: 100vh;
+    width: 100%;
+    background: var(--theme-header-color-light);
+    text-align: center;
+    transform: translateY(-150%);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
+
+    z-index: 100;
+
+    /* EXPERIMENTAL */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#mobile-nav a {
+    color: var(--theme-nav-text);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 80px;
+}
+
+#mobile-nav ul {
+    margin-bottom: 100px;
+}
+
+#hamburger-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 20px;
+}
+
+#hamburger-button--wrapper {
+    display: block;
+    position: relative;
+}
+
+#hamburger-button span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--theme-nav-text);
+
+    transition: .2s;
+}
+
+#hamburger-button span:nth-child(2) {
+    top: 10px;
+}
+
+#hamburger-button span:nth-child(3) {
+    top: 10px;
+}
+
+#hamburger-button span:nth-child(4) {
+    top: 20px;
+}
+
+@media only screen and (max-width: 950px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav--button {
+        display: inline;
+    }
+
+    #mobile-nav {
+        display: inline;
+        opacity: 0;
+    }
+}
