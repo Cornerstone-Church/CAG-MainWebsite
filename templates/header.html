@@ -26,8 +26,8 @@
                 <li>
                     <a href="/media/">MEDIA</a>
                 </li>
-                <li>
-                    <a href="/give/">GIVE</a>
+                <li id="give-insert">
+                    <!-- <a href="/give/">GIVE</a> -->
                 </li>
             </ul>
         </nav>
@@ -70,9 +70,26 @@
             <li>
                 <a href="/media/">MEDIA</a>
             </li>
-            <li>
-                <a href="/give/">GIVE</a>
+            <li id="give-insert">
+                <!-- <a href="/give/">GIVE</a> -->
             </li>
         </ul>
     </nav>
+
+    <!-- Script for giving tuesday swap -->
+    <script>
+        var giveInsert = document.getElementById('give-insert');
+        var giveNav = document.createElement('a');
+        giveNav.innerHTML = 'GIVE';
+        var currentDate = new Date().getDate();
+        console.log(currentDate);
+        var matchDate = 3;
+
+        if (currentDate == matchDate) {
+            giveNav.setAttribute('href', '/give/givingtuesday.html');
+        } else {
+            giveNav.setAttribute('href', '/give/');
+        }
+        giveInsert.appendChild(giveNav);
+    </script>
 </header>
