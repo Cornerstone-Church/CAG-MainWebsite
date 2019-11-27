@@ -70,7 +70,7 @@
             <li>
                 <a href="/media/">MEDIA</a>
             </li>
-            <li id="give-insert">
+            <li id="give-insert--mobile">
                 <!-- <a href="/give/">GIVE</a> -->
             </li>
         </ul>
@@ -79,6 +79,7 @@
     <!-- Script for giving tuesday swap -->
     <script>
         var giveInsert = document.getElementById('give-insert');
+        var giveInsertMobile = document.getElementById('give-insert--mobile');
         var giveNav = document.createElement('a');
         giveNav.innerHTML = 'GIVE';
         var currentDate = new Date().getDate();
@@ -91,5 +92,6 @@
             giveNav.setAttribute('href', '/give/');
         }
         giveInsert.appendChild(giveNav);
+        giveInsertMobile.appendChild(giveNav);
     </script>
 </header>
