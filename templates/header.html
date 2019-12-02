@@ -80,18 +80,24 @@
     <script>
         var giveInsert = document.getElementById('give-insert');
         var giveInsertMobile = document.getElementById('give-insert--mobile');
+
         var giveNav = document.createElement('a');
         giveNav.innerHTML = 'GIVE';
+        var giveNavMobile = document.createElement('a');
+        giveNavMobile.innerHTML = 'GIVE';
+        
         var currentDate = new Date().getDate();
         console.log(currentDate);
         var matchDate = 3;
 
         if (currentDate == matchDate) {
             giveNav.setAttribute('href', '/give/givingtuesday.html');
+            giveNavMobile.setAttribute('href', '/give/givingtuesday.html');
         } else {
             giveNav.setAttribute('href', '/give/');
+            giveNavMobile.setAttribute('href', '/give/');
         }
         giveInsert.appendChild(giveNav);
-        giveInsertMobile.appendChild(giveNav);
+        giveInsertMobile.appendChild(giveNavMobile);
     </script>
 </header>
