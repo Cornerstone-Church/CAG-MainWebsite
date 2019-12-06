@@ -111,7 +111,21 @@
                     <!-- LOGO Code -->
                     <img id="series-logo" src="/ref/sermon_series/logo_19120201.png">
                     <h1 id="series-text">
-
+                        <div class="expires">
+                            <div class="expire-date">2019-12-07</div>
+                            <br>A Touch of Christmas
+                            <br>December 7th @ 10:00am - 2:00pm
+                        </div>
+                        <div class="expires">
+                            <div class="expire-date">2019-12-15</div>
+                            <br>The Lost Christmas Production
+                            <br>December 13th, 14th, & 15th @ 7:00pm
+                        </div>
+                        <div class="expires">
+                            <div class="expire-date">2019-12-24</div>
+                            <br>Christmas Eve service
+                            <br>December 24th @ 4:00pm, 6:00pm
+                        </div>
                     </h1>
                     <iframe class="drop-shadow" id="series-video"
                         src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
@@ -134,16 +148,16 @@
 
     <!-- Script for giving tuesday swap -->
     <script>
-            var giveElement = document.getElementById('giving-tuesday');
-            var currentDate = new Date().getDate();
-            var matchDate = 3;
-    
-            if (currentDate == matchDate) {
-                giveElement.style.display = 'inline';
-            } else {
-                giveElement.style.display = 'none';
-            }
-        </script>
+        var giveElement = document.getElementById('giving-tuesday');
+        var currentDate = new Date().getDate();
+        var matchDate = 3;
+
+        if (currentDate == matchDate) {
+            giveElement.style.display = 'inline';
+        } else {
+            giveElement.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
