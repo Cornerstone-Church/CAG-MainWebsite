@@ -34,6 +34,7 @@ You have been warned..... :-0 */
 
     --header-height: 70px;
     --header-second-bar--height: 30px;
+    overflow-x: hidden;
 }
 
 * {
