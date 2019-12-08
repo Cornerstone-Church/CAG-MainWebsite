@@ -75,18 +75,6 @@
             </div>
         </div>
 
-        <!-- Giving Tuesday -->
-        <div id="giving-tuesday"
-            style="position: absolute; width: 100vw; height: 100vh; background-image: url('/ref/pages/give_page/givingtuesday.jpg'); background-position: center; background-size: cover;">
-            <div
-                style="display: inline-block; padding: 20px; position: absolute; bottom: 0%; left: 50%; transform: translate(-50%, -20%);">
-                <div class="center">
-                    <h1 style="color: var(--theme-primary-color); font-size: 3em;">Giving Tuesday</h1>
-                    <a class="button--white" href="/give/givingtuesday.html">Give Today</a>
-                </div>
-            </div>
-        </div>
-
         <!-- <div style="position: absolute; width: 100vw; height: 100vh; background-color: #9c2e2e;">
             <div
                 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: white; border-radius: 5px; text-transform: uppercase; font-weight: bold;">
@@ -145,19 +133,6 @@
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="/scripts/alert.js"></script>
-
-    <!-- Script for giving tuesday swap -->
-    <script>
-        var giveElement = document.getElementById('giving-tuesday');
-        var currentDate = new Date().getDate();
-        var matchDate = 3;
-
-        if (currentDate == matchDate) {
-            giveElement.style.display = 'inline';
-        } else {
-            giveElement.style.display = 'none';
-        }
-    </script>
 </body>
 
 </html>
