@@ -25,15 +25,17 @@ function getRealtimeUpdate() {
         });
     });
 
-    saturdayDocRef.onSnapshot(function (doc) {
-        // Grab snapshot data
-        const fetchedData = doc.data();
-        // Fetch Date
-        saturdayDate.innerHTML = fetchedData['date'];
 
-        // List all elements in the items array
-        fetchedData['items'].forEach((item) => {
-            saturdayMenu.innerHTML += item + '<br>';
-        });
-    });
+    //// Code not used
+    // saturdayDocRef.onSnapshot(function (doc) {
+    //     // Grab snapshot data
+    //     const fetchedData = doc.data();
+    //     // Fetch Date
+    //     saturdayDate.innerHTML = fetchedData['date'];
+
+    //     // List all elements in the items array
+    //     fetchedData['items'].forEach((item) => {
+    //         saturdayMenu.innerHTML += item + '<br>';
+    //     });
+    // });
 }
