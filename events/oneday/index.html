@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Events | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=19072201">
+    <link rel="stylesheet" href="../styles/events_style.css?version=19040901">
+    <link rel="stylesheet" href="../styles/banner.css?version=19042401">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <script src="../../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body onload="holdIt(); expireIt(); startSlideShow();" onresize="resizingWindow()">
+    <div id="header"></div>
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <div class="oneday-banner">
+            <img id="oneday-background" src="./background.jpg">
+            <img id="oneday-foreground" src="./OneDay_Logo.png">
+        </div>
+
+        <div class="center">
+            <iframe src="https://www.youtube.com/embed/dT8mDU12_kI" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/hold_it.js?version=19050101"></script>
+    <script src="/scripts/expire_it.js?version=19050102"></script>
+    <script src="./scripts/banner.js?version=19042401s"></script>
+</body>
+
+</html>
