@@ -49,6 +49,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 60%;
 
     color: var(--theme-primary-color);
 }
@@ -86,7 +87,7 @@ h2 {
 
 .class-selector p {
     text-indent: 0px;
-    text-align: center;
+    text-align: left;
 }
 
 #class-element {
