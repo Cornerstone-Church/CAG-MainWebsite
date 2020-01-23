@@ -3,11 +3,12 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 #sunday-element {
-    height: 600px;
+    height: 700px;
 }
 
 #nursery-element {
@@ -52,6 +53,7 @@ h2 {
     top:  50%;
     left: 20px;
     z-index: 2;
+    margin: 0px;;
 
     font-size: 40px;
     transform: translatey(-50%);
@@ -93,7 +95,7 @@ h2 {
 
 .class-selector p {
     text-indent: 0px;
-    text-align: center;
+    text-align: left;
 }
 
 #class-element {
@@ -118,7 +120,7 @@ h2 {
     }
 
     #sunday-element {
-        height: 900px;
+        height: 1000px;
     }
 
     #wednesday-element {
