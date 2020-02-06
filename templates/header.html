@@ -30,6 +30,15 @@
                     <a href="/give/">GIVE</a>
                 </li>
             </ul>
+            <div id="siteSearch">
+                <div id="searchButton">
+
+                </div>
+
+                <div id="searchBar">
+                    <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()" onfocus="downloadSearchResults()">
+                </div>
+            </div>
         </nav>
         <nav id="mobile-nav--button">
             <a id="hamburger-button" onclick="toggleMobileNav()">
@@ -41,6 +50,7 @@
                 </div>
             </a>
         </nav>
+
     </main>
 
     <!-- Outside of the flex style -->
@@ -75,4 +85,9 @@
             </li>
         </ul>
     </nav>
+
+    <div id="siteSearchResult">
+        <ul>
+        </ul>
+    </div>
 </header>
