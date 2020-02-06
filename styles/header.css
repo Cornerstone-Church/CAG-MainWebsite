@@ -35,8 +35,8 @@ header {
     display: flex;
     align-content: center;
     justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
 
-    /* EXPERIMENTAL */
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     
@@ -58,6 +58,8 @@ header {
     backdrop-filter: blur(0px) saturate(100%);
     -webkit-backdrop-filter: blur(0px) saturate(100%);
     transition: ease-in-out .3s;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
 }
 
 .header-dark {
@@ -224,6 +226,88 @@ header {
 
 #hamburger-button span:nth-child(4) {
     top: 20px;
+}
+
+/* Search */
+#desktop-nav #siteSearch {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+#desktop-nav #searchBar {
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 200px;
+}
+
+#desktop-nav #searchBar input {
+    border: 2px solid #888;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    width: 100%;
+
+
+}
+#desktop-nav #searchBar input:focus{
+    outline: none;
+    border: 2px solid var(--theme-secondary-color);
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    width: 100%;
+
+
+}
+
+#siteSearchResult {
+    position: absolute;
+    top: calc(var(--header-height) + 4px);
+    right: 10px;
+    height: 400px;
+    width: 300px;
+    background: var(--theme-header-color-light);
+    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    border-radius: 3px;
+
+    overflow-y: scroll;
+}
+
+#siteSearchResult li {
+    margin: 0px 15px;
+    padding: 10px 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+}
+
+#siteSearchResult li:last-child {
+    margin: 0px 10px;
+    padding: 10px 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+#siteSearchResult li a {
+    text-decoration: none;
+    color: var(--theme-nav-text);
+}
+
+#siteSearchResult li .item-title {
+    font-weight: bold;
+}
+
+#siteSearchResult li .item-keywords {
+    display: none;
+}
+
+#siteSearchResult li .item-description {
+    font-size: .8em;
+    color: #888;
+    padding-left: 5px;
 }
 
 @media only screen and (max-width: 950px) {
