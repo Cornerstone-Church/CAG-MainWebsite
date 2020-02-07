@@ -1,6 +1,8 @@
 var initalDownload = false;
 
 function downloadSearchResults() {
+    var searchBar = document.getElementById('globalSearchBar');
+
     if (!initalDownload) {
         var db = firebase.firestore();
 
@@ -10,6 +12,10 @@ function downloadSearchResults() {
             });
             initalDownload = true;
         })
+    } else {
+        if (searchBar.value != "") {
+            showSearchResults();
+        }
     }
 }
 
@@ -17,17 +23,33 @@ function querySearchResults() {
     var items = document.querySelectorAll('#siteSearchResult li');
     var searchBar = document.getElementById('globalSearchBar');
     var searchBarResults = searchBar.value.toUpperCase();
-    var results = document.querySelector('#siteSearchResult ul');
+    var results = document.querySelector('#siteSearchResult');
+    var noResultError = document.getElementById('no-results--error');
 
-    for (i = 0; i < items.length; i++) {
-        var title = items[i].querySelector('.item-title').innerHTML;
-        var keywords = items[i].querySelector('.item-keywords').innerHTML;
-        
-        if((keywords.toUpperCase().indexOf(searchBarResults) > -1) || (title.toUpperCase().indexOf(searchBarResults) > -1)) {
-            items[i].style.display = "";
-        } else {
-            items[i].style.display = "none";
+    var hiddenItems = 0;
+    
+    if (searchBarResults != "") {
+        showSearchResults();
+        for (i = 0; i < items.length; i++) {
+            var title = items[i].querySelector('.item-title').innerHTML;
+            var keywords = items[i].querySelector('.item-keywords').innerHTML;
+            
+            if((keywords.toUpperCase().indexOf(searchBarResults) > -1) || (title.toUpperCase().indexOf(searchBarResults) > -1)) {
+                items[i].style.display = "";
+            } else {
+                items[i].style.display = "none";
+                hiddenItems++;
+            }
         }
+
+        // Shows no results message
+        if (hiddenItems >= items.length) {
+            noResultError.style.display = 'inline';
+        } else {
+            noResultError.style.display = 'none';
+        }
+    } else {
+        hideSearchResults();
     }
 }
 
@@ -58,4 +80,16 @@ function createSearchItem(link, title, keywords, description) {
     listItem.appendChild(actionLink);
 
     resultWrapper.appendChild(listItem);
+}
+
+function hideSearchResults() {
+    var results = document.querySelector('#siteSearchResult');
+    // Added a timeout because when clicking a link the results would dissapear before the mouse down registered.
+    // This allows the input to be recognised before closing.
+    setTimeout(function() {results.style.display = "none";}, 100);
+}
+
+function showSearchResults() {
+    var results = document.querySelector('#siteSearchResult');
+    results.style.display = "inline";
 }
