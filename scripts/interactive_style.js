@@ -72,6 +72,7 @@ function enableDarkMode() {
     var header = document.querySelector("header");
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
+    var searchLogo = document.querySelector('#siteSearch #search-button');
 
     // Make text light
     enableLightText();
@@ -84,6 +85,8 @@ function enableDarkMode() {
     }
     // Change Logo to white
     headerLogo.src = "/ref/icons/cag-logo-white.png";
+    searchLogo.src = "/ref/icons/search-white.png";
+
 
     lightMode = false;
 }
@@ -93,6 +96,7 @@ function enableLightText() {
     // Declare Variables
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
+    var searchLogo = document.querySelector('#siteSearch #search-button');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -110,6 +114,7 @@ function enableLightText() {
 
     // Change Logo to white
     headerLogo.src = "/ref/icons/cag-logo-white.png";
+    searchLogo.src = "/ref/icons/search-white.png"
 }
 
 
@@ -117,6 +122,7 @@ function enableNormalText() {
     // Declare Variables
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
+    var searchLogo = document.querySelector('#siteSearch #search-button');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -134,6 +140,7 @@ function enableNormalText() {
 
     // Change Logo to white
     headerLogo.src = "/ref/icons/cag-logo-left.png";
+    searchLogo.src = "/ref/icons/search-dark.png"
 }
 
 

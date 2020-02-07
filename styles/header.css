@@ -233,23 +233,25 @@ header {
     position: absolute;
     top: 0px;
     right: 30px;
+    height: 100%;
 }
 
 #desktop-nav #searchBar {
-    display: inline-block;
     position: absolute;
     top: 35px;
-    right: 30px;
+    right: 0px;
     width: 200px;
+
 }
 
 #desktop-nav #searchBar input {
+    visibility: hidden;
+    position: absolute;
+    right: 0px;
     border: 2px solid #888;
     transform: translateY(-50%);
     padding: 5px 10px;
     width: 100%;
-
-
 }
 #desktop-nav #searchBar input:focus{
     outline: none;
@@ -259,6 +261,18 @@ header {
     width: 100%;
 
 
+}
+
+#desktop-nav #search-button {
+    position: absolute;
+    width: 15px;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+#desktop-nav #search-button:hover {
+    cursor: pointer;
 }
 
 #siteSearchResult {
@@ -271,7 +285,6 @@ header {
     background: var(--theme-primary-color);
     
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-
     border-radius: 3px;
 
     overflow-y: scroll;

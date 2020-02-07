@@ -93,3 +93,12 @@ function showSearchResults() {
     var results = document.querySelector('#siteSearchResult');
     results.style.display = "inline";
 }
+
+function showSearchBar() {
+    var searchbar = document.getElementById('globalSearchBar');
+    var searchLogo = document.querySelector('#siteSearch #search-button');
+
+    searchLogo.style.display = "none";
+    searchbar.style.visibility = 'visible';
+    searchbar.focus();
+}
