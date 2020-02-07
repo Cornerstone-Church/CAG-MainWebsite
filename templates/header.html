@@ -36,7 +36,7 @@
                 </div>
 
                 <div id="searchBar">
-                    <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()" onfocus="downloadSearchResults()">
+                    <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()" onfocus="downloadSearchResults()" onfocusout="hideSearchResults()">
                 </div>
             </div>
         </nav>
@@ -89,5 +89,6 @@
     <div id="siteSearchResult">
         <ul>
         </ul>
+        <div id="no-results--error">No results found</div>
     </div>
 </header>
