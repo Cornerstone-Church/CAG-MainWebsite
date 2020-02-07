@@ -262,6 +262,7 @@ header {
 }
 
 #siteSearchResult {
+    display: none;
     position: absolute;
     top: calc(var(--header-height) + 4px);
     right: 10px;
@@ -303,6 +304,13 @@ header {
     font-size: .8em;
     color: #888;
     padding-left: 5px;
+}
+
+#siteSearchResult #no-results--error {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 950px) {
