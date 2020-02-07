@@ -99,6 +99,6 @@ function showSearchBar() {
     var searchLogo = document.querySelector('#siteSearch #search-button');
 
     searchLogo.style.display = "none";
-    searchbar.style.visibility = 'visible';
+    searchbar.style.display = "inline";
     searchbar.focus();
 }
