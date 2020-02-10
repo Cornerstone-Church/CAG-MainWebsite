@@ -57,6 +57,31 @@
             $('#footer').load('/templates/footer.html?version=19041102');
         });
     </script>
+
+    <!-- REMOVE AFTER POPUP -->
+    <style>
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            2% {
+                transform: scale(1.2);
+                opacity:.7;
+            }
+            4% {
+                transform: scale(1);
+            }
+            95% {
+                opacity: .7;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    </style>
 </head>
 
 <body onload="headerVideo(); expireIt(); holdIt();" onscroll="headerScroll(); animationChecker();">
@@ -75,14 +100,12 @@
                 <h1>Cornerstone Church</h1>
             </div>
         </div>
-        
-        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
-        <div id="searchBubble" style="background: var(--theme-primary-color); position: absolute; top: 70px; right: 20px; padding: 5px 10px; border-radius: 10px; opacity: .8; transition: 1s;">Try our search!</div>
-        <script>
-            var searchBubble = document.getElementById('searchBubble');
 
-            setTimeout(function () {searchBubble.style.opacity = 0}, 3000);
-        </script>
+        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
+        <div id="searchBubble"
+            style="background: var(--theme-primary-color); position: absolute; top: 70px; right: 20px; padding: 5px 10px; border-radius: 10px; opacity: 0; transition: 1s; animation-name: popup; animation-duration: 8s; animation-fill-mode: forwards; animation-delay: 3s;">
+            Try our new search!</div>
+
         <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
 
         <!-- NOTIFICATION CODE -->
