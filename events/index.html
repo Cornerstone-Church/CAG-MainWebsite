@@ -33,6 +33,12 @@
         gtag('config', 'UA-138079008-1');
     </script>
 
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
     <script src="../../scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -51,56 +57,32 @@
         <!-- Slider -->
         <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()">
             <div id="slide-progress"></div>
+            <!-- Youth Convention -->
+            <div class="expires">
+                <div class="expire-date">2020-03-20</div>
+                <div class="slider-slide">
+                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/324767" target="_blank">
+                        <img class="slide-background"
+                            src="/ref/announcments/slides/YC_background-20021101.jpg">
+                        <img class="slide-foreground"
+                            src="/ref/announcments/slides/YC_foreground-20021101.png">
+                    </a>
+                </div>
+            </div>
+            
             <!-- Missions Trips -->
             <div class="expires">
-                <div class="expire-date">2020-02-02</div>
+                <div class="expire-date">2020-10-08</div>
                 <div class="slider-slide">
                     <a href="/missions/missionstrips/">
                         <img class="slide-background"
                             src="/ref/announcments/slides/MissionTrips_Background-20010301.jpg">
                         <img class="slide-foreground"
-                            src="/ref/announcments/slides/MissionTrips_Foreground-20010301.png">
+                            src="/ref/announcments/slides/MissionTrips_Foreground-20021101.png">
                     </a>
                 </div>
             </div>
-
-            <!-- One Day -->
-            <div class="expires">
-                <div class="expire-date">2020-01-26</div>
-                <div class="slider-slide">
-                    <a href="./oneday/">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/ODTFTW_Slide_Background-20010901.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/ODTFTW_SundaySlide_Foreground-20010901.png">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Father Daughter -->
-            <div class="expires">
-                <div class="expire-date">2020-02-07</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/355496" target="_blank">
-                        <img class="slide-background" src="/ref/announcments/slides/FDBanquet_Background-20010901.jpg">
-                        <img class="slide-foreground" src="/ref/announcments/slides/FDBanquet_Foreground-20010901.png">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Water Batism -->
-            <div class="expires">
-                <div class="expire-date">2020-02-09</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/352870" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/WaterBaptism_Background-19123001.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/WaterBaptism_Foreground_19123001.png">
-                    </a>
-                </div>
-            </div>
-
+            
             <!-- Equip Slides -->
             <!-- <div class="expires"> -->
             <!-- <div class="expire-date">2020-02-09</div> -->
@@ -172,6 +154,7 @@
 
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/hold_it.js?version=19050101"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="./scripts/banner.js?version=19042401s"></script>

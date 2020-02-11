@@ -41,14 +41,15 @@
         gtag('config', 'UA-138079008-1');
     </script>
 
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
     <!-- JQuery Import -->
     <script src="./scripts/jquery-3.3.1.min.js">
     </script>
-
-    <!-- Import Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
-    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -56,6 +57,31 @@
             $('#footer').load('/templates/footer.html?version=19041102');
         });
     </script>
+
+    <!-- REMOVE AFTER POPUP -->
+    <style>
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            2% {
+                transform: scale(1.2);
+                opacity:.7;
+            }
+            4% {
+                transform: scale(1);
+            }
+            95% {
+                opacity: .7;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    </style>
 </head>
 
 <body onload="headerVideo(); expireIt(); holdIt();" onscroll="headerScroll(); animationChecker();">
@@ -74,6 +100,13 @@
                 <h1>Cornerstone Church</h1>
             </div>
         </div>
+
+        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
+        <div id="searchBubble"
+            style="background: var(--theme-primary-color); position: absolute; top: 70px; right: 20px; padding: 5px 10px; border-radius: 10px; opacity: 0; transition: 1s; animation-name: popup; animation-duration: 8s; animation-fill-mode: forwards; animation-delay: 2s;">
+            Try our new search!</div>
+
+        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
 
         <!-- NOTIFICATION CODE -->
         <!-- <div class="expires">
@@ -105,9 +138,7 @@
                     <img id="series-logo" src="">
                     <br>
                     <!-- Sub Text code -->
-                    <h1 id="series-text" style="background: #f8dc60;">
-                        -Disclaimer- <br>This Sunday's message (Feb. 9) is not appropriate for children. <br>Please take your
-                        kids (5th grade and under) to our childrens ministry. <br> Regisration closes at 9:20 AM & 11:20 AM.
+                    <h1 id="series-text">
                     </h1>
                     <iframe class="drop-shadow" id="series-video"
                         src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
@@ -115,7 +146,7 @@
                         allowfullscreen></iframe>
                     <br><br>
                     <!-- <a class="button--white" href="/seriesmatterial/">Daily Videos</a> -->
-                    <a class="button--white" href="/seriesmatterial/200202_Notes.pdf">Sermon Notes</a>
+                    <a class="button--white" href="/seriesmatterial/200209_Notes.pdf">Sermon Notes</a>
                 </div>
             </div>
 
@@ -127,6 +158,7 @@
     <script src="/scripts/interactive_style.js?version=19040801"></script>
     <script src="/home/scripts/home_script.js?version=19040801"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
+    <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="/scripts/alert.js"></script>
 </body>

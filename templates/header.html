@@ -31,6 +31,16 @@
                 </li>
             </ul>
         </nav>
+        <div id="siteSearch">
+            <div id="searchButton">
+                <img id="search-button" src="/ref/icons/search-dark.png" alt="Search CAG.org" onclick="showSearchBar()">
+            </div>
+
+            <div id="searchBar">
+                <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()"
+                    onfocus="downloadSearchResults()" onfocusout="hideSearchResults()">
+            </div>
+        </div>
         <nav id="mobile-nav--button">
             <a id="hamburger-button" onclick="toggleMobileNav()">
                 <div class="hamburger-button--wrapper">
@@ -41,6 +51,7 @@
                 </div>
             </a>
         </nav>
+
     </main>
 
     <!-- Outside of the flex style -->
@@ -75,4 +86,10 @@
             </li>
         </ul>
     </nav>
+
+    <div id="siteSearchResult">
+        <ul>
+        </ul>
+        <div id="no-results--error">No results found</div>
+    </div>
 </header>
