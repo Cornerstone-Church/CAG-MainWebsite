@@ -1,0 +1,13 @@
+.debug_float {
+    position: fixed;
+    top: 0px;
+    left: 30px;
+    background-color: black;
+    opacity: .7;
+    padding: 10px;
+    z-index: 100;
+
+    color: white;
+
+    border-radius: 0px 0px 10px 10px;
+}
