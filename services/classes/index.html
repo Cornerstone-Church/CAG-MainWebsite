@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Weekly Classes | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="../styles/services.css?version=19041101">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <img id="banner" src="/ref/pages/services_page/class.jpg">
+        <div class="content">
+            <a class="button-small" href="../#services">Go Back</a>
+
+            <div class="center">
+                <h1>Wednesday Night Classes</h1>
+                <h2>January 29th - March 11th, 2020</h2>
+            </div>
+            <ul class="class-list">
+
+                <!-- Fireside Room -->
+                <li>
+                    <h2>Discover Class</h2>
+                    <h3>Fireside Room</h3>
+                    <p>
+                        Learn about the DNA, mission & beliefs of Cornerstone. This class is especially for those
+                        interested in becoming an official member—someone committed to faithful giving, growing &
+                        serving.
+                    </p>
+                </li>
+
+                <!-- Sanctuary -->
+                <li>
+                    <h2>Exploring My Bible</h2>
+                    <h3>Sanctuary</h3>
+                    <p>
+                        An overview of the Old and New Testament exploring the major characters, themes, and places of
+                        the Bible. A helpful timeline of major events will also be shared.
+                    </p>
+                </li>
+
+                <!-- Choir Room -->
+                <!-- <li>
+                    <h2>Romans</h2>
+                    <h3>Choir Room</h3>
+                    <p>
+                        This study focuses on Paul’s systematic explanation of the gospel to the Romans and offers
+                        insight into the doctrines of sin, salvation, and sanctification. The student will learn how
+                        union with Christ and the indwelling Holy Spirit leads to spiritual growth.
+                    </p>
+                </li> -->
+
+                <!-- Prayer Room -->
+                <!-- <li>
+                    <h2>Fathers United Through Christ</h2>
+                    <h3>Prayer Room</h3>
+                    <p>
+                        This class emphasis is to help reunite fathers who have been separated and/or divided from their
+                        children. It’s goal is to reestablish relationship using biblical direction.
+                    </p>
+                </li> -->
+
+                <!-- Room 101 -->
+                <li>
+                    <h2>Buddhism: The Darkness of Enlightenment</h2>
+                    <h3>Room 101</h3>
+                    <p>
+                        Buddhism is an ancient spiritual belief that blinds people to the saving knowledge of Jesus
+                        Christ. Come and learn about the history of Buddhism, its beliefs, its presence around the world
+                        and its growth in the West. More importantly, learn how we can reach those lost in the darkness
+                        of "enlightenment".
+                    </p>
+                </li>
+
+                <!-- Room 102 -->
+                <li>
+                    <h2>Deaf Ministry: Second Kings</h2>
+                    <h3>Room 102</h3>
+                    <p>
+                        Come take a journey through the book of Second Kings and explore some of the miraculous events
+                        that occurred testifying to God’s continuing work among His people. Learn about the different
+                        kings reigning in both Israel and Judah as we explore almost 300 years of different monarchies.
+                        This class is facilitated in sign language.
+                    </p>
+                </li>
+
+                <!-- Room 103 -->
+                <li>
+                    <h2>Romans</h2>
+                    <h3>Room 103</h3>
+                    <p>
+                        This study focuses on Paul’s systematic explanation of the gospel to the Romans and offers
+                        insight into the doctrines of sin, salvation, and sanctification. The student will learn how
+                        union with Christ and the indwelling Holy Spirit leads to spiritual growth.
+                    </p>
+                </li>
+                
+                <!-- Room 105 -->
+                    <li>
+                        <h2>Managing Conflict</h2>
+                        <h3>Room 105</h3>
+                        <p>
+                            Got Conflict? In your marriage, family, or work? Join Dr. Ron Sommers for practical insights on
+                            managing conflict from Jesus, the Bible, and Dr. Sommers book on Managing Conflict. Study
+                            conflict’s origins, purposes, and methods for managing it for God’s glory. Remember: Conflict is
+                            normal, combat is not.
+                        </p>
+                    </li>
+
+                <!-- Room 108 -->
+                <li>
+                    <h2>How to Study the Bible</h2>
+                    <h3>Room 108</h3>
+                    <p>
+                        Have you ever wanted to improve your Bible study skills? Join us for an interactive class to
+                        help with your study time. Learn some great skills to further enhance your quiet time and get
+                        the most out of the Word.
+                    </p>
+                </li>
+
+                <!-- Room 110 -->
+                <li>
+                    <h2>Doulos Deep Dive</h2>
+                    <h3>Room 110</h3>
+                    <p>
+                        Are you 18-35? Join the Doulos community as we dive into God’s Word and apply it to our lives in
+                        practical ways. We want the Bible to truly be a lamp unto our feet!
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>

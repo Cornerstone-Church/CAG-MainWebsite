@@ -1,0 +1,15 @@
+#prayer-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#prayer-table #title-section td {
+    font-weight: bold;
+    -webkit-font-weight: bold;
+}
+
+#prayer-table td {
+    padding: 10px 20px;
+    margin: 0px;
+    border: 1px solid black;
+}

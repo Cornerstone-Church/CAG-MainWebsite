@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Give | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="./styles/give_style.css?version=19111901">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <div id="banner-give">
+            <img src="/ref/pages/give_page/tithe.jpg">
+            <div class="text">
+                <p>
+                    Here at Cornerstone we believe in giving back what God has blessed us with. Whether that is through
+                    tithe, missions donations, or faith promises we give out of a joyful heart to further the kingdom.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="center">
+                <div>
+                    <a target="_blank" href="https://easytithe.com/caggiving" id="give-online" class="give-buttons">
+                        <div class="button-container">
+                            <img src="/ref/pages/give_page/online.png">
+                            <h1>Online</h1>
+                        </div>
+                    </a>
+                    <a onclick="openPopup()" id="give-mobile" class="give-buttons">
+                        <div class="button-container">
+                            <img src="/ref/pages/give_page/text.png">
+                            <h1>Text Message</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="text-overlay">
+            <div class="dim-background" onclick="closePopup()">
+
+            </div>
+            <div id="popup-window">
+                <div id="popup-titlebar">
+                    <div onclick="closePopup()" title="Close Popup" class="close-button">X</div>
+                </div>
+                <h1>Give Through Texting</h1>
+                <ul>
+                    <li>
+                        <h2>Step 1</h2>
+                        Text the number: 301-640-5767
+                    </li>
+                    <li>
+                        <h2>Step 2</h2>
+                        Enter your amount.<br>For example, if you were wanting to give $100 for missions text:<br>$100
+                        missions
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+    <script src="./scripts/giving_popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Missions Trips | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="../styles/mission_style.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <img id="banner" src="/ref/pages/missions_page/backgrounds/missions-trips.jpg">
+        <div class="content">
+            <a href="../" class="button-small">Go Back</a><br><br>
+            <h1>Upcoming Missions Trips</h1>
+            <h2>The price for each trip ranges from $800 - $2000.</h2><br><br>
+            <table id="missions-trip">
+                <tr>
+                    <td><b>Trip Name</b></td>
+                    <td><b>Dates</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Type</b></td>
+                    <td></td>
+                </tr>
+                <div class="epires">
+                    <div class="expire-date">2020-04-14</div>
+                    <tr>
+                        <td>Grand Bahama Island, Bahamas</td>
+                        <td>March 7th - 14th</td>
+                        <td>$1280</td>
+                        <td>Ages 16 & older</td>
+                        <td><a target="_blank" class="button-small">Closed</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-04-29</div>
+                    <tr>
+                        <td>Abaco Island, Bahamas</td>
+                        <td>March 29th - April 4th</td>
+                        <td>$1200</td>
+                        <td>Ages 16 & older</td>
+                        <td><a href="https://cornerstonebowie.churchcenter.com/registrations/events/351966" target="_blank" class="button-small">Register</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-07-27</div>
+                    <tr>
+                        <td>Atlanta</td>
+                        <td>July 27th - August 1st</td>
+                        <td>$1800</td>
+                        <td>Youth (Incoming 7th graders through 2020 High School Grads)</td>
+                        <td><a href="https://cornerstonebowie.churchcenter.com/registrations/events/370548" target="_blank" class="button-small">Register</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-08-04</div>
+                    <tr>
+                        <td>Romania</td>
+                        <td>August 4th - August 11th</td>
+                        <td>$1800</td>
+                        <td>Women, Ages 18+</td>
+                        <td><a href="https://cornerstonebowie.churchcenter.com/registrations/events/370752" target="_blank" class="button-small">Register</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-08-17</div>
+                    <tr>
+                        <td>Moldova</td>
+                        <td>August 17th - August 25th</td>
+                        <td>$1900</td>
+                        <td>Ages 14+ (Minors must be accompanied by parent)</td>
+                        <td><a href="https://cornerstonebowie.churchcenter.com/registrations/events/370820" target="_blank" class="button-small">Register</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-09-28</div>
+                    <tr>
+                        <td>Greece</td>
+                        <td>September 28th - October 9th</td>
+                        <td>Bahamas</td>
+                        <td>Doulos (Ages 18-35)</td>
+                        <td><a href="https://cornerstonebowie.churchcenter.com/registrations/events/370845" target="_blank" class="button-small">Register</a></td>
+                    </tr>
+                </div>
+                <div class="expires">
+                    <div class="expire-date">2020-10-03</div>
+                    <tr>
+                        <td>Cuba</td>
+                        <td>October 3rd - October 10th</td>
+                        <td>$1850</td>
+                        <td>Men, Ages 18+</td>
+                        <td><a target="_blank" class="button-small">Open Soon</a></td>
+                    </tr>
+                </div>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>

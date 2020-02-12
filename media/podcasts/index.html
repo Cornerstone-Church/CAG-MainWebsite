@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Podcasts | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="../styles/media_page_style.css?version=19073101">
+    <link rel="stylesheet" href="../styles/video-player.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="../../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body onload="enableDarkMode(); pageLoad()">
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section id="watch-page--section">
+        <div id="sermons--section" class="dark-section">
+            <h1 style="margin-top: 50px;">Podcasts</h1>
+            <iframe title="Cornerstone Church - Bowie, MD" id="multi_iframe"
+                src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F607625%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=e2e303c994549c8cdab4e9c1fd0fdfd806a48031&size=430&skin=7&episode_list_bg=%23ecf0f1&bg_left=%23242424&bg_mid=%23242424&bg_right=%23242424&auto=0&share=0&fonts=Helvetica&download=1&rtl=0&show_playlist_recent_number=10&pbad=1"
+                frameborder="0" scrolling="no" width="100%" height="432" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./scripts/video-player.js"></script>
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+    <script src="./scripts/recap-section.js"></script>
+</body>
+
+</html>

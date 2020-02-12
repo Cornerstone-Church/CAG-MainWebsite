@@ -1,0 +1,284 @@
+:root {
+    --default-button--height: 400px;
+    --expanded-button--height: 600px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#ministry-selector {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+}
+
+#ministry-selector li {
+    display: block;
+    margin: 4px 0px;
+}
+
+#ministry-selector li:hover {
+    cursor: pointer;
+}
+
+#ministry-selector .big-button {
+    display: block;
+    height: var(--default-button--height);
+    
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+#ministry-selector .big-button .background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 1
+}
+
+#ministry-selector .section-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+
+    opacity: 0;
+
+    /* Hide elements off screen */
+    transform: translateX(-100%);
+}
+
+#ministry-selector .selector-text-header {
+    z-index: 2;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    opacity: 1;
+    transition: .5s;
+}
+
+#ministry-selector .selector-text-content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ministry-selector h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: var(--theme-primary-color);
+    font-weight: bold;
+}
+
+#ministry-selector h2 {
+    color: var(--theme-primary-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+#ministry-selector p {
+    color: var(--theme-primary-color);
+    text-indent: 0px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.section-bar {
+    position: fixed;
+    top: var(--header-height);
+    background: var(--theme-subheader-color-light);
+    width: 100%;
+    /* EXPERIMENTAL */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    table-layout: fixed;
+
+    z-index: 90;
+}
+
+.section-bar td {
+    width: 20%;
+    text-align: center;
+    border-right: 2px solid rgba(var(--theme-secondary-color--rgb), 0.3);
+    transition: .3s;
+
+}
+
+.section-bar td:hover {
+    width: 30%;
+}
+
+.section-bar td:last-child {
+    border-right: none;
+}
+
+.section-bar a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Noto Sans TC";
+    padding: 4px;
+
+    color: var(--theme-header-color-dark);
+}
+
+.section-bar .selected a{
+    color: #666;
+}
+
+.icon-table {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    /* Because padding on the right was not enough??? */
+    padding-right: 40px;
+}
+
+.icon-table:hover {
+    background: white;
+}
+
+.icon-table .table-icon {
+    width: 130px;
+}
+
+.icon-table img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    border: 10px solid white;
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.icon-table .table-description-text {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.icon-table .table-description-text--right {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.icon-table h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--theme-text-color);
+}
+
+.icon-table p {
+    color: var(--theme-text-color);
+    text-indent: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Ministry Buttons */
+
+.ministry-buttons--section {
+    text-align: center;
+    background: none;
+}
+
+.ministry-buttons--section .ministry-button {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    border: 2px solid white;
+    height: 70px;
+    width: 150px;
+    padding: 0px !important;
+}
+
+.ministry-buttons--section .ministry-button .text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px !important;
+    margin: 0px !important;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--theme-primary-color);
+}
+
+.ministry-buttons--section .text h1 {
+    font-size: 20px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.ministry-buttons--section .text h2 {
+    padding: 0px !important;
+    margin: 5px 0px !important;
+    width: 100%;
+
+    font-size: 10px !important;
+    font-style: italic;
+}
+
+.ministry-buttons--section .ministry-button .image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.ministry-buttons--section .ministry-button:hover .image {
+    opacity: 1;
+}
+
+
+.ministry-buttons--section .ministry-button .image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+
+    filter: saturate(30%) blur(1px);
+}
+
+
+@media only screen and (max-width:800px) {
+    :root {
+        --expanded-button--height: 1000px;
+    }
+
+    .selector-text-content h1 {
+        font-size: 30px !important;
+    }
+
+    #ministry-selector .selector-text-content {
+        width: 90%;
+    }
+
+    #ministry-logo {
+        width: 100%;
+    }
+}

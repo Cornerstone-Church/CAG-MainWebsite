@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Prayer | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../styles/style.css?version=20021101">
+    <link rel="stylesheet" href="./styles/prayer_style.css?version=19040901">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="../../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <!-- <img id="banner" src="/ref/pages/prayer_page/prayer.jpg"> -->
+        <div id="saturday-prayer--wrapper">
+            <div id="saturday-prayer--background">
+                <img src="/ref/pages/prayer_page/prayer.jpg">
+            </div>
+            <div id="saturday-prayer--foreground">
+                <h1>Saturday Night Prayer</h1>
+                <h2>Every Saturday | 7:00pm</h2>
+                <p>
+                    Join us every Saturday night for an evening of prayer for the church and our world. Starting at
+                    7:00pm after our evening service, encounter God and seek His face through worship and prayer.
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>I Need Prayer</h1>
+            <p>
+                We believe in the power of prayer. Please take a moment and send your prayer requests so our prayer
+                team can join you in prayer.
+                <br><br>
+                <i>
+                    Matthew 18:19-20<br>
+                    “Again, truly I tell you that if two of you on earth agree about anything they ask for, it will be
+                    done for them by my Father in heaven. For where two or three gather in my name, there am I with
+                    them.“</i>
+            </p><br>
+            Send your prayer request to <a
+                href="mailto:prayer@cag.org?subject=Prayer Request&body=Cornerstone Church Family, %0A%0A ">prayer@cag.org</a>.
+        </div> <!-- End of Content -->
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>

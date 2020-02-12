@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Doulos Young Adults | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="../styles/ministries_style.css">
+    <link rel="stylesheet" href="./styles/doulos_styles.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+
+        <img id="banner" src="/ref/pages/ministries_page/banners/doulosBanner.jpg">
+        <div class="content">
+            <a href="../" class="button-small--white">Go Back</a><br><br>
+            <center>
+                <h1>Young Adults Community</h1>
+            </center>
+            <p>Doulos exists to establish an environment where young adults can come unashamed and intimately interact
+                with God. From the very first time you walk through the doors, we hope you feel welcomed and sense
+                community. </p>
+            <h2>Here's what happens on Monday night:</h2>
+
+            <ul id="class-element">
+
+                <!-- Prayer -->
+                <li class="class-selector" onclick="">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/prayer.jpg">
+                        <h2>Prayer | 6:30 - 7:00pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Prayer</h2>
+                            <p><b>6:30pm - 7:00pm</b>
+                                <br><br>Join us as a community to seek the face of Jesus and feel His presence draw
+                                near. You can pray for needs in your life, dreams that God has not answered, or even for
+                                service. Draw close and experiance God.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Dinner -->
+                <li class="class-selector" onclick="">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/dinner.jpg">
+                        <h2>Dinner | 7:30 - 8:05pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Dinner</h2>
+                            <p><b>7:30 - 8:05pm</b><br><br>
+                                Enjoy felloship with other members of doulos and fill up on a delicious food. Every week
+                                a different meal will be served.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Worship -->
+                <li class="class-selector" onclick="">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/doulos/worship.jpg">
+                        <h2>Worship | 8:05 - 9:30pm</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Service</h2>
+                            <p><b>8:05 - 9:30pm</b><br><br>
+                                Encounter God and let Him breathe life into your sole. Hear from leaders, teachers, and
+                                fellow doulos members on what God has placed on their hearts.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>No current upcoming events.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>

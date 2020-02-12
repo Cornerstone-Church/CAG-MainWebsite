@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>About | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="./styles/about_style.css">
+    <link rel="stylesheet" href="./styles/about_animation.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body onscroll="scrolling()">
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <div id="section1" class="about-sections right--no-background background-animation text-animation">
+            <img src="/ref/pages/about_page/pastor_pose.jpg">
+            <div class="text-wrapper">
+                <p><b>Pastor Mark Lehmann</b> has been the lead Pastor at Cornerstone for 25+ years. He has a heart for people and the world around him. Each Sunday, you'll hear relatable sermons that touch on real-world topics that people encounter in everyday life.<br><br>
+                    <a class="button--white" href="./pastors/">Our Pastors & Staff</a>
+                </p>
+            </div>
+        </div>
+        <div id="section2" class="about-sections left">
+            <img src="/ref/pages/about_page/cornerstone-background.jpg">
+            <div class="text-wrapper">
+                <p>Cornerstone is a church that believes in <b>building an authentic community, lifting up Jesus,
+                        growing in Him and touching our world.</b> Our focus and passion is to reach people in our
+                    community and around the world with the love of Jesus.<br><br>
+                    <a class="button--white" href="./beliefs/">Our Beliefs</a>
+                </p>
+            </div>
+        </div>
+        <div id="section3" class="about-sections right">
+            <img src="/ref/pages/about_page/church&sky.jpg">
+            <div class="text-wrapper">
+                <p>Over the years Cornerstone has partnered with churches around the world to reach others for Jesus. Check out our list of churches that are part of Cornerstone. <br><br>
+                    <a class="button--white" href="./churches/">Partner Churches</a>
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+    <script src="./scripts/about_animation.js"></script>
+</body>
+
+</html>

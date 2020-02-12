@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cornerstone Church - Bowie MD | Building an Authentic Community, Lifting up Jesus, Growing in Him, Touching
+        our World.</title>
+    <meta charset="utf8">
+
+    <!-- Search Engine Information -->
+    <meta name="title" content="Cornerstone Church | Bowie MD">
+    <meta name="description"
+        content="Building an Authentic Community, Lifting up Jesus, Growing in Him, and Touching our World. Cornerstone Church is located in Bowie, Maryland. Experience God through services and activities on Saturday, Sunday, and throughout the week.">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="/styles/debug.css">
+    <link rel="stylesheet" href="/home/styles/home_style.css?version=19093001">
+    <link rel="stylesheet" href="/home/styles/home_animation.css?version=19040801">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Building an Authentic Community, Lifting up Jesus, Growing in Him and Touching our World. Check Cornerstone Church located in Bowie MD. Experience God through our services and activities on Saturday, Sunday, and through the week.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
+    <!-- JQuery Import -->
+    <script src="./scripts/jquery-3.3.1.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html?version=19041102');
+        });
+    </script>
+
+    <!-- REMOVE AFTER POPUP -->
+    <style>
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            2% {
+                transform: scale(1.2);
+                opacity:.7;
+            }
+            4% {
+                transform: scale(1);
+            }
+            95% {
+                opacity: .7;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+
+<body onload="headerVideo(); expireIt(); holdIt();" onscroll="headerScroll(); animationChecker();">
+    <!-- Header Element -->
+    <div id="header"></div>
+
+    <!-- Body Section -->
+    <!-- Welcome Video Layer -->
+    <div id="video-banner">
+        <video playsinline muted id="video-banner--video" autoplay loop muted>
+            <source src="./ref/pages/home_page/home_loop_19110701.mp4">
+        </video>
+        <div>
+            <div id="video-banner--text">
+                <h2>Welcome to</h2>
+                <h1>Cornerstone Church</h1>
+            </div>
+        </div>
+
+        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
+        <div id="searchBubble"
+            style="background: var(--theme-primary-color); position: absolute; top: 70px; right: 20px; padding: 5px 10px; border-radius: 10px; opacity: 0; transition: 1s; animation-name: popup; animation-duration: 8s; animation-fill-mode: forwards; animation-delay: 2s;">
+            Try our new search!</div>
+
+        <!-- REMOVE THIS AFTER A COUPLE WEEKS -->
+
+        <!-- NOTIFICATION CODE -->
+        <!-- <div class="expires">
+            <div class="expire-date">2020-01-07</div>
+            <div style="position: absolute; width: 100vw; height: 100vh; background-color: #9c2e2e;">
+                <div
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: white; border-radius: 5px; text-transform: uppercase; font-weight: bold;">
+                    All activities for tonight (1/7) are cancelled due to weather. We look forward to seeing you tomorrow night for Wednesday Night Activities.
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Sermon Section -->
+    <div id="series-section">
+        <section class="parallax_base">
+            <div id="announcement-div">
+                <h3>Local Church &bull; Global Outreach <br><span style="color: rgb(112, 132, 153)">Over 70 nations
+                        Represented</span></h3>
+            </div>
+            <!-- Sermon video Section -->
+            <div id="sermon-video--wrapper">
+                <div id="sermon-video--background">
+                    <img src="/ref/sermon_series/background_20020401.jpg">
+                </div>
+                <div id="sermon-video--foreground">
+                    <!-- LOGO Code -->
+                    <!-- <img id="series-logo" src="/ref/sermon_series/logo_20020401.png"> -->
+                    <img id="series-logo" src="">
+                    <br>
+                    <!-- Sub Text code -->
+                    <h1 id="series-text">
+                    </h1>
+                    <iframe class="drop-shadow" id="series-video"
+                        src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                        frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <br><br>
+                    <!-- <a class="button--white" href="/seriesmatterial/">Daily Videos</a> -->
+                    <a class="button--white" href="/seriesmatterial/200209_Notes.pdf">Sermon Notes</a>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div id="footer"></div>
+        </section>
+    </div>
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/home/scripts/home_script.js?version=19040801"></script>
+    <script src="/scripts/expire_it.js?version=19050102"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+    <script src="/scripts/hold_it.js"></script>
+    <script src="/scripts/alert.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Media | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="./styles/media_page_style.css?version=19073101">
+    <link rel="stylesheet" href="./styles/video-player.css">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+    
+    <script src="../../scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body onload="enableDarkMode(); pageLoad()">
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section id="watch-page--section">
+        <!-- Sermon Series -->
+        <div id="enduring-faith--section">
+            <!-- Background Image -->
+            <img id="sermon-series--background" src="/ref/sermon_series/background_20020401.jpg">
+            <!-- Video Content -->
+            <div id="sermon-series--forground" class="content">
+                <div class="center">
+                    <img id="sermon-series-logo" src="/ref/sermon_series/logo_20020401.png">
+
+                    <!-- Commented out because we have no shorts -->
+                    <!-- <h1>Series Short Films</h1> -->
+                </div>
+                <!-- Not displayed because no shorts -->
+                <section style="display: none;" id="video-player">
+                    <div id="video-player--video">
+                        <!-- First Load Video -->
+                        <div id="default-video" class="video">
+                            <iframe id="default-frame" src="https://www.youtube.com/embed/qvnop0jrHCY?rel=0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Error View -->
+                        <div id="video-error" class="video">
+                            <h1>There was an error. This video can not be found.</h1>
+                        </div>
+
+                        <!-- Video Selection -->
+                        <div id="video-1" class="video">
+                            <iframe id="video1-frame" src="https://www.youtube.com/embed/ZZJag3s60zc" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video-2" class="video">
+                            <iframe id="video2-frame" src="https://www.youtube.com/embed/c7Wup5DlQXk" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video-3" class="video">
+                            <iframe id="video3-frame" src="https://www.youtube.com/embed/zaAy1n1rMgs" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="video-4" class="video">
+                            <iframe id="video4-frame" src="https://www.youtube.com/embed/Ok2JDbIEbss" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Not used right now (Dissabled) -->
+                    <div id="video-player--thumbnail">
+                        <div id="thumbnail-wrapper">
+                            <div id="thumb-1" class="thumbnail" onclick="thumbSelector(1)">
+                                <img id="thumb-1--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-2" class="thumbnail dissable" onclick="//thumbSelector(2)">
+                                <img id="thumb-2--background" src="/ref/pages/watch_page/thumbnails/02.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-3" class="thumbnail dissable" onclick="//thumbSelector(3)">
+                                <img id="thumb-3--background" src="/ref/pages/watch_page/thumbnails/03.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-4" class="thumbnail dissable" onclick="//thumbSelector(4)">
+                                <img id="thumb-4--background" src="/ref/pages/watch_page/thumbnails/04.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-5" class="thumbnail dissable" onclick="//thumbSelector(5)">
+                                <img id="thumb-5--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-6" class="thumbnail dissable" onclick="//thumbSelector(6)">
+                                <img id="thumb-6--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-7" class="thumbnail dissable" onclick="//thumbSelector(7)">
+                                <img id="thumb-7--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-8" class="thumbnail dissable" onclick="//thumbSelector(8)">
+                                <img id="thumb-8--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                            <div id="thumb-9" class="thumbnail dissable" onclick="//thumbSelector(9)">
+                                <img id="thumb-9--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
+                                <h1></h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="sermons--section" class="dark-section">
+            <h1>Watch our Service</h1>
+            <iframe class="drop-shadow"
+                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br><br>
+
+            <div class="content">
+                <div class="more-sermons--wrapper">
+                    <div class="more-sermons--element">
+                        <a href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                            target="_blank" class="more-sermons--button">
+                            <img src="/ref/pages/watch_page/icons/video_icon.png"><br>
+                            More Services
+                        </a>
+                    </div>
+
+                    <div class="podcast--element">
+                        <a href="./podcasts/" class="more-sermons--button">
+                            <img src="/ref/pages/watch_page/icons/podcast_icon.png"><br>
+                            Podcast
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Moment Together Section -->
+        <div class="light-section moment-together--section">
+            <h1>A Moment Together</h1>
+            <h2>New Episodes Every Friday</h2>
+            <iframe class="drop-shadow"
+                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGvYMkmF9aFePk-S_zfHdNW"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- Across the Table -->
+        <div class="light-section moment-together--section">
+            <h1>Across the Table</h1>
+            <h2>Podcast</h2>
+            <iframe class="drop-shadow"
+                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGuZGA0sKwLmk9gcT4LOF3X"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- Recent Videos -->
+        <div id="recent-videos--section" class="dark-section">
+            <h1>Recent Videos</h1>
+            <ul id="recent-selector">
+                <li>
+                    <a onclick="openRecentVideo(0, 'https://www.youtube.com/embed/1uFMGB3bKoo')">
+                        <img src="/ref/pages/watch_page/thumbs/my-hope-my-future.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a onclick="openRecentVideo(1, 'https://www.youtube.com/embed/zOtKzSUBuHc')">
+                        <img src="/ref/pages/watch_page/thumbs/power-up-vbs.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a onclick="openRecentVideo(2, 'https://www.youtube.com/embed/krKxWgMkH2Q')">
+                        <img src="/ref/pages/watch_page/thumbs/christ-resurrection.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="recent-videos--popup" onclick="closeAll()">
+            <div id="popup-window">
+                <div id="close-button" onclick="closeAll()" style="text-align: right">X</div>
+                <div class="center">
+                    <iframe width="560" height="315" src="" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./scripts/video-player.js"></script>
+    <!-- <script src="./scripts/watch_page.js"></script> -->
+    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+    <script src="./scripts/recap-section.js"></script>
+</body>
+
+</html>

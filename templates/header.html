@@ -1,0 +1,95 @@
+<header>
+    <main class="header-content header-logo">
+        <a id="header-icon" href="/">
+            <img src="/ref/icons/cag-logo-left.png" alt="Home Page">
+        </a>
+        <nav id="desktop-nav">
+            <ul>
+                <li>
+                    <a href="/services/">SERVICES</a>
+                </li>
+                <li>
+                    <a href="/about/">ABOUT</a>
+                </li>
+                <li>
+                    <a href="/ministries/">MINISTRIES</a>
+                </li>
+                <li>
+                    <a href="/events/">EVENTS</a>
+                </li>
+                <li>
+                    <a href="/missions/">MISSIONS</a>
+                </li>
+                <li>
+                    <a href="/prayer/">PRAYER</a>
+                </li>
+                <li>
+                    <a href="/media/">MEDIA</a>
+                </li>
+                <li id="give-insert">
+                    <a href="/give/">GIVE</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="siteSearch">
+            <div id="searchButton">
+                <img id="search-button" src="/ref/icons/search-dark.png" alt="Search CAG.org" onclick="showSearchBar()">
+            </div>
+
+            <div id="searchBar">
+                <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()"
+                    onfocus="downloadSearchResults()" onfocusout="hideSearchResults()">
+            </div>
+        </div>
+        <nav id="mobile-nav--button">
+            <a id="hamburger-button" onclick="toggleMobileNav()">
+                <div class="hamburger-button--wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </nav>
+
+    </main>
+
+    <!-- Outside of the flex style -->
+    <nav id="mobile-nav">
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/services/">SERVICES</a>
+            </li>
+            <li>
+                <a href="/about/">ABOUT</a>
+            </li>
+            <li>
+                <a href="/ministries/">MINISTRIES</a>
+            </li>
+            <li>
+                <a href="/events/">EVENTS</a>
+            </li>
+            <li>
+                <a href="/missions/">MISSIONS</a>
+            </li>
+            <li>
+                <a href="/prayer/">PRAYER</a>
+            </li>
+            <li>
+                <a href="/media/">MEDIA</a>
+            </li>
+            <li id="give-insert--mobile">
+                <a href="/give/">GIVE</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="siteSearchResult">
+        <ul>
+        </ul>
+        <div id="no-results--error">No results found</div>
+    </div>
+</header>

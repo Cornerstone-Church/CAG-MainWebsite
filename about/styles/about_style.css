@@ -1,0 +1,344 @@
+
+p {
+    text-indent: 0px;
+}
+
+#project-links {
+    margin-top: 50px;
+    width: 100%;
+}
+
+#project-links td {
+    width: 50%;
+    text-align: center;
+    vertical-align: top;
+}
+
+#project-links a {
+    color: var(--theme-text-color);
+    text-decoration: none;
+}
+
+#project-links a:hover {
+    color: var(--theme-text-hover);
+}
+
+#missions-trip {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#missions-trip tr:first-child td {
+    border-top: 0px;
+}
+
+#missions-trip td {
+    padding: 10px;
+    border-top: 2px solid #ccd4df;
+}
+
+#missions-trip td:last-child {
+    text-align: right;
+    width: 100px;
+}
+
+.about-sections {
+    position: relative;
+    height: 70vh;
+}
+
+.about-sections img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    filter: saturate(0%);
+}
+
+.about-sections .text-wrapper {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100%;
+}
+
+.about-sections p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40vw;
+
+    color: var(--theme-primary-color);
+    font-size: 20px;
+    text-indent: 0px;
+
+    opacity: 0;
+}
+
+.left .text-wrapper {
+    left: 0px;
+    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.left p {
+    text-align: left;
+    left: 5vw;
+}
+
+.right .text-wrapper {
+    right: 0px;
+    background: linear-gradient(0.75turn, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.right p {
+    text-align: right;
+    right: 5vw;
+}
+
+.right--no-background .text-wrapper {
+    right: 0px;
+    background: none;
+}
+
+.right--no-background p {
+    text-align: right;
+    right: 5vw;
+}
+
+.none {
+    display: inline;
+}
+
+
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 4px;
+}
+
+.image-overlay img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay .text-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    padding: 30px;
+
+    background: rgba(0, 0, 0, .8);
+}
+
+.image-overlay .text-section--right {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0%, -50%);
+    width: 50vw;
+    padding: 30px;
+
+
+    color: var(--theme-primary-color);
+}
+
+/* Pastor Section */
+
+#pastor-lead-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#pastor-lead-description {
+    padding: 20px;
+    align-self: flex-end;
+    text-align: center;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+#pastor-lead-description h1 {
+    padding: 20px 20px 0px 20px;
+    color: var(--theme-secondary-color);
+    font-size: 30px;
+}
+
+#pastor-lead-description h2 {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+#pastor-list {
+    text-align: center;
+}
+
+.pastor {
+    margin: 10px 20px;
+    width: auto;
+    display: inline-block;
+}
+
+.pastor-image {
+    text-align: center;
+    border: 10px solid white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    font-size: 0px;
+}
+
+.pastor-image img {
+    height: 225px;
+    width: 325px;
+    object-fit: cover;
+}
+
+.pastor-description {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.pastor-description h1 {
+    font-size: 25px;
+    color: var(--theme-secondary-color);
+}
+
+.pastor-description h2 {
+    font-size: 18px;
+    color: var(--theme-text-subheader);
+}
+
+.large-header {
+    margin: 60px 0px 20px 0px;
+}
+
+/* Partnered Churches Section */
+
+#partnered-churches {
+
+}
+
+#partnered-churches .churches {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#partnered-churches .churches--background {
+    width: 100%;
+    height: 100%;
+}
+
+#partnered-churches #bristow--background {
+    background: url('/ref/pages/about_page/partnered/bristow.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#partnered-churches #easterhouse--background {
+    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#partnered-churches #biserica--background {
+    background: url('/ref/pages/about_page/partnered/biserica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#partnered-churches .churches--forground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+
+    background: var(--theme-primary-color);
+    padding: 30px 40px;
+
+    text-align: center;
+}
+
+#partnered-churches .churches--forground h1 {
+}
+
+
+/* Beliefs Section */
+
+#what-we-believe-element {
+    list-style: none;
+    padding: 0px;
+}
+
+#what-we-believe-element li {
+    padding-bottom: 50px;
+}
+
+.what-we-believe--background {
+    background: #E8D6D1;
+}
+
+@media only screen and (max-width:800px) {
+    .about-sections p {
+        width: 80vw;
+    }
+
+    .left .text-wrapper {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .right .text-wrapper {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .right--no-background img {
+        object-position: left; 
+    }
+
+    .right--no-background .text-wrapper {
+        background: rgba(0, 0, 0, .8);
+    }
+
+    .right--no-background p {
+        text-align: left;
+        left: 5vw;
+    }
+    
+    .right p {
+        text-align: left;
+        left: 5vw;
+    }
+
+    .image-overlay .text-section {
+        width: 80%;
+    }
+
+    #pastor-lead-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    #pastor-lead-description {
+        width: 90%;
+    }
+
+    .pastor-image img {
+        height: 180px;
+        width: 280px;
+    }
+}

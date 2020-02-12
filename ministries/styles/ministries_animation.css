@@ -1,0 +1,57 @@
+/*
+    A stylesheet that moves the element from off screen and
+    brings up the opacity. Will also fade then move element
+    off screen so it is not clickable.
+
+    Check out the ministries-script.js to see the implememntation.
+*/
+
+@keyframes sectionShow {
+    /* Bring element on screen and keep hidden */
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+    1% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    /* Fade in the element */
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+@keyframes sectionHide {
+    /* Fade out element */
+    0% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+    /* Move element off screen */
+    99% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+}
+
+/* Apply this class to the element to fade it in */
+.showSection {
+    animation-name: sectionShow;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+/* Apply this class to fade the element back out */
+.hideSection {
+    animation-name: sectionHide;
+    animation-duration: .5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}

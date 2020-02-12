@@ -1,0 +1,28 @@
+.oneday-banner {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.oneday-banner img {
+    position: absolute;
+}
+
+#oneday-background {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#oneday-foreground {
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+iframe {
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+}
