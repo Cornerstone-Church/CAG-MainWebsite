@@ -1,0 +1,31 @@
+#office-staff h2 {
+    padding: 0px;
+    margin-top: 50px;
+
+    text-transform: uppercase;
+}
+
+#office-staff li {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.staff-name {
+    padding: 0px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.staff-description {
+    font-style: italic;
+}
+
+#banner {
+    height: 500px;
+}
+
+@media only screen and (max-width:800px) {
+    #banner {
+        height: 200px;
+    }
+}
