@@ -23,8 +23,8 @@ You have been warned..... :-0 */
     --theme-secondary-color: #34495e;
     --theme-secondary-color--rgb: 52, 73, 94;
     --theme-background-color: #ecf0f1;
-    --theme-header-color-dark: rgba(20, 20, 20, 0.8);
-    --theme-header-color-light: rgba(236, 240, 241, 0.9);
+    --theme-header-color-dark: #242424;
+    --theme-header-color-light: rgba(236, 240, 241, 1);
     --theme-subheader-color-light: rgba(220, 220, 220, 0.8);
     --theme-activation-color: #3498db;
     --theme-text-color: #34495e;
