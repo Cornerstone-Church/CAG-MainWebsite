@@ -1,0 +1,45 @@
+#live-stream-wrapper {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    max-height: 800px;
+    background: var(--theme-header-color-dark);
+}
+
+#live-objects {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100%;
+}
+
+#live-stream-wrapper h1 {
+    color: var(--theme-primary-color);
+    text-align: center;
+    font-weight: normal;
+}
+
+#live-stream-wrapper #live-stream {
+    width: 100%;
+    height: 75%;
+    max-width: 1200px;
+}
+
+#button-group {
+    margin-top: 2%;
+}
+
+#button-group a {
+    display: inline-block;
+    margin: 10px;
+    width: 130px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #live-stream-wrapper #live-stream {
+        max-height: 300px;
+    }
+}
