@@ -71,7 +71,7 @@ h2 {
 
     background: rgba(0, 0, 0, .8);
     z-index: 2;
-    opacity: 0;
+    opacity: 1;
 
     transition: .3s;
 }
