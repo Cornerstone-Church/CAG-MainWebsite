@@ -75,7 +75,7 @@
                 <h1>Cornerstone Church</h1>
             </div>
         </div>
-        
+
         <!-- NOTIFICATION CODE -->
         <!-- <div class="expires">
             <div class="expire-date">2020-01-07</div>
@@ -129,6 +129,30 @@
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="/scripts/alert.js"></script>
+
+    <!-- Live Stream Time checker -->
+    <script>
+        checkDate();
+
+        function checkDate() {
+            var currentDate = new Date();
+            var currentHour = currentDate.getUTCHours();
+            var currentDay = currentDate.getUTCDay();
+
+            var startTime = 13; // 13 (9:00am EST)
+            var endTime = 16; // 16 (12:00pm EST)
+            var streamDay = 0 // 0 (Sunday)
+
+            if (currentDay == streamDay) {
+                if (currentHour >= startTime && currentHour < endTime) {
+                    window.location.replace("/live/");
+                }
+            }
+
+            console.log('checked');
+            setTimeout(checkDate, 10000);
+        }
+    </script>
 </body>
 
 </html>
