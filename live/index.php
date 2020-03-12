@@ -1,3 +1,34 @@
+<?php
+try {
+    $channelId = 'CornerstoneBowie';
+    $videoId = getLiveVideoID($channelId);
+    $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
+} catch(Exception $e) {
+    // Echo the generated error
+    // echo "ERROR: ".$e->getMessage();
+}
+
+// The method which finds the video ID
+function getLiveVideoID($channelId)
+{
+    $videoId = null;
+
+    // Fetch the livestream page
+    if($data = file_get_contents('https://www.youtube.com/embed/live_stream?channel='.$channelId))
+    {
+        // Find the video ID in there
+        if(preg_match('/\'VIDEO_ID\': \"(.*?)\"/', $data, $matches))
+            $videoId = $matches[1];
+        else
+            throw new Exception('Couldn\'t find video ID');
+    }
+    else
+        throw new Exception('Couldn\'t fetch data');
+
+    return $videoId;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,10 +92,14 @@
     <div class="header_padding" id="live-stream-wrapper">
         <div id="live-objects" class="center">
             <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
-            <iframe id="live-stream" class="drop-shadow"
-                src="https://www.youtube.com/embed/live_stream?channel=UCx-bgFNkwgq1c_42gy-BNrw&autoplay=1"
-                frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <div id="live-iframe">
+                <iframe id="live-stream" class="drop-shadow"
+                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>&autoplay=1'
+                    frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe id="live-chat" src='<?php echo $chatURL ?>' frameborder="0">
+                </iframe>
+            </div>
             <div id="button-group">
                 <a href="/give/" target="_blank" class="button--white">Give Online</a>
                 <a href="/events/" target="_blank" class="button--white">Our Events</a>
@@ -94,3 +129,5 @@
 </body>
 
 </html>
+
+
