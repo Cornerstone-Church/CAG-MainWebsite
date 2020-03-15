@@ -19,6 +19,15 @@
     color: var(--theme-primary-color);
     text-align: center;
     font-weight: normal;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+#live-stream-wrapper h2 {
+    color: var(--theme-primary-color);
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: normal;
 }
 
 #live-stream-wrapper #live-iframe {

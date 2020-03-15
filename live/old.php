@@ -92,6 +92,7 @@ function getLiveVideoID($channelId)
     <div class="header_padding" id="live-stream-wrapper">
         <div id="live-objects" class="center">
             <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
+            <h2>9:00am & 11:00am EST</h2>
             <div id="live-iframe">
                 <iframe id="live-stream" class="drop-shadow"
                     src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>&autoplay=1'
