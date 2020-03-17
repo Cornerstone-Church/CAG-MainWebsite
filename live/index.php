@@ -5,7 +5,7 @@ try {
     $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
 } catch(Exception $e) {
     // Echo the generated error
-    // echo "ERROR: ".$e->getMessage();
+    echo '<div id="offline-error"></div>';
 }
 
 // The method which finds the video ID
@@ -101,6 +101,9 @@ function getLiveVideoID($channelId)
                 <iframe id="live-chat" src='<?php echo $chatURL ?>' frameborder="0">
                 </iframe>
             </div>
+            <div id="stream-offline">
+                <h2>Stream Offline</h2>
+            </div>
             <div id="button-group">
                 <a href="/give/" target="_blank" class="button--white">Give Online</a>
                 <a href="/events/" target="_blank" class="button--white">Our Events</a>
@@ -127,6 +130,19 @@ function getLiveVideoID($channelId)
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/hold_it.js"></script>
+    <script>
+        var offlineError = document.getElementById('offline-error');
+        if (offlineError != null) {
+            offlineMode();
+        }
+
+        function offlineMode() {
+            var player = document.getElementById('live-iframe');
+            var offlineMesge = document.getElementById('stream-offline');
+            player.style.display = 'none';
+            offlineMesge.style.display = 'inline';
+        }
+    </script>
 </body>
 
 </html>
