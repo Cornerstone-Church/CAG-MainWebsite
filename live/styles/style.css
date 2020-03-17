@@ -15,6 +15,16 @@
     height: 100%;
 }
 
+#stream-offline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+
+    display: none;
+}
+
 #live-stream-wrapper h1 {
     color: var(--theme-primary-color);
     text-align: center;
