@@ -1,6 +1,6 @@
 <?php
 try {
-    $channelId = 'CornerstoneBowie';
+    $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
     $videoId = getLiveVideoID($channelId);
     $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
 } catch(Exception $e) {
