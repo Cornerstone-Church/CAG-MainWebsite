@@ -1,3 +1,34 @@
+<?php
+try {
+    $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
+    $videoId = getLiveVideoID($channelId);
+    $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
+} catch(Exception $e) {
+    // Echo the generated error
+    // echo "ERROR: ".$e->getMessage();
+}
+
+// The method which finds the video ID
+function getLiveVideoID($channelId)
+{
+    $videoId = null;
+
+    // Fetch the livestream page
+    if($data = file_get_contents('https://www.youtube.com/embed/live_stream?channel='.$channelId))
+    {
+        // Find the video ID in there
+        if(preg_match('/\'VIDEO_ID\': \"(.*?)\"/', $data, $matches))
+            $videoId = $matches[1];
+        else
+            throw new Exception('Couldn\'t find video ID');
+    }
+    else
+        throw new Exception('Couldn\'t fetch data');
+
+    return $videoId;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,10 +95,10 @@
             <h2>9:00am & 11:00am EST</h2>
             <div id="live-iframe">
                 <iframe id="live-stream" class="drop-shadow"
-                    src='https://www.youtube.com/embed/4936nRA3RcM?&autoplay=1'
+                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>&autoplay=1'
                     frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe id="live-chat" src='https://www.youtube.com/live_chat?v=4936nRA3RcM&embed_domain=cag.org' frameborder="0">
+                <iframe id="live-chat" src='<?php echo $chatURL ?>' frameborder="0">
                 </iframe>
             </div>
             <div id="button-group">
