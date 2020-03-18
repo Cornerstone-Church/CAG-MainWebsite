@@ -118,7 +118,8 @@ function getLiveVideoID($channelId)
             href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
         <br><br>
         <h2>JOIN US ONLINE</h2>
-        Sunday 9:00am | 11:00am EST
+        Sunday Services 9:00am | 11:00am EST
+        <br>Prayer Mon-Sat at 12:00pm EST
     </section>
 
     <!-- Footer Section -->
