@@ -44,7 +44,7 @@ function getLiveVideoID($channelId)
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20021101">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20031901">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
@@ -102,7 +102,8 @@ function getLiveVideoID($channelId)
                 </iframe>
             </div>
             <div id="stream-offline">
-                <h2>Stream Offline</h2>
+                <img src="/ref/pages/live_page/offline.png">
+                <h2 id="error-message">Stream Offline</h2>
             </div>
             <div id="button-group">
                 <a href="/give/" target="_blank" class="button--white">Give Online</a>
