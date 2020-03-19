@@ -102,7 +102,8 @@ function getLiveVideoID($channelId)
                 </iframe>
             </div>
             <div id="stream-offline">
-                <h2>Stream Offline</h2>
+                <img src="/ref/pages/live_page/offline.png">
+                <h2 id="error-message">Stream Offline</h2>
             </div>
             <div id="button-group">
                 <a href="/give/" target="_blank" class="button--white">Give Online</a>

@@ -25,6 +25,16 @@
     display: none;
 }
 
+#stream-offline img {
+    display: inline-block;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#stream-offline #error-message {
+    font-weight: bold;
+}
+
 #live-stream-wrapper h1 {
     color: var(--theme-primary-color);
     text-align: center;
