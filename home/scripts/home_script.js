@@ -13,6 +13,8 @@ var debugElement = document.getElementById("dev");
 // The container that scrolls
 var parallaxContainer = document.querySelector(".parallax_container");
 
+funFact();
+
 // Checks every scroll to see if an animation should be applied.
 function animationChecker() {
     // Gets the current top value of the container and adds it to the height
@@ -27,4 +29,14 @@ function animationChecker() {
             seriesText.classList.add("series-text--animation");
         }
     }
+}
+
+function funFact() {
+    firebase.firestore().collection('website-fun-facts').doc('facts').get().then(doc => {
+        var facts = doc.data().facts;
+        var index = Math.floor(Math.random() * facts.length);
+        var element = document.getElementById('fun-fact');
+
+        element.innerHTML = facts[index];
+    });
 }

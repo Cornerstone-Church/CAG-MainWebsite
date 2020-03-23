@@ -106,29 +106,37 @@
     <div id="series-section">
         <section class="parallax_base">
             <div id="announcement-div">
-                <h3>Local Church &bull; Global Outreach <br><span style="color: rgb(112, 132, 153)">Over 70 nations
+                <h3>Ministries Online<br><span style="color: rgb(112, 132, 153); font-size: .7em;">Ministries you can join from your home</span></h3>
+                <br><br>
+                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/alive/">Kids</a><br><br>
+                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/fusion/">Youth</a><br><br>
+                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/doulos/">Young Adults</a><br><br>
+                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/adults/">Adults</a>
+            </div>
+            <div id="announcement-div">
+                <h3>Local Church &bull; Global Outreach <br><span id="fun-fact" style="color: rgb(112, 132, 153)">Over 70 nations
                         Represented</span></h3>
             </div>
+
             <!-- Sermon video Section -->
             <div id="sermon-video--wrapper">
                 <div id="sermon-video--background">
-                    <img src="/ref/sermon_series/background_20020401.jpg">
+                    <img src="/ref/sermon_series/background_20032301.jpg">
                 </div>
                 <div id="sermon-video--foreground">
                     <!-- LOGO Code -->
-                    <!-- <img id="series-logo" src="/ref/sermon_series/logo_20020401.png"> -->
+                    <img id="series-logo" src="/ref/sermon_series/logo_20032301.png">
                     <img id="series-logo" src="">
                     <br>
                     <!-- Sub Text code -->
-                    <h1 id="series-text">
-                    </h1>
+                    <h1 id="series-text"></h1>
                     <iframe class="drop-shadow" id="series-video"
                         src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                         frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <br><br>
                     <!-- <a class="button--white" href="/seriesmatterial/">Daily Videos</a> -->
-                    <a class="button--white" href="/seriesmatterial/200322_Notes.pdf.pdf">Sermon Notes</a>
+                    <a class="button" href="/seriesmatterial/200322_Notes.pdf.pdf">Sermon Notes</a>
                 </div>
             </div>
 
@@ -143,52 +151,7 @@
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="/scripts/alert.js"></script>
-
-    <!-- Live Stream Time checker -->
-    <script>
-        checkDate();
-        checkPrayer();
-
-        function checkDate() {
-            var currentDate = new Date();
-            var currentHour = currentDate.getUTCHours();
-            var currentDay = currentDate.getUTCDay();
-
-            var startTime = 13; // 13 (9:00am EST)
-            var endTime = 16; // 16 (12:00pm EST)
-            var streamDay = 0 // 0 (Sunday)
-
-            if (currentDay == streamDay) {
-                if (currentHour >= startTime && currentHour < endTime) {
-                    window.location.replace("/live/");
-                }
-            }
-            setTimeout(checkDate, 10000);
-        }
-
-        function checkPrayer() {
-            var currentDate = new Date();
-            var currentHour = currentDate.getUTCHours();
-            var currentDay = currentDate.getUTCDay();
-            var currentMin = currentDate.getUTCMinutes();
-
-            console.log(currentDate.getUTCHours());
-
-            var startHourTime = 16; // 16 (12:00pm EST)
-            var startMinTime = 00; // 00
-            var endHourTime = 16; // 17 (12:30pm EST)
-            var endMinTime = 30; // 30
-            // 0 (Sunday)
-
-            if (currentHour >= startHourTime && currentHour <= endHourTime) {
-                if (currentMin >= startMinTime && currentMin < endMinTime) {
-                    window.location.replace("/live/");
-                }
-            }
-
-            setTimeout(checkPrayer, 10000);
-        }
-    </script>
+    <script src="/scripts/stream_check.js"></script>
 </body>
 
 </html>
