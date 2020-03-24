@@ -1,6 +1,8 @@
 // Get current date
 var date = new Date();
 
+console.log(date.getHours())
+
 // Sunday Service times
 var sundayDay = 0 // Sunday
 var sundayStartS1 = [9, 00];
@@ -86,7 +88,6 @@ function checkLive(currentDate, startTime, endTime, day) {
     }
 
     if (goLive) {
-        console.log('GOING LIVE');
-        // window.location.replace('/live/');
+        window.location.replace('/live/');
     }
 }
