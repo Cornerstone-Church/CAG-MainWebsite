@@ -71,12 +71,12 @@
     opacity: 0;
 }
 
-#announcement-div {
+.home-divide {
     display: inline-block;
     padding: 40px 0;
 }
 
-#announcement-div h3 {
+.home-divide h3 {
     font-size: 40px;
     font-family: "IBM Plex Sans";
     font-weight: bold;
