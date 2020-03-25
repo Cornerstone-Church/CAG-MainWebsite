@@ -20,8 +20,9 @@
 
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
-    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
-    
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
     <script>
@@ -37,7 +38,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
     <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
-    
+
     <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -55,16 +56,30 @@
     <section class="header_padding">
         <img id="banner" src="/ref/pages/ministries_page/banners/fusionBanner.jpg">
         <div class="content">
-            <a href="../" class="button-small">Go Back</a><br><br>
             <div class="center">
                 <h1>Join us Sundays at 9am or 11am & Wednesdays at 7pm</h1>
-                <h2>Downstairs in the Community Room</h2>
+                <!-- TODO: remove comments -->
+                <!-- <h2>Downstairs in the Community Room</h2> -->
             </div>
             <p>Our heart and passion is for students to encounter Jesus and live the full life that He has designed for
                 them. We learn the truth about who God is and who we are. No matter what the culture or society says, a
                 student’s identity is in Him! We hope your student will join us on this faith-building journey
                 together.</p>
-
+            
+            <br><br>
+            <div class="center">
+                <iframe class="drop-shadow" style="width: 90%; height: 315; max-width: 560px; " width="560" height="315"
+                    src="https://www.youtube.com/embed?listType=playlist&list=PLh5nLlK0DS4w_6ISHV9SkblU5zx4AIlJW"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <br>
+            <div class="center">
+                Join our Zoom meeting for small groups!
+                <br>
+                <a class="button-small" href="https://zoom.us/j/468674331">Join Small Groups</a>
+            </div>
+            <br><br>
             <ul id="class-element">
                 <!-- Instagram -->
                 <li class="class-selector" onclick="">
@@ -120,10 +135,24 @@
                         </div>
                     </div>
                 </li>
-            </ul>
-            <h2>Upcoming Events</h2>
-            <ul>
-                <li>No current upcoming events.</li>
+
+                <!-- Sermon Notes -->
+                <li class="class-selector" onclick="">
+                    <div class="placeholder-top">
+                        <img src="/ref/pages/ministries_page/sections/fusion/facebook.jpg">
+                        <h2>Parents Facebook Group</h2>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="placeholder-bottom">
+                            <h2>Parents Facebook Group</h2>
+                            <p>Follow our Facebook Group to keep up with everything Fusion Youth is doing throughout the year.</p><br>
+                            <center><a class="button--white"
+                                    href="https://www.facebook.com/groups/996341427386062/" target="_blank">Go
+                                    to Facebook Group</a></center>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
 
