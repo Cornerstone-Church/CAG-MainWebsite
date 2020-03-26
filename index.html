@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20021101">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" href="/home/styles/home_style.css?version=20032501">
+    <link rel="stylesheet" href="/home/styles/home_style.css?version=20032601">
     <link rel="stylesheet" href="/home/styles/home_animation.css?version=19040801">
 
     <!-- Fav Icons -->
@@ -59,7 +59,7 @@
     </script>
 </head>
 
-<body onload="headerVideo(); expireIt(); holdIt();" onscroll="headerScroll(); animationChecker();">
+<body onload="headerTrans()" onscroll="headerScroll(); animationChecker();">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -74,31 +74,17 @@
                 <h2>Welcome to</h2>
                 <h1>Cornerstone Church</h1>
             </div>
+            <div id="banner-buttons">
+                <a class="button--white" href="/live/">Watch Live</a>
+                <a class="button--white" href="/media/">View Sermons</a>
+            </div>
         </div>
 
         <!-- NOTIFICATION CODE -->
-        <div class="expires">
-            <div class="expire-date">2020-04-10</div>
-            <div style="position: absolute; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8);">
-                <div
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 300px; padding: 20px; background-color: white; border-radius: 5px; text-transform: uppercase; font-weight: bold;">
-                    <h2>NEW POST: March 20th, 2020</h2>
-                    <p>An important message from Pastor Mark on COVID-19</p>
-                    <iframe style="width: 100%; height: 100%; min-height: 200px;"
-                        src="https://www.youtube.com/embed/PwGXEAALxVM" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; autoplay;"
-                        allowfullscreen></iframe>
-                    <p style="font-size: .8em;">Join us live every day right here for prayer at 12pm and also services
-                        on Sunday at 9am and 11am.
-                    </p>
-                    <div style="text-align: center; margin-top: 10px;">
-                        <a style="margin: 5px;" target="_blank" href="/prayer/" class="button-small">Prayer</a>
-                        <a style="margin: 5px;" target="_blank" href="/posts/" class="button-small">Updates</a>
-                        <a style="margin: 5px;" href="mailto:care@cag.org" class="button-small">Care</a>
-                        <a style="margin: 5px;" target="_blank" href="/give/" class="button-small">Give</a>
-                    </div>
-                </div>
-            </div>
+
+        <div id="alert">
+            <a href="#"></a>
+            <img src="/ref/icons/arrow_white.png">
         </div>
     </div>
 
@@ -106,16 +92,19 @@
     <div id="series-section">
         <section class="parallax_base">
             <div id="ministry-online-div" class="home-divide">
-                <h3>Ministries Online<br><span style="color: rgb(112, 132, 153); font-size: .7em;">Ministries you can join from your home</span></h3>
+                <h3>Ministries Online<br><span style="color: rgb(112, 132, 153); font-size: .7em;">Ministries you can
+                        join from your home</span></h3>
                 <br><br>
-                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/alive/">Kids</a><br><br>
-                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/fusion/">Youth</a><br><br>
-                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/doulos/">Young Adults</a><br><br>
-                <a class="button" style="width: 90%; max-width: 600px;" href="/ministries/adults/">Adults</a>
+                <a class="button" href="/ministries/alive/">Kids</a><br><br>
+                <a class="button" href="/ministries/fusion/">Youth</a><br><br>
+                <a class="button" href="/ministries/doulos/">Young
+                    Adults</a><br><br>
+                <a class="button" href="/ministries/adults/">Adults</a>
             </div>
             <br>
             <div id="announcement-div" class="home-divide">
-                <h3>Local Church &bull; Global Outreach <br><span id="fun-fact" style="color: rgb(112, 132, 153)">Over 70 nations
+                <h3>Local Church &bull; Global Outreach <br><span id="fun-fact" style="color: rgb(112, 132, 153)">Over
+                        70 nations
                         Represented</span></h3>
             </div>
 
@@ -145,13 +134,13 @@
         </section>
     </div>
     <!-- Scripts -->
-    <script src="/scripts/interactive_style.js?version=19040801"></script>
-    <script src="/home/scripts/home_script.js?version=19040801"></script>
+    <script src="/scripts/interactive_style.js?version=20032601"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="/scripts/alert.js"></script>
-    <script src="/home/scripts/stream_check.js?version=20032501"></script>
+    <script src="/home/scripts/home_script.js?version=20032601"></script>
+    <script src="/home/scripts/stream_check.js?version=20032601"></script>
 </body>
 
 </html>

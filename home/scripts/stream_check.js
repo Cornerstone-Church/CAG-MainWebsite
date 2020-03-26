@@ -1,14 +1,14 @@
 // Get current date
 var date = new Date();
 
-console.log(date.getHours())
-
 // Sunday Service times
 var sundayDay = 0 // Sunday
-var sundayStartS1 = [9, 00];
+var sundayStartS1 = [8, 59];
 var sundayEndS1 = [10, 10];
-var sundayStartS2 = [11, 00];
+var sundayStartS2 = [10, 59];
 var sundayEndS2 = [12, 10];
+var sundayStartS3 = [17, 59];
+var sundayEndS3 = [19, 10];
 
 // Noon Prayer Times
 var noonPrayerStart = [11, 59];

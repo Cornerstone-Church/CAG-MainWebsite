@@ -19,49 +19,56 @@ var mobileNavVissable = false;
 var headerTransparent = false;
 
 
-function headerVideo() {
-    var header = document.querySelector("header");
-    header.classList.add('header-transparent');
-    enableLightText();
-
-    headerTransparent = true;
+function headerTrans() {
+    // Make sure function does not run if there is an alert
+    if (hasAlert == null || !hasAlert) {
+        var header = document.querySelector("header");
+        console.log(header);
+        header.classList.add('header-transparent');
+        enableLightText();
+    
+        headerTransparent = true;
+    }
 }
 
 
 function headerScroll() {
-    // Import elements
-    var header = document.querySelector("header");
-
-    // Captures scrolling position
-    // var scrollPosition = parallaxContainer.scrollTop;
-    var scrollPosition = window.scrollY;
-
-    // If the scroll position is greater than the set height
-    if (scrollPosition >= scrollTransitionHeight) {
-        // Make sure we only execute once when scrolling
-        if (!isScrolling) {
-            header.classList.add("header-blur");
-            header.classList.remove("header-transparent");
-            header.classList.remove("header-dark");
-            enableNormalText();
-
-            isScrolling = true;
-            headerTransparent = false;
-        }
-    } else {
-        if (isScrolling) {
-            header.classList.remove("header-blur");
-            // Only add dark header if nav bar is open
-            if (mobileNavVissable) {
-                header.classList.add("header-dark");
-            } else {
-                // Enable transparancy if nav bar is not open
-                header.classList.add("header-transparent");
+    // Make sure function only runs when there are no alerts
+    if (hasAlert == null || !hasAlert) {
+        // Import elements
+        var header = document.querySelector("header");
+    
+        // Captures scrolling position
+        // var scrollPosition = parallaxContainer.scrollTop;
+        var scrollPosition = window.scrollY;
+    
+        // If the scroll position is greater than the set height
+        if (scrollPosition >= scrollTransitionHeight) {
+            // Make sure we only execute once when scrolling
+            if (!isScrolling) {
+                header.classList.add("header-blur");
+                header.classList.remove("header-transparent");
+                header.classList.remove("header-dark");
+                enableNormalText();
+    
+                isScrolling = true;
+                headerTransparent = false;
             }
-            enableLightText();
-
-            isScrolling = false;
-            headerTransparent = true;
+        } else {
+            if (isScrolling) {
+                header.classList.remove("header-blur");
+                // Only add dark header if nav bar is open
+                if (mobileNavVissable) {
+                    header.classList.add("header-dark");
+                } else {
+                    // Enable transparancy if nav bar is not open
+                    header.classList.add("header-transparent");
+                }
+                enableLightText();
+    
+                isScrolling = false;
+                headerTransparent = true;
+            }
         }
     }
 }
