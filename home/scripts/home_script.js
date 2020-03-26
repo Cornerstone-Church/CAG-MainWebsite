@@ -13,7 +13,13 @@ var debugElement = document.getElementById("dev");
 // The container that scrolls
 var parallaxContainer = document.querySelector(".parallax_container");
 
+// Has alert variable
+var hasAlert = false;
+
 funFact();
+checkAlert();
+expireIt();
+holdIt();
 
 // Checks every scroll to see if an animation should be applied.
 function animationChecker() {
@@ -38,5 +44,32 @@ function funFact() {
         var element = document.getElementById('fun-fact');
 
         element.innerHTML = facts[index];
+    });
+}
+
+function checkAlert() {
+    firebase.firestore().collection('alerts').doc('alert').get().then((doc) => {
+        var title = doc.data().title;
+        var action = doc.data().action;
+        var expireDate = doc.data().expireDate;
+        var currentDate = new Date().getTime() / 1000;
+        var currentDate = Math.round(currentDate);
+
+        // Determin if alert exists
+        if (title != "") {
+            // If we have not reached the expiration date then run alert
+            if (expireDate.seconds > currentDate) {
+                // Alert Code
+                var alertWrapper = document.getElementById('alert');
+                var alertText = document.querySelector('#alert a');
+
+                alertText.innerHTML = title;
+                alertText.setAttribute('href', action);
+
+                alertWrapper.style.display = 'inline';
+
+                hasAlert = true;
+            }
+        }
     });
 }
