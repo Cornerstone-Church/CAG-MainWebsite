@@ -168,6 +168,26 @@
     margin-left: 5px;
 }
 
+#banner-buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#banner-buttons a {
+    width: 140px;
+    margin: 8px;
+}
+
+/* TODO: Remove when done */
+/* COVID CODE */
+#ministry-online-div a {
+    width: 90%;
+    max-width: 600px;
+}
+
 @media only screen and (max-width:800px) {
     #announcement-div h3 {
         font-size: 20px;
@@ -189,5 +209,15 @@
     
     #video-banner h2 {
         font-size: 20px;
+    }
+
+    /* TODO: Remove when done */
+    /* COVID CODE */
+    #ministry-online-div a {
+        width: 70%;
+    }
+
+    #ministry-online-div h3 {
+        font-size: 1.5em;
     }
 }
