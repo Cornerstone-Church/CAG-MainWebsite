@@ -1,8 +1,6 @@
 // Get current date
 var date = new Date();
 
-console.log(date.getHours())
-
 // Sunday Service times
 var sundayDay = 0 // Sunday
 var sundayStartS1 = [8, 59];
