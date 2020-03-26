@@ -9,11 +9,11 @@ h2 {
 .class-selector {
     padding: 0;
     margin: 0;
-    border: 1px soli
+    transition: .5s;
 }
 
 .class-selector {
-    height: 300px;
+    height: 50px;
     width: 100%;
     overflow: hidden;
 
@@ -38,7 +38,7 @@ h2 {
     left: 20px;
     z-index: 2;
 
-    font-size: 40px;
+    font-size: 30px;
     transform: translatey(-50%);
     color: white;
     text-transform: uppercase;
@@ -77,6 +77,10 @@ h2 {
     transition: .3s;
 }
 
+.class-selector:hover {
+    height: 300px;
+}
+
 .class-selector:hover .content-wrapper {
     opacity: 1;
 }
@@ -100,5 +104,9 @@ h2 {
 @media only screen and (max-width:800px) {
     .class-selector .placeholder-bottom {
         width: 90%;
+    }
+
+    #facebook .placeholder-top h2 {
+        font-size: 20px;
     }
 }
