@@ -142,7 +142,7 @@
 #alert {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 50;
     margin-top: var(--header-height);
     background: var(--theme-secondary-color);
     width: 100%;
