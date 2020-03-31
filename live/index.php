@@ -7,7 +7,6 @@ try {
     $jsCode = 'console.log(' + $e + ');';
     // Echo the generated error
     echo '<div id="offline-error"></div>';
-    echo ($jsCode);
 }
 
 // The method which finds the video ID
