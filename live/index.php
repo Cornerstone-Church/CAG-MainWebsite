@@ -4,9 +4,10 @@ try {
     $videoId = getLiveVideoID($channelId);
     $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
 } catch(Exception $e) {
+    $jsCode = 'console.log(' + $e + ');';
     // Echo the generated error
-    echo '<div id="offline-error">$e</div>';
-    echo 'ERROR: $e';
+    echo '<div id="offline-error"></div>';
+    echo ($jsCode);
 }
 
 // The method which finds the video ID
