@@ -1,7 +1,7 @@
 var offlineError = document.getElementById('offline-error');
 
 // Sunday Service times
-var sundayDay = 0 // Sunday
+var sundayDay = 0 ;// Sunday
 var sundayStartS1 = [9, 00];
 var sundayStartS2 = [11, 00];
 var sundayStartS3 = [18, 00];
@@ -51,7 +51,7 @@ function countdownTimer(time, day) {
         var currentTimeInSec = hourUTC + minUTC + secUTC;
 
         // Time the stream starting message will show in seconds
-        var streamStartingTime = 120
+        var streamStartingTime = 120;
 
         // Convert to UTC
         var endTime = [(time[0] + 4), time[1]];
