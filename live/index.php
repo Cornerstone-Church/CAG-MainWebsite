@@ -5,7 +5,7 @@ try {
     $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
 } catch(Exception $e) {
     // Echo the generated error
-    echo '<div id="offline-error"></div>';
+    echo '<div id="offline-error">$e</div>';
 }
 
 // The method which finds the video ID
