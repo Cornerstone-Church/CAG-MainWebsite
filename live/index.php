@@ -29,7 +29,6 @@ function getLiveVideoID($channelId)
 }
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,11 +91,11 @@ function getLiveVideoID($channelId)
     <div class="header_padding" id="live-stream-wrapper">
         <div id="live-objects" class="center">
             <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
-            <h2>9:00am | 11:00am | 6:00pm ET</h2>
+            <h2>9:00am & 11:00am EDT</h2>
             <div id="live-iframe">
                 <iframe id="live-stream" class="drop-shadow"
-                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>'
-                    frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>' frameborder="0"
+                    allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <iframe id="live-chat" src='<?php echo $chatURL ?>' frameborder="0">
                 </iframe>
@@ -104,6 +103,10 @@ function getLiveVideoID($channelId)
             <div id="stream-offline">
                 <img src="/ref/pages/live_page/offline.png">
                 <h2 id="error-message">Stream Offline</h2>
+            </div>
+            <div id="countdown">
+                <div id="label-text">Next service starts in</div>
+                <div id="clock"></div>
             </div>
             <div id="button-group">
                 <a href="/give/" target="_blank" class="button--white">Give Online</a>
@@ -119,8 +122,8 @@ function getLiveVideoID($channelId)
             href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
         <br><br>
         <h2>JOIN US ONLINE</h2>
-        Sunday Services 9:00am | 11:00am | 6:00pm ET
-        <br>Prayer Mon-Sat at 12:00pm ET
+        Sunday Services 9:00am | 11:00am EDT
+        <br>Prayer Mon-Sat at 12:00pm EDT
     </section>
 
     <!-- Footer Section -->
@@ -128,25 +131,10 @@ function getLiveVideoID($channelId)
     </div>
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=19040801"></script>
-    <script src="/home/scripts/home_script.js?version=19040801"></script>
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/hold_it.js"></script>
-    <script>
-        var offlineError = document.getElementById('offline-error');
-        if (offlineError != null) {
-            offlineMode();
-        }
-
-        function offlineMode() {
-            var player = document.getElementById('live-iframe');
-            var offlineMesge = document.getElementById('stream-offline');
-            player.style.display = 'none';
-            offlineMesge.style.display = 'inline';
-        }
-    </script>
+    <script src="./scripts/script.js?version=20032701"></script>
 </body>
 
 </html>
-
-
