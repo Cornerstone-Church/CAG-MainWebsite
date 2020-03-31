@@ -6,6 +6,7 @@ try {
 } catch(Exception $e) {
     // Echo the generated error
     echo '<div id="offline-error">$e</div>';
+    echo 'ERROR: $e';
 }
 
 // The method which finds the video ID
