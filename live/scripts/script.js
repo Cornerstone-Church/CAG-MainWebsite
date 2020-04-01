@@ -13,17 +13,19 @@ var noonPrayerStart = [12, 00];
 var tuesDay = 2;
 var tuesPrayerStart = [19, 00];
 
-// Sunday Services
-countdownTimer(sundayStartS1, sundayDay);
-countdownTimer(sundayStartS2, sundayDay);
-countdownTimer(sundayStartS3, sundayDay);
-
-// Prayer Services
-countdownTimer(noonPrayerStart);
-countdownTimer(tuesPrayerStart, tuesDay);
-
+// If if the service is offline
 if (offlineError != null) {
+    // Enable offline mode
     offlineMode();
+    
+    // Sunday Services
+    countdownTimer(sundayStartS1, sundayDay);
+    countdownTimer(sundayStartS2, sundayDay);
+    countdownTimer(sundayStartS3, sundayDay);
+    
+    // Prayer Services
+    countdownTimer(noonPrayerStart);
+    countdownTimer(tuesPrayerStart, tuesDay);
 }
 
 function offlineMode() {
@@ -85,20 +87,23 @@ function countdownTimer(time, day) {
                 clockElement.innerHTML = remainingSec;
             }
 
-            // If countdown is finished
-            if (currentTimeInSec >= endTimeInSec) {
-                clockElement.innerHTML = "Stream starting soon...";
-
-                // TODO: Refresh Page HERE
+            // If countdown is 5 mins or less
+            if (currentTimeInSec >= (endTimeInSec - 300)) {
+                // Refresh Page
                 setTimeout(() => {
                     location.reload();
-                }, 10000)
-                
-                // Remove countdown after 2 mins
-                if (currentTimeInSec >= (endTimeInSec + streamStartingTime)) {
-                    countdownElement.style.display = 'none';
-                    // Stop countdown
-                    clearInterval(counter);
+                }, 30000);
+
+                // If countdown is finished
+                if (currentTimeInSec >= endTimeInSec) {
+                    clockElement.innerHTML = "Stream starting soon...";
+                    
+                    // Remove countdown after 2 mins
+                    if (currentTimeInSec >= (endTimeInSec + streamStartingTime)) {
+                        countdownElement.style.display = 'none';
+                        // Stop countdown
+                        clearInterval(counter);
+                    }
                 }
             }
         }
