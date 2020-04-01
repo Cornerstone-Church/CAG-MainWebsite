@@ -13,17 +13,19 @@ var noonPrayerStart = [12, 00];
 var tuesDay = 2;
 var tuesPrayerStart = [19, 00];
 
-// Sunday Services
-countdownTimer(sundayStartS1, sundayDay);
-countdownTimer(sundayStartS2, sundayDay);
-countdownTimer(sundayStartS3, sundayDay);
-
-// Prayer Services
-countdownTimer(noonPrayerStart);
-countdownTimer(tuesPrayerStart, tuesDay);
-
+// If if the service is offline
 if (offlineError != null) {
+    // Enable offline mode
     offlineMode();
+    
+    // Sunday Services
+    countdownTimer(sundayStartS1, sundayDay);
+    countdownTimer(sundayStartS2, sundayDay);
+    countdownTimer(sundayStartS3, sundayDay);
+    
+    // Prayer Services
+    countdownTimer(noonPrayerStart);
+    countdownTimer(tuesPrayerStart, tuesDay);
 }
 
 function offlineMode() {
