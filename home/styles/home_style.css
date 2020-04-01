@@ -45,9 +45,9 @@
     text-transform: uppercase;
 }
 
-#sermon-video--foreground img {
-    width: 600px;
-    height: auto;
+#sermon-video--foreground #series-logo {
+    width: auto;
+    height: 200px;
 }
 
 #sermon-video--foreground iframe {
