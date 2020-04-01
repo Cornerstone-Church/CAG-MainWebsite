@@ -13,8 +13,6 @@ var noonPrayerStart = [12, 00];
 var tuesDay = 2;
 var tuesPrayerStart = [19, 00];
 
-offlineMode();
-
 // Sunday Services
 countdownTimer(sundayStartS1, sundayDay);
 countdownTimer(sundayStartS2, sundayDay);

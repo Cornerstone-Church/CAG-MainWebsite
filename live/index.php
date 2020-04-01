@@ -135,7 +135,7 @@ function getLiveVideoID($channelId)
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/hold_it.js"></script>
-    <script src="./scripts/script.js?version=20032701"></script>
+    <script src="./scripts/script.js?version=20040101"></script>
 </body>
 
 </html>
