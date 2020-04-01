@@ -85,20 +85,23 @@ function countdownTimer(time, day) {
                 clockElement.innerHTML = remainingSec;
             }
 
-            // If countdown is finished
-            if (currentTimeInSec >= endTimeInSec) {
-                clockElement.innerHTML = "Stream starting soon...";
-
-                // TODO: Refresh Page HERE
+            // If countdown is 5 mins or less
+            if (currentTimeInSec >= (endTimeInSec - 300)) {
+                // Refresh Page
                 setTimeout(() => {
                     location.reload();
-                }, 10000)
-                
-                // Remove countdown after 2 mins
-                if (currentTimeInSec >= (endTimeInSec + streamStartingTime)) {
-                    countdownElement.style.display = 'none';
-                    // Stop countdown
-                    clearInterval(counter);
+                }, 30000);
+
+                // If countdown is finished
+                if (currentTimeInSec >= endTimeInSec) {
+                    clockElement.innerHTML = "Stream starting soon...";
+                    
+                    // Remove countdown after 2 mins
+                    if (currentTimeInSec >= (endTimeInSec + streamStartingTime)) {
+                        countdownElement.style.display = 'none';
+                        // Stop countdown
+                        clearInterval(counter);
+                    }
                 }
             }
         }
