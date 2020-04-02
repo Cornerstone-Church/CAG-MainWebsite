@@ -193,8 +193,10 @@
         font-size: 20px;
     }
 
-    #sermon-video--foreground img {
+    #sermon-video--foreground #series-logo {
         width: 80%;
+        height: auto;
+        margin-bottom: 30px;
     }
 
     #sermon-video--foreground iframe {
