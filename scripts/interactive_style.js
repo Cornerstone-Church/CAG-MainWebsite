@@ -48,7 +48,6 @@ function headerScroll() {
         if (scrollPosition >= scrollTransitionHeight) {
             // Make sure we only execute once when scrolling
             if (!isScrolling) {
-                header.classList.add("header-blur");
                 header.classList.remove("header-transparent");
                 header.classList.remove("header-dark");
                 enableNormalText();
