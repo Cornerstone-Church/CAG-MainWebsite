@@ -1,4 +1,5 @@
 var offlineError = document.getElementById('offline-error');
+var streamIsLive = false;
 
 // Sunday Service times
 var sundayDay = 0 ;// Sunday
@@ -17,16 +18,17 @@ var tuesPrayerStart = [19, 00];
 if (offlineError != null) {
     // Enable offline mode
     offlineMode();
+    
+    // Sunday Services
+    countdownTimer(sundayStartS1, sundayDay);
+    countdownTimer(sundayStartS2, sundayDay);
+    countdownTimer(sundayStartS3, sundayDay);
+    
+    // Prayer Services
+    countdownTimer(noonPrayerStart);
+    countdownTimer(tuesPrayerStart, tuesDay);
 }
 
-// Sunday Services
-countdownTimer(sundayStartS1, sundayDay);
-countdownTimer(sundayStartS2, sundayDay);
-countdownTimer(sundayStartS3, sundayDay);
-
-// Prayer Services
-countdownTimer(noonPrayerStart);
-countdownTimer(tuesPrayerStart, tuesDay);
 
 function offlineMode() {
     var player = document.getElementById('live-iframe');
