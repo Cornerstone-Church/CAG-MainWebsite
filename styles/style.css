@@ -337,6 +337,32 @@ section {
     background-size: contain;
     width: 50px;
     height: 50px;
+
+    animation-name: bottom-button-animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bottom-button-animation {
+    0% {
+        transform: translate(-50%, 0%);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(-50%, -20%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, 0%);
+    }
+    70% {
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        transform: translateY(-50%, 0%);
+        opacity: 1;
+    }
 }
 
 #debug {
