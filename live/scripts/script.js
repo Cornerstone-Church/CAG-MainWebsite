@@ -82,6 +82,13 @@ function countdownTimer(time, day) {
             // Get the remaining seconds
             var remainingSec = 60 - secUTC;
 
+            // Fixes countdown not going to 00
+            if(secUTC == 0) {
+                remainingSec = 0;
+            }
+
+            console.log(secUTC);
+
             if (remainingMin != 0) {
                 clockElement.innerHTML = remainingMin + ':' + ('0' + remainingSec).slice(-2);
             } else {
