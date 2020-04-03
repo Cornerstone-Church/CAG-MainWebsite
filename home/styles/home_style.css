@@ -181,6 +181,15 @@
     margin: 8px;
 }
 
+#banner-down-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+
 /* TODO: Remove when done */
 /* COVID CODE */
 #ministry-online-div a {

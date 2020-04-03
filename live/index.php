@@ -41,7 +41,7 @@ function getLiveVideoID($channelId)
         content="Building an Authentic Community, Lifting up Jesus, Growing in Him, and Touching our World. Cornerstone Church is located in Bowie, Maryland. Experience God through services and activities on Saturday, Sunday, and throughout the week.">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css?version=20021101">
+    <link rel="stylesheet" href="/styles/style.css?version=20040301">
     <link rel="stylesheet" href="/styles/debug.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20040201">
 
