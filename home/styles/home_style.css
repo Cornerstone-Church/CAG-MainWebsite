@@ -25,7 +25,7 @@
     /* Center Video element */
     width: 100%;
     margin: 0;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 #sermon-video--foreground h1 {
@@ -44,7 +44,8 @@
 #sermon-video--foreground #series-logo {
     width: 80%;
     height: auto;
-    max-width: 500px;
+    max-height: 200px;
+    object-fit: contain;
 }
 
 #sermon-video--foreground .resize-wrapper {
@@ -225,9 +226,9 @@
     #sermon-video--foreground .resize-wrapper iframe {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        left: 2.5%;
+        width: 95%;
+        height: 95%;
     }
 
     #video-banner h1 {
