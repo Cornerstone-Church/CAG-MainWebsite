@@ -43,7 +43,7 @@ function getLiveVideoID($channelId)
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20021101">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20031901">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20040201">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
@@ -103,6 +103,11 @@ function getLiveVideoID($channelId)
             <div id="stream-offline">
                 <img src="/ref/pages/live_page/offline.png">
                 <h2 id="error-message">Stream Offline</h2>
+                <div id="error-description">
+                    <b>Looking for service? Check back at these times:</b>
+                    <br>Sunday Services 9:00am | 11:00am | 6:00pm ET
+                    <br>Daily Prayer at 12:00pm ET
+                </div>
             </div>
             <div id="countdown">
                 <div id="label-text">Next service starts in</div>
@@ -123,18 +128,18 @@ function getLiveVideoID($channelId)
         <br><br>
         <h2>JOIN US ONLINE</h2>
         Sunday Services 9:00am | 11:00am | 6:00pm ET
-        <br>Prayer Mon-Sat at 12:00pm ET
+        <br>Daily Prayer at 12:00pm ET
     </section>
 
     <!-- Footer Section -->
     <div id="footer"></div>
     </div>
     <!-- Scripts -->
-    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/interactive_style.js?version=20040201"></script>
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=19050102"></script>
     <script src="/scripts/hold_it.js"></script>
-    <script src="./scripts/script.js?version=20040102"></script>
+    <script src="./scripts/script.js?version=20040203"></script>
 </body>
 
 </html>

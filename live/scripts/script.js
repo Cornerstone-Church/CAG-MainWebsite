@@ -1,4 +1,5 @@
 var offlineError = document.getElementById('offline-error');
+var streamIsLive = false;
 
 // Sunday Service times
 var sundayDay = 0 ;// Sunday
@@ -27,6 +28,7 @@ if (offlineError != null) {
     countdownTimer(noonPrayerStart);
     countdownTimer(tuesPrayerStart, tuesDay);
 }
+
 
 function offlineMode() {
     var player = document.getElementById('live-iframe');
@@ -81,8 +83,7 @@ function countdownTimer(time, day) {
             var remainingSec = 60 - secUTC;
 
             if (remainingMin != 0) {
-                // TODO: Make seconds always show 2 digits
-                clockElement.innerHTML = remainingMin + ':' + remainingSec;
+                clockElement.innerHTML = remainingMin + ':' + ('0' + remainingSec).slice(-2);
             } else {
                 clockElement.innerHTML = remainingSec;
             }

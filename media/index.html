@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20021101">
     <link rel="stylesheet" href="./styles/media_page_style.css?version=20033101">
-    <link rel="stylesheet" href="./styles/video-player.css">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
@@ -62,91 +61,7 @@
             <div id="sermon-series--forground" class="content">
                 <div class="center">
                     <img id="sermon-series-logo" src="/ref/sermon_series/logo_20032301.png">
-
-                    <!-- Commented out because we have no shorts -->
-                    <!-- <h1>Series Short Films</h1> -->
                 </div>
-                <!-- Not displayed because no shorts -->
-                <section style="display: none;" id="video-player">
-                    <div id="video-player--video">
-                        <!-- First Load Video -->
-                        <div id="default-video" class="video">
-                            <iframe id="default-frame" src="https://www.youtube.com/embed/qvnop0jrHCY?rel=0"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-
-                        <!-- Error View -->
-                        <div id="video-error" class="video">
-                            <h1>There was an error. This video can not be found.</h1>
-                        </div>
-
-                        <!-- Video Selection -->
-                        <div id="video-1" class="video">
-                            <iframe id="video1-frame" src="https://www.youtube.com/embed/ZZJag3s60zc" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div id="video-2" class="video">
-                            <iframe id="video2-frame" src="https://www.youtube.com/embed/c7Wup5DlQXk" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div id="video-3" class="video">
-                            <iframe id="video3-frame" src="https://www.youtube.com/embed/zaAy1n1rMgs" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div id="video-4" class="video">
-                            <iframe id="video4-frame" src="https://www.youtube.com/embed/Ok2JDbIEbss" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-                    <!-- Not used right now (Dissabled) -->
-                    <div id="video-player--thumbnail">
-                        <div id="thumbnail-wrapper">
-                            <div id="thumb-1" class="thumbnail" onclick="thumbSelector(1)">
-                                <img id="thumb-1--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-2" class="thumbnail dissable" onclick="//thumbSelector(2)">
-                                <img id="thumb-2--background" src="/ref/pages/watch_page/thumbnails/02.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-3" class="thumbnail dissable" onclick="//thumbSelector(3)">
-                                <img id="thumb-3--background" src="/ref/pages/watch_page/thumbnails/03.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-4" class="thumbnail dissable" onclick="//thumbSelector(4)">
-                                <img id="thumb-4--background" src="/ref/pages/watch_page/thumbnails/04.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-5" class="thumbnail dissable" onclick="//thumbSelector(5)">
-                                <img id="thumb-5--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-6" class="thumbnail dissable" onclick="//thumbSelector(6)">
-                                <img id="thumb-6--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-7" class="thumbnail dissable" onclick="//thumbSelector(7)">
-                                <img id="thumb-7--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-8" class="thumbnail dissable" onclick="//thumbSelector(8)">
-                                <img id="thumb-8--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                            <div id="thumb-9" class="thumbnail dissable" onclick="//thumbSelector(9)">
-                                <img id="thumb-9--background" src="/ref/pages/watch_page/thumbnails/01.jpg">
-                                <h1></h1>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </div>
         <div id="sermons--section" class="dark-section">
@@ -232,9 +147,7 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script src="./scripts/video-player.js"></script>
-    <!-- <script src="./scripts/watch_page.js"></script> -->
-    <script src="/scripts/interactive_style.js?version=19040801"></script>
+    <script src="/scripts/interactive_style.js?version=20040201"></script>
     <script src="/scripts/sitewide-search.js"></script>
     <script src="./scripts/recap-section.js"></script>
 </body>
