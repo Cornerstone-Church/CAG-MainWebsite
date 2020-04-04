@@ -100,6 +100,16 @@ h2 {
     margin-bottom: 30px;;
 }
 
+.video-resize--wrapper {
+    position: relative;
+    padding-bottom: 440px; /* 16:9 */
+    height: 0;
+}
+
+.video-resize--wrapper iframe {
+    width: 760px;
+    height: 427.5px;
+}
 
 @media only screen and (max-width:800px) {
     .class-selector .placeholder-bottom {
@@ -108,5 +118,19 @@ h2 {
 
     #facebook .placeholder-top h2 {
         font-size: 20px;
+    }
+
+    .video-resize--wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+
+    .video-resize--wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 2.5%;
+        width: 95%;
+        height: 95%;
     }
 }
