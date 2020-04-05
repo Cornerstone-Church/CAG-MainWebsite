@@ -2,7 +2,7 @@
 try {
     $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
     $videoId = getLiveVideoID($channelId);
-    $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
+    $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=www.cag.org";
 } catch(Exception $e) {
     // Echo the generated error
     echo '<div id="offline-error"></div>';
