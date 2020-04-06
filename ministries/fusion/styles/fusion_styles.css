@@ -1,3 +1,5 @@
+@import "fusion_animation.css";
+
 h1 {
     padding: 20px 0;
 }
@@ -16,7 +18,6 @@ h2 {
     height: 50px;
     width: 100%;
     overflow: hidden;
-
     position: relative;
 }
 
@@ -36,7 +37,7 @@ h2 {
     position: absolute;
     top:  25px;
     left: 20px;
-    z-index: 2;
+    z-index: 3;
 
     font-size: 30px;
     transform: translatey(-50%);
@@ -50,7 +51,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    /* visibility: hidden; */
     color: var(--theme-primary-color);
 }
 
@@ -70,7 +71,7 @@ h2 {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
     opacity: 0;
 
@@ -79,14 +80,16 @@ h2 {
 
 .class-selector:hover {
     height: 300px;
+    visibility: visible;
 }
 
 .class-selector:hover .content-wrapper {
     opacity: 1;
 }
 
-.class-selector:hover .placeholder-top h2 {
-    opacity: 1;
+.class-selector:hover .placeholder-bottom {
+    animation: disableButton;
+    animation-duration: 0.5s;
 }
 
 .class-selector p {
