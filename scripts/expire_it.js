@@ -5,7 +5,7 @@
 
     Classes:
     'expires' (Required) - Put on parent element that will hide if expired.
-    'expire-date' (Required) - On each element that will expire. Element will expire the day after entered date. FORMAT: <YEAR>-<MONTH>-<DAY> 2019-04-12
+    'expire-date' (Required) - On each element that will expire. Element will expire on the entered date. FORMAT: <YEAR>-<MONTH>-<DAY> 2019-04-12
     'expire-empty' (Optional) - An element that will notify user that everything is expired. Will be displayed inline.
 
     1. Add function expireIt() to body onload.
@@ -47,7 +47,7 @@ function expireIt() {
         // Format for the Date class
         var dateCaptured = new Date(element.innerHTML).getTime();
         // Add number of milliseconds in a day to show element on expiration date
-        dateCaptured += 86400000;
+        // dateCaptured += 86400000;
 
         if ((dateCaptured) < currentTime) {
             // Element expired
