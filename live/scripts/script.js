@@ -126,6 +126,5 @@ function countdownTimer(time, day) {
 function getChatLink(videoId) {
     var chatLink = 'https://www.youtube.com/live_chat?v=';
     var fullLink = chatLink.concat(videoId, '&embed_domain=', window.location.hostname);
-    console.log("Link produced by getChatLink: " + fullLink);
     document.getElementById("live-chat").src = fullLink;
 }
