@@ -1,0 +1,19 @@
+/*
+    A stylesheet that quickly moves the social media
+    menu buttons out of the way, then back so they
+    are not accidentally tapped on from a collapsed
+    menu.
+
+    See fusion_style.css to see the implementation.
+*/
+@keyframes disableButton {
+    0% {
+        transform: translate(-150vw, -50%);
+    }
+    1% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
