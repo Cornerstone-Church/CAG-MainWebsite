@@ -2,7 +2,6 @@
 try {
     $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
     $videoId = getLiveVideoID($channelId);
-    $chatURL = "https://www.youtube.com/live_chat?v=".$videoId."&embed_domain=cag.org";
 } catch(Exception $e) {
     // Echo the generated error
     echo '<div id="offline-error"></div>';
@@ -82,9 +81,9 @@ function getLiveVideoID($channelId)
             $('#footer').load('/templates/footer.html?version=19041102');
         });
     </script>
+    
 </head>
-
-<body onload="expireIt(); holdIt(); enableDarkMode()">
+<body onload="expireIt(); holdIt(); getChatLink('<?php echo $videoId ?>'); enableDarkMode()">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -97,7 +96,7 @@ function getLiveVideoID($channelId)
                     src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>' frameborder="0"
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe id="live-chat" src='<?php echo $chatURL ?>' frameborder="0">
+                <iframe id="live-chat" frameborder="0">
                 </iframe>
             </div>
             <div id="stream-offline">
@@ -137,7 +136,7 @@ function getLiveVideoID($channelId)
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=20040201"></script>
     <script src="/scripts/sitewide-search.js"></script>
-    <script src="/scripts/expire_it.js?version=19050102"></script>
+    <script src="/scripts/expire_it.js?version=20040601"></script>
     <script src="/scripts/hold_it.js"></script>
     <script src="./scripts/script.js?version=20040301"></script>
 </body>
