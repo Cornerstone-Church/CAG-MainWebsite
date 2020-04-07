@@ -51,7 +51,6 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* visibility: hidden; */
     color: var(--theme-primary-color);
 }
 
@@ -80,7 +79,6 @@ h2 {
 
 .class-selector:hover {
     height: 300px;
-    visibility: visible;
 }
 
 .class-selector:hover .content-wrapper {
