@@ -14,34 +14,30 @@ As a team communication is key to developing a successful project. Please use yo
 
 ## Structure
 ### Branches
- - "bleeding": The main branch servant ministers should be connected with. SUBMIT ALL CODE TO THIS!!!
- - "freeze": Code taken from bleeding to be bug tested and finalized.
- - "master": Holds project details like this readme.
+ - "master": Holds code being stablized for release.
  - "release": Code live on site.
 
 ## How to get started
 ### Recommended Software
-The nice thing about code is that its flexible. And us a programmers like flexibility!! So feel free to use whatever IDE you please but I will post what I use here.
+The nice thing about code is that its flexible. And us programmers like flexibility!! So feel free to use whatever IDE you please but I will post what I use here.
 - IDE: [Visual Studio Code](https://code.visualstudio.com/)
 - Plugins: Live Server, HTMLS CSS Support, Material Icon Theme
 - Git: Git obviously ;)
 
+### Before you get the code
+Before you start changing code and fixing issues, please reach out to me on Slack. All changes should go through me before assigned. DO NOT work on code unless you are assigned to the issue or feature.
+
 ### Get Code
 1. Clone into repository: git clone https://github.com/Cornerstone-Church/CAG-MainWebsite.git
-2. Change branch to "bleeding": git checkout bleeding
-3. Start editing!
  
-## Upload to repository
- - Make sure you are in "bleeding". Pushes to other branches is not allowed!
-1. Add all changes to git: git add -A
-2. Commit changes with a description: git commit -m "REQUIRED DESCRIPTION HERE"
-3. Push updated code to repository: git push
+## Upload to branch
+Please upload all your code to a branch that is your username in this way: 'user-silentsonata'. If that branch does not exist feel free to create it. If it is an issue create a branch labeled 'issue-NameOfIssue' so that way everyone can see the code fixes for that issue.
 
 ## Request branch upgrade
-Code uploaded to the "bleeding" branch does not automatically get uploaded to the web servers. In order for code to be moved to the next level (like "freeze") you must create a Pull Request.
+Code uploaded to does not automatically get uploaded to the web servers. In order for code to be moved to the servers you must create a Pull Request to master. All code must be synced with master before getting sent to release.
 1. Click Pull Request on GitHub repository site.
 2. Click "New pull request".
-3. Choose your branch changes ("freeze" <- "bleeding").
+3. Choose your branch changes ("master" <- "user-silentsonata").
 4. Name your request with a description.
 NOTE: Requests without a description will most likely not be approved.
 5. Submit and wait for approval from an admin.

@@ -118,3 +118,13 @@ function countdownTimer(time, day) {
 
     }, 1000);
 }
+
+/** Generates the live chat link on youtube based on the videoID
+ * 
+ * @param {string} videoId 
+ */
+function getChatLink(videoId) {
+    var chatLink = 'https://www.youtube.com/live_chat?v=';
+    var fullLink = chatLink.concat(videoId, '&embed_domain=', window.location.hostname);
+    document.getElementById("live-chat").src = fullLink;
+}
