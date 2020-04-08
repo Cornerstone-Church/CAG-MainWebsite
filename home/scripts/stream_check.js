@@ -19,6 +19,11 @@ var tuesDay = 2;
 var tuesPrayerStart = [18, 59];
 var tuesPrayerEnd = [20, 00];
 
+// Good Friday
+var friDay = 5;
+var friStart = [18, 58];
+var friEnd = [20, 00];
+
 console.log('Stream_Check: Active');
 
 
@@ -36,6 +41,9 @@ function liveTrigger() {
 
     // Tuesday Night Prayer
     checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
+
+    // Good Friday
+    checkLive(date, friStart, friEnd, friDay);
 }
 
 /** Check Live Function
