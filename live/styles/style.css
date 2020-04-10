@@ -1,34 +1,19 @@
 #live-stream-wrapper {
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - var(--header-height));
-    max-height: 800px;
     background: var(--theme-header-color-dark);
 }
 
-#live-objects {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    height: 100%;
-}
-
 #stream-offline {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
+    text-align: center;
     text-transform: uppercase;
-
+    padding: 200px 0 200px 0;
     display: none;
 }
 
 #stream-offline img {
-    display: inline-block;
+    display: block;
     height: 35px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
 }
 
 #stream-offline #error-message {
@@ -51,36 +36,42 @@
 
 #live-stream-wrapper h2 {
     color: var(--theme-primary-color);
-    margin: 0px;
     margin-bottom: 20px;
     font-weight: normal;
+    text-align: center;
 }
 
 #live-stream-wrapper #live-iframe {
-    display: block;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 95%;
+    position: static;
+}
+
+#resize-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+
+#resize-wrapper iframe {
     position: absolute;
     width: 100%;
-    height: 68%;
-    max-width: 1500px;
+    height: 100%;
 }
 
-#live-stream-wrapper #live-stream {
-    width: 70%;
+#live-stream-wrapper #live-iframe #live-chat {
     height: 100%;
-    max-width: 1200px;
-}
-
-#live-stream-wrapper #live-chat {
-    height: 100%;
-    width: 29%;
+    width: 100%;
+    position: relative;
 }
 
 #button-group {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
     width: 100%;
+    text-align: center;
+    padding: 50px 0 50px 0;
 }
 
 #button-group a {
@@ -90,24 +81,39 @@
 }
 
 #countdown {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    position: static;
     display: none;
     color: var(--theme-primary-color);
+    padding: 200px 0 200px 0;
 }
 
 #countdown #clock {
     font-size: 1.5em;
 }
 
-@media only screen and (max-width: 600px) {
-    #live-stream-wrapper #live-stream {
-        max-height: 300px;
+#content {
+    max-width: 550px;
+    position: static;
+}
+
+@media only screen and (max-width: 1000px) {
+    #live-stream-wrapper #live-iframe #live-chat {
+        height: 500px;
     }
 
-    #live-stream-wrapper #live-chat {
+    #live-stream-wrapper #live-iframe {
+        grid-template-columns: auto;
+        grid-template-rows: 50.625vw 500px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    #live-chat {
         display: none;
+    }
+    #live-stream-wrapper #live-iframe {
+        grid-template-rows: 0% 0%;
     }
 }

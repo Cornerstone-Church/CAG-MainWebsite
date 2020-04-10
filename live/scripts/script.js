@@ -34,7 +34,7 @@ function offlineMode() {
     var player = document.getElementById('live-iframe');
     var offlineMesge = document.getElementById('stream-offline');
     player.style.display = 'none';
-    offlineMesge.style.display = 'inline';
+    offlineMesge.style.display = 'block';
 }
 
 function countdownTimer(time, day) {
@@ -71,7 +71,7 @@ function countdownTimer(time, day) {
         } else {
             startCountdown = true;
             offlineMessage.style.display = 'none';
-            countdownElement.style.display = 'inline';
+            countdownElement.style.display = 'block';
         }
 
         if (startCountdown) {
