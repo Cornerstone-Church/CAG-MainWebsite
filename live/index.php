@@ -42,7 +42,7 @@ function getLiveVideoID($channelId)
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20040301">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20040201">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20041001">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
