@@ -121,7 +121,8 @@ function getLiveVideoID($channelId)
     </div>
 
     <!-- Body Section -->
-    <section class="content center" id="live-content">
+    <div id="live-content">
+        <section class="content center" id="content">
         Thanks for joining us this week! If you have any questions or would like to get involved, feel free to <a
             href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
         <br><br>
@@ -129,6 +130,7 @@ function getLiveVideoID($channelId)
         Sunday Services 9:00am | 11:00am | 6:00pm ET
         <br>Daily Prayer at 12:00pm ET
     </section>
+    </div>
     
     <!-- Footer Section -->
     <div id="footer"></div>

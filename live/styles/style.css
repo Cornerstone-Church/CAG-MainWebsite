@@ -1,5 +1,6 @@
 #live-stream-wrapper {
     background: var(--theme-header-color-dark);
+    padding-bottom: 0;
 }
 
 #stream-offline {
@@ -71,7 +72,7 @@
     position: static;
     width: 100%;
     text-align: center;
-    padding: 50px 0 50px 0;
+    padding: 50px 0 30px 0;
 }
 
 #button-group a {
@@ -93,7 +94,18 @@
 }
 
 #live-content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: var(--theme-header-color-dark);
+}
+
+#live-content #content {
     max-width: 550px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    background: var(--theme-header-color-dark);
+    color: var(--theme-primary-color);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -115,8 +127,8 @@
     #live-stream-wrapper #live-iframe {
         grid-template-rows: 0% 0%;
     }
-    #live-content {
+    #live-content #content {
         display: block;
-        margin: 50px auto 0 auto;
+        margin: 0 auto;
     }
 }
