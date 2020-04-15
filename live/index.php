@@ -107,6 +107,7 @@ function getLiveVideoID($channelId)
                 <br>Good Friday Service | 7:00pm
                 <br>Sunday Services 9:00am | 11:00am | 6:00pm ET
                 <br>Daily Prayer at 12:00pm ET
+
             </div>
         </div>
         <div id="countdown">
@@ -139,7 +140,7 @@ function getLiveVideoID($channelId)
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=20040601"></script>
     <script src="/scripts/hold_it.js"></script>
-    <script src="./scripts/script.js?version=20040301"></script>
+    <script src="./scripts/script.js?version=20040801"></script>
 </body>
 
 </html>
