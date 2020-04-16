@@ -1,0 +1,165 @@
+/* Elements that can be accessed and used across the entire site */
+
+/*  flat-banner Element
+    A banner that uses a flat style to have a large image with supporting text.
+    There are two layers that must be created when using this element. An image layer, and a text layer.
+    The text layer is required to be wrapped in a 'forground-wrapper'. The image layer is required to be
+    wrapped in a 'background-wrapper' element.
+
+    For an example use case check out: /ministries/women/index.html
+*/
+.flat-banner {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* General layout definitions */
+.flat-banner #background-wrapper {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    transition: 1s;
+}
+
+.flat-banner #background-wrapper img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flat-banner #forground-wrapper {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: var(--theme-secondary-color);
+    transition: 1s;
+}
+
+/* Forground text styles */
+.flat-banner #forground-wrapper #text-wrapper {
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    padding: 40px;
+    transform: translateY(-50%);
+    color: var(--theme-primary-color);
+    /* transition: 1s; */
+}
+
+.flat-banner #forground-wrapper #text-wrapper h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: 1s
+}
+
+.flat-banner #forground-wrapper #text-wrapper h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    opacity: .7;
+    line-height: 1.5em;
+}
+
+/* Alignment Left styles */
+.flat-banner.align-left #background-wrapper {
+    left: 40%;
+}
+.flat-banner.align-left #forground-wrapper {
+    left: 0%;
+    text-align: right;
+}
+.flat-banner.align-left #forground-wrapper #text-wrapper {
+    right: 0px;
+}
+
+/* Alignment Right styles */
+.flat-banner.align-right #background-wrapper {
+    right: 40%;
+}
+.flat-banner.align-right #forground-wrapper {
+    right: 0%;
+    text-align: left;
+}
+.flat-banner.align-right #forground-wrapper #text-wrapper {
+    left: 0px;
+}
+
+/* Adjust header size when not on a large screen */
+@media only screen and (max-width: 1200px) {
+    .flat-banner #forground-wrapper #text-wrapper h1 {
+        font-size: 2em;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 900px) {
+    .flat-banner #background-wrapper {
+        width: 50%;
+    }
+
+    .flat-banner #forground-wrapper {
+        width: 50%;
+    }
+
+    .flat-banner #forground-wrapper #text-wrapper {
+        padding: 16px;
+        width: 100%;
+    }
+
+    /* Alignment Left styles */
+    .flat-banner.align-left #background-wrapper {
+        left: 50%;
+    }
+
+    /* Alignment Right styles */
+    .flat-banner.align-right #background-wrapper {
+        right: 50%;
+    }
+}
+
+/* Phone */
+@media only screen and (max-width: 650px) {
+    .flat-banner #background-wrapper {
+        width: 100%;
+    }
+
+    .flat-banner.align-left #background-wrapper {
+        left: 0%;
+    }
+
+    .flat-banner.align-right #background-wrapper {
+        right: 0%;
+    }
+
+    .flat-banner #forground-wrapper {
+        width: 100%;
+        background: rgba(var(--theme-secondary-color--rgb), .9);
+    }
+
+    .flat-banner.align-left #forground-wrapper #text-wrapper {
+        text-align: center;
+        padding: 0px;
+    }
+    .flat-banner.align-right #forground-wrapper #text-wrapper {
+        text-align: center;
+        padding: 0px;
+    }
+}
+
+/*  flat-tile Element
+
+    For an example use case check out: /ministries/women/index.html
+*/
+.flat-tile {
+
+}
