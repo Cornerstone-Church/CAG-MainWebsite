@@ -6,6 +6,13 @@
     The text layer is required to be wrapped in a 'forground-wrapper'. The image layer is required to be
     wrapped in a 'background-wrapper' element.
 
+    Modifiers:
+    flat-banner (root):
+        .align-left - Left align style that will put the text on the left and image on the right.
+        .align-right - Right align style that will put the text on the right and image on the left.
+    forground-wrapper:
+        .long-title - Used for longer titles. Will resize text at 1200px wide screen to 2em.
+
     For an example use case check out: /ministries/women/index.html
 */
 .flat-banner {
@@ -24,7 +31,6 @@
     height: 100%;
     transition: 1s;
 }
-
 .flat-banner #background-wrapper img {
     padding: 0px;
     margin: 0px;
@@ -32,7 +38,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 .flat-banner #forground-wrapper {
     display: inline-block;
     position: absolute;
@@ -52,7 +57,6 @@
     color: var(--theme-primary-color);
     /* transition: 1s; */
 }
-
 .flat-banner #forground-wrapper #text-wrapper h1 {
     margin: 0px;
     padding: 0px;
@@ -60,7 +64,6 @@
     font-weight: bold;
     transition: 1s
 }
-
 .flat-banner #forground-wrapper #text-wrapper h2 {
     margin: 0px;
     padding: 0px;
@@ -95,9 +98,8 @@
     left: 0px;
 }
 
-/* Adjust header size when not on a large screen */
 @media only screen and (max-width: 1200px) {
-    .flat-banner #forground-wrapper #text-wrapper h1 {
+    .flat-banner #forground-wrapper #text-wrapper .long-title {
         font-size: 2em;
     }
 }
@@ -115,6 +117,10 @@
     .flat-banner #forground-wrapper #text-wrapper {
         padding: 16px;
         width: 100%;
+    }
+
+    .flat-banner #forground-wrapper #text-wrapper h1 {
+        font-size: 2em;
     }
 
     /* Alignment Left styles */
