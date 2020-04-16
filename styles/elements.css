@@ -14,6 +14,7 @@
     width: 100%;
     margin: 0px;
     padding: 0px;
+    background: var(--theme-secondary-color);
 }
 
 /* General layout definitions */
@@ -143,7 +144,7 @@
 
     .flat-banner #forground-wrapper {
         width: 100%;
-        background: rgba(var(--theme-secondary-color--rgb), .9);
+        background: rgba(var(--theme-secondary-color--rgb), .7);
     }
 
     .flat-banner.align-left #forground-wrapper #text-wrapper {
