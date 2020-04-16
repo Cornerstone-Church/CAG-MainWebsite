@@ -4,7 +4,8 @@
     A banner that uses a flat style to have a large image with supporting text.
     There are two layers that must be created when using this element. An image layer, and a text layer.
     The text layer is required to be wrapped in a 'forground-wrapper'. The image layer is required to be
-    wrapped in a 'background-wrapper' element.
+    wrapped in a 'background-wrapper' element. If you are using text elements inside of the forground, use
+    text-wrapper then put text as a child.
 
     Modifiers:
     flat-banner (root):
@@ -98,6 +99,7 @@
     left: 0px;
 }
 
+/* long-title Modifier */
 @media only screen and (max-width: 1200px) {
     .flat-banner #forground-wrapper #text-wrapper .long-title {
         font-size: 2em;
