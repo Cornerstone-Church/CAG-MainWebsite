@@ -97,7 +97,7 @@ function getLiveVideoID($channelId)
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <iframe id="live-chat" frameborder="0" src="https://www.youtube.com/live_chat?v=DWcJFNfaw9c&embed_domain=localhost" style="display: static"></iframe>
+            <iframe id="live-chat" frameborder="0" style="display: static"></iframe>
         </div>
         <div id="stream-offline">
             <img src="/ref/pages/live_page/offline.png">
