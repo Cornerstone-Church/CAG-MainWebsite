@@ -93,7 +93,7 @@ function getLiveVideoID($channelId)
         <div id="live-iframe">
             <div id="resize-wrapper">
                 <iframe class="drop-shadow"
-                    src='https://www.youtube.com/embed/live_stream?channel=UCSJ4gkVC6NrvII8umztf0Ow' frameborder="0"
+                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>' frameborder="0"
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
