@@ -246,6 +246,6 @@
 
 @media only screen and (min-width: 1204px) {
     .flat-tile-container {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 33.3% 33.3% 33.3%;
     }
 }
