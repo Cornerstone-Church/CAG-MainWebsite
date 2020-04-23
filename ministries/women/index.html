@@ -6,6 +6,7 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/style.css?version=20040301">
+    <link rel="stylesheet" href="/styles/elements.css?version=20041601">
     <link rel="stylesheet" href="../styles/ministries_style.css">
     <link rel="stylesheet" href="./styles/women_styles.css?version=19062401">
 
@@ -38,7 +39,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
     <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
-    
+
     <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -54,20 +55,87 @@
 
     <!-- Content goes here -->
     <section class="header_padding">
-        <img id="banner" src="/ref/pages/ministries_page/banners/womenBanner.jpg">
-        <div class="content">
+        <div class="flat-banner align-left">
+            <div id="background-wrapper">
+                <img src="/ref/pages/ministries_page/banners/womenBanner.jpg">
+            </div>
+            <div id="forground-wrapper">
+                <div id="text-wrapper">
+                    <h1 class="long-title">Women's Ministry</h1>
+                    <h2>God desires every woman to live a<br>victorious life through the<br>transforming power of Jesus Christ
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="flat-tile-container">
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/naomi-s-fellowship" style="background-image: url('/ref/pages/ministries_page/sections/woman/naomi.jpg');">
+                <div id="text-wrapper">
+                    <h1>Naomi's Fellowship</h1>
+                    <h2>A support group for widows</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/moms-night-in-life-group" style="background-image: url('/ref/pages/ministries_page/sections/woman/night-in.jpg');">
+                <div id="text-wrapper">
+                    <h1>Mom's Night In</h1>
+                    <h2>A group of moms with kids</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/believing-god-severn" style="background-image: url('/ref/pages/ministries_page/sections/woman/love.jpg');">
+                <div id="text-wrapper">
+                    <h1>Believing God</h1>
+                    <h2>A Beth Moore study group</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/bible-readers-fellowship" style="background-image: url('/ref/pages/ministries_page/sections/woman/bible.jpg');">
+                <div id="text-wrapper">
+                    <h1>Bible Reader's Fellowship</h1>
+                    <h2>Read the Word together</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/huddleston-life-group" style="background-image: url('/ref/pages/ministries_page/sections/woman/huddleston.jpg');">
+                <div id="text-wrapper">
+                    <h1>Huddleston Life Group</h1>
+                    <h2>Grow stronger through prayer</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/single-moms-life" style="background-image: url('/ref/pages/ministries_page/sections/woman/single-mom.jpg');">
+                <div id="text-wrapper">
+                    <h1>Single Mom's Life</h1>
+                    <h2>A group for single mothers</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/take-a-hike" style="background-image: url('/ref/pages/ministries_page/sections/woman/take-hike.jpg');">
+                <div id="text-wrapper">
+                    <h1>Take a Hike</h1>
+                    <h2>Explore outdoor trails together</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/tuesday-morning-ladies-life-group" style="background-image: url('/ref/pages/ministries_page/sections/woman/tuesday-morning.jpg');">
+                <div id="text-wrapper">
+                    <h1>Tuesday Morning Life Group</h1>
+                    <h2>A group to strengthen faith</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="https://cornerstonebowie.churchcenter.com/groups/discipleship/women-of-the-word" style="background-image: url('/ref/pages/ministries_page/sections/woman/women-world.jpg');">
+                <div id="text-wrapper">
+                    <h1>Women of the Word</h1>
+                    <h2>Grasp your identity in Christ</h2>
+                </div>
+            </a>
+        </div>
+        <!-- <div class="content">
             <a href="../" class="button-small">Go Back</a><br><br>
             <center>
                 <h1>God desires every woman to live a victorious life through the transforming power of Jesus Christ
                 </h1>
             </center>
-            <h2>Check out these groups you can be a part of:</h2>
+            <h2>Check out these groups you can be a part of:</h2> -->
 
             <!-- Classes -->
-            <ul id="class-element">
+            <!-- <ul id="class-element"> -->
 
                 <!-- Fellowship -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/naomi.jpg">
                         <h2>Naomi's Fellowship</h2>
@@ -90,10 +158,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Moms Night -->
-                <li id="moms-night" class="class-selector" onclick="">
+                <!-- <li id="moms-night" class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/night-in.jpg">
                         <h2>Mom's Night In</h2>
@@ -119,10 +187,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/love.jpg">
                         <h2>Believing God</h2>
@@ -149,10 +217,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/bible.jpg">
                         <h2>Bible Readers Fellowship</h2>
@@ -171,10 +239,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li id="huddleston" class="class-selector" onclick="">
+                <!-- <li id="huddleston" class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/huddleston.jpg">
                         <h2>Huddleston Life Group</h2>
@@ -200,10 +268,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/single-mom.jpg">
                         <h2>Single Mom's Life</h2>
@@ -226,10 +294,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/take-hike.jpg">
                         <h2>Take a Hike</h2>
@@ -250,10 +318,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/tuesday-morning.jpg">
                         <h2>Tuesday Morning Ladies Life Group</h2>
@@ -274,10 +342,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
                 <!-- Loving Life -->
-                <li class="class-selector" onclick="">
+                <!-- <li class="class-selector" onclick="">
                     <div class="placeholder-top">
                         <img src="/ref/pages/ministries_page/sections/woman/women-world.jpg">
                         <h2>Women of the Word</h2>
@@ -300,7 +368,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
     </section>
 
