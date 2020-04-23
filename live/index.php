@@ -42,7 +42,7 @@ function getLiveVideoID($channelId)
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20040301">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20040201">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20041001">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
@@ -88,51 +88,52 @@ function getLiveVideoID($channelId)
     <div id="header"></div>
 
     <div class="header_padding" id="live-stream-wrapper">
-        <div id="live-objects" class="center">
-            <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
-            <h2>9:00am | 11:00am | 6:00pm ET</h2>
-            <div id="live-iframe">
-                <iframe id="live-stream" class="drop-shadow"
+        <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
+        <h2>9:00am | 11:00am | 6:00pm ET</h2>
+        <div id="live-iframe">
+            <div id="resize-wrapper">
+                <iframe class="drop-shadow"
                     src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>' frameborder="0"
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe id="live-chat" frameborder="0">
-                </iframe>
             </div>
-            <div id="stream-offline">
-                <img src="/ref/pages/live_page/offline.png">
-                <h2 id="error-message">Stream Offline</h2>
-                <div id="error-description">
-                    <b>Looking for service? Check back at these times:</b>
-                    <br>Sunday Services 9:00am | 11:00am | 6:00pm ET
-                    <br>Daily Prayer at 12:00pm ET
-                </div>
+            <iframe id="live-chat" frameborder="0" style="display: static"></iframe>
+        </div>
+        <div id="stream-offline">
+            <img src="/ref/pages/live_page/offline.png">
+            <h2 id="error-message">Stream Offline</h2>
+            <div id="error-description">
+                <b>Looking for service? Check back at these times:</b>
+                <br>Sunday Services 9:00am | 11:00am | 6:00pm ET
+                <br>Daily Prayer at 12:00pm ET
+
             </div>
-            <div id="countdown">
-                <div id="label-text">Next service starts in</div>
-                <div id="clock"></div>
-            </div>
-            <div id="button-group">
-                <a href="/give/" target="_blank" class="button--white">Give Online</a>
-                <a href="/events/" target="_blank" class="button--white">Our Events</a>
-                <a href="/about/" target="_blank" class="button--white">About Us</a>
-            </div>
+        </div>
+        <div id="countdown">
+            <div id="label-text">Next service starts in</div>
+            <div id="clock"></div>
+        </div>
+        <div id="button-group">
+            <a href="/give/" target="_blank" class="button--white">Give Online</a>
+            <a href="/events/" target="_blank" class="button--white">Our Events</a>
+            <a href="/about/" target="_blank" class="button--white">About Us</a>
         </div>
     </div>
 
     <!-- Body Section -->
-    <section class="content center">
-        Thanks for joining us this week! If you have any questions or would like to get<br>involved, feel free to <a
+    <div id="live-content">
+        <section class="content center" id="content">
+        Thanks for joining us this week! If you have any questions or would like to get involved, feel free to <a
             href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
         <br><br>
         <h2>JOIN US ONLINE</h2>
         Sunday Services 9:00am | 11:00am | 6:00pm ET
         <br>Daily Prayer at 12:00pm ET
     </section>
-
+    </div>
+    
     <!-- Footer Section -->
     <div id="footer"></div>
-    </div>
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=20040201"></script>
     <script src="/scripts/sitewide-search.js"></script>
