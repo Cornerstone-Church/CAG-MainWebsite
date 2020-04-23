@@ -185,6 +185,53 @@
     text-align: center;
 }
 
+#banner-buttons #watch-live-wrapper {
+    display: inline-block;
+    /* background: green; */
+}
+
+#banner-buttons #watch-live-wrapper #tool-tip {
+    background: var(--theme-secondary-color);
+    color: var(--theme-primary-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid var(--theme-primary-color);
+    padding: 5px;
+    opacity: 0;
+}
+
+.tool-tip-in {
+    animation: tool-tip-in 2s 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tool-tip-in {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(0%) scale(1);
+    }
+    70% {
+        transform: translateY(0%) scale(1.05);
+    }
+    80% {
+        transform: translateY(0%) scale(1);
+    }
+    90% {
+        transform: translateY(0%) scale(1.05);
+    }
+    100% {
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}
+
 #banner-buttons a {
     width: 140px;
     margin: 8px;
@@ -221,7 +268,7 @@
         position: relative;
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
-      }
+    }
 
     #sermon-video--foreground .resize-wrapper iframe {
         position: absolute;
