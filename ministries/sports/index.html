@@ -6,6 +6,7 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/style.css?version=20040301">
+    <link rel="stylesheet" href="/styles/elements.css?version=20041601">
     <link rel="stylesheet" href="../styles/ministries_style.css">
     <link rel="stylesheet" href="./styles/sports_styles.css">
 
@@ -20,8 +21,9 @@
 
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
-    <meta property="og:description" content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
-    
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
     <script>
@@ -37,7 +39,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
     <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
-    
+
     <script src="/scripts/jquery-3.3.1.min.js">
     </script>
     <script>
@@ -53,61 +55,40 @@
 
     <!-- Content goes here -->
     <section class="header_padding">
-        <img id="banner" src="/ref/pages/ministries_page/banners/sportsBanner.jpg">
-        <div class="content">
-            <a href="../" class="button-small">Go Back</a><br><br>
-
-            <h2>Get Involved</h2>
-            <p>Find a sport your interested in? E-mail <a
-                    href="mailto:connections@cag.org?subject=Sports Ministry Interest">connections@cag.org</a> for more
-                information!</p>
-            <h2>Sports you can be a part of:</h2>
-
-            <!-- Sports List -->
-            <ul id="class-element">
-                <!-- Men's Softball -->
-                <li class="class-selector" onclick="">
-                    <div class="placeholder-top">
-                        <img src="/ref/pages/ministries_page/sections/sports/softball.jpg">
-                        <h2>Men's Softball</h2>
-                    </div>
-
-                    <div class="content-wrapper">
-                        <div class="placeholder-bottom">
-                            <h2>Men's Softball</h2>
-                            <ul>
-                                <li>
-                                    <b>Time:</b> Every Tuesday begining in April
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="class-selector" onclick="">
-                    <!-- Men's Basketball -->
-                    <div class="placeholder-top">
-                        <img src="/ref/pages/ministries_page/sections/sports/basketball.jpg">
-                        <h2>Men's Basketball</h2>
-                    </div>
-
-                    <div class="content-wrapper">
-                        <div class="placeholder-bottom">
-                            <h2>Men's Basketball</h2>
-                            <ul>
-                                <li>
-                                    <b>Time:</b> Every Thursday night at 7:00pm
-                                </li>
-                                <li>
-                                    <b>Location:</b> Multi-Purpose Room
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="flat-banner align-right">
+            <div id="background-wrapper">
+                <img src="/ref/pages/ministries_page/banners/sportsBanner.jpg">
+            </div>
+            <div id="forground-wrapper">
+                <div id="text-wrapper">
+                    <h1 class="long-title">Sports</h1>
+                    <h2>Teams at Cornerstone</h2>
+                </div>
+            </div>
         </div>
 
+        <div class="flat-tile-container">
+            <a id="flat-item" style="background-image: url('/ref/pages/ministries_page/sections/sports/softball.jpg');">
+                <div id="text-wrapper">
+                    <h1>Men's Softball</h1>
+                    <h2>Every Tuesday begining in April</h2>
+                </div>
+            </a>
+            <a id="flat-item"
+                style="background-image: url('/ref/pages/ministries_page/sections/sports/basketball.jpg');">
+                <div id="text-wrapper">
+                    <h1>Men's Basketball</h1>
+                    <h2>Thursdays at 7:00pm | Multi-Purpose Room</h2>
+                </div>
+            </a>
+            <a id="flat-item" href="mailto:connections@cag.org"
+                style="background-image: url('/ref/pages/ministries_page/sections/sports/field.jpg');">
+                <div id="text-wrapper">
+                    <h1>Get Involved</h1>
+                    <h2>Contact connections@cag.org</h2>
+                </div>
+            </a>
+        </div>
     </section>
 
     <!-- Footer -->
