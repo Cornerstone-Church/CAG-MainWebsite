@@ -10,19 +10,10 @@ var sundayEndS2 = [12, 10];
 var sundayStartS3 = [17, 59];
 var sundayEndS3 = [19, 10];
 
-// Noon Prayer Times
-var noonPrayerStart = [11, 59];
-var noonPrayerEnd = [12, 28];
-
 // Tuesday Night Prayer
 var tuesDay = 2;
 var tuesPrayerStart = [18, 59];
 var tuesPrayerEnd = [20, 00];
-
-// Good Friday
-var friDay = 5;
-var friStart = [18, 58];
-var friEnd = [20, 00];
 
 console.log('Stream_Check: Active');
 
@@ -36,14 +27,8 @@ function liveTrigger() {
     checkLive(date, sundayStartS1, sundayEndS1, sundayDay);
     checkLive(date, sundayStartS2, sundayEndS2, sundayDay);
 
-    // Noon Prayer Times
-    checkLive(date, noonPrayerStart, noonPrayerEnd);
-
     // Tuesday Night Prayer
     checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
-
-    // Good Friday
-    checkLive(date, friStart, friEnd, friDay);
 }
 
 /** Check Live Function
