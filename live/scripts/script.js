@@ -59,7 +59,7 @@ function countdownTimer(time, day) {
         var currentTimeInSec = hourUTC + minUTC + secUTC;
 
         // Time the stream starting message will show in seconds
-        var streamStartingTime = 120;
+        var streamStartingTime = 300;
 
         // Convert to UTC
         var endTime = [(time[0] + 4), time[1]];
