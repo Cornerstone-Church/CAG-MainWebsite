@@ -225,10 +225,6 @@ p {
 
 /* Partnered Churches Section */
 
-#partnered-churches {
-
-}
-
 #partnered-churches .churches {
     position: relative;
     height: 80vh;
@@ -238,27 +234,6 @@ p {
 #partnered-churches .churches--background {
     width: 100%;
     height: 100%;
-}
-
-#partnered-churches #bristow--background {
-    background: url('/ref/pages/about_page/partnered/bristow.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#partnered-churches #easterhouse--background {
-    background: url('/ref/pages/about_page/partnered/easterhouse.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#partnered-churches #biserica--background {
-    background: url('/ref/pages/about_page/partnered/biserica.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 #partnered-churches .churches--forground {
@@ -273,10 +248,6 @@ p {
 
     text-align: center;
 }
-
-#partnered-churches .churches--forground h1 {
-}
-
 
 /* Beliefs Section */
 
