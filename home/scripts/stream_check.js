@@ -24,11 +24,8 @@ liveTrigger();
 // A function that holds all check functions
 function liveTrigger() {
     // Sunday Services
-    // checkLive(date, sundayStartS1, sundayEndS1, sundayDay);
-    // checkLive(date, sundayStartS2, sundayEndS2, sundayDay);
-
-    // Temporary online services
-    checkLive(date, [9, 00], [11, 40], 0);
+    checkLive(date, sundayStartS1, sundayEndS1, sundayDay);
+    checkLive(date, sundayStartS2, sundayEndS2, sundayDay);
 
     // Tuesday Night Prayer
     checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
