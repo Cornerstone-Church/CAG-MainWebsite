@@ -89,7 +89,7 @@ function getLiveVideoID($channelId)
 
     <div class="header_padding" id="live-stream-wrapper">
         <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
-        <h2>9:00am | 11:00am | 6:00pm ET</h2>
+        <h2>9:00am | 11:00am ET</h2>
         <div id="live-iframe">
             <div id="resize-wrapper">
                 <iframe class="drop-shadow"
@@ -104,7 +104,7 @@ function getLiveVideoID($channelId)
             <h2 id="error-message">Stream Offline</h2>
             <div id="error-description">
                 <b>Looking for service? Check back at these times:</b>
-                <br>Sunday Services 9:00am | 11:00am | 6:00pm ET
+                <br>Sunday Services 9:00am | 11:00am ET
                 <br>Daily Prayer at 12:00pm ET
 
             </div>
@@ -127,7 +127,7 @@ function getLiveVideoID($channelId)
             href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
         <br><br>
         <h2>JOIN US ONLINE</h2>
-        Sunday Services 9:00am | 11:00am | 6:00pm ET
+        Sunday Services 9:00am | 11:00am ET
         <br>Daily Prayer at 12:00pm ET
     </section>
     </div>
