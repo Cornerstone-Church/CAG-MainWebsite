@@ -28,7 +28,7 @@ function liveTrigger() {
     checkLive(date, sundayStartS2, sundayEndS2, sundayDay);
 
     // Tuesday Night Prayer
-    checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
+    // checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
 }
 
 /** Check Live Function
