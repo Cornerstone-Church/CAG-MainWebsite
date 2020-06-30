@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <title>Meet Our Team | Cornerstone Church</title>
+    <title>Cornerstone Church - Bowie MD | Building an Authentic Community, Lifting up Jesus, Growing in Him, Touching
+        our World.</title>
     <meta charset="utf8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Search Engine Information -->
+    <meta name="title" content="Cornerstone Church | Bowie MD">
+    <meta name="description"
+        content="Building an Authentic Community, Lifting up Jesus, Growing in Him, and Touching our World. Cornerstone Church is located in Bowie, Maryland. Experience God through services and activities on Saturday, Sunday, and throughout the week.">
+
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=20040301">
-    <link rel="stylesheet" href="../../styles/about_style.css">
-    <link rel="stylesheet" href="./styles/staff_style.css?version=19041101">
+    <link rel="stylesheet" href="/styles/debug.css">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css?version=20040301">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
@@ -21,7 +28,7 @@
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
     <meta property="og:description"
-        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+        content="Building an Authentic Community, Lifting up Jesus, Growing in Him and Touching our World. Check Cornerstone Church located in Bowie MD. Experience God through our services and activities on Saturday, Sunday, and through the week.">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
@@ -49,42 +56,30 @@
     </script>
 </head>
 
-<body>
+<body onload="expireIt(); holdIt();">
+    <!-- Header Element -->
     <div id="header"></div>
-
-    <!-- Content goes here -->
-    <section class="header_padding">
-
-        <img id="banner" src="/ref/pages/about_page/staff/hire_20030301.jpg">
-
-        <div id="office-staff" class="content">
-            <div class="center">
-                <h1>Job Opportunities</h1>
-                <h2>Church: Full-Time</h2>
-                <ul>
-                    <li>Administrative Assistant</li>
-                    <li>Building Maintenance</li>
-                    <li>Full Charge Bookkeeper</li>
-                </ul>
-                <h2>Church: Part-Time</h2>
-                <ul>
-                    <li>No opportunities available</li>
-                </ul>
-                <h2>CCA</h2>
-                <ul>
-                    <li>Elementary Teachers | 2020-2021 School Year</li>
-                </ul>
-                <br><br><div>Send your resume today! Email <a href="mailto:employment@cag.org">employment@cag.org</a></div>
-            </div>
+    <div class="header_padding center">
+        <div class="banner">
+            <img id="banner-background">
+            <img id="banner-overlay" src="./image_fg.JPG">
         </div>
-    </section>
+        <br>
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeozjToXLkTfAdiXw8xQDdGB17ju_7VvzCRJ-_olcQbW0plNg/viewform?usp=sf_link" target="_blank">Sign Up</a>
+        <br><br>
+        <!-- <a class="button" href="#waver" target="_blank">Join Service</a> -->
+    </div>
 
-    <!-- Footer -->
+
+    <!-- Footer Section -->
     <div id="footer"></div>
-
+    </div>
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=20040201"></script>
+    <script src="/home/scripts/home_script.js?version=19040801"></script>
     <script src="/scripts/sitewide-search.js"></script>
+    <script src="/scripts/expire_it.js?version=20040601"></script>
+    <script src="/scripts/hold_it.js"></script>
 </body>
 
 </html>
