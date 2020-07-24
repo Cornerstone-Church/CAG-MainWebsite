@@ -50,14 +50,15 @@
 
 #sermon-video--foreground .resize-wrapper {
     position: relative;
-    padding-bottom: 440px; /* 16:9 */
+    padding-bottom: 440px;
+    /* 16:9 */
     height: 0;
-  }
+}
 
 .videoWrapper iframe {
     width: 800px;
     height: 440px;
-  }
+}
 
 #sermon-video--foreground .resize-wrapper iframe {
     width: 800px;
@@ -88,7 +89,6 @@
 #video-banner {
     height: 100vh;
     overflow: hidden;
-
     position: relative;
 }
 
@@ -245,9 +245,10 @@
     opacity: 0;
 }
 
-
 /* TODO: Remove when done */
+
 /* COVID CODE */
+
 #ministry-online-div a {
     width: 90%;
     max-width: 600px;
@@ -257,19 +258,17 @@
     #announcement-div h3 {
         font-size: 20px;
     }
-
     /*#sermon-video--foreground #series-logo {
         width: 80%;
         height: auto;
         margin-bottom: 30px;
     }*/
-
     #sermon-video--foreground .resize-wrapper {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
+        padding-bottom: 56.25%;
+        /* 16:9 */
         height: 0;
     }
-
     #sermon-video--foreground .resize-wrapper iframe {
         position: absolute;
         top: 0;
@@ -277,21 +276,17 @@
         width: 95%;
         height: 95%;
     }
-
     #video-banner h1 {
         font-size: 30px;
     }
-    
     #video-banner h2 {
         font-size: 20px;
     }
-
     /* TODO: Remove when done */
     /* COVID CODE */
     #ministry-online-div a {
         width: 70%;
     }
-
     #ministry-online-div h3 {
         font-size: 1.5em;
     }
