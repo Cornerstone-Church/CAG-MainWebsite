@@ -1,5 +1,7 @@
+var firestore = firebase.firestore();
+
 var currentSlide = 0; // Start on slide 1
-var slideDelay = 4000; // In miliseconds 5000
+var slideDelay = 4000; // In milliseconds 5000
 
 // Will find slides and put here after startSlideShow() is called for hidden slides.
 var bannerSlides = [];
@@ -9,18 +11,18 @@ var statusBar = document.getElementById('slide-progress');
 function startSlideShow() {
     // Capture remaining element slides
     bannerSlides = document.querySelectorAll(".slider-slide");
-    
+
     // Start animation listener
     statusBar.addEventListener("animationend", animationListener, false);
-    
+
     // Set slide one to visiable
     bannerSlides[0].style.opacity = '1';
-    
+
     // Only run timmer if there is 2 or more slides
     if (bannerSlides.length >= 2) {
         // Set the duration of the status bar
         statusBar.style.animationDuration = (slideDelay / 1000) + "s";
-    
+
         statusBar.classList.add("slide-progress-animation");
     }
 
@@ -68,4 +70,19 @@ function pauseSlideShow() {
 
 function resumeSlideShow() {
     statusBar.style.animationPlayState = "running";
+}
+
+
+// Reference where the data is stored in the database
+const eventsRef = firestore.collection("events");
+
+function getRealtimeUpdate() {
+    eventsRef.onSnapshot(function (querySnapshot) {
+        // function to run for each event
+        querySnapshot.forEach(function (doc) {
+            // Grab document data
+            const fetchedData = doc.data();
+
+        });
+    });
 }
