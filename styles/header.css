@@ -252,7 +252,7 @@ header #searchBar input:focus {
     outline: none;
     border: 2px solid var(--theme-secondary-color);
     padding: 5px 10px;
-    width: 200px;
+    width: 175px;
 }
 
 header #search-button {
@@ -331,20 +331,18 @@ header #siteSearchResult #no-results--error {
 
     header #search-button {
         width: 20px;
-        right: 70px;
     }
 
     header #searchBar {
-        left: 30px;
-        width: 70%;
+        right: 65px;
     }
 
     header #searchBar input {
         height: 40px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     header #siteSearchResult {
-        left: 10px;
+        right: 10px;
     }
 }
