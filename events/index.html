@@ -27,7 +27,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-138079008-1');
@@ -37,6 +40,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
     <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
 
     <script src="../../scripts/jquery-3.3.1.min.js">
@@ -49,7 +53,7 @@
     </script>
 </head>
 
-<body onload="holdIt(); expireIt(); startSlideShow();" onresize="resizingWindow()">
+<body onload="holdIt(); expireIt(); getCurrentEvents(); startSlideShow();" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
@@ -57,130 +61,6 @@
         <!-- Slider -->
         <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()">
             <div id="slide-progress"></div>
-            <!-- Youth Convention -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-03-14</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/386540" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/WaterBaptism_Background.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/WaterBaptism_Foreground.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Youth Convention -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-03-20</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/324767" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/YC_background-20021101.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/YC_foreground-20021101.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Joy Retro Game Night -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-03-27</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/395948" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/JOYRetroGamenight_Background.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/JOYRetroGamenight_Foreground.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Wanted -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-03-30</div>
-                <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/390977" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/WANTED_Background.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/WANTED_Foreground.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Sisterhood Tea -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-04-03</div>
-                <div class="slider-slide">
-                    <a href="#" target="_blank">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/SisterhoodTea_Background.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/SisterhoodTea_Foreground.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Missions Trips -->
-            <!-- <div class="expires">
-                <div class="expire-date">2020-10-08</div>
-                <div class="slider-slide">
-                    <a href="/missions/missionstrips/">
-                        <img class="slide-background"
-                            src="/ref/announcments/slides/MissionTrips_Background-20010301.jpg">
-                        <img class="slide-foreground"
-                            src="/ref/announcments/slides/MissionTrips_Foreground-20021101.png">
-                    </a>
-                </div>
-            </div> -->
-
-            <!-- Sunday Service -->
-            <div class="slider-slide">
-                <a>
-                    <img class="slide-background" src="/ref/announcments/slides/ServiceOnline_background2 2.jpg">
-                    <img class="slide-foreground" src="/ref/announcments/slides/ServiceOnline_Foreground2-2.png">
-                </a>
-            </div>
-
-            <!-- Saturday Night Prayer -->
-            <div class="slider-slide">
-                <a href="/prayer/">
-                    <img class="slide-background" src="/ref/announcments/slides/SNP_Background.jpg">
-                    <img class="slide-foreground" src="/ref/announcments/slides/SNP_Foreground.png">
-                </a>
-            </div>
-
-            <!-- School of leadership -->
-            <div class="expires">
-                <div class="expire-date">2020-10-08</div>
-                <div class="slider-slide">
-                    <a>
-                        <img class="slide-background" src="/ref/announcments/slides/SOL_Background-20022701.png">
-                        <img class="slide-foreground" src="/ref/announcments/slides/SOL_Foreground-20081401.png">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Prayer -->
-            <div class="slider-slide">
-                <a href="/prayer/">
-                    <img class="slide-background" src="/ref/announcments/slides/InTheGap_PrayerBackground.jpg">
-                    <img class="slide-foreground" src="/ref/announcments/slides/InTheGap_PrayerForeground.png">
-                </a>
-            </div>
-
-
-            <!-- Equip Slides -->
-            <!-- <div class="expires"> -->
-            <!-- <div class="expire-date">2020-02-09</div> -->
-            <!-- <div class="slider-slide">
-                    <a href="https://cornerstonebowie.churchcenter.com/registrations/events/345394" target="_blank">
-                        <img class="slide-background" src="/ref/announcments/slides/Equip_Background-20010301.jpg">
-                        <img class="slide-foreground" src="/ref/announcments/slides/Equip_Foreground-20010301.png">
-                    </a>
-                </div> -->
-            <!-- </div> -->
         </div>
 
         <!-- Header Section -->
