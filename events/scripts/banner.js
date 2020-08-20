@@ -1,4 +1,8 @@
+// Imports from HTML doc
+const events = document.querySelector("#slider");
+
 var firestore = firebase.firestore();
+var storage = firebase.storage();
 
 var currentSlide = 0; // Start on slide 1
 var slideDelay = 4000; // In milliseconds 5000
@@ -9,9 +13,6 @@ var statusBar = document.getElementById('slide-progress');
 
 
 function startSlideShow() {
-    // Capture remaining element slides
-    bannerSlides = document.querySelectorAll(".slider-slide");
-
     // Start animation listener
     statusBar.addEventListener("animationend", animationListener, false);
 
@@ -74,14 +75,49 @@ function resumeSlideShow() {
 
 
 // Reference where the data is stored in the database
-const eventsRef = firestore.collection("events");
+const eventsFirestore = firestore.collection("events");
 
-function getRealtimeUpdate() {
-    eventsRef.onSnapshot(function (querySnapshot) {
+const eventsStorage = storage.ref().child('events');
+
+function getCurrentEvents() {
+    // Clear events from #slider element
+    events.innerHTML = '<div id="slide-progress"></div>\n'
+
+    eventsFirestore.onSnapshot(function (querySnapshot) {
         // function to run for each event
         querySnapshot.forEach(function (doc) {
             // Grab document data
             const fetchedData = doc.data();
+
+            // Fetch the background and foreground for the event
+            eventsStorage.child(`${fetchedData.title.replace(/ /g, '')}-bg`).getDownloadURL().then(function (background) {
+                eventsStorage.child(`${fetchedData.title.replace(/ /g, '')}-fg`).getDownloadURL().then(function (foreground) {
+
+                    // Generate html
+                    var slide = events.innerHTML += `
+                        <div class="slider-slide">
+                            <a${(fetchedData.link.length > 0) ? ` href="${fetchedData.link}"` : ''}>
+                                <img class="slide-background" src="${background}">
+                                <img class="slide-foreground" src="${foreground}" alt="${fetchedData.title}">
+                            </a>
+                        </div>
+                    `
+
+                    if (fetchedData.date.length > 0) {
+                        slide = `
+                            <div class="expires">
+                                <div class="expire-date">${fetchedData.date}</div>
+                                ${slide}
+                            </div>
+                        `
+                    }
+
+                    events.innerHTML += slide;
+
+                    // Capture remaining element slides
+                    bannerSlides = document.querySelectorAll(".slider-slide");
+                });
+            });
 
         });
     });
