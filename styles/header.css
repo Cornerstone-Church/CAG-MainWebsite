@@ -4,11 +4,13 @@
         /* Hides elements so they are not clickable */
         transform: translateY(-150%);
     }
+
     1% {
         opacity: 0;
         /* Bring elements to forground then fade up */
         transform: translateY(0%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0%);
@@ -20,6 +22,7 @@
         opacity: 1;
         transform: translateY(0%);
     }
+
     100% {
         opacity: 0;
         transform: translateY(-150%);
@@ -31,7 +34,7 @@ header {
     position: fixed;
     background: var(--theme-header-color-light);
     top: 0px;
-    
+
     display: flex;
     align-content: center;
     justify-content: center;
@@ -39,7 +42,7 @@ header {
 
     /* backdrop-filter: blur(20px) saturate(180%); */
     /* -webkit-backdrop-filter: blur(20px) saturate(180%); */
-    
+
     /* Size */
     height: var(--header-height);
     width: 100%;
@@ -67,7 +70,7 @@ header {
     transition: ease-in-out .2s;
 }
 
-.header-light{
+.header-light {
     background: var(--theme-header-color-light);
     transition: ease-in-out .2s;
 }
@@ -167,7 +170,7 @@ header #mobile-nav {
     text-align: center;
     transform: translateY(-150%);
     overflow-y: scroll;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
 
     z-index: 100;
 
@@ -229,46 +232,32 @@ header #hamburger-button span:nth-child(4) {
 }
 
 /* Search */
-header #siteSearch {
-    position: absolute;
-    top: 0px;
-    right: 30px;
-    height: 100%;
-}
-
 header #searchBar {
     position: absolute;
     top: 35px;
-    right: 0px;
-    width: 200px;
-
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 5px;
 }
 
 header #searchBar input {
-    display: none;
-    position: absolute;
-    right: 0px;
-    border: 2px solid #888;
-    transform: translateY(-50%);
-    padding: 5px 10px;
-    width: 100%;
+    display: inline-block;
+    border: none;
+    padding: none;
+    width: 0px;
+    transition: width 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-header #searchBar input:focus{
+
+header #searchBar input:focus {
     outline: none;
     border: 2px solid var(--theme-secondary-color);
-    transform: translateY(-50%);
     padding: 5px 10px;
-    width: 100%;
-
-
+    width: 200px;
 }
 
 header #search-button {
-    position: absolute;
+    display: inline-block;
     width: 15px;
-    top: 50%;
-    right: 0px;
-    transform: translateY(-50%);
 }
 
 header #search-button:hover {
@@ -283,7 +272,7 @@ header #siteSearchResult {
     height: 400px;
     width: 300px;
     background: var(--theme-primary-color);
-    
+
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
     border-radius: 3px;
 
@@ -343,11 +332,6 @@ header #siteSearchResult #no-results--error {
     header #search-button {
         width: 20px;
         right: 70px;
-    }
-
-    header #siteSearch {
-        right: 0px;
-        width: 100%;
     }
 
     header #searchBar {
