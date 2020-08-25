@@ -27,14 +27,14 @@ function querySearchResults() {
     var noResultError = document.getElementById('no-results--error');
 
     var hiddenItems = 0;
-    
+
     if (searchBarResults != "") {
         showSearchResults();
-        for (i = 0; i < items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             var title = items[i].querySelector('.item-title').innerHTML;
             var keywords = items[i].querySelector('.item-keywords').innerHTML;
-            
-            if((keywords.toUpperCase().indexOf(searchBarResults) > -1) || (title.toUpperCase().indexOf(searchBarResults) > -1)) {
+
+            if ((keywords.toUpperCase().indexOf(searchBarResults) > -1) || (title.toUpperCase().indexOf(searchBarResults) > -1)) {
                 items[i].style.display = "";
             } else {
                 items[i].style.display = "none";
@@ -86,19 +86,12 @@ function hideSearchResults() {
     var results = document.querySelector('#siteSearchResult');
     // Added a timeout because when clicking a link the results would dissapear before the mouse down registered.
     // This allows the input to be recognised before closing.
-    setTimeout(function() {results.style.display = "none";}, 100);
+    setTimeout(function () {
+        results.style.display = "none";
+    }, 100);
 }
 
 function showSearchResults() {
     var results = document.querySelector('#siteSearchResult');
     results.style.display = "inline";
-}
-
-function showSearchBar() {
-    var searchbar = document.getElementById('globalSearchBar');
-    var searchLogo = document.querySelector('#siteSearch #search-button');
-
-    searchLogo.style.display = "none";
-    searchbar.style.display = "inline";
-    searchbar.focus();
 }
