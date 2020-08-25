@@ -31,16 +31,11 @@
                 </li>
             </ul>
         </nav>
-        <div id="siteSearch">
-            <div id="searchButton">
-                <img id="search-button" src="/ref/icons/search-dark.png" alt="Search CAG.org" onclick="showSearchBar()">
-            </div>
-
-            <div id="searchBar">
-                <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()"
-                    onfocus="downloadSearchResults()" onfocusout="hideSearchResults()">
-            </div>
-        </div>
+        <label id="searchBar">
+            <input id="globalSearchBar" type="text" placeholder="Search" onkeyup="querySearchResults()"
+                onfocus="downloadSearchResults()" onfocusout="hideSearchResults()" />
+            <img id="search-button" src="/ref/icons/search-dark.png" alt="Search CAG.org" onclick="showSearchBar()" />
+        </label>
         <nav id="mobile-nav--button">
             <a id="hamburger-button" onclick="toggleMobileNav()">
                 <div class="hamburger-button--wrapper">

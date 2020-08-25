@@ -27,7 +27,7 @@ function headerTrans() {
             console.log(header);
             header.classList.add('header-transparent');
             enableLightText();
-        
+
             headerTransparent = true;
         }
     }, 1000);
@@ -39,11 +39,11 @@ function headerScroll() {
     if (hasAlert == null || !hasAlert) {
         // Import elements
         var header = document.querySelector("header");
-    
+
         // Captures scrolling position
         // var scrollPosition = parallaxContainer.scrollTop;
         var scrollPosition = window.scrollY;
-    
+
         // If the scroll position is greater than the set height
         if (scrollPosition >= scrollTransitionHeight) {
             // Make sure we only execute once when scrolling
@@ -51,7 +51,7 @@ function headerScroll() {
                 header.classList.remove("header-transparent");
                 header.classList.remove("header-dark");
                 enableNormalText();
-    
+
                 isScrolling = true;
                 headerTransparent = false;
             }
@@ -66,7 +66,7 @@ function headerScroll() {
                     header.classList.add("header-transparent");
                 }
                 enableLightText();
-    
+
                 isScrolling = false;
                 headerTransparent = true;
             }
@@ -80,7 +80,7 @@ function enableDarkMode() {
     var header = document.querySelector("header");
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
-    var searchLogo = document.querySelector('#siteSearch #search-button');
+    var searchLogo = document.querySelector('#searchBar #search-button');
 
     // Make text light
     enableLightText();
@@ -104,7 +104,7 @@ function enableLightText() {
     // Declare Variables
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
-    var searchLogo = document.querySelector('#siteSearch #search-button');
+    var searchLogo = document.querySelector('#searchBar #search-button');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -114,7 +114,7 @@ function enableLightText() {
     }
 
     // Changes the color of the mobile nav button
-    mobileNavButton.forEach(function(element) {
+    mobileNavButton.forEach(function (element) {
         element.style.background = "var(--theme-primary-color)";
     });
 
@@ -130,7 +130,7 @@ function enableNormalText() {
     // Declare Variables
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
-    var searchLogo = document.querySelector('#siteSearch #search-button');
+    var searchLogo = document.querySelector('#searchBar #search-button');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -140,7 +140,7 @@ function enableNormalText() {
         navTextElements[i].style.color = 'var(--theme-nav-text)';
     }
 
-    mobileNavButton.forEach(function(element) {
+    mobileNavButton.forEach(function (element) {
         element.style.background = 'var(--theme-nav-text)';
     });
 
@@ -161,13 +161,13 @@ function toggleMobileNav() {
     if (!mobileNavVissable) {
         // mobileNav.style.display = 'inline';
         mobileNav.style.animationName = 'MobileNavMenu-In';
-        
+
         // Modify the menu button
         mobileButton[0].style.opacity = '0';
         mobileButton[1].style.transform = 'rotate(45deg)';
         mobileButton[2].style.transform = 'rotate(-45deg)';
         mobileButton[3].style.opacity = '0';
-        
+
         // Check to see if header is in transparent mode
         if (headerTransparent) {
             header.classList.remove("header-transparent");
@@ -189,7 +189,7 @@ function toggleMobileNav() {
             header.classList.add("header-transparent");
             header.classList.remove("header-dark");
         }
-        
+
         mobileNavVissable = false;
     }
 
