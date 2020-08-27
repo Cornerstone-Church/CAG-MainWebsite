@@ -42,7 +42,7 @@ You have been warned..... :-0 */
     padding: 0;
 }
 
-/* Text Syles */
+/* Text Styles */
 h1 {
     margin: 0px;
     padding: 10px 0px;
@@ -77,7 +77,8 @@ a:hover {
 }
 
 /* Body Styles */
-body, html {
+body,
+html {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
@@ -129,7 +130,7 @@ section {
     object-fit: cover;
 }
 
- /* Class that centers elements to the center */
+/* Class that centers elements to the center */
 .center {
     text-align: center;
 }
@@ -138,7 +139,8 @@ section {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
 }
 
-.expire-date, #expire-empty {
+.expire-date,
+#expire-empty {
     display: none;
 }
 
@@ -179,7 +181,7 @@ section {
     border-collapse: collapse;
 }
 
-.section_links:hover a{
+.section_links:hover a {
     font-size: 20px;
 }
 
@@ -207,7 +209,7 @@ section {
 
 .section_links td:hover .section_links_text {
     font-size: 30px
-    /* opacity: 0; */
+        /* opacity: 0; */
 }
 
 .section_links td:hover img {
@@ -223,7 +225,7 @@ section {
 
     white-space: nowrap;
     overflow: hidden;
-    
+
     text-decoration: none;
     color: var(--theme-primary-color);
     text-transform: uppercase;
@@ -349,16 +351,20 @@ section {
         transform: translate(-50%, 0%);
         opacity: 0;
     }
+
     30% {
         transform: translate(-50%, -20%);
         opacity: 1;
     }
+
     50% {
         transform: translate(-50%, 0%);
     }
+
     70% {
         transform: translate(-50%, -20%);
     }
+
     100% {
         transform: translateY(-50%, 0%);
         opacity: 1;
@@ -387,7 +393,8 @@ form {
     text-align: left;
 }
 
-form input, textarea {
+form input,
+textarea {
     margin: 10px 0px 20px 2%;
     padding: 10px;
     border: 2px solid #98a5b4;
@@ -399,13 +406,15 @@ form input {
     width: 40%;
 }
 
-form input::placeholder, textarea::placeholder {
+form input::placeholder,
+textarea::placeholder {
     color: var(--theme-text-color);
     text-transform: uppercase;
     font-family: "Raleway";
 }
 
-form input:focus, textarea:focus {
+form input:focus,
+textarea:focus {
     border-color: var(--theme-secondary-color);
     outline: none;
 }
