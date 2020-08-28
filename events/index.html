@@ -53,15 +53,13 @@
     </script>
 </head>
 
-<body onload="holdIt(); expireIt(); getCurrentEvents(); startSlideShow();" onresize="resizingWindow()">
+<body onload="holdIt(); expireIt();" onresize="resizingWindow()">
     <div id="header"></div>
     <!-- Content goes here -->
     <section class="header_padding">
         <!-- Title Banner -->
         <!-- Slider -->
-        <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()">
-            <div id="slide-progress"></div>
-        </div>
+        <div id="slider" onmouseover="pauseSlideShow()" onmouseout="resumeSlideShow()"></div>
 
         <!-- Header Section -->
         <div class="content">
