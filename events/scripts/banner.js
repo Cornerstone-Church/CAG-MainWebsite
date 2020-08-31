@@ -88,40 +88,51 @@ const eventsFirestore = firestore.collection("events");
 const eventsStorage = storage.ref().child('events');
 
 eventsFirestore.onSnapshot(function (querySnapshot) {
-    // Clear events from #slider element
-    events.innerHTML = '<div id="slide-progress"></div>\n'
+    var eventPromises = [];
 
-    // Get current date
-    var currentDate = new Date().getTime();
-
-    // add html for each event found
-    for (var i = 0, len = querySnapshot.docs.length; i < len; i++) {
-        const fetchedData = querySnapshot.docs[i].data();
-        // Fetch the background and foreground images for the event
-        eventsStorage.child(`${fetchedData.name.replace(/ /g, '')}_bg`).getDownloadURL().then(function (bg) {
-            eventsStorage.child(`${fetchedData.name.replace(/ /g, '')}_fg`).getDownloadURL().then(function (fg) {
-                // Get expiration date
-                var expirationDate;
-                expirationDate = new Date(fetchedData.date).getTime();
-                // Generate html if not expired
-                if (!(typeof expirationDate === 'number' && expirationDate < currentDate)) {
-                    let slide = `
-                                <div class="slider-slide">
-                                    <a${(typeof fetchedData.link === 'string' && fetchedData.link.length > 0) ? ` href="${fetchedData.link}"` : ''}>
-                                        <img class="slide-background" src="${bg}">
-                                        <img class="slide-foreground" src="${fg}" alt="${fetchedData.name}">
-                                    </a>
-                                </div>
-                            `
-                    // Add current slide to html
-                    events.innerHTML += slide;
-                }
-
-                // Start slide show after last slide is generated
-                if (len === document.querySelectorAll(".slider-slide").length) {
-                    startSlideShow();
-                }
+    // add promises to array
+    querySnapshot.forEach(doc => {
+        let data = doc.data();
+        eventPromises.push(new Promise(function (resolve) {
+            Promise.all([
+                eventsStorage.child(`${data.name.replace(/ /g, '')}_bg`).getDownloadURL(),
+                eventsStorage.child(`${data.name.replace(/ /g, '')}_fg`).getDownloadURL()
+            ]).then(function (images) {
+                // Send the event data and images back with a promise.
+                resolve({
+                    ...data,
+                    bg: images[0],
+                    fg: images[1]
+                });
             });
+        }));
+    });
+
+    Promise.all(eventPromises).then(function (eventData) {
+        // Get current date
+        var currentDate = new Date().getTime();
+        // Clear events from #slider element
+        events.innerHTML = '<div id="slide-progress"></div>\n';
+
+        // add html for each event found
+        eventData.forEach(function (data) {
+            // Get expiration date
+            var expirationDate;
+            expirationDate = new Date(data.date).getTime();
+            // Generate html if not expired
+            if (!(typeof expirationDate === 'number' && expirationDate < currentDate)) {
+                // Add current slide to html
+                events.innerHTML += `
+                    <div class="slider-slide">
+                        <a${(typeof data.link === 'string' && data.link.length > 0) ? ` href="${data.link}"` : ''}>
+                            <img class="slide-background" src="${data.bg}">
+                            <img class="slide-foreground" src="${data.fg}" alt="${data.name}">
+                        </a>
+                    </div>
+                `;
+            }
         });
-    }
+
+        startSlideShow();
+    });
 });
