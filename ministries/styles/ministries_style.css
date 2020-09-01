@@ -260,8 +260,6 @@ html {
     top: 0px;
     left: 0px;
     object-fit: cover;
-
-    filter: saturate(30%) blur(1px);
 }
 
 .class-selector {

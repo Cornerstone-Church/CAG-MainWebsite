@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Fusion Youth | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css?version=20040301">
+    <link rel="stylesheet" href="../styles/ministries_style.css?version=20041001">
+    <link rel="stylesheet" href="../styles/ministries_animation.css?version=20041001">
+    <link rel="stylesheet" href="./styles/fusion_styles.css?version=20041001">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('/templates/header.html');
+            $('#footer').load('/templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <img id="banner" src="/ref/pages/ministries_page/banners/link_banner_20082701.jpg">
+        <div class="content">
+            <div class="center">
+                <h1 style="text-transform: none;">theLINK ON CAMPUS</h1>
+                <h2 style="margin-bottom: 0px;">Wednesday Nights</h2>
+                <b>6:30pm - 9:00pm</b> | theLINK Outdoor Service
+                <br><br>
+                <h1 style="text-transform: none;">theLINK ONLINE</h1>
+                <h2 style="margin-bottom: 0px;">Wednesday Nights</h2>
+                <b>6:30pm</b> | Pre-service Zoom Groups
+                <br><b>7:00pm</b> | <a href="https://www.youtube.com/channel/UCtG-IjzwIMsunV4e-dD3xvQ"
+                    target="_blank">theLINK Service on YouTube</a>
+                <br><b>7:15pm</b> | Zoom Groups
+                <br><br>
+                <h2 style="margin-bottom: 0px;">Monday - Friday</h2>
+                <b>11:00am</b> | S.O.A.P Social Via Zoom
+                <br><br>
+                <div class="center">
+                    <h3>Zoom Groups</h3>
+                    <a class="button-small" href="https://zoom.us/j/461299662" target="_blank">Wednesday Pre-Service</a>
+                    <a class="button-small"
+                        href="https://us02web.zoom.us/j/81994886230?pwd=UGRkZjNnWWJMT1lsVVBuN05VcVRXQT09"
+                        target="_blank">S.O.A.P Social Study</a>
+                </div>
+                <br>
+            </div>
+            <p>Our heart and passion is for youth-aged students (6th-12th grade) to engage in a life-giving connection
+                with their Creator and be part of a godly community. theLINK is a place where students and leaders can
+                be real, grow, be challenged, worship, give, serve, and simply do life together. At theLINK, we all win
+                when teenagers are <b>connected to Christ and connected to community.</b></p>
+            <br>
+            <h3>Service Information</h3>
+            <p>
+                Our weekly meetings occur every Wednesday night through Zoom/YouTube (theLINK Online) at 6:45 and in
+                person on the 1st, 2nd, 3rd and 5th Wednesdays of the month from 6:30pm to 9pm. These in-person meetings
+                are broken down by Week 1 (Community Night), Week 2 (HS Night), Week 3 (MS Night), Week 4 (LINK Online)
+                & Week 5 (HS & MS Prayer and Worship Night) of every month.
+            </p>
+            <h3>S.O.A.P. SOCIALS</h3>
+            <p>
+                S.O.A.P. Socials are our virtual Bible studies which take place every weekday at 11am. We use the
+                S.O.A.P. study model where we read Scripture, discuss our Observations, look for ways to Apply what we
+                observed and spend time in Prayer—asking God to help us not just be hearers of His Word but people who
+                do what it says!
+            </p>
+        </div>
+        <div class="center">
+            <div class="video-resize--wrapper">
+                <iframe class="drop-shadow"
+                    src="https://www.youtube.com/embed?listType=playlist&list=PLh5nLlK0DS4w_6ISHV9SkblU5zx4AIlJW"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+        <ul id="class-element">
+
+            <!-- Youtube -->
+            <li class="class-selector" onclick="">
+                <div class="placeholder-top">
+                    <img src="/ref/pages/ministries_page/sections/link/youtube_20032601.jpg">
+                    <h2>Youtube</h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="placeholder-bottom">
+                        <p>Check out our Youtube page for all our content!</p><br>
+                        <div class="center"><a class="button--white"
+                                href="https://www.youtube.com/channel/UCtG-IjzwIMsunV4e-dD3xvQ" target="_blank">Go
+                                to Youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Instagram -->
+            <li class="class-selector" onclick="">
+                <div class="placeholder-top">
+                    <img src="/ref/pages/ministries_page/sections/link/instagram_20032601.jpg" target="_blank">
+                    <h2>Instagram</h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="placeholder-bottom">
+                        <p>Check out our Instagram for updates and interactions!</p><br>
+                        <div class="center"><a class="button--white" href="http://instagram.com/cornerstonefusionyouth"
+                                target="_blank">Go to
+                                Instagram</a></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- TikTok -->
+            <li class="class-selector" onclick="">
+                <div class="placeholder-top">
+                    <img style="background: black;">
+                    <h2>TikTok</h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="placeholder-bottom">
+                        <p>Check out Fusion's TikTok to stay connected while home!</p><br>
+                        <center><a class="button--white" href="https://vm.tiktok.com/G1tpPj/" target="_blank">Go
+                                to TikTok</a></center>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Facebook -->
+            <li id="facebook" class="class-selector" onclick="">
+                <div class="placeholder-top">
+                    <img src="/ref/pages/ministries_page/sections/link/facebook_20032601.jpg" target="_blank">
+                    <h2>Parents Facebook Group</h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="placeholder-bottom">
+                        <p>Follow our Facebook Group to keep up with everything Fusion Youth is doing throughout the
+                            year.</p><br>
+                        <center><a class="button--white" href="https://www.facebook.com/groups/996341427386062/"
+                                target="_blank">Go
+                                to Facebook Group</a></center>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Sermon Notes -->
+            <li class="class-selector" onclick="">
+                <div class="placeholder-top">
+                    <img src="/ref/pages/ministries_page/sections/link/notes_20032601.jpg" target="_blank">
+                    <h2>Sermon Notes</h2>
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="placeholder-bottom">
+                        <p>Miss a service? Want to dive in deeper to what you heard? Check out Pastor Mike's sermon
+                            notes!</p><br>
+                        <center><a class="button--white"
+                                href="https://cornerstonebowie-my.sharepoint.com/:f:/g/personal/mbadolato_cag_org/EiMHI6WJIqlAgApQhig23qQBF2gkwP7dvIhcF9T5LSyDUA?e=JNyPz7">Go
+                                to Sermon Notes</a></center>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=20040201"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>
