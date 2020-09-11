@@ -24,7 +24,6 @@ function headerTrans() {
         // Make sure function does not run if there is an alert
         if (hasAlert == null || !hasAlert) {
             var header = document.querySelector("header");
-            console.log(header);
             header.classList.add('header-transparent');
             enableLightText();
 
