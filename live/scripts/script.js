@@ -2,7 +2,7 @@ var offlineError = document.getElementById('offline-error');
 var streamIsLive = false;
 
 // Sunday Service times
-var sundayDay = 0 ;// Sunday
+var sundayDay = 0;// Sunday
 var sundayStartS1 = [9, 00];
 var sundayStartS2 = [11, 00];
 var sundayStartS3 = [18, 00];
@@ -21,12 +21,12 @@ var friStartTime = [19, 00];
 if (offlineError != null) {
     // Enable offline mode
     offlineMode();
-    
+
     // Sunday Services
     countdownTimer(sundayStartS1, sundayDay);
     countdownTimer(sundayStartS2, sundayDay);
     countdownTimer(sundayStartS3, sundayDay);
-    
+
     // Prayer Services
     countdownTimer(noonPrayerStart);
     countdownTimer(tuesPrayerStart, tuesDay);
@@ -89,11 +89,9 @@ function countdownTimer(time, day) {
             var remainingSec = 60 - secUTC;
 
             // Fixes countdown not going to 00
-            if(secUTC == 0) {
+            if (secUTC == 0) {
                 remainingSec = 0;
             }
-
-            console.log(secUTC);
 
             if (remainingMin != 0) {
                 clockElement.innerHTML = remainingMin + ':' + ('0' + remainingSec).slice(-2);
@@ -111,7 +109,7 @@ function countdownTimer(time, day) {
                 // If countdown is finished
                 if (currentTimeInSec >= endTimeInSec) {
                     clockElement.innerHTML = "Stream starting soon...";
-                    
+
                     // Remove countdown after 2 mins
                     if (currentTimeInSec >= (endTimeInSec + streamStartingTime)) {
                         countdownElement.style.display = 'none';

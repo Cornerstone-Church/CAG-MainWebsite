@@ -46,7 +46,6 @@ function holdIt() {
         // See what holdElements can be shown
         if (dateCaptured < currentTime) {
             holdElements[currentIndex].classList.remove("hold");
-            console.log(TAG + "Showing held item");
         }
 
         // Increase the index
