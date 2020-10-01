@@ -1,3 +1,3 @@
 var firestore = firebase.firestore();
 
-console.log('Alert: Inactive');
+// console.log('Alert: Inactive');

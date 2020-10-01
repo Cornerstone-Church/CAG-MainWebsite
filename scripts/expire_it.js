@@ -57,13 +57,6 @@ function expireIt() {
         currentIndex++;
     });
 
-    // Print out how many expired items there are
-    if (expiredItems == 0) {
-        console.log(TAG + "No items have expired.");
-    } else {
-        console.log(TAG + expiredItems + " item(s) have expired.");
-    }
-
     // Check if all items are expired
     if (expireEmpty != null) {
         if (expiredItems == expireElements.length) {

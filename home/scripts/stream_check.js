@@ -15,8 +15,6 @@ var tuesDay = 2;
 var tuesPrayerStart = [18, 59];
 var tuesPrayerEnd = [20, 00];
 
-console.log('Stream_Check: Active');
-
 
 // Run checker
 liveTrigger();
