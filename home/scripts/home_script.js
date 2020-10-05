@@ -81,6 +81,9 @@ function checkAlert() {
 }
 
 function toolTipCheck(currentDate, startTime, endTime, day) {
+
+    // TODO: Add the prayer TV logic here
+
     // Should go live
     var goLive = false;
     var shouldCheckDay = false;
