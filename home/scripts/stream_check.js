@@ -10,12 +10,6 @@ var sundayEndS2 = [12, 10];
 var sundayStartS3 = [17, 59];
 var sundayEndS3 = [19, 10];
 
-// Tuesday Night Prayer
-var tuesDay = 2;
-var tuesPrayerStart = [18, 59];
-var tuesPrayerEnd = [20, 00];
-
-
 // Run checker
 liveTrigger();
 
@@ -24,9 +18,6 @@ function liveTrigger() {
     // Sunday Services
     checkLive(date, sundayStartS1, sundayEndS1, sundayDay);
     checkLive(date, sundayStartS2, sundayEndS2, sundayDay);
-
-    // Tuesday Night Prayer
-    // checkLive(date, tuesPrayerStart, tuesPrayerEnd, tuesDay);
 }
 
 /** Check Live Function
