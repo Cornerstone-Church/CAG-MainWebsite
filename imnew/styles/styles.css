@@ -1,0 +1,56 @@
+#scroller {
+    display: block;
+    z-index: 1;
+    height: 500vh;
+    overflow: hidden;
+}
+
+#scroller div {
+    height: 120vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* opacity: .5; */
+}
+
+#scroller div .section-wrapper {
+    position: absolute;
+    height: auto;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section-one {
+    background-image: url("/ref/pages/imnew_page/image1.jpg");
+    z-index: 1;
+}
+
+#section-two {
+    background: var(--theme-primary-color);
+    height: 50vh !important;
+    z-index: 3;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+#section-three {
+    background-image: url("/ref/pages/imnew_page/image2.jpg");
+    z-index: 2;
+}
+
+#section-four {
+    background-image: url("/ref/pages/imnew_page/image3.jpg");
+    z-index: 2;
+    transform: translateY(-30vh);
+}
+
+#section-five {
+    background: yellow;
+    z-index: 0;
+}
+
+#footerOnTop {
+    position: initial;
+    z-index: 200;
+}

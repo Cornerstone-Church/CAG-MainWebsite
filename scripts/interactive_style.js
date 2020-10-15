@@ -19,17 +19,34 @@ var mobileNavVissable = false;
 var headerTransparent = false;
 
 
-function headerTrans() {
+function headerTrans(shouldBeDarkText) {
     setTimeout(() => {
         // Make sure function does not run if there is an alert
-        if (hasAlert == null || !hasAlert) {
+        try {
+            // Runs on pages with alert functions
+            if (hasAlert != null || hasAlert) {
+                // Do nothing
+            } else {
+                // Runs on any page that does not have a alert functions
+                var header = document.querySelector("header");
+                header.classList.add('header-transparent');
+                if (!shouldBeDarkText || (shouldBeDarkText == undefined)) {
+                    enableLightText();
+                }
+    
+                headerTransparent = true;
+            }
+        } catch (e) {
+            // Runs on any page that does not have a alert functions
             var header = document.querySelector("header");
             header.classList.add('header-transparent');
-            enableLightText();
+            if (!shouldBeDarkText || (shouldBeDarkText == undefined)) {
+                enableLightText();
+            }
 
             headerTransparent = true;
         }
-    }, 1000);
+    }, 500);
 }
 
 
