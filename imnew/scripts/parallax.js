@@ -6,6 +6,10 @@ var sectionFour = document.getElementById('section-four');
 var sectionFive = document.getElementById('section-five');
 var footer = document.getElementById('footer');
 
+
+var sectionFiveOffset;
+
+var windowHeight;
 var locationY;
 
 
@@ -15,15 +19,34 @@ function setTransform(yPos, element) {
     element.style.transform = `translateY(${yPos}px)`;
 }
 
-function setOpacity(sOp, eOp, steps, element) {
-
+function visibility(visibilityMarker, locationY, element) {
+    // Makes element visiable
+    if (visibilityMarker <= locationY) {
+        makeVisible(element);
+    } else {
+        makeHidden(element);
+    }
 }
 
-function scrollLoop() {
-    locationY = window.scrollY;
+function makeVisible(element) {
+    element.style.visibility = 'visible';
+}
 
-    setTransform(locationY * .9, sectionOne);
+function makeHidden(element) {
+    element.style.visibility = 'hidden';
+}
+
+
+function scrollLoop() {
+    windowHeight = window.innerHeight;
+    locationY = window.scrollY;
+    sectionFiveOffset = windowHeight * 4.35;
+
+    setTransform(locationY * .95, sectionOne);
     setTransform(locationY * -.1, sectionThree);
+    setTransform((locationY * 1.05) - sectionFiveOffset, sectionFive);
+
+    visibility(windowHeight * 2, locationY, sectionFive);
 
     requestAnimationFrame(scrollLoop);
 }
