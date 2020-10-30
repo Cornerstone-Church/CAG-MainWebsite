@@ -118,12 +118,12 @@ function getLiveVideoID($channelId)
             <a href="/give/" target="_blank" class="button--white">Give Online</a>
             <!-- Sermon Notes -->
             <div class="expires">
-                <div class="expire-date">2020-10-03</div>
-                <a class="button--white" href="/seriesmatterial/200913_Notes.pdf">Notes</a>
+                <div class="expire-date">2020-11-01</div>
+                <a class="button--white" href="/seriesmatterial/201003_Notes.pdf">Sermon Notes</a>
             </div>
             <div class="hold">
-                <div class="hold-date">2020-10-03</div>
-                <a class="button--white" href="/seriesmatterial/201003_Notes.pdf">Sermon Notes</a>
+                <div class="hold-date">2020-11-01</div>
+                <a class="button--white" href="/seriesmatterial/201101_Notes.pdf">Sermon Notes</a>
             </div>
             <!-- About Us -->
             <a href="/about/" target="_blank" class="button--white">About Us</a>
