@@ -1,7 +1,6 @@
 <?php
 try {
-    // $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
-    $channelId = 'UC-brWutd4wvpoymwHBiKb_Q';
+    $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
     // Broken
     // $videoId = getLiveVideoID($channelId);
 } catch(Exception $e) {
