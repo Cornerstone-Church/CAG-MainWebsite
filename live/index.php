@@ -5,7 +5,8 @@ try {
     $videoId = getLiveVideoID($channelId);
 } catch(Exception $e) {
     // Echo the generated error
-    echo '<div id="offline-error">' + $e + '</div>';
+    // echo '<div id="offline-error"></div>';
+    echo $e;
 }
 
 // The method which finds the video ID
