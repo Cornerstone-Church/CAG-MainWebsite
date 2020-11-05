@@ -1,6 +1,7 @@
 <?php
 try {
-    $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
+    // $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
+    $channelId = 'UC-brWutd4wvpoymwHBiKb_Q';
     $videoId = getLiveVideoID($channelId);
 } catch(Exception $e) {
     // Echo the generated error
