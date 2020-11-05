@@ -2,11 +2,14 @@
 try {
     // $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
     $channelId = 'UC-brWutd4wvpoymwHBiKb_Q';
-    $videoId = getLiveVideoID($channelId);
+    // Broken
+    // $videoId = getLiveVideoID($channelId);
 } catch(Exception $e) {
-    // Echo the generated error
-    // echo '<div id="offline-error"></div>';
-    echo $e;
+    // Create offline error to trigger offline mode
+    echo '<div id="offline-error"></div>';
+    
+    // DEBUGGING ONLY - Only enable when debugging
+    // echo $e;
 }
 
 // The method which finds the video ID
@@ -85,7 +88,7 @@ function getLiveVideoID($channelId)
     </script>
     
 </head>
-<body onload="expireIt(); holdIt(); getChatLink('<?php echo $videoId ?>'); enableDarkMode()">
+<body onload="expireIt(); holdIt(); enableDarkMode()">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -99,7 +102,8 @@ function getLiveVideoID($channelId)
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <iframe id="live-chat" frameborder="0" style="display: static"></iframe>
+            <!-- Broken -->
+            <!-- <iframe id="live-chat" frameborder="0" style="display: static"></iframe> -->
         </div>
         <div id="stream-offline">
             <img src="/ref/pages/live_page/offline.png">
