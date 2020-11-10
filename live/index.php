@@ -1,10 +1,14 @@
 <?php
 try {
     $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
-    $videoId = getLiveVideoID($channelId);
+    // Broken
+    // $videoId = getLiveVideoID($channelId);
 } catch(Exception $e) {
-    // Echo the generated error
+    // Create offline error to trigger offline mode
     echo '<div id="offline-error"></div>';
+    
+    // DEBUGGING ONLY - Only enable when debugging
+    // echo $e;
 }
 
 // The method which finds the video ID
@@ -83,7 +87,7 @@ function getLiveVideoID($channelId)
     </script>
     
 </head>
-<body onload="expireIt(); holdIt(); getChatLink('<?php echo $videoId ?>'); enableDarkMode()">
+<body onload="expireIt(); holdIt(); enableDarkMode()">
     <!-- Header Element -->
     <div id="header"></div>
 
@@ -97,7 +101,8 @@ function getLiveVideoID($channelId)
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <iframe id="live-chat" frameborder="0" style="display: static"></iframe>
+            <!-- Broken -->
+            <!-- <iframe id="live-chat" frameborder="0" style="display: static"></iframe> -->
         </div>
         <div id="stream-offline">
             <img src="/ref/pages/live_page/offline.png">
@@ -118,12 +123,12 @@ function getLiveVideoID($channelId)
             <a href="/give/" target="_blank" class="button--white">Give Online</a>
             <!-- Sermon Notes -->
             <div class="expires">
-                <div class="expire-date">2020-10-03</div>
-                <a class="button--white" href="/seriesmatterial/200913_Notes.pdf">Notes</a>
+                <div class="expire-date">2020-11-01</div>
+                <a class="button--white" href="/seriesmatterial/201003_Notes.pdf">Sermon Notes</a>
             </div>
             <div class="hold">
-                <div class="hold-date">2020-10-03</div>
-                <a class="button--white" href="/seriesmatterial/201003_Notes.pdf">Sermon Notes</a>
+                <div class="hold-date">2020-11-01</div>
+                <a class="button--white" href="/seriesmatterial/201101_Notes.pdf">Sermon Notes</a>
             </div>
             <!-- About Us -->
             <a href="/about/" target="_blank" class="button--white">About Us</a>

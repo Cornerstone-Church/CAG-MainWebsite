@@ -10,13 +10,6 @@ var sundayStartS3 = [18, 00];
 // Noon Prayer Times
 var noonPrayerStart = [12, 00];
 
-// Tuesday Night Prayer
-var tuesDay = 2;
-var tuesPrayerStart = [19, 00];
-
-var friDay = 5;
-var friStartTime = [19, 00];
-
 // If if the service is offline
 if (offlineError != null) {
     // Enable offline mode
@@ -29,10 +22,6 @@ if (offlineError != null) {
 
     // Prayer Services
     countdownTimer(noonPrayerStart);
-    countdownTimer(tuesPrayerStart, tuesDay);
-
-    // Good Friday Service
-    countdownTimer(friStartTime, friDay);
 }
 
 
