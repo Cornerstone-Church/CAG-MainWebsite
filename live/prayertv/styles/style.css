@@ -1,5 +1,5 @@
 #live-stream-wrapper {
-    background: var(--theme-header-color-dark);
+    background: linear-gradient(0deg, #E27BB2, #4A79B0);
     padding-bottom: 0;
 }
 
@@ -27,12 +27,17 @@
     text-transform: none;
 }
 
-#live-stream-wrapper h1 {
-    color: var(--theme-primary-color);
-    text-align: center;
-    font-weight: normal;
-    margin-top: 10px;
-    padding: 0px;
+#live-stream-wrapper #logo-wrapper {
+    position: relative;
+    padding-top: 20px;
+    height: 200px;
+}
+
+#live-stream-wrapper #logo-wrapper img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 200px;
 }
 
 #live-stream-wrapper h2 {
@@ -67,7 +72,6 @@
 }
 
 #button-group {
-    position: static;
     width: 100%;
     text-align: center;
     padding: 50px 0 30px 0;
@@ -76,7 +80,7 @@
 #button-group a {
     display: inline-block;
     margin: 10px;
-    width: 150px;
+    width: 130px;
 }
 
 #countdown {
@@ -95,15 +99,13 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    background: var(--theme-header-color-dark);
 }
 
 #live-content #content {
     max-width: 550px;
     padding-bottom: 50px;
     margin: 0 auto;
-    background: var(--theme-header-color-dark);
-    color: var(--theme-primary-color);
+    color: var(--theme-primary-text);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -128,5 +130,9 @@
     #live-content #content {
         display: block;
         margin: 0 auto;
+    }
+
+    #live-content {
+        margin-top: 20px;
     }
 }
