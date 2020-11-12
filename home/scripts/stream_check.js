@@ -10,7 +10,7 @@ var sundayEndS2 = [12, 10];
 
 // Tool Tip code
 var date = new Date();
-var toolTipStart = [11, 59];
+var toolTipStart = [12, 00];
 var toolTipEnd = [12, 30];
 toolTipCheck(date, toolTipStart, toolTipEnd);
 
