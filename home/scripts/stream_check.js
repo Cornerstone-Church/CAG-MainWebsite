@@ -1,6 +1,9 @@
 // Get current date
 var date = new Date();
 
+// Is daylight Savings
+var daylightSavings = false;
+
 // Sunday Service times
 var sundayDay = 0 // Sunday
 var sundayStartS1 = [8, 59];
@@ -56,6 +59,11 @@ function checkLive(currentDate, startTime, endTime, day) {
     cEndTime = (endHourTimeUTC * 60) + endTime[1];
     cCurrentTime = (currentHour * 60) + currentMin;
 
+    // Apply daylight savings
+    if (!daylightSavings) {
+        cCurrentTime -= 60;
+    }
+
     // Check if should go live
     if (shouldCheckDay) {
         if (currentDay == day) {
@@ -105,6 +113,14 @@ function toolTipCheck(currentDate, startTime, endTime, day) {
     cStartTime = (startHourTimeUTC * 60) + startTime[1];
     cEndTime = (endHourTimeUTC * 60) + endTime[1];
     cCurrentTime = (currentHour * 60) + currentMin;
+
+    // Apply daylight savings
+    if (!daylightSavings) {
+        cCurrentTime -= 60;
+    }
+
+    console.log(cCurrentTime);
+    console.log(cStartTime);
 
     // Check if should go live
     if (shouldCheckDay) {
