@@ -1,3 +1,5 @@
+// CODE OBSOLETE
+
 var offlineError = document.getElementById('offline-error');
 var streamIsLive = false;
 
