@@ -1,37 +1,3 @@
-<?php
-try {
-    $channelId = 'UCx-bgFNkwgq1c_42gy-BNrw';
-    // Broken
-    // $videoId = getLiveVideoID($channelId);
-} catch(Exception $e) {
-    // Create offline error to trigger offline mode
-    echo '<div id="offline-error"></div>';
-    
-    // DEBUGGING ONLY - Only enable when debugging
-    // echo $e;
-}
-
-// The method which finds the video ID
-function getLiveVideoID($channelId)
-{
-    $videoId = null;
-
-    // Fetch the livestream page
-    if($data = file_get_contents('https://www.youtube.com/embed/live_stream?channel='.$channelId))
-    {
-        // Find the video ID in there
-        if(preg_match('/\'VIDEO_ID\': \"(.*?)\"/', $data, $matches))
-            $videoId = $matches[1];
-        else
-            throw new Exception('Couldn\'t find video ID');
-    }
-    else
-        throw new Exception('Couldn\'t fetch data');
-
-    return $videoId;
-}
-?>
-
 <html lang="en">
 
 <head>
@@ -44,7 +10,7 @@ function getLiveVideoID($channelId)
         content="Building an Authentic Community, Lifting up Jesus, Growing in Him, and Touching our World. Cornerstone Church is located in Bowie, Maryland. Experience God through services and activities on Saturday, Sunday, and throughout the week.">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css?version=20040301">
+    <link rel="stylesheet" href="/styles/style.css?version=20111201">
     <link rel="stylesheet" href="/styles/debug.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20041001">
 
@@ -97,12 +63,10 @@ function getLiveVideoID($channelId)
         <div id="live-iframe">
             <div id="resize-wrapper">
                 <iframe class="drop-shadow"
-                    src='https://www.youtube.com/embed/live_stream?channel=<?php echo $channelId ?>' frameborder="0"
+                    src='https://www.youtube.com/embed/live_stream?channel=UCx-bgFNkwgq1c_42gy-BNrw' frameborder="0"
                     allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <!-- Broken -->
-            <!-- <iframe id="live-chat" frameborder="0" style="display: static"></iframe> -->
         </div>
         <div id="stream-offline">
             <img src="/ref/pages/live_page/offline.png">
@@ -121,6 +85,8 @@ function getLiveVideoID($channelId)
         <div id="button-group">
             <!-- Give -->
             <a href="/give/" target="_blank" class="button--white">Give Online</a>
+            <!-- About Us -->
+            <a href="/about/" target="_blank" class="button--white">About Us</a>
             <!-- Sermon Notes -->
             <div class="expires">
                 <div class="expire-date">2020-11-01</div>
@@ -130,8 +96,6 @@ function getLiveVideoID($channelId)
                 <div class="hold-date">2020-11-01</div>
                 <a class="button--white" href="/seriesmatterial/201101_Notes.pdf">Sermon Notes</a>
             </div>
-            <!-- About Us -->
-            <a href="/about/" target="_blank" class="button--white">About Us</a>
         </div>
     </div>
 
@@ -154,7 +118,7 @@ function getLiveVideoID($channelId)
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=20040601"></script>
     <script src="/scripts/hold_it.js"></script>
-    <script src="./scripts/script.js?version=20042901"></script>
+    <!-- <script src="./scripts/script.js?version=20042901"></script> -->
 </body>
 
 </html>
