@@ -80,6 +80,7 @@ function enableDarkMode() {
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
     var searchLogo = document.querySelector('#searchBar #search-button');
+    var externalIcon = document.querySelectorAll('header .external-link');
 
     // Make text light
     enableLightText();
@@ -94,6 +95,10 @@ function enableDarkMode() {
     headerLogo.src = "/ref/icons/cag-logo-white.png";
     searchLogo.src = "/ref/icons/search-white.png";
 
+    externalIcon.forEach((element) => {
+        element.src = "/ref/icons/external_link_light.png";
+    });
+
 
     lightMode = false;
 }
@@ -104,6 +109,7 @@ function enableLightText() {
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
     var searchLogo = document.querySelector('#searchBar #search-button');
+    var externalIcon = document.querySelectorAll('header .external-link');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -122,6 +128,9 @@ function enableLightText() {
     // Change Logo to white
     headerLogo.src = "/ref/icons/cag-logo-white.png";
     searchLogo.src = "/ref/icons/search-white.png"
+    externalIcon.forEach((element) => {
+        element.src = "/ref/icons/external_link_light.png";
+    });
 }
 
 
@@ -130,6 +139,7 @@ function enableNormalText() {
     var navTextElements = document.querySelectorAll("nav a");
     var headerLogo = document.querySelector("#header-icon img");
     var searchLogo = document.querySelector('#searchBar #search-button');
+    var externalIcon = document.querySelectorAll('header .external-link');
     var mobileNavButton = document.querySelectorAll('#hamburger-button span')
     var mobileNavBackdrop = document.getElementById('mobile-nav');
 
@@ -148,6 +158,9 @@ function enableNormalText() {
     // Change Logo to white
     headerLogo.src = "/ref/icons/cag-logo-left.png";
     searchLogo.src = "/ref/icons/search-dark.png"
+    externalIcon.forEach((element) => {
+        element.src = "/ref/icons/external_link_dark.png";
+    });
 }
 
 
