@@ -1,27 +1,29 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Live Service | Cornerstone Church</title>
+    <title>Cornerstone Church - Bowie MD | Building an Authentic Community, Lifting up Jesus, Growing in Him, Touching
+        our World.</title>
     <meta charset="utf8">
 
     <!-- Search Engine Information -->
-    <meta name="title" content="Cornerstone Church Live Service | Bowie MD">
+    <meta name="title" content="Cornerstone Church | Bowie MD">
     <meta name="description"
         content="Building an Authentic Community, Lifting up Jesus, Growing in Him, and Touching our World. Cornerstone Church is located in Bowie, Maryland. Experience God through services and activities on Saturday, Sunday, and throughout the week.">
 
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/styles/style.css?version=20111201">
+    <link rel="stylesheet" href="/styles/style.css?version=20120201">
     <link rel="stylesheet" href="/styles/debug.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css?version=20041001">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css?version=20040301">
 
     <!-- Fav Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
     <link rel="manifest" href="/fav_icons/site.webmanifest">
-    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#ecf0f1">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ecf0f1">
-    <meta name="theme-color" content="#242424">
+    <meta name="theme-color" content="#ecf0f1">
 
     <!-- Preview Elements -->
     <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
@@ -43,75 +45,54 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
     <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
     <script src="/scripts/jquery-3.3.1.min.js">
     </script>
-    <script>Theme: "We were made for this"
+    <script>
         $(document).ready(function () {
             $('#header').load('/templates/header.html');
             $('#footer').load('/templates/footer.html?version=19041102');
         });
     </script>
-    
 </head>
-<body onload="expireIt(); holdIt(); enableDarkMode()">
+
+<body onload="expireIt(); holdIt();">
     <!-- Header Element -->
     <div id="header"></div>
 
-    <div class="header_padding" id="live-stream-wrapper">
-        <h1><span style="color: red; font-weight: bold;">LIVE</span> AT CORNERSTONE</h1>
-        <h2>9:00am | 11:00am ET</h2>
-        <div id="live-iframe">
-            <div id="resize-wrapper">
-                <iframe class="drop-shadow"
-                    src='https://www.youtube.com/embed/live_stream?channel=UCx-bgFNkwgq1c_42gy-BNrw' frameborder="0"
-                    allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-        <div id="stream-offline">
-            <img src="/ref/pages/live_page/offline.png">
-            <h2 id="error-message">Stream Offline</h2>
-            <div id="error-description">
-                <b>Looking for service? Check back at these times:</b>
-                <br>Sunday Services 9:00am | 11:00am ET
-                <br>Daily Prayer at 12:00pm ET
-
-            </div>
-        </div>
-        <div id="countdown">
-            <div id="label-text">Next service starts in</div>
-            <div id="clock"></div>
-        </div>
-        <div id="button-group">
-            <!-- Give -->
-            <a href="/give/" target="_blank" class="button--white">Give Online</a>
-            <!-- About Us -->
-            <a href="/about/" target="_blank" class="button--white">About Us</a>
-            <!-- Sermon Notes -->
-            <a class="button--white" href="/seriesmatterial/notes/">Sermon Notes</a>
-        </div>
-    </div>
-
     <!-- Body Section -->
-    <div id="live-content">
-        <section class="content center" id="content">
-        Thanks for joining us this week! If you have any questions or would like to get involved, feel free to <a
-            href="/about/">find out more about us</a> or <a href="/events/">sign up for some of our events</a>.
-        <br><br>
-        <h2>JOIN US ONLINE</h2>
-        Sunday Services 9:00am | 11:00am ET
-        <br>Daily Prayer at 12:00pm ET
-    </section>
+    <div class="banner">
+        <img id="banner-background" src="/ref/sermon_series/background_20123101.jpg">
+        <img id="banner-overlay" src="/ref/sermon_series/logo_20123101.png">
     </div>
-    
+    <section class="content">
+        <h1>Sermon notes for the entire series</h1>
+        <div id="sermon-notes-list">
+            <ul>
+                <div class="hold">
+                    <div class="hold-date">2021-01-10</div>
+                    <li>
+                        <h2>1/10/21 - Don't Stop Short</h2>
+                        <a class="button-small" target="_blank" href="/seriesmatterial/210110_Notes.pdf">Download</a>
+                    </li>
+                </div>
+                <li>
+                    <h2>1/3/21 - The Power of Connecting with the Heart of God</h2>
+                    <a class="button-small" target="_blank" href="/seriesmatterial/210103_Notes.pdf">Download</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Footer Section -->
     <div id="footer"></div>
+    </div>
     <!-- Scripts -->
     <script src="/scripts/interactive_style.js?version=20040201"></script>
+    <script src="/home/scripts/home_script.js?version=19040801"></script>
     <script src="/scripts/sitewide-search.js"></script>
     <script src="/scripts/expire_it.js?version=20040601"></script>
     <script src="/scripts/hold_it.js"></script>
-    <!-- <script src="./scripts/script.js?version=20042901"></script> -->
 </body>
 
 </html>
