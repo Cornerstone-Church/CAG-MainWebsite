@@ -93,9 +93,27 @@ section {
 
 /* Big images at the top of the page */
 #banner {
+    position: relative;
     width: 100%;
     height: 50vh;
     object-fit: cover;
+}
+
+/* Two layer banner that needs a forgound and a background
+    NOTE: It is best practice to wrap inside of a null #banner object for correct sizing.
+ */
+#banner-layer-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner-layer-fg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .content {
