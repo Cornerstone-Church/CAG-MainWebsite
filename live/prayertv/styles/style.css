@@ -108,6 +108,36 @@
     color: var(--theme-primary-text);
 }
 
+#youtube-button-wrapper {
+    position: relative;
+    height: 350px;
+}
+
+#youtube-button-prayer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: url('/ref/pages/live_page/youtube-play-button.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: .2s;
+}
+
+#youtube-button-prayer:hover {
+    height: 250px;
+    width: 250px;
+}
+
+#youtube-button-prayer a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 1000px) {
     #live-stream-wrapper #live-iframe #live-chat {
         height: 500px;
