@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Our Services | Cornerstone Church</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/styles/style.css?version=21011401">
+    <link rel="stylesheet" href="/styles/elements.css?version=20041601">
+    <link rel="stylesheet" href="./styles/services.css?version=20040101">
+
+    <!-- Fav Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav_icons/favicon-16x16.png">
+    <link rel="manifest" href="/fav_icons/site.webmanifest">
+    <link rel="mask-icon" href="/fav_icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ecf0f1">
+    <meta name="theme-color" content="#ecf0f1">
+
+    <!-- Preview Elements -->
+    <meta property="og:image" content="https://cag.org/ref/thumbnails/Website_Thumbnail.jpg">
+    <meta property="og:description"
+        content="Check our Cornerstone Church located in Bowie MD. Experience God through our services on both Saturday and Sunday.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138079008-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138079008-1');
+    </script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://static.cag.org/scripts/zalem_firebase.js"></script>
+
+    <script src="/scripts/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#header').load('../../templates/header.html');
+            $('#footer').load('../../templates/footer.html?version=19041102');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Content goes here -->
+    <section class="header_padding">
+        <!-- Banner -->
+        <div class="flat-banner align-left">
+            <div id="background-wrapper">
+                <img src="/ref/img/building/cornerstone-background.jpg">
+            </div>
+            <div id="forground-wrapper">
+                <div id="text-wrapper">
+                    <h1 class="long-title">Cornerstone Church</h1>
+                    <h2>Main Campus | Bowie Maryland</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <a class="button-small" href="../">All Locations</a>
+            <h1>Service Registration</h1>
+            <p>In order to attend a Cornerstone Service, <b>all attendees must sign a<br>waiver for each service they
+                    attend.</b> Please find the service registration below.</p>
+            <a class="button-small" style="margin-left: 10px"
+                href="https://cornerstonebowie.churchcenter.com/registrations/events/category/23985"
+                target="_blank">Service Registration & Waiver</a>
+            <h1>Live Stream Services</h1>
+            <b>
+                <div id="times">Sunday Services | 9:00am | 11:00am<br>Daily Prayer | 12:00pm</div>
+            </b>
+            <p>
+                During these hard times, <i>some gatherings listed below have been canceled until further
+                    notice.</i> We
+                have now moved all Sunday services online. Tune in at our normal service times in addition to our
+                12:00pm daily prayer. All this will take place on our Home
+                Page. Also be sure to check out our other ministries that
+                are happening online.
+            </p>
+
+            <h1>Campus Services</h1>
+            <ul id="services">
+                <a href="https://cornerstonebowie.churchcenter.com/registrations/events/category/2146" target="_blank">
+                    <li id="sunday-section">
+                        <img src="/ref/pages/services_page/sanctuary.jpg">
+                        <div class="dim-background">
+                            <h1>Sunday (REGISTRATION Required)</h1>
+                            <div class="service-time">9:00am | 11:00am</div>
+                            <div class="overlay-title">
+                                <!-- TODO: Remove outside -->
+                                <p>
+                                    Join us Sunday mornings as we gather to experience God’s presence and grow in Him
+                                    through
+                                    worship and the word.
+                                </p>
+                            </div>
+                            <!-- <div class="avaliable-ministries">ASL provided at 9AM service. Spanish translation provided at
+                                11 AM service. <br>Children's Ministry, Nursery, & Youth are provided for both services.
+                            </div> -->
+                        </div>
+                    </li>
+                </a>
+                <li id="saturday-section" style="opacity: .4; filter: saturate(0);">
+                    <img src="/ref/pages/services_page/saturday.jpg">
+                    <div class="dim-background">
+                        <div class="overlay-title">
+                            <h1>Saturday (Suspended due to COVID)</h1>
+                            <div class="service-time">5:30pm</div>
+                        </div>
+                        <div class="overlay-title">
+                            <p>
+                                Check out our Saturday night services! Encounter God's presence through His word in our
+                                main service and close out the night by praying and seeking the
+                                face of God.
+                            </p>
+                        </div>
+                        <div class="avaliable-ministries">Children's Ministry is provided for this service.
+                        </div>
+                    </div>
+                </li>
+                <a href="https://cornerstonebowie.churchcenter.com/registrations/events/category/2146" target="_blank">
+                    <li id="saturday-prayer-section">
+                        <img src="/ref/pages/prayer_page/prayer.jpg">
+                        <div class="dim-background">
+                            <div class="overlay-title">
+                                <h1>Saturday Prayer (Registration Required)</h1>
+                                <div class="service-time">7:00pm</div>
+                            </div>
+                            <div class="overlay-title">
+                                <p>
+                                    Join us every Saturday night for an evening of prayer for the church and our world.
+                                    Starting at 7:00pm after our evening service, encounter God and seek His face
+                                    through
+                                    worship and prayer.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+                <li id="wednesday-section" style="opacity: .4; filter: saturate(0);">
+                    <img src="/ref/pages/services_page/class.jpg">
+                    <div class="dim-background">
+                        <div class="overlay-title">
+                            <h1>Wednesday (Online Only due to COVID)</h1>
+                            <div class="service-time">7:00pm</div>
+                        </div>
+                        <div class="overlay-title">
+                            <p>
+                                Take your walk with Christ to the next level with classes and discipleship that
+                                encourage you to grow deeper.
+                            </p>
+
+                            <div class="center">
+                                <!-- TODO: Revert this back when done -->
+                                <!-- <a class="button-small--white" href="./classes/">View Classes</a> -->
+                            </div>
+                        </div>
+                        <div class="avaliable-ministries">Children's Ministry & Youth are provided for this service.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h1>Location</h1>
+            <iframe id="location-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.3777144913142!2d-76.728887284737!3d38.98387507955742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7eeae140ff065%3A0xaa8c6cf962ac556f!2sCornerstone+Church!5e0!3m2!1sen!2sus!4v1547586174050"
+                width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/scripts/interactive_style.js?version=20040201"></script>
+    <script src="/scripts/sitewide-search.js"></script>
+</body>
+
+</html>
