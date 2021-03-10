@@ -6,6 +6,7 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/styles/style.css?version=21011401">
+    <link rel="stylesheet" href="/styles/elements.css?version=20041601">
     <link rel="stylesheet" href="./styles/media_page_style.css?version=20040301">
 
     <!-- Fav Icons -->
@@ -67,7 +68,7 @@
         <div id="sermons--section" class="dark-section">
             <h1>Latest Sermon</h1>
             <div class="video-resize--wrapper">
-                <iframe class="drop-shadow"
+                <iframe
                 src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
@@ -105,20 +106,33 @@
             </div>
         </div> -->
 
-        <!-- Across the Table -->
-        <div class="light-section moment-together--section">
-            <h1>Across the Table</h1>
-            <h2>Podcast</h2>
-            <div class="video-resize--wrapper">
-                <iframe class="drop-shadow"
-                src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCGuZGA0sKwLmk9gcT4LOF3X"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <!-- Recent Sermons -->
+        <div class="light-section" id="recent-series-section">
+            <h1 id="title">Recent Sermon Series</h1>
+            <div class="flat-tile-container">
+                <div id="flat-item" style="background-image: url('/ref/pages/ministries_page/sections/men/disciple.jpg');">
+                    <div id="text-wrapper">
+                        <h1>Men's Discipleship Class</h1>
+                        <h2>Wednesday Nights @ 7pm | Lower Level</h2>
+                    </div>
+                </div>
+                <div id="flat-item" style="background-image: url('/ref/pages/ministries_page/sections/men/breakfast.jpg');">
+                    <div id="text-wrapper">
+                        <h1>Men's Breakfast</h1>
+                        <h2>Learn God's word and eat breakfast</h2>
+                    </div>
+                </div>
+                <a id="flat-item" href="../sports/" style="background-image: url('/ref/pages/ministries_page/sections/men/sports.jpg');">
+                    <div id="text-wrapper">
+                        <h1>Sports</h1>
+                        <h2>Men's softball and basketball</h2>
+                    </div>
+                </a>
             </div>
         </div>
 
         <!-- Recent Videos -->
-        <div id="recent-videos--section" class="dark-section">
+        <!-- <div id="recent-videos--section" class="dark-section">
             <h1>Recent Videos</h1>
             <ul id="recent-selector">
                 <li>
@@ -150,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Footer -->

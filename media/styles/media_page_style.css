@@ -74,6 +74,14 @@ body {
     color: var(--theme-primary-color);
 }
 
+#recent-series-section {
+    padding: 0px;
+}
+
+#recent-series-section #title {
+    padding: 40px;
+}
+
 .video-resize--wrapper {
     position: relative;
     padding-bottom: 440px; /* 16:9 */
