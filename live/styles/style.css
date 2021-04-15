@@ -1,30 +1,6 @@
 #live-stream-wrapper {
     background: var(--theme-header-color-dark);
-    padding-bottom: 0;
-}
-
-#stream-offline {
-    position: static;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 200px 0 200px 0;
-    display: none;
-}
-
-#stream-offline img {
-    display: block;
-    height: 35px;
-    margin: 0 auto 10px auto;
-}
-
-#stream-offline #error-message {
-    font-weight: bold;
-}
-
-#stream-offline #error-description {
-    font-size: .9em;
-    color: #666;
-    text-transform: none;
+    padding-bottom: 30px;
 }
 
 #live-stream-wrapper h1 {
@@ -37,58 +13,8 @@
 
 #live-stream-wrapper h2 {
     color: var(--theme-primary-color);
-    margin-bottom: 20px;
     font-weight: normal;
     text-align: center;
-}
-
-#live-stream-wrapper #live-iframe {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 95%;
-    position: static;
-}
-
-#resize-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-}
-
-#resize-wrapper iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#live-stream-wrapper #live-iframe #live-chat {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-#button-group {
-    position: static;
-    width: 100%;
-    text-align: center;
-    padding: 50px 0 30px 0;
-}
-
-#button-group a {
-    display: inline-block;
-    margin: 10px;
-    width: 150px;
-}
-
-#countdown {
-    text-align: center;
-    position: static;
-    display: none;
-    color: var(--theme-primary-color);
-    padding: 200px 0 200px 0;
-}
-
-#countdown #clock {
-    font-size: 1.5em;
 }
 
 #live-content {
@@ -106,6 +32,42 @@
     color: var(--theme-primary-color);
 }
 
+#location-wrapper {
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+
+#location-links {
+    display: inline-block;
+}
+
+#location-links .stream-link {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 0px;
+    padding: 10px;
+    border-right: 1px solid var(--theme-primary-color);
+    /* Text */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--theme-primary-color);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#location-links .stream-link:last-child {
+    border-right: none;
+}
+
+#location-links .stream-link img {
+    width: 90%;
+}
+
+#location-links .stream-link:hover {
+    opacity: .7;
+}
+
 @media only screen and (max-width: 1000px) {
     #live-stream-wrapper #live-iframe #live-chat {
         height: 500px;
@@ -119,14 +81,18 @@
 }
 
 @media only screen and (max-width: 800px) {
-    #live-chat {
-        display: none;
-    }
+    
     #live-stream-wrapper #live-iframe {
         grid-template-rows: 0% 0%;
     }
+
     #live-content #content {
         display: block;
         margin: 0 auto;
     }
+
+    #location-links .stream-link {
+        border-right: none;
+    }
+
 }
