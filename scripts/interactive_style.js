@@ -13,9 +13,9 @@ var scrollTransitionHeight = 200;
 var lightMode = true;
 
 // Shows if mobile nav bar is open or not
-var mobileNavVissable = false;
+var mobileNavVisible = false;
 
-// Shows if header is trasparent or not (For nav bar mobile)
+// Shows if header is transparent or not (For nav bar mobile)
 var headerTransparent = false;
 
 
@@ -58,10 +58,10 @@ function headerScroll() {
             if (isScrolling) {
                 header.classList.remove("header-blur");
                 // Only add dark header if nav bar is open
-                if (mobileNavVissable) {
+                if (mobileNavVisible) {
                     header.classList.add("header-dark");
                 } else {
-                    // Enable transparancy if nav bar is not open
+                    // Enable transparency if nav bar is not open
                     header.classList.add("header-transparent");
                 }
                 enableLightText();
@@ -170,7 +170,7 @@ function toggleMobileNav() {
     var mobileButton = document.querySelectorAll('#hamburger-button span');
     var header = document.querySelector("header");
 
-    if (!mobileNavVissable) {
+    if (!mobileNavVisible) {
         // mobileNav.style.display = 'inline';
         mobileNav.style.animationName = 'MobileNavMenu-In';
 
@@ -186,7 +186,7 @@ function toggleMobileNav() {
             header.classList.add("header-dark");
         }
 
-        mobileNavVissable = true;
+        mobileNavVisible = true;
     } else {
         // mobileNav.style.display = 'none';
         mobileNav.style.animationName = 'MobileNavMenu-Out';
@@ -202,7 +202,7 @@ function toggleMobileNav() {
             header.classList.remove("header-dark");
         }
 
-        mobileNavVissable = false;
+        mobileNavVisible = false;
     }
 
 }

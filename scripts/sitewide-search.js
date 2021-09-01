@@ -1,16 +1,16 @@
-var initalDownload = false;
+var initialDownload = false;
 
 function downloadSearchResults() {
     var searchBar = document.getElementById('globalSearchBar');
 
-    if (!initalDownload) {
+    if (!initialDownload) {
         var db = firebase.firestore();
 
         db.collection('website-search').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 createSearchItem(doc.data().action, doc.data().title, doc.data().keywords, doc.data().description);
             });
-            initalDownload = true;
+            initialDownload = true;
         })
     } else {
         if (searchBar.value != "") {
@@ -84,8 +84,8 @@ function createSearchItem(link, title, keywords, description) {
 
 function hideSearchResults() {
     var results = document.querySelector('#siteSearchResult');
-    // Added a timeout because when clicking a link the results would dissapear before the mouse down registered.
-    // This allows the input to be recognised before closing.
+    // Added a timeout because when clicking a link the results would disappear before the mouse down registered.
+    // This allows the input to be recognized before closing.
     setTimeout(function () {
         results.style.display = "none";
     }, 100);

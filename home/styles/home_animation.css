@@ -20,7 +20,7 @@
     100% { opacity: 1; }
 }
 
-/* Series Annimations */
+/* Series Animations */
 .series-logo--animation {
     animation-name: fadeInPull;
     animation-duration: 1s;
@@ -44,7 +44,7 @@
     animation-fill-mode: forwards;
 }
 
-/* Anouncments */
+/* Announcements */
 .annOneBackground--animation {
     animation-name: fadeIn;
     animation-duration: .5s;
