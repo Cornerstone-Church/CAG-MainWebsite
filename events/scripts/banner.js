@@ -1,5 +1,5 @@
 var currentSlide = 0; // Start on slide 1
-var slideDelay = 4000; // In miliseconds 5000
+var slideDelay = 4000; // In milliseconds 5000
 
 // Will find slides and put here after startSlideShow() is called for hidden slides.
 var bannerSlides = [];
@@ -13,10 +13,10 @@ function startSlideShow() {
     // Start animation listener
     statusBar.addEventListener("animationend", animationListener, false);
     
-    // Set slide one to visiable
+    // Set slide one to visible
     bannerSlides[0].style.opacity = '1';
     
-    // Only run timmer if there is 2 or more slides
+    // Only run timer if there is 2 or more slides
     if (bannerSlides.length >= 2) {
         // Set the duration of the status bar
         statusBar.style.animationDuration = (slideDelay / 1000) + "s";

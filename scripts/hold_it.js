@@ -29,7 +29,7 @@
     </div>
  */
 
-//  Caputre all holdElements that are held
+//  Capture all holdElements that are held
 var holdElements = document.querySelectorAll(".hold");
 var holdDate = document.querySelectorAll(".hold-date");
 

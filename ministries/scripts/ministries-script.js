@@ -57,7 +57,7 @@ function openElement(index) {
     containerElements[index].style.height = 'var(--expanded-button--height)';
     // Hide title
     titleElements[index].style.opacity = '0';
-    // Remove any hideSection classes that could be in the elemnt
+    // Remove any hideSection classes that could be in the element
     contentElements[index].classList.remove('hideSection');
     // Add the showSection class to move and fade in the element
     contentElements[index].classList.add('showSection');

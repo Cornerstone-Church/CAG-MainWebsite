@@ -55,7 +55,7 @@ function checkAlert() {
         var currentDate = new Date().getTime() / 1000;
         var currentDate = Math.round(currentDate);
 
-        // Determin if alert exists
+        // Determine if alert exists
         if (title != "") {
             // If we have not reached the expiration date then run alert
             if (expireDate.seconds > currentDate) {
