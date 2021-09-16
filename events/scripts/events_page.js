@@ -8,7 +8,7 @@ var slide3animation = true;
 
 
 function onLoad() {
-    // Get slides in the right position and set transparancy to 0 except the first slide
+    // Get slides in the right position and set transparency to 0 except the first slide
     // getSlide(0).style.top = getContainerOffset() + 'px';
     slides.forEach(function (item, index) {
         item.style.top = getContainerOffset() + 'px';
@@ -64,7 +64,7 @@ function scrollingSlideShow() {
             slideContent[2].style.opacity = '1';
             slide3animation = false;
         }
-        // removes a srolling up glitch
+        // removes a scrolling up glitch
         slides.forEach(function (item, index) {
             item.style.top = '0px';
         });

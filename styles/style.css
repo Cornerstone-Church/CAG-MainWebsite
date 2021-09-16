@@ -99,7 +99,7 @@ section {
     object-fit: cover;
 }
 
-/* Two layer banner that needs a forgound and a background
+/* Two layer banner that needs a foreground and a background
     NOTE: It is best practice to wrap inside of a null #banner object for correct sizing.
  */
 #banner-layer-bg {
