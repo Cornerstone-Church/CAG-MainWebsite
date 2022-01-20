@@ -1,7 +1,9 @@
 var initialDownload = false;
 
-function downloadSearchResults() {
+function openSearchBar() {
     var searchBar = document.getElementById('globalSearchBar');
+
+    searchBar.classList.add('open');
 
     if (!initialDownload) {
         var db = firebase.firestore();
@@ -16,6 +18,41 @@ function downloadSearchResults() {
         if (searchBar.value != "") {
             showSearchResults();
         }
+    }
+}
+
+function closeSearchBar() {
+    var searchBar = document.getElementById('globalSearchBar');
+
+    if (searchBar.value == "") {
+        searchBar.classList.remove('open');
+
+        hideSearchResults();
+    }
+}
+
+function searchBarKeyDetect(e) {
+    switch (e.key) {
+        case 'Enter':
+            e.preventDefault();
+
+            var items = document.querySelectorAll('#siteSearchResult li');
+
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].style.display != "none") {
+                    items[i].querySelector('a').click();
+                    break;
+                }
+            }
+            break;
+        case 'Escape':
+            e.preventDefault();
+
+            e.target.value = "";
+            closeSearchBar();
+            break;
+        default:
+            break;
     }
 }
 
@@ -84,11 +121,8 @@ function createSearchItem(link, title, keywords, description) {
 
 function hideSearchResults() {
     var results = document.querySelector('#siteSearchResult');
-    // Added a timeout because when clicking a link the results would disappear before the mouse down registered.
-    // This allows the input to be recognized before closing.
-    setTimeout(function () {
-        results.style.display = "none";
-    }, 100);
+
+    results.style.display = "none";
 }
 
 function showSearchResults() {

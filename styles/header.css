@@ -266,7 +266,7 @@ header #searchBar input {
         width 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-header #searchBar input:focus {
+header #searchBar input.open {
     border-left-width: 2px;
     border-right-width: 2px;
     opacity: 1;
@@ -274,7 +274,7 @@ header #searchBar input:focus {
     width: 175px;
 }
 
-header #searchBar input:focus+#search-button {
+header #searchBar input.open+#search-button {
     cursor: default;
     margin: 0;
     margin-top: 13.5px;
@@ -368,7 +368,7 @@ header #siteSearchResult #no-results--error {
         margin-top: 18px;
     }
 
-    header #searchBar input:focus+#search-button {
+    header #searchBar input.open+#search-button {
         margin-top: 28px;
     }
 
